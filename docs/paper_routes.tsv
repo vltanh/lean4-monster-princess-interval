@@ -1,0 +1,32 @@
+# label	environment	proved	cited statements (written by hand: the paper has no public TeX source)
+# Labels are the formalization's own; each is named in backticks in the docstring of its Lean result.
+# claim:value is the paper's Section 1 claim that the game has a value (from Alpern–Gal [4]); unnumbered.
+claim:value	claim	0	
+prop:1	proposition	1	
+prop:2	proposition	1	
+prop:3	proposition	1	
+prop:4	proposition	1	
+prop:5	proposition	1	
+def:6	definition	0	
+prop:7	proposition	1	
+prop:8	proposition	1	
+thm:9	theorem	1	
+# eq:4 is the matrix (4); its entries are computed "ignoring ε" in running text.
+eq:4	equation	1	
+thm:10	theorem	1	eq:4,prop:1,prop:5
+lem:11	lemma	1	prop:8
+# Lemma 12's proof: "we may assume that a hider moves at no greater speed than 1" (Proposition 3).
+lem:12	lemma	1	prop:3
+lem:13	lemma	1	lem:12
+# Equations (9)–(12) and (15) are derived in running text.
+eq:9	equation	1	lem:11,lem:13
+eq:10	equation	1	eq:9
+thm:14	theorem	1	eq:10
+eq:11	equation	1	
+eq:12	equation	1	eq:9,eq:11
+thm:15	theorem	1	eq:12
+eq:15	equation	1	
+thm:16	theorem	1	eq:15,prop:5
+# The display of Section 3 and the conclusion of Section 6 (also the abstract).
+sec:3	claim	1	thm:9,thm:10
+main	theorem	1	thm:14,thm:16
