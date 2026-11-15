@@ -1,0 +1,144 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "The princess and monster game on an interval"
+  description: >-
+    A Lean 4 formalization of S. Alpern, R. Fokkink, R. Lindelauf and G.-J. Olsder, "The
+    'Princess and Monster' game on an interval" (SIAM J. Control Optim. 47, 2008). A searcher
+    of speed at most 1 and a hider with continuous paths move in [-1, 1]; the payoff is the
+    first meeting time, and mixed strategies are Borel probability measures for the topology
+    of uniform convergence on compact sets.
+
+
+    It proves that the game has a value V and that 15/11 ≤ V ≤ 13/9, together with every
+    numbered result of the paper: the dominance results of Section 2, Theorems 9 and 10
+    (V ≤ 47/32, V ≥ 97/75), Lemmas 11–13 and Theorems 14 and 15 on searchers with a continuous
+    initial distribution, and Theorem 16 on hiders with a continuous initial distribution. The
+    minimax theorem of Alpern and Gal and the invariance theorem of Alpern and Asic, which the
+    paper cites, are proved too, so the formalization is unconditional. Where the paper's
+    arguments are informal (Theorems 10, 14, 16) they are completed; two statements and two
+    formulas of the paper are corrected.
+  authors:
+    - "The-Anh Vu-Le"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "The-Anh Vu-Le"
+
+classification:
+  arxiv: ["math.OC", "cs.GT"]
+  msc2020: ["91A24", "90B40", "91A05", "49N75"]
+
+sources:
+  - title: "The \"Princess and Monster\" game on an interval"
+    authors:
+      - "Steve Alpern"
+      - "Robbert Fokkink"
+      - "Roy Lindelauf"
+      - "Geert-Jan Olsder"
+    id: "doi:10.1137/060672054"
+    type: "article"
+    location: "SIAM Journal on Control and Optimization 47(3) (2008), 1178–1190, https://doi.org/10.1137/060672054"
+    relationship: "formalizes"
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "A mixed strategy minimax theorem without compactness"
+    authors:
+      - "Steve Alpern"
+      - "Shmuel Gal"
+    type: "article"
+    location: "SIAM Journal on Control and Optimization 26 (1988), 1357–1361"
+    relationship: "background"
+    note: "Cited for the existence of the value; proved in External/AlpernGal (External.AlpernGal.minimax), from Mathlib's Sion theorem."
+    license: "unknown"
+    author_endorsement: "not-contacted"
+  - title: "The search value of a network"
+    authors:
+      - "Steve Alpern"
+      - "Mirjana Asic"
+    type: "article"
+    location: "Networks 15 (1985), 229–238"
+    relationship: "background"
+    note: "Theorem 3, in the special case of the interval's reflection, is used for Proposition 4; proved in External/AlpernAsic."
+    license: "unknown"
+    author_endorsement: "not-contacted"
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Unconditional. Formalized: the existence of the value (Section 1, from the Alpern–Gal
+    minimax theorem, proved here); Propositions 1–8 and Definition 6 (Section 2); Theorem 9,
+    the matrix game (4) and its value, Theorem 10 (Section 3); Lemmas 11–13, formulas (9)–(12),
+    Theorems 14 and 15 (Section 4); formula (15) and Theorem 16 (Section 5); the main result
+    15/11 ≤ V ≤ 13/9 (Section 6). Corrected: Lemma 11 excludes two starting points where the
+    printed statement fails; formula (9) as an equality needs the hider to meet one sweeper
+    strictly first; formula (11) has the lower limit -1 (misprint 0); formula (15) is corrected.
+    "Ignoring ε" is read as a limit ε → 0. Not formalized: the remarks that hider strategies may
+    be restricted to a dense set and approximated by nonintersecting ones (not used by any
+    result), the Euler–Lagrange discussion, the figures, and the conjecture V = 1.4.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["claude-opus-5-5"]
+      framework: "Claude Code 2.1.325"
+      tool_setup: "formalize-math-paper skill (https://github.com/vltanh/formalize-math-paper; a local copy differing from commit e339f64 of 2026-10-17); one coordinating Claude Code session with 11 sub-agents (statement review, 8 parallel proving agents, report check, follow-up exploration), at most 8 at once; Lean v4.36.0-rc2, Mathlib v4.36.0-rc2"
+      cost:
+        wall_time: "2.7 hours elapsed to the completed audit report; 4.2 hours of sub-agent time"
+        spend_usd: "not tracked"
+        hardware: "local machine (20 cores, 62 GB RAM)"
+      prompting_notes: "The maintainer invoked the skill on the paper's PDF and asked to treat the repository as the paper's formalization."
+  spend_usd: "not tracked"
+  notes: >-
+    The coordinating agent inventoried the paper, checked its numerical claims, stated every
+    result, and wrote the repaired proof plans for Theorems 10, 14 and 16; sub-agents proved the
+    results in parallel against those plans; independent agents checked the statements and the
+    report against the paper. See CREDITS.md.
+
+fidelity:
+  divergences: >-
+    Statements: Lemma 11 excludes the starting points H(y) ∓ y (counterexample H(t) = t, y = 1/2,
+    x = 0) and is stated for every hider path of speed at most 1; formula (9) as an equality
+    requires the hider to meet A strictly first (it fails at y = 1); formula (11) uses the lower
+    limit -1; formula (15) is corrected; the cited minimax theorem is stated for a nonempty
+    space. Proofs that depart from the paper's (each reported in its docstring and in REPORT.md,
+    Section 7): Proposition 1 (the dominating path continues by sweeping; the paper's leaves
+    [-1, 1]); Proposition 3 (the dominating path in closed form; the paper's induction can stall);
+    Proposition 7's extension to finite mixtures (no argument in the paper; quantile paths);
+    Theorem 10 (lower bounds for every greedy response instead of an informal enumeration;
+    the start at an end bounded directly instead of by Proposition 1); Lemma 11 and Theorem 14
+    (both sweeper cases directly, where the paper applies Proposition 8 to a single path);
+    Lemma 12 and formula (9) (a layer-cake identity for paths of speed at most 1, where the paper
+    argues to first order for smooth paths); Theorem 16 (lower bounds for every searcher path,
+    where the paper applies Proposition 5 to a continuous mixture and reads a minimum off
+    figures). The paper's capture time is called upper semicontinuous; it is lower
+    semicontinuous, which is what the minimax theorem needs.
+
+review:
+  status: "agent-reviewed"
+  reviewers:
+    - "none"
+  notes: >-
+    The statements were checked against the paper by an independent AI agent before the proofs
+    were written; REPORT.md's findings were checked by another. Comparator accepts the Solution
+    under the Lean kernel and nanoda. No person has reviewed the proofs.
+
+alignment:
+  namespace: "PrincessMonster.Challenge"
+  statements:
+    - source: "Section 1: existence of the value (from the Alpern–Gal minimax theorem)"
+      lean: "PrincessMonster.Challenge.value_exists"
+      module: "Challenge"
+      status: "proved"
+      note: "The lower and upper values in mixed strategies coincide."
+    - source: "Abstract and Section 6: 15/11 ≤ V ≤ 13/9 (Theorems 14 and 16)"
+      lean: "PrincessMonster.Challenge.main"
+      module: "Challenge"
+      status: "proved"
+      note: "There is V equal to both the lower and the upper value with 15/11 ≤ V ≤ 13/9."
+
+acknowledgements: "Mathlib (in particular Sion's minimax theorem, Prokhorov's theorem, the Riesz–Markov–Kakutani theorem and Arzelà–Ascoli); Lean's Comparator and nanoda."
