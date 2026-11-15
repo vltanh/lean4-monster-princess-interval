@@ -59,15 +59,16 @@ How it was made:
 - **Follow-up papers.** A further agent explored follow-up papers, which are kept private.
 
 Figures, from 2026-11-14 16:00 CST (UTC−06:00) to the commit that completes [`REPORT.md`](REPORT.md)
-(18:57 CST), from the Claude Code transcripts:
+(19:44 CST), from the Claude Code transcripts:
 
-- elapsed time: 2.9 hours;
-- sub-agents: 12, at most 8 running at once, 4.7 hours of agent time in total, 2 resumptions;
-- tool calls: 702 by the sub-agents and 232 by the main session;
-- tokens, sub-agents: 1.65M output, 3.62M input, 121M cache reads;
-- tokens, main session: 0.52M output, 0.79M input, 124M cache reads;
-- model calls: 884, all to `claude-opus-5-5` (225 by the main session, 659 by the sub-agents).
+- elapsed time: 3.7 hours;
+- sub-agents: 13 (one of them started by the follow-up exploration), at most 8 running at once,
+  5.8 hours of agent time in total, 2 resumptions;
+- tool calls: 864 by the sub-agents and 243 by the main session;
+- tokens, sub-agents: 1.83M output, 4.30M input, 153M cache reads;
+- tokens, main session: 0.52M output, 0.80M input, 136M cache reads;
+- model calls: 1031, all to `claude-opus-5-5` (239 by the main session, 792 by the sub-agents).
 
-The figures count the coordinating session and its sub-agents up to that commit. The
-exploration of follow-up papers, still running then, is counted only up to that time, and the
+The figures count the coordinating session and its sub-agents up to that commit, including the
+exploration of follow-up papers (about 1.4 hours of agent time), whose results are private. The
 packaging that followed is not counted. The formalization started from an empty repository.
