@@ -76,6 +76,7 @@ meta def paperResults : List (String × Name) :=
   [("Value (Sec. 1)", ``PrincessMonster.value_exists),
    ("Prop 1", ``PrincessMonster.proposition1),
    ("Prop 1 (to the other end)", ``PrincessMonster.proposition1_sweeping),
+   ("Prop 1 (start at an end)", ``PrincessMonster.proposition1_start_one),
    ("Prop 2", ``PrincessMonster.proposition2),
    ("Prop 3", ``PrincessMonster.proposition3),
    ("Prop 3 (continuous H)", ``PrincessMonster.proposition3_of_continuous),

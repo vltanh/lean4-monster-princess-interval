@@ -29,8 +29,8 @@ is assumed. The paper's informal arguments in Sections 3–5 are completed into 
 | --- | --- | --- |
 | Section 1 | `value_exists` ★ | the game has a value: lower and upper values coincide; the searcher has an optimal mixed strategy |
 | Theorem 9 | [`theorem9`](PrincessMonster/Section3/Theorem9.lean#L221) | `V ≤ 47/32` (sweepers with probability `7/16` each, strategy `±B` with `1/16` each) |
-| Theorem 10 | [`theorem10`](PrincessMonster/Section3/Theorem10.lean#L794) | `V ≥ 97/75`, the value of the matrix game (4) |
-| Theorem 14 | [`theorem14`](PrincessMonster/Section4/Theorem14.lean#L347) | `V ≤ 13/9`: sweepers with probability `7/9`, uniformly started runners with `2/9` |
+| Theorem 10 | [`theorem10`](PrincessMonster/Section3/Theorem10.lean#L795) | `V ≥ 97/75`, the value of the matrix game (4) |
+| Theorem 14 | [`theorem14`](PrincessMonster/Section4/Theorem14.lean#L353) | `V ≤ 13/9`: sweepers with probability `7/9`, uniformly started runners with `2/9` |
 | Theorem 15 | [`theorem15`](PrincessMonster/Section4/Theorem15.lean#L419) | against sweepers mixed with runners started by any atomless `Φ`, the hider gets more than `1.421` |
 | Theorem 16 | [`theorem16`](PrincessMonster/Section5/Theorem16.lean#L2139) | `V ≥ 15/11`: ends with probability `3/11`, uniformly started loiterers with `8/11` |
 | Main result | `main` ★ | `15/11 ≤ V ≤ 13/9` |
@@ -54,7 +54,7 @@ is set up as in the paper:
 | E11 | Lemma 11 is false at one starting point, and its proof applies Proposition 8 to a single path; it holds for every path of speed at most `1` once that point is excluded. |
 | E13 | Formula (9) fails when the hider meets both sweepers at once (`y = 1`). |
 | E14, E17 | Formulas (11) and (15) are misprinted; Figure 3 does not match the strategy it plots. |
-| E5 | Proposition 3's inductive construction can stall; the same path has a closed formula and works for every continuous hider path. |
+| E5 | Proposition 3's inductive construction can stall; a dominating path in closed form works, for every continuous hider path. |
 | E10, E16 | The reductions of all searcher responses to a few explicit paths in Theorems 10 and 16 are informal (Theorem 16 applies Proposition 5 to a continuous mixture). Both are completed by lower bounds valid for every searcher path. |
 
 The proofs follow the paper's arguments. Where a step is wrong or missing, the proof departs from

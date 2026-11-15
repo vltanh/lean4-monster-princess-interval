@@ -332,7 +332,13 @@ private lemma s4t_payoff_E : ∫⁻ S, captureTime S hiderE ∂(sigma (7 / 9) un
 probability `7/9`, `s_Φ` with uniform `Φ` with probability `2/9`), the optimal response of the
 hider gives the value `13/9`. In particular `V ≤ 13/9`.
 
-The proof follows the paper, with one repair. (1) By Proposition 3 (`prop:3`, in the form
+The proof follows the paper's route ((9), (10), `p = 7/9`), with these departures, each needed
+because a step of the paper does not apply as stated (REPORT.md, Section 7): the hider path is
+replaced by one of speed at most `1` through `proposition3_of_continuous`, since the paper's
+smooth paths are not what Proposition 3 produces; (9) is used as a bound valid for every
+continuation after `y` (`equation9_le`), proved through Lemma 13 in integrated form
+(`s4_lemma13'`) rather than Lemmas 12 and 13 for smooth paths; and the reflection replaces the
+paper's "by Proposition 8, `H ≥ 0`". (1) By Proposition 3 (`prop:3`, in the form
 `proposition3_of_continuous`) every hider path `H` is dominated by a path `H'` of speed at most
 `1`. (2) `σ` is invariant under the reflection and `T(-S, -H') = T(S, H')`, so we may replace
 `H'` by `-H'` and assume that `H'` meets `A` first (the paper takes this for granted through the

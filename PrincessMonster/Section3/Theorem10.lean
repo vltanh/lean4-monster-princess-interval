@@ -2,6 +2,7 @@ module
 
 public import PrincessMonster.Section3.Strategies
 public import PrincessMonster.Section2.Greedy
+public import PrincessMonster.Section2.Dominance
 public import Mathlib.Order.Filter.Basic
 public import Mathlib.Topology.Instances.ENNReal.Lemmas
 public import Mathlib.Data.Fin.VecNotation
@@ -559,31 +560,29 @@ section Theorem10
 variable {ε : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 / 100)
 include hε hε1
 
-/-- Start at the end `1`. Departure from the paper: the paper cites Proposition 1 ("it is
-optimal to adopt strategy `A`"); here the six capture times are bounded directly from the speed
-limit, `P t ≥ 1 - t`. -/
+/-- The sweeper `A` concedes at least `97/75 - 7ε/25`: its six capture times are computed
+exactly (`s3b_T_A_E`, …), and the payoff is `(194 - 42ε)/150`. -/
+lemma s3b_pay_sweeperA : ENNReal.ofReal (97 / 75 - 7 * ε / 25) ≤ s3b_pay ε sweeperA :=
+  s3b_pay_ge (ca := 0) (cb := 2) (cf := 1 - ε / 2) (cf' := 2) (cg := 1 - 3 * ε / 2) (cg' := 2)
+    le_rfl (by norm_num) (by linarith) (by norm_num) (by linarith) (by norm_num)
+    s3b_T_A_E.ge s3b_T_A_nE.ge (s3b_T_A_F hε hε1).ge (s3b_T_A_nF hε hε1).ge
+    (s3b_T_A_G hε hε1).ge (s3b_T_A_nG hε hε1).ge (by linarith)
+
+/-- Start at the end `1`, following the paper: "If the searcher starts out from an end, then by
+Proposition 1 it is optimal to adopt strategy `A`". By Proposition 1 (`proposition1_start_one`)
+the sweeper `A` meets each of the six hider paths no later than `P`, so `P` concedes at least
+what `A` concedes. -/
 lemma s3b_start_one {P : C(ℝ≥0, ℝ)} (hP : P ∈ searcherPaths) (h0 : P 0 = 1) :
     ENNReal.ofReal (97 / 75 - 7 * ε / 25) ≤ s3b_pay ε P := by
-  have hlow : ∀ t : ℝ≥0, 1 - (t : ℝ) ≤ P t := fun t => by
-    have := (s3b_lip0 hP t).1; rwa [h0] at this
-  refine s3b_pay_ge (ca := 0) (cb := 2) (cf := 1 - ε / 2) (cf' := 2) (cg := 1 - 3 * ε / 2)
-    (cg' := 2) le_rfl (by norm_num) (by linarith) (by norm_num) (by linarith) (by norm_num)
-    (by simp) ?_ ?_ ?_ ?_ ?_ (by linarith)
-  · refine s3b_ofReal_le fun t ht => ne_of_gt ?_
-    change (-1 : ℝ) < P t
-    linarith [hlow t]
-  · refine s3b_ofReal_le fun t ht => ne_of_gt ?_
-    change max 0 (min 1 ((t : ℝ) + ε - 1)) < P t
-    have := hlow t; have := t.2; s3b_lin
-  · refine s3b_ofReal_le fun t ht => ne_of_gt ?_
-    change -max 0 (min 1 ((t : ℝ) + ε - 1)) < P t
-    have := hlow t; have := t.2; s3b_lin
-  · refine s3b_ofReal_le fun t ht => ne_of_gt ?_
-    change min 1 (max (min (1 / 2) (1 - ε - t)) (t - 1 + 3 * ε)) < P t
-    have := hlow t; have := t.2; s3b_lin
-  · refine s3b_ofReal_le fun t ht => ne_of_gt ?_
-    change -min 1 (max (min (1 / 2) (1 - ε - t)) (t - 1 + 3 * ε)) < P t
-    have := hlow t; have := t.2; s3b_lin
+  have hA := proposition1_start_one hP h0
+  have hE := searcherPaths_subset_hiderPaths hiderE_mem
+  have hF := searcherPaths_subset_hiderPaths (hiderF_mem (ε := ε))
+  have hG := searcherPaths_subset_hiderPaths (hiderG_mem hε.le)
+  refine (s3b_pay_sweeperA hε hε1).trans ?_
+  unfold s3b_pay
+  gcongr
+  exacts [hA _ hE, hA _ (neg_mem_hiderPaths hE), hA _ hF, hA _ (neg_mem_hiderPaths hF),
+    hA _ hG, hA _ (neg_mem_hiderPaths hG)]
 
 /-- Start at the centre `0`, reaching `-1` no later than `+1`. -/
 lemma s3b_start_zero {P : C(ℝ≥0, ℝ)} (hP : P ∈ searcherPaths) (h0 : P 0 = 0)
@@ -781,16 +780,18 @@ lemma s3b_lintegral_ge {ε : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 / 100) (S : se
 the hider strategy of the matrix game keeps the expected capture time above `97/75 - δ` against
 every searcher path, so the lower value is at least `97/75`.
 
-Proof (the paper's, made rigorous): by Proposition 5 the searcher's response to the six hider
+Departure from the paper: the paper reduces the searcher's responses to `A, B, C, D, M`
+informally and takes the value of the matrix game (4); here every greedy response is bounded
+directly. By Proposition 5 the searcher's response to the six hider
 paths `±E, ±F, ±G` (the column `H` has weight `0`) is dominated by a greedy path, which starts
 where one of them starts, at `±1`, `0` or `±1/2`; by symmetry the starts `1`, `0`, `1/2` suffice.
 The six capture times are then bounded case by case, giving an expected capture time of at least
 `97/75 - 7ε/25` against every searcher path. The weights are the optimal hider strategy `q` of
 `matrix4_value`; the entries of (4) (`equation4`) are not needed for the bound.
 
-Departure from the paper: for the start at an end the paper cites Proposition 1 ("it is optimal
-to adopt strategy `A`"); here the six capture times of any path starting at `1` are bounded
-directly from the speed limit (`s3b_start_one`), so Proposition 1 is not used. -/
+The start at an end follows the paper through Proposition 1 (`proposition1_start_one`): a path
+starting at `1` is dominated by the sweeper `A`, whose capture times are computed exactly
+(`s3b_start_one`). -/
 theorem theorem10 :
     (∀ δ : ℝ≥0∞, 0 < δ → ∀ᶠ ε in 𝓝[>] (0 : ℝ), ∀ S : searcherPaths,
         97 / 75 ≤ ∫⁻ H, captureTime S H ∂(strategy10 ε) + δ) ∧

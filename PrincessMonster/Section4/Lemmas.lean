@@ -1119,6 +1119,11 @@ end Payoff
 on `[-1, 1]`, and let `H` be a hider path of speed at most `1` that meets the sweeper `A` first,
 at time `y`, and then runs to the end `+1`. Then `V(s_Φ, H)` is given by (9), with `x = H(0)`.
 
+Departure from the paper: the expected time of the catches before `y` is computed by Lemma 13
+in integrated form for paths of speed at most `1` (`s4_lemma13'`, a layer-cake identity), not by
+Lemma 12 and an integration by parts, which need a smooth path (or a change of variables for
+Lipschitz functions, which Mathlib lacks in usable form).
+
 "First" is strict: a path that meets both sweepers at time `1` (where they cross, at `0`) and then
 runs to `+1` runs along `-A` and is met by the left runners at time `1`, not `2`; there (9) fails
 (for `H = F` with `ε = 0` and uniform `Φ` the payoff is `3/4`, while (9) gives `1`).
@@ -1172,7 +1177,8 @@ theorem equation9 (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonCla
     (intervalIntegral.integral_nonneg y.coe_nonneg fun t _ => s4_cdf_nonneg μ _)
 
 /-- **Formula (9)** (`eq:9`), as a bound: whatever the hider does after meeting the sweeper,
-`V(s_Φ, H)` is at most (9).
+`V(s_Φ, H)` is at most (9). Departure from the paper: as for `equation9`, the early catches are
+counted by `s4_lemma13'`.
 
 Proof: split `s_Φ` into the five groups of searchers of Lemma 11. The right runners starting in
 `(1 - 2y, H(0)]` and the left runners starting in `[H(0), 1)` contribute the two integrals of

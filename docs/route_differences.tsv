@@ -2,7 +2,6 @@
 prop:4	+claim:value	Proposition 4 presupposes the value and an optimal searcher strategy, which the paper takes from the Alpern–Gal minimax theorem in Section 1 (claim:value) without citing it there.
 main	+claim:value	The conclusion 15/11 ≤ V ≤ 13/9 presupposes that the value V exists (Section 1, claim:value).
 thm:10	-eq:4	Departure (E8): the paper reduces the searcher's responses to A, B, C, D, M informally and reads the value of (4); the formal proof bounds every greedy response (Proposition 5) directly, with the optimal hider weights of (4) (matrix4_value).
-thm:10	-prop:1	Departure (E8): for a searcher starting at an end the paper cites Proposition 1 ('optimal to adopt A'); Proposition 1 as stated does not give this, and the formal proof bounds such paths directly from the speed limit.
 lem:11	-prop:8	Departure (E10): the paper assumes H ≥ 0 'by Proposition 8', which concerns symmetric nonintersecting mixtures, not a single path; the formal proof treats both cases (A or -A met first) directly.
 lem:12	-prop:3	The speed bound that the paper obtains from Proposition 3 ('we may assume') is a hypothesis of the formal statement; Proposition 3 is applied where the reduction happens, in Theorem 14.
 lem:13	-lem:12	The formal Lemma 13 is the integration-by-parts identity that the paper states; Lemma 12 gives (7) its meaning but is not needed for the identity.
