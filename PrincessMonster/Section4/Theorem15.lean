@@ -195,8 +195,8 @@ private lemma s4t_captureTime_A_Hx {ε x : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 
     refine ne_of_gt (lt_of_le_of_lt (min_le_of_right_le (max_le_max (min_le_right _ _) le_rfl))
       (max_lt (by linarith) (by linarith)))
 
-private lemma s4t_captureTime_negA_Hx {ε x : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 / 4)
-    (hx : x ∈ Set.Icc (0 : ℝ) 1) : captureTime (-sweeperA) (pathHx ε x) = 2 := by
+private lemma s4t_captureTime_negA_Hx {ε x : ℝ} (hε : 0 < ε)
+    : captureTime (-sweeperA) (pathHx ε x) = 2 := by
   refine le_antisymm (s4t_captureTime_negA_le_two
     (searcherPaths_subset_hiderPaths (pathHx_mem hε))) ?_
   have h := le_captureTime_of_ne (S := -sweeperA) (H := pathHx ε x) (c := 2) fun t ht => by
@@ -209,7 +209,7 @@ private lemma s4t_lintegral_symDiracS_Hx {ε x : ℝ} (hε : 0 < ε) (hε1 : ε 
     (hx : x ∈ Set.Icc (0 : ℝ) 1) :
     ∫⁻ S, captureTime S (pathHx ε x) ∂(symDiracS sweeperA) =
       ENNReal.ofReal (1 / 2 * (1 - 3 * ε / 2 + 2)) := by
-  rw [s4t_lintegral_symDiracS, s4t_captureTime_A_Hx hε hε1, s4t_captureTime_negA_Hx hε hε1 hx,
+  rw [s4t_lintegral_symDiracS, s4t_captureTime_A_Hx hε hε1, s4t_captureTime_negA_Hx hε,
     ENNReal.ofReal_mul (by norm_num), ENNReal.ofReal_add (by linarith) (by norm_num),
     ENNReal.ofReal_div_of_pos two_pos]
   simp [ENNReal.ofReal]
@@ -335,7 +335,7 @@ theorem equation12 (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonCl
       Real.coe_toNNReal _ (by linarith [hε.2])
     have h9 := equation9 μ hμ (pathHx_mem hε.1) hA
       (by
-        rw [hA, s4t_captureTime_negA_Hx hε.1 hε.2.le hx]
+        rw [hA, s4t_captureTime_negA_Hx hε.1]
         have : (1 - 3 * ε / 2).toNNReal < 2 := by
           rw [← NNReal.coe_lt_coe, ht₀]; norm_num; linarith [hε.1]
         exact_mod_cast this)

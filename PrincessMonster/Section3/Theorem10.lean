@@ -456,7 +456,7 @@ noncomputable def s3b_pay (ε : ℝ) (P : C(ℝ≥0, ℝ)) : ℝ≥0∞ :=
     24 / 75 * (1 / 2 * (captureTime P (hiderF ε) + captureTime P (-hiderF ε))) +
     20 / 75 * (1 / 2 * (captureTime P (hiderG ε) + captureTime P (-hiderG ε)))
 
-lemma s3b_lintegral {ε : ℝ} (hε : 0 ≤ ε) (hε1 : ε ≤ 1 / 4) (S : C(ℝ≥0, ℝ)) :
+lemma s3b_lintegral {ε : ℝ} (hε : 0 ≤ ε) (S : C(ℝ≥0, ℝ)) :
     ∫⁻ H, captureTime S H ∂(strategy10 ε) = s3b_pay ε S := by
   have hE := searcherPaths_subset_hiderPaths hiderE_mem
   have hF := searcherPaths_subset_hiderPaths (hiderF_mem (ε := ε))
@@ -731,7 +731,7 @@ end Theorem10
 noncomputable def s3b_hs (ε : ℝ) : Fin 6 → C(ℝ≥0, ℝ) :=
   ![hiderE, -hiderE, hiderF ε, -hiderF ε, hiderG ε, -hiderG ε]
 
-lemma s3b_hs_mem {ε : ℝ} (hε : 0 ≤ ε) (hε1 : ε ≤ 1 / 4) (j : Fin 6) :
+lemma s3b_hs_mem {ε : ℝ} (hε : 0 ≤ ε) (j : Fin 6) :
     s3b_hs ε j ∈ searcherPaths := by
   have hF := hiderF_mem (ε := ε)
   have hG := hiderG_mem hε
@@ -766,8 +766,8 @@ lemma s3b_hs_zero {ε : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 / 100) (j : Fin 6) 
 by Proposition 5 it is dominated by a greedy path, which starts at a hider's starting point. -/
 lemma s3b_lintegral_ge {ε : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 / 100) (S : searcherPaths) :
     ENNReal.ofReal (97 / 75 - 7 * ε / 25) ≤ ∫⁻ H, captureTime S H ∂(strategy10 ε) := by
-  rw [s3b_lintegral hε.le (by linarith) S]
-  have hmem := s3b_hs_mem hε.le (by linarith)
+  rw [s3b_lintegral hε.le S]
+  have hmem := s3b_hs_mem hε.le
   obtain ⟨σ, hσ⟩ := proposition5 (s3b_hs ε) hmem S.2
   have hGr : greedyOrder (s3b_hs ε) σ ∈ searcherPaths := greedyOrder_mem hmem σ
   have h0 := s3b_hs_zero hε hε1 (σ 0)
