@@ -169,7 +169,8 @@ theorem value_exists :
       (∃ μ : ProbabilityMeasure searcherPaths,
         ⨆ H : hiderPaths, ∫⁻ S, captureTime S H ∂(μ : Measure searcherPaths) = upperValue) ∧
       ∀ ε : ℝ≥0∞, 0 < ε → ∃ (s : Finset hiderPaths) (w : hiderPaths → ℝ≥0∞),
-        ∑ H ∈ s, w H = 1 ∧ lowerValue ≤ (⨅ S : searcherPaths, ∑ H ∈ s, w H * captureTime S H) + ε := by
+        ∑ H ∈ s, w H = 1 ∧
+          lowerValue ≤ (⨅ S : searcherPaths, ∑ H ∈ s, w H * captureTime S H) + ε := by
   have hne : Nonempty searcherPaths := ⟨⟨val_sweep, val_sweep_mem⟩⟩
   -- the minimax theorem of Alpern and Gal
   obtain ⟨hopt, hval⟩ := External.AlpernGal.minimax (X := searcherPaths) (Y := hiderPaths)

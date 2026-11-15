@@ -1,6 +1,7 @@
 module
 
-public import Mathlib.MeasureTheory.Measure.MeasureSpace
+public import Mathlib.MeasureTheory.Measure.Basic
+public import Mathlib.MeasureTheory.Measure.CompleteLattice
 public import Mathlib.MeasureTheory.Integral.Lebesgue.Map
 
 /-!
@@ -41,6 +42,7 @@ private lemma val_le_half_add {a b c : ℝ≥0∞} (ha : c ≤ a) (hb : c ≤ b)
           ENNReal.ofNat_ne_top, one_mul]
     _ ≤ (1 / 2 : ℝ≥0∞) * (a + b) := by gcongr
 
+omit [MeasurableSpace Y] in
 /-- **Alpern and Asic (1985), Theorem 3**, for the minimizer, with the group `{id, φ}`: if the
 payoff is invariant under the involutions `φX`, `φY`, the symmetrization of a mixed strategy `μ`
 guarantees at least as much as `μ`. -/
@@ -58,6 +60,7 @@ theorem theorem3_minimizer (f : X → Y → ℝ≥0∞) (hf : ∀ y, Measurable 
   exact val_half_add_le (le_iSup (fun y => ∫⁻ x, f x y ∂μ) y)
     (le_iSup (fun y => ∫⁻ x, f x y ∂μ) (φY y))
 
+omit [MeasurableSpace X] in
 /-- **Alpern and Asic (1985), Theorem 3**, for the maximizer, with the group `{id, φ}`. -/
 theorem theorem3_maximizer (f : X → Y → ℝ≥0∞) (hf : ∀ x, Measurable fun y => f x y)
     (φX : X → X) (φY : Y → Y) (hφY : Measurable φY) (hφX : Function.Involutive φX)

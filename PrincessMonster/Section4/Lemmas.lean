@@ -1180,7 +1180,8 @@ Lemma 13'; the right runners starting above `H(0)` catch `H` by time `y`, those 
 `1 - 2y` by time `4`, and the left runners starting below `H(0)` by time `2`. -/
 theorem equation9_le (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonClass μ] (hμ : μ Iᶜ = 0)
     {H : C(ℝ≥0, ℝ)} (hH : H ∈ searcherPaths) {y : ℝ≥0}
-    (hyA : captureTime sweeperA H = y) (hfirst : captureTime sweeperA H ≤ captureTime (-sweeperA) H) :
+    (hyA : captureTime sweeperA H = y)
+    (hfirst : captureTime sweeperA H ≤ captureTime (-sweeperA) H) :
     ∫⁻ S, captureTime S H ∂(sPhi μ) ≤ ENNReal.ofReal (formula9 (cdf μ) (H 0) y (realPath H)) := by
   obtain ⟨hy1, hHy, -⟩ := s4_meetA hH hyA hfirst
   have hI : ∀ᵐ x ∂μ, x ∈ I := by rw [ae_iff]; exact hμ

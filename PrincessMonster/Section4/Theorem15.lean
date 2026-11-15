@@ -206,7 +206,7 @@ private lemma s4t_captureTime_negA_Hx {ε x : ℝ} (hε : 0 < ε)
   simpa using h
 
 private lemma s4t_lintegral_symDiracS_Hx {ε x : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 / 4)
-    (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+    :
     ∫⁻ S, captureTime S (pathHx ε x) ∂(symDiracS sweeperA) =
       ENNReal.ofReal (1 / 2 * (1 - 3 * ε / 2 + 2)) := by
   rw [s4t_lintegral_symDiracS, s4t_captureTime_A_Hx hε hε1, s4t_captureTime_negA_Hx hε,
@@ -359,7 +359,7 @@ theorem equation12 (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonCl
     rw [show 1 / 2 * (1 - 3 * (0 : ℝ) / 2 + 2) = 3 / 2 by norm_num, ← s4t_ofReal_frac] at hlim
     refine Tendsto.congr' ?_ hlim
     filter_upwards [Ioo_mem_nhdsGT (by norm_num : (0 : ℝ) < 1 / 4)] with ε hε
-    exact (s4t_lintegral_symDiracS_Hx hε.1 hε.2.le hx).symm
+    exact (s4t_lintegral_symDiracS_Hx hε.1 hε.2.le).symm
 
 /-! ### Lower Riemann sums for (12) -/
 

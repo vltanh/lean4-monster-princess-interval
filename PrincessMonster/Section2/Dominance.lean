@@ -243,7 +243,8 @@ The dominating path is the end-sweeping one of `proposition1_sweeping`. Departur
 paper: the paper's `S*` (equal to `S` up to the first end time `t₀`, then `1 + t₀ - t`) leaves the
 interval after `t₀ + 2`; here it turns back at each end and keeps sweeping (a triangle wave). -/
 theorem proposition1 {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherPaths) :
-    ∃ S' ∈ searcherPaths, EndReflecting S' ∧ ∀ H ∈ hiderPaths, captureTime S' H ≤ captureTime S H := by
+    ∃ S' ∈ searcherPaths, EndReflecting S' ∧
+      ∀ H ∈ hiderPaths, captureTime S' H ≤ captureTime S H := by
   obtain ⟨S', hS', hsw, hdom⟩ := dom_exists_endSweeping hS
   exact ⟨S', hS', fun t₀ ht₀ t h1 h2 => hsw t₀ ht₀ t h1 (by linarith), hdom⟩
 
@@ -254,13 +255,15 @@ Departure from the paper: the paper's `S*` (equal to `S` up to the first end tim
 `1 + t₀ - t`) leaves the interval after `t₀ + 2`; here it turns back at each end and keeps
 sweeping (a triangle wave). -/
 theorem proposition1_sweeping {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherPaths) :
-    ∃ S' ∈ searcherPaths, EndSweeping S' ∧ ∀ H ∈ hiderPaths, captureTime S' H ≤ captureTime S H := by
+    ∃ S' ∈ searcherPaths, EndSweeping S' ∧
+      ∀ H ∈ hiderPaths, captureTime S' H ≤ captureTime S H := by
   exact dom_exists_endSweeping hS
 
 /-- **Proposition 2** (`prop:2`). Every pure hider strategy is dominated by one which is
 end-absorbing. -/
 theorem proposition2 {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths) :
-    ∃ H' ∈ hiderPaths, EndAbsorbing H' ∧ ∀ S ∈ searcherPaths, captureTime S H ≤ captureTime S H' := by
+    ∃ H' ∈ hiderPaths, EndAbsorbing H' ∧
+      ∀ S ∈ searcherPaths, captureTime S H ≤ captureTime S H' := by
   by_cases hne : ∃ t, H t = 1 ∨ H t = -1
   · obtain ⟨t₀, ht₀, hfirst⟩ := dom_first_end_time H hne
     -- `H'` agrees with `H` up to `t₀` and then stays at the end `H t₀`

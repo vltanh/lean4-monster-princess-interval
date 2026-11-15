@@ -107,7 +107,8 @@ lemma hiderF_mem {ε : ℝ} : hiderF ε ∈ searcherPaths :=
   pathOf_mem_searcherPaths _
     (fun s t => abs_max_sub_max_le_of (by simp)
       (abs_min_sub_min_le_of (by simp) (le_of_eq (by ring_nf))))
-    (fun t _ => ⟨by linarith [le_max_left 0 (min 1 (t + ε - 1))], max_le (by norm_num) (min_le_left _ _)⟩)
+    (fun t _ => ⟨by linarith [le_max_left 0 (min 1 (t + ε - 1))],
+      max_le (by norm_num) (min_le_left _ _)⟩)
 
 lemma hiderG_mem {ε : ℝ} (hε : 0 ≤ ε) : hiderG ε ∈ searcherPaths :=
   pathOf_mem_searcherPaths _

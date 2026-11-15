@@ -99,7 +99,8 @@ theorem proposition4 :
         ⨆ H : hiderPaths, ∫⁻ S, captureTime S H ∂(μ : Measure searcherPaths) = upperValue) ∧
     ∀ ε : ℝ≥0∞, 0 < ε → ∃ ν : ProbabilityMeasure hiderPaths,
         (ν : Measure hiderPaths).map reflectH = ν ∧
-        lowerValue ≤ (⨅ S : searcherPaths, ∫⁻ H, captureTime S H ∂(ν : Measure hiderPaths)) + ε := by
+        lowerValue ≤
+          (⨅ S : searcherPaths, ∫⁻ H, captureTime S H ∂(ν : Measure hiderPaths)) + ε := by
   obtain ⟨hval, ⟨μ₀, hμ₀⟩, -⟩ := value_exists
   refine ⟨?_, fun ε hε => ?_⟩
   · -- the searcher: symmetrize an optimal strategy (Alpern and Asic, Theorem 3)
