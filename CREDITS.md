@@ -48,20 +48,25 @@ How it was made:
 - **Integration and checks.** The coordinating session committed each agent's work after checking
   its statements against the baseline. It then ran the axiom audit, the route check and
   Comparator, and removed unused hypotheses in three rounds.
-- **The report.** The coordinating session wrote [`REPORT.md`](REPORT.md), and an independent
-  agent checked its findings against the paper, by recomputation, and against the literature (it
-  found the two later theses and several overstated claims, which were corrected). A further agent
-  explored follow-up papers, which are kept private.
+- **The report.** The coordinating session wrote [`REPORT.md`](REPORT.md). An independent agent
+  checked its findings against the paper, by recomputation, and against the literature; it found
+  the two later theses and several overstated claims, which were corrected.
+- **Proof review.** Another independent agent compared every formal proof with the paper's. It
+  found one departure that was not necessary (Theorem 10's start at an end) and two inaccurate
+  descriptions (Propositions 3 and 7). The two agents that wrote those proofs were resumed: one
+  added [`proposition1_start_one`](PrincessMonster/Section2/Dominance.lean#L268), the other made Theorem 10 use it, and the descriptions were
+  corrected.
+- **Follow-up papers.** A further agent explored follow-up papers, which are kept private.
 
 Figures, from 2026-11-14 16:00 CST (UTC−06:00) to the commit that completes [`REPORT.md`](REPORT.md)
-(18:41 CST), from the Claude Code transcripts:
+(18:57 CST), from the Claude Code transcripts:
 
-- elapsed time: 2.7 hours;
-- sub-agents: 11, at most 8 running at once, 4.2 hours of agent time in total;
-- tool calls: 613 by the sub-agents and 210 by the main session;
-- tokens, sub-agents: 1.53M output, 2.75M input, 104M cache reads;
-- tokens, main session: 0.50M output, 0.75M input, 106M cache reads;
-- model calls: 782, all to `claude-opus-5-5` (202 by the main session, 580 by the sub-agents).
+- elapsed time: 2.9 hours;
+- sub-agents: 12, at most 8 running at once, 4.7 hours of agent time in total, 2 resumptions;
+- tool calls: 702 by the sub-agents and 232 by the main session;
+- tokens, sub-agents: 1.65M output, 3.62M input, 121M cache reads;
+- tokens, main session: 0.52M output, 0.79M input, 124M cache reads;
+- model calls: 884, all to `claude-opus-5-5` (225 by the main session, 659 by the sub-agents).
 
 The figures count the coordinating session and its sub-agents up to that commit. The
 exploration of follow-up papers, still running then, is counted only up to that time, and the

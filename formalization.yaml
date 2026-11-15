@@ -86,9 +86,9 @@ automation:
     - method: "agent"
       models: ["claude-opus-5-5"]
       framework: "Claude Code 2.1.325"
-      tool_setup: "formalize-math-paper skill (https://github.com/vltanh/formalize-math-paper; a local copy differing from commit e339f64 of 2026-10-17); one coordinating Claude Code session with 11 sub-agents (statement review, 8 parallel proving agents, report check, follow-up exploration), at most 8 at once; Lean v4.36.0-rc2, Mathlib v4.36.0-rc2"
+      tool_setup: "formalize-math-paper skill (https://github.com/vltanh/formalize-math-paper; a local copy differing from commit e339f64 of 2026-10-17); one coordinating Claude Code session with 12 sub-agents (statement review, 8 parallel proving agents, report check, proof review, follow-up exploration), at most 8 at once; Lean v4.36.0-rc2, Mathlib v4.36.0-rc2"
       cost:
-        wall_time: "2.7 hours elapsed to the completed audit report; 4.2 hours of sub-agent time"
+        wall_time: "2.9 hours elapsed to the completed audit report; 4.7 hours of sub-agent time"
         spend_usd: "not tracked"
         hardware: "local machine (20 cores, 62 GB RAM)"
       prompting_notes: "The maintainer invoked the skill on the paper's PDF and asked to treat the repository as the paper's formalization."
@@ -107,10 +107,11 @@ fidelity:
     limit -1; formula (15) is corrected; the cited minimax theorem is stated for a nonempty
     space. Proofs that depart from the paper's (each reported in its docstring and in REPORT.md,
     Section 7): Proposition 1 (the dominating path continues by sweeping; the paper's leaves
-    [-1, 1]); Proposition 3 (the dominating path in closed form; the paper's induction can stall);
+    [-1, 1]); Proposition 3 (a different dominating path in closed form, with the paper's domination
+    argument; the paper's induction can stall);
     Proposition 7's extension to finite mixtures (no argument in the paper; quantile paths);
-    Theorem 10 (lower bounds for every greedy response instead of an informal enumeration;
-    the start at an end bounded directly instead of by Proposition 1); Lemma 11 and Theorem 14
+    Theorem 10 (lower bounds for every greedy response instead of an informal enumeration of five
+    responses); Lemma 11 and Theorem 14
     (both sweeper cases directly, where the paper applies Proposition 8 to a single path);
     Lemma 12 and formula (9) (a layer-cake identity for paths of speed at most 1, where the paper
     argues to first order for smooth paths); Theorem 16 (lower bounds for every searcher path,
@@ -124,7 +125,8 @@ review:
     - "none"
   notes: >-
     The statements were checked against the paper by an independent AI agent before the proofs
-    were written; REPORT.md's findings were checked by another. Comparator accepts the Solution
+    were written; REPORT.md's findings were checked by another, and the formal proofs were
+    compared with the paper's by a third. Comparator accepts the Solution
     under the Lean kernel and nanoda. No person has reviewed the proofs.
 
 alignment:
