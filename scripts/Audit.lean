@@ -75,6 +75,7 @@ meta def externalResults : List (String × Name) :=
 meta def paperResults : List (String × Name) :=
   [("Value (Sec. 1)", ``PrincessMonster.value_exists),
    ("Prop 1", ``PrincessMonster.proposition1),
+   ("Prop 1 (to the other end)", ``PrincessMonster.proposition1_sweeping),
    ("Prop 2", ``PrincessMonster.proposition2),
    ("Prop 3", ``PrincessMonster.proposition3),
    ("Prop 3 (continuous H)", ``PrincessMonster.proposition3_of_continuous),
@@ -91,6 +92,7 @@ meta def paperResults : List (String × Name) :=
    ("Lemma 11", ``PrincessMonster.lemma11),
    ("Lemma 12", ``PrincessMonster.lemma12),
    ("Lemma 13", ``PrincessMonster.lemma13),
+   ("Lemma 13' (speed ≤ 1)", ``PrincessMonster.s4_lemma13'),
    ("(9)", ``PrincessMonster.equation9),
    ("(9) bound", ``PrincessMonster.equation9_le),
    ("(10)", ``PrincessMonster.equation10),

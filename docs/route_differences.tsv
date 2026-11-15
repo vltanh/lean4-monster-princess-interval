@@ -1,0 +1,14 @@
+# label	±other	reason (each departure is also stated in the Lean docstring and in REPORT.md, Section 7)
+prop:4	+claim:value	Proposition 4 presupposes the value and an optimal searcher strategy, which the paper takes from the Alpern–Gal minimax theorem in Section 1 (claim:value) without citing it there.
+main	+claim:value	The conclusion 15/11 ≤ V ≤ 13/9 presupposes that the value V exists (Section 1, claim:value).
+thm:10	-eq:4	Departure (E8): the paper reduces the searcher's responses to A, B, C, D, M informally and reads the value of (4); the formal proof bounds every greedy response (Proposition 5) directly, with the optimal hider weights of (4) (matrix4_value).
+thm:10	-prop:1	Departure (E8): for a searcher starting at an end the paper cites Proposition 1 ('optimal to adopt A'); Proposition 1 as stated does not give this, and the formal proof bounds such paths directly from the speed limit.
+lem:11	-prop:8	Departure (E10): the paper assumes H ≥ 0 'by Proposition 8', which concerns symmetric nonintersecting mixtures, not a single path; the formal proof treats both cases (A or -A met first) directly.
+lem:12	-prop:3	The speed bound that the paper obtains from Proposition 3 ('we may assume') is a hypothesis of the formal statement; Proposition 3 is applied where the reduction happens, in Theorem 14.
+lem:13	-lem:12	The formal Lemma 13 is the integration-by-parts identity that the paper states; Lemma 12 gives (7) its meaning but is not needed for the identity.
+eq:10	-eq:9	(10) is the evaluation, for the uniform distribution, of the right-hand side of (9) (formula9); it does not need the identity (9) itself.
+thm:16	-eq:15	Departure (E17): Proposition 5 does not apply to the continuous hider mixture and the reduction to S1, S2 is left to the reader; the formal proof bounds every searcher path directly, so (15) is not needed.
+thm:16	-prop:5	Departure (E17): see the previous line; Proposition 5 needs finitely many hider paths.
+sec:3	-thm:9	The display asserts strict inequalities 97/75 < V < 47/32, which Theorems 9 and 10 do not give (they give ≤); they follow from the main result (E9).
+sec:3	-thm:10	See the previous line.
+sec:3	+main	See the previous lines: the strict inequalities come from 15/11 ≤ V ≤ 13/9.
