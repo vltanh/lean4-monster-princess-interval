@@ -549,6 +549,11 @@ interval* in *Advances in Dynamic Games and Their Applications* (Annals of the I
   bachelor's thesis, Utrecht, January 2018 ([record](https://studenttheses.uu.nl/handle/20.500.12932/29143)).
   It presents the circle and the paper's results on the interval, with (15) corrected as in
   Geupel's thesis.
+- S. Alpern, *A simple open problem in search games on an interval*, §4.1 of S. Angelopoulos,
+  P. Fraigniaud, F. V. Fomin, N. Nisse and D. M. Thilikos, *Report on GRASTA 2017*
+  ([HAL lirmm-01645614](https://hal-lirmm.ccsd.cnrs.fr/lirmm-01645614), 2017). It poses the game on
+  `[0, 1]` as open, notes that the sweep guarantees `3/4` (that is, `3/2` on `[-1, 1]`) and that
+  the searcher can do better, and cites the paper.
 - No published work found improves the bounds `15/11 ≤ V ≤ 13/9` or settles the conjecture
   `V = 1.4`. Wikipedia's article ([Princess and monster game](https://en.wikipedia.org/wiki/Princess_and_monster_game))
   says the value on the interval has been estimated only approximately.
