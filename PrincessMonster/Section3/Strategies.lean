@@ -78,7 +78,7 @@ lemma pathOf_triangleWave_mem {g : ℝ → ℝ} (hg : Continuous g) (hL : ∀ s 
     pathOf (fun t => Real.triangleWave (g t)) (by fun_prop) ∈ searcherPaths :=
   pathOf_mem_searcherPaths _
     (fun s t => (Real.abs_triangleWave_sub_le _ _).trans (hL s t))
-    (fun t _ => Real.triangleWave_mem_Icc _)
+    (fun _ _ => Real.triangleWave_mem_Icc _)
 
 lemma sweeperA_mem : sweeperA ∈ searcherPaths :=
   pathOf_triangleWave_mem (by fun_prop) fun s t => by
@@ -103,13 +103,13 @@ lemma stratM_mem : stratM ∈ searcherPaths :=
 lemma hiderE_mem : hiderE ∈ searcherPaths :=
   ⟨fun _ => by simp [hiderE], fun _ _ => by simp [hiderE]⟩
 
-lemma hiderF_mem {ε : ℝ} (hε : 0 ≤ ε) (hε1 : ε ≤ 1) : hiderF ε ∈ searcherPaths :=
+lemma hiderF_mem {ε : ℝ} : hiderF ε ∈ searcherPaths :=
   pathOf_mem_searcherPaths _
     (fun s t => abs_max_sub_max_le_of (by simp)
       (abs_min_sub_min_le_of (by simp) (le_of_eq (by ring_nf))))
     (fun t _ => ⟨by linarith [le_max_left 0 (min 1 (t + ε - 1))], max_le (by norm_num) (min_le_left _ _)⟩)
 
-lemma hiderG_mem {ε : ℝ} (hε : 0 ≤ ε) (hε1 : ε ≤ 1 / 4) : hiderG ε ∈ searcherPaths :=
+lemma hiderG_mem {ε : ℝ} (hε : 0 ≤ ε) : hiderG ε ∈ searcherPaths :=
   pathOf_mem_searcherPaths _
     (fun s t => abs_min_sub_min_le_of (by simp)
       (abs_max_sub_max_le_of (abs_min_sub_min_le_of (by simp)
@@ -117,7 +117,7 @@ lemma hiderG_mem {ε : ℝ} (hε : 0 ≤ ε) (hε1 : ε ≤ 1 / 4) : hiderG ε �
         (le_of_eq (by ring_nf))))
     (fun t ht => ⟨le_min (by norm_num) (le_max_of_le_right (by linarith)), min_le_left _ _⟩)
 
-lemma hiderH_mem {ε : ℝ} (hε : 0 ≤ ε) (hε1 : ε ≤ 1 / 2) : hiderH ε ∈ searcherPaths :=
+lemma hiderH_mem {ε : ℝ} : hiderH ε ∈ searcherPaths :=
   pathOf_mem_searcherPaths _
     (fun s t => abs_min_sub_min_le_of (by simp)
       (abs_max_sub_max_le_of (by simp) (le_of_eq (by ring_nf))))

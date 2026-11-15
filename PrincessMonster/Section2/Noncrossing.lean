@@ -88,7 +88,7 @@ private lemma dom_captureTime_le_inf {S H₁ H₂ : C(ℝ≥0, ℝ)} {t₁ : ℝ
 is dominated by the noncrossing strategy that mixes `H₁ ∧ H₂, H₁ ∨ H₂` with equal probability:
 against every searcher path the sum of the two capture times does not decrease. -/
 theorem proposition7 {H₁ H₂ : C(ℝ≥0, ℝ)} (h₁ : H₁ ∈ hiderPaths) (h₂ : H₂ ∈ hiderPaths)
-    {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherPaths) :
+    {S : C(ℝ≥0, ℝ)} :
     captureTime S H₁ + captureTime S H₂ ≤ captureTime S (H₁ ⊓ H₂) + captureTime S (H₁ ⊔ H₂) := by
   -- renumber so that `H₁` is caught first
   wlog h12 : captureTime S H₁ ≤ captureTime S H₂ generalizing H₁ H₂

@@ -459,8 +459,8 @@ noncomputable def s3b_pay (ε : ℝ) (P : C(ℝ≥0, ℝ)) : ℝ≥0∞ :=
 lemma s3b_lintegral {ε : ℝ} (hε : 0 ≤ ε) (hε1 : ε ≤ 1 / 4) (S : C(ℝ≥0, ℝ)) :
     ∫⁻ H, captureTime S H ∂(strategy10 ε) = s3b_pay ε S := by
   have hE := searcherPaths_subset_hiderPaths hiderE_mem
-  have hF := searcherPaths_subset_hiderPaths (hiderF_mem hε (by linarith))
-  have hG := searcherPaths_subset_hiderPaths (hiderG_mem hε hε1)
+  have hF := searcherPaths_subset_hiderPaths (hiderF_mem (ε := ε))
+  have hG := searcherPaths_subset_hiderPaths (hiderG_mem hε)
   simp only [strategy10, symDiracH, lintegral_add_measure, lintegral_smul_measure,
     lintegral_dirac, s3b_toHider hE, s3b_toHider hF, s3b_toHider hG,
     s3b_toHider (neg_mem_hiderPaths hE), s3b_toHider (neg_mem_hiderPaths hF),
@@ -733,8 +733,8 @@ noncomputable def s3b_hs (ε : ℝ) : Fin 6 → C(ℝ≥0, ℝ) :=
 
 lemma s3b_hs_mem {ε : ℝ} (hε : 0 ≤ ε) (hε1 : ε ≤ 1 / 4) (j : Fin 6) :
     s3b_hs ε j ∈ searcherPaths := by
-  have hF := hiderF_mem hε (by linarith)
-  have hG := hiderG_mem hε hε1
+  have hF := hiderF_mem (ε := ε)
+  have hG := hiderG_mem hε
   fin_cases j
   exacts [hiderE_mem, neg_mem_searcherPaths hiderE_mem, hF, neg_mem_searcherPaths hF, hG,
     neg_mem_searcherPaths hG]

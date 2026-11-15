@@ -35,7 +35,7 @@ noncomputable def pathHx (ε x : ℝ) : C(ℝ≥0, ℝ) :=
 
 /-- `H_x` has speed at most `1` and stays in `[-1, 1]`: it is a minimum and maximum of unit-speed
 motions, cut off at `1`, and it never goes below `3ε - 1`. -/
-lemma pathHx_mem {ε x : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 / 4) (hx : x ∈ Set.Icc (0 : ℝ) 1) :
+lemma pathHx_mem {ε x : ℝ} (hε : 0 < ε) :
     pathHx ε x ∈ searcherPaths :=
   pathOf_mem_searcherPaths _
     (fun s t => abs_min_sub_min_le_of (by simp)
@@ -49,7 +49,7 @@ variational integral (8) over this path is
 `(Φ(x)(1 - x) + ∫_{-1}^{-x} Φ + ∫_{1-2y}^{x} Φ)/2`. The paper prints the lower limit of the first
 integral as `0`; the computation gives `-1`, and only `-1` agrees with (12). -/
 theorem equation11 {Φ : ℝ → ℝ} (hΦ : Continuous Φ) (hΦ₀ : Φ (-1) = 0) {x y : ℝ}
-    (hx : x ∈ Set.Icc (0 : ℝ) 1) (hy : (1 - x) / 2 ≤ y) (hy1 : y ≤ 1) :
+    (hx : x ∈ Set.Icc (0 : ℝ) 1) (hy : (1 - x) / 2 ≤ y) :
     (∫ t in (0 : ℝ)..y, (Φ (-t + min (x + t) (1 - t)) + Φ (-t - min (x + t) (1 - t)))) =
       1 / 2 * (Φ x * (1 - x) + (∫ t in (-1 : ℝ)..(-x), Φ t) + ∫ t in (1 - 2 * y)..x, Φ t) := by
   have ha0 : 0 ≤ (1 - x) / 2 := by linarith [hx.2]
@@ -198,7 +198,7 @@ private lemma s4t_captureTime_A_Hx {ε x : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 
 private lemma s4t_captureTime_negA_Hx {ε x : ℝ} (hε : 0 < ε) (hε1 : ε ≤ 1 / 4)
     (hx : x ∈ Set.Icc (0 : ℝ) 1) : captureTime (-sweeperA) (pathHx ε x) = 2 := by
   refine le_antisymm (s4t_captureTime_negA_le_two
-    (searcherPaths_subset_hiderPaths (pathHx_mem hε hε1 hx))) ?_
+    (searcherPaths_subset_hiderPaths (pathHx_mem hε))) ?_
   have h := le_captureTime_of_ne (S := -sweeperA) (H := pathHx ε x) (c := 2) fun t ht => by
     have ht' : (t : ℝ) < 2 := by exact_mod_cast ht
     rw [s4t_negA_apply ht'.le, s4t_pathHx_apply]
@@ -322,7 +322,7 @@ theorem equation12 (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonCl
           min_eq_right (min_le_of_right_le (by linarith [ht.1]))]
       simp only [this]
     rw [hx0, show (1 : ℝ) - 3 * 0 / 2 = 1 by norm_num, formula9, hint,
-      equation11 hΦc hΦm1 hx (by linarith [hx.1]) le_rfl, show (1 : ℝ) - 2 * 1 = -1 by norm_num,
+      equation11 hΦc hΦm1 hx (by linarith [hx.1]), show (1 : ℝ) - 2 * 1 = -1 by norm_num,
       hΦm1]
     ring
   -- for `0 < ε < 1/4`, (9) gives the payoff exactly
@@ -333,7 +333,7 @@ theorem equation12 (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonCl
     have hA := s4t_captureTime_A_Hx (x := x) hε.1 hε.2.le
     have ht₀ : (((1 - 3 * ε / 2).toNNReal : ℝ≥0) : ℝ) = 1 - 3 * ε / 2 :=
       Real.coe_toNNReal _ (by linarith [hε.2])
-    have h9 := equation9 μ hμ (pathHx_mem hε.1 hε.2.le hx) hA
+    have h9 := equation9 μ hμ (pathHx_mem hε.1) hA
       (by
         rw [hA, s4t_captureTime_negA_Hx hε.1 hε.2.le hx]
         have : (1 - 3 * ε / 2).toNNReal < 2 := by
@@ -494,7 +494,7 @@ theorem theorem15 (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonCla
   obtain ⟨ε, hε1, hε2⟩ := ((hlim.eventually_const_lt hL).and
     (Ioo_mem_nhdsGT (by norm_num : (0 : ℝ) < 1 / 4))).exists
   have hmem : ∀ x ∈ Set.Icc (0 : ℝ) 1, pathHx ε x ∈ hiderPaths := fun x hx =>
-    searcherPaths_subset_hiderPaths (pathHx_mem hε2.1 hε2.2.le hx)
+    searcherPaths_subset_hiderPaths (pathHx_mem hε2.1)
   refine ⟨ENNReal.ofReal (37 / 237) • Measure.dirac (toHider hiderE) +
     ENNReal.ofReal (148 / 237) • Measure.dirac (toHider (pathHx ε 1)) +
     ENNReal.ofReal (24 / 237) • Measure.dirac (toHider (pathHx ε 0)) +

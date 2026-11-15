@@ -471,7 +471,7 @@ one with speed bounded by `1`.
 Departure from the paper: the inductive construction of `H*` is replaced by a closed formula for
 the same path (the construction can stall: `τ` may equal `t₀`, and the times may accumulate).
 Smoothness is not used; see `proposition3_of_continuous`. -/
-theorem proposition3 {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths) (hsmooth : Smooth H) :
+theorem proposition3 {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths) (_hsmooth : Smooth H) :
     ∃ H' ∈ searcherPaths, ∀ S ∈ searcherPaths, captureTime S H ≤ captureTime S H' :=
   dom_exists_dominating hH
 
