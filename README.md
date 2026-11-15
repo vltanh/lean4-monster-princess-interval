@@ -1,5 +1,7 @@
 # The princess and monster game on an interval — a Lean formalization
 
+[![Lean Action CI](https://github.com/vltanh/lean4-monster-princess-interval/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/vltanh/lean4-monster-princess-interval/actions/workflows/lean_action_ci.yml)
+
 A searcher (the monster) and a hider (the princess) move in the interval `[-1, 1]` without seeing
 each other. The searcher has speed at most `1`; the hider may move as she likes. The searcher pays
 the hider the time until they meet. S. Alpern, R. Fokkink, R. Lindelauf and G.-J. Olsder,
