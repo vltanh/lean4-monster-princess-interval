@@ -1,0 +1,81 @@
+name: Incoming-front and contact certificates
+
+on:
+  push:
+    branches:
+      - research/interval-progress-2026-11-10
+    paths:
+      - .github/workflows/front-reduction.yml
+      - packages/interval_global_closure/project_front2_princess.cjs
+      - packages/interval_global_closure/lower_n256_front2_*.json
+      - packages/interval_global_closure/verify_front2_projection_fraction.py
+      - packages/interval_global_closure/verify_incoming_front_completion.py
+      - packages/interval_global_closure/verify_bulk_contact_equations.py
+      - packages/interval_global_closure/verify_initial_inward_contact.py
+      - packages/interval_global_closure/verify_inward_endpoint_obstacle.py
+      - packages/interval_global_closure/verify_curved_initial_phase.py
+      - packages/interval_global_closure/verify_front_one_contact_moments.py
+      - packages/interval_global_closure/verify_boundary_shadow_kernel.py
+      - packages/interval_global_closure/verify_prefix_compression_diagnostic.py
+      - packages/interval_global_closure/early_return_prefix_deletion.json
+      - packages/interval_global_closure/record_bellman/build_endpoint_tail_charts.py
+      - packages/interval_global_closure/record_bellman/replay_center_renewal_paths.py
+      - packages/interval_global_closure/inspect_monster_start_profile.py
+      - packages/interval_global_closure/verify_boundary_layer_kernel.py
+      - packages/interval_clock_grid/extract_normalized_princess.cjs
+      - packages/interval_clock_grid/lower_n256_*.json
+      - packages/interval_discovery_certificates/monster_mutations_n128.physical.json.gz
+      - research/12-global-closure/GLOBAL_INCOMING_FRONT_COMPLETION.md
+      - research/12-global-closure/BULK_CONTACT_AND_CUSP_EQUATIONS.md
+      - research/12-global-closure/BOUNDARY_LAYER_KERNEL_AND_GAP.md
+      - research/12-global-closure/INITIAL_INWARD_SHEET_CONTACT.md
+      - research/12-global-closure/MOVING_FRONT_INITIAL_CONTACT.md
+      - research/12-global-closure/ENDPOINT_SQUARE_ROOT_CONTACT.md
+      - research/12-global-closure/SUPERADDITIVE_CENTRAL_RETURN_COMPRESSION.md
+      - research/12-global-closure/CURVED_INITIAL_PHASE_RESPONSE.md
+      - research/12-global-closure/FRONT_CONTINUATION_GAPS_AND_ZENO.md
+      - research/12-global-closure/FRONT_ONE_CONTACT_NONALGEBRAICITY.md
+
+permissions:
+  contents: read
+
+jobs:
+  front-projection-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the front theorem and certified source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Replay first-contact, ordering and atomic trace fixtures
+        run: python3 -B packages/interval_global_closure/verify_incoming_front_completion.py --report /tmp/incoming_front_completion_replay.json
+      - name: Verify the projected legal Princess law and inherited bound
+        run: node packages/interval_global_closure/project_front2_princess.cjs verify
+      - name: Independently decode all fields and exhaust small physical banks
+        run: python3 -B packages/interval_global_closure/verify_front2_projection_fraction.py --checkout . --report /tmp/front2_projection_independent_replay.json
+
+  contact-equations-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the physical contact kernels
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Integrate the bulk and endpoint identities independently
+        run: python3 -B packages/interval_global_closure/verify_bulk_contact_equations.py /tmp/bulk_contact_equations_replay.json
+      - name: Replay the complete initial-inward moment and dominance identities
+        run: python3 -B packages/interval_global_closure/verify_initial_inward_contact.py /tmp/initial_inward_contact_replay.json
+      - name: Replay inward endpoint rows and actual atom jumps
+        run: python3 -B packages/interval_global_closure/verify_inward_endpoint_obstacle.py /tmp/inward_endpoint_obstacle_replay.json
+      - name: Replay curved-phase compression and the complete initial guard
+        run: python3 -B packages/interval_global_closure/verify_curved_initial_phase.py /tmp/curved_initial_phase_replay.json
+      - name: Replay front-one moments and signed family comparisons
+        run: python3 -B packages/interval_global_closure/verify_front_one_contact_moments.py /tmp/front_one_contact_moment_replay.json
+      - name: Replay shadow paths with all initial and turn ties
+        run: python3 -B packages/interval_global_closure/verify_boundary_shadow_kernel.py
+      - name: Reconstruct the current upper law's initial gap and cutoff
+        run: python3 -B packages/interval_global_closure/inspect_monster_start_profile.py --physical-certificate packages/interval_discovery_certificates/monster_mutations_n128.physical.json.gz --report /tmp/monster_mutations_n128_start_profile_replay.json
+      - name: Replay the failed suffix advance and actual front-preserving comparison
+        run: python3 -B packages/interval_global_closure/verify_prefix_compression_diagnostic.py --report /tmp/prefix_compression_diagnostic_replay.json

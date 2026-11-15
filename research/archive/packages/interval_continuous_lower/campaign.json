@@ -1,0 +1,5 @@
+{
+  "schema": 1,
+  "run_on_push": false,
+  "purpose": "Legacy run_on_push field retained for schema compatibility; numerical discovery is now manual-only via workflow_dispatch. Keep false. Use geometric hypotheses and the structural regressions first."
+}

@@ -1,0 +1,46 @@
+{
+  "scope": "Floating probability-master reconstruction with independent payoff residuals, not an exact value certificate.",
+  "source_master_blob": "6cac47a4b2227fa1469bb463d35ed37ffb3af1b6",
+  "shape": {
+    "princess_rows": 159,
+    "monster_columns": 1086
+  },
+  "warm": {
+    "status": "optimal",
+    "value": 1.4259240849281507,
+    "dualValue": 1.425924084927647,
+    "low": 1.4259240849267794,
+    "high": 1.425924084927145,
+    "primal": 1.316657954676009e-17,
+    "dual": 6.082911951921233e-13,
+    "pivots": 0,
+    "refactors": 3,
+    "ms": 1328
+  },
+  "cold": {
+    "status": "optimal",
+    "value": 1.4259240849272499,
+    "dualValue": 1.4259240849271493,
+    "low": 1.4259240849267223,
+    "high": 1.4259240849275967,
+    "primal": 2.276998503835249e-13,
+    "dual": 2.992051051364797e-13,
+    "pivots": 655,
+    "refactors": 18,
+    "ms": 12795
+  },
+  "supplied_dual_value": 1.4259240849269847,
+  "rejected_naive_tableau_run": {
+    "status": "optimal",
+    "value": 1.42592887788408,
+    "dualValue": 1.4227889456531715,
+    "saved": 1.4259240849269847,
+    "primalViolation": 0.000012346559349785124,
+    "dualViolation": 0,
+    "low": 1.4247808245956801,
+    "high": 1.4259464831995992,
+    "monsterSupport": 149,
+    "princessSupport": 150,
+    "ms": 72040
+  }
+}

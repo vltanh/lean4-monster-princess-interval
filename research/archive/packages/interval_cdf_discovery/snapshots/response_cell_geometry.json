@@ -1,0 +1,28 @@
+{
+  "n": 34,
+  "negativeM3Tetrahedra": 39304,
+  "positiveM3Tetrahedra": 117912,
+  "positiveM1Triangles": 3468,
+  "positiveM2Triangles": 3468,
+  "centerFixedOneTriangles": 1156,
+  "exactProjectedTriangleChecks": 6935,
+  "initialPrimitiveIntervalChecks": 165376,
+  "negativeM1Intervals": 34,
+  "negativeM2Intervals": 34,
+  "exactVolumes": {
+    "negativeM3": "1/6",
+    "positiveM3": "1/2",
+    "positiveM1": "3/2",
+    "positiveM2": "3/2",
+    "centerFixedOne": "1/2"
+  },
+  "scope": "Geometric coverage and common-triangle checks only; no new payoff solve.",
+  "input": {
+    "repository": "vltanh/lean4-monster-princess",
+    "ref": "research/interval-progress-2026-11-10",
+    "path": "packages/interval_cdf_discovery/snapshots/endpoint_joint_i1_field.json",
+    "blob_sha": "5c45d042ee9948faebc03354c3e1e2ee3cbec1a5"
+  },
+  "runtime": "V8 BigInt, executed independently of unavailable workspace",
+  "python_port_status": "response_cells.py mirrors this construction but was not executed during outage"
+}

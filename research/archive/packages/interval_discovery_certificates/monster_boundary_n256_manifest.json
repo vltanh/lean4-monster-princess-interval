@@ -1,0 +1,113 @@
+{
+  "certificate": "monster_boundary_n256.physical.json.gz",
+  "certificate_gzip_sha256": "80580dae8551c2838172d7f419861a3a9774793a8d039bdad087e21d24526f39",
+  "ci_provenance": {
+    "artifact_archive_sha256": "d356d204e73ab82e20aa3a47955afc830f9fe941b35fc785883fa6159838a1a8",
+    "artifact_id": 14092179160,
+    "artifact_member": "best.physical.json",
+    "artifact_name": "target-upper-boundary-256",
+    "completed_iterations": 1,
+    "configured_lp_budget_seconds": 600,
+    "discovery_status": "BUDGET_STOPPED",
+    "elapsed_seconds": 979.7537786280001,
+    "head_sha": "317d1d8d0164c0f1ff9996398c113135f7e8d33e",
+    "random_seed": 577215,
+    "repository": "vltanh/lean4-monster-princess",
+    "run_attempt": 1,
+    "run_id": 43541622377,
+    "run_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43541622377",
+    "source_metadata": {
+      "github_run_id": "43541622377",
+      "github_sha": "317d1d8d0164c0f1ff9996398c113135f7e8d33e",
+      "initial_law_sha256": "1171710b1fab0d3ae400b3995a1a918ed862a38fba0c3672ad0aae18751e01ce",
+      "numpy": "2.3.5",
+      "options": {
+        "boundary_points": 48,
+        "certify_every": 4,
+        "full_every": 8,
+        "initial_law": "/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_discovery_certificates/monster_mutations_n128.physical.json.gz",
+        "iterations": 80,
+        "lp_seconds": 600.0,
+        "mutation_count": 128,
+        "n": 256,
+        "output": "results/upper-boundary-256",
+        "pricing_paths": 256,
+        "profile_seed": "/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_clock_grid/lower_n256_field.json",
+        "resume": null,
+        "seconds": 3600.0,
+        "seed": 577215,
+        "sparse_master": true
+      },
+      "profile_seed_sha256": "81483589b60c14d823d2bb467015a321d77cf555076fe8d69a36d63cd829d7d5",
+      "python": "3.12.3",
+      "scipy": "1.17.0",
+      "scope": "Joint physical support, probability, and causal calendar search; no restricted-family result is a game lower bound.",
+      "source_sha256": {
+        "packages/interval_clock_grid/exact_certificate.cjs": "571838d0f524fee041ba11b84d963532221ecd822b43eeb34c25dac03e6d774e",
+        "packages/interval_clock_grid/normalized_native/cached_path_pricing.py": "e1137a9460b2f4503f6d8be4492c67ada754f26f626d04b110fce33798017ffb",
+        "packages/interval_clock_grid/normalized_native/persistent_highs.py": "dbe54dfbbf47ced5090e2ad907347e08dd2ca43bf5810571c72f36be42337ca6",
+        "packages/interval_clock_grid/normalized_native/price_normalized.cpp": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+        "packages/interval_clock_grid/normalized_native/solve_normalized.py": "aaa5edb121f47fe38a4d2ea656828933c921f4187eb51cd22082117253f92352",
+        "packages/interval_clock_grid/normalized_native/verify_native_field.py": "3c57dae89da500ff28181eaecb85ccdcb63ef025eacac8b0289eb995dc12b780",
+        "packages/interval_clock_grid/qout_primal_certificate.cjs": "c479218cab8551cf851eb6fb23f9f0f6e83ac1285e006f65d1cc143c47a0178d",
+        "packages/interval_discovery/monster_search.py": "067daf06afb0b28e3dbf037856aa500ca0a9d8c39bdabfe2b1035fb8cbc5f451",
+        "packages/interval_monster_boundary/search.py": "ed45c582ba54f575a5d22c43e20ca13d20e5831a4a9ce1026e1f9b826c246365",
+        "packages/interval_sparse_upper/master.py": "7a86cc479e5e9dccc06ff6aec0c61f768186f57109ed7201fa44d14473299372"
+      }
+    },
+    "stop_reason": "per_solve_lp_time_limit"
+  },
+  "comparison": {
+    "concurrent_explicit_princess_security": "582289859141/409600000000",
+    "concurrent_game_value_lower": "582291421641/409600000000",
+    "explicit_strategy_gap": "704399819399/204800000000000",
+    "game_value_gap": "703618569399/204800000000000",
+    "lower_scope": "Previously independently certified lower; not replayed by this upper manifest.",
+    "previous_upper": "145925593551091/102400000000000",
+    "upper_improvement": "1857712283/204800000000000"
+  },
+  "exact_result": {
+    "closure_arcs": 558630,
+    "closure_excess": "1259070109479/1024000000000000",
+    "closure_nodes": 262402,
+    "distinct_physical_pairs": 752,
+    "endpoint_baseline": "91124223552501/64000000000000",
+    "exact_cut": "265930716799554",
+    "exact_flow": "265930716799554",
+    "global_upper": "291849329389899/204800000000000",
+    "n": 256,
+    "physical_calendar_plans": 770,
+    "positive_flow_entries": 83592,
+    "scope": "global physical Monster upper via centered-law Princess normalization and exact Qout closure",
+    "status": "PASS"
+  },
+  "files_sha256": {
+    "monster_boundary_n256.physical.json.gz": "80580dae8551c2838172d7f419861a3a9774793a8d039bdad087e21d24526f39",
+    "monster_boundary_n256_replay.json": "4b91d173497b494aedbe7e67550c495fd7180bef9cf490414be2e98b49c075eb",
+    "monster_boundary_n256_structure.json": "b9611ac386875dfb43058afc479653b5f612ae3b1059052546ad31fce2546fec",
+    "verify_manifest.py": "dbf23945013f942ab15e8fe0e5b6d07a865cab5010050fe50e8c26ae003c2462"
+  },
+  "format": "ci-discovered-physical-monster-upper-v1",
+  "gzip_mtime": 0,
+  "gzip_original_filename": "",
+  "replay": "monster_boundary_n256_replay.json",
+  "replay_sha256": "4b91d173497b494aedbe7e67550c495fd7180bef9cf490414be2e98b49c075eb",
+  "scope": "Exact rational physical Monster law bounds every Princess via centered-law normalization and exact Qout flow/cut. No equilibrium is claimed.",
+  "status": "PASS",
+  "structure": "monster_boundary_n256_structure.json",
+  "structure_sha256": "b9611ac386875dfb43058afc479653b5f612ae3b1059052546ad31fce2546fec",
+  "uncompressed_bytes": 29489108,
+  "uncompressed_certificate_sha256": "5c736b0c6ef59b418cce0e2e2ef24b0a8dbe4d017a6eca7578d9e1c79616b31d",
+  "verification": {
+    "fresh_existing_node_replay": true,
+    "independent_python_verifier": "verify_manifest.py",
+    "independent_python_verifier_sha256": "dbf23945013f942ab15e8fe0e5b6d07a865cab5010050fe50e8c26ae003c2462",
+    "lean_kernel_checked": false,
+    "node_verifier_sha256": "c479218cab8551cf851eb6fb23f9f0f6e83ac1285e006f65d1cc143c47a0178d",
+    "proof_dependencies": [
+      "research/12-global-closure/NORMALIZED_GRID_BANK_PRICING.md",
+      "packages/interval_clock_grid/QOUT_PRIMAL_CERTIFICATES.md"
+    ],
+    "separate_python_integer_reconstruction": true
+  }
+}

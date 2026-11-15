@@ -1,0 +1,66 @@
+{
+  "scope": "Exact oracle regressions; these fixtures are not game bounds.",
+  "fixtures": [
+    {
+      "name": "distinct_same_limit",
+      "limit": "0",
+      "nodes": 7,
+      "unpruned_nodes": 11,
+      "permutations": 6,
+      "independent_oracle_states": 11,
+      "epsilon": "1/4000"
+    },
+    {
+      "name": "asymmetric_stationary",
+      "limit": "19/32",
+      "nodes": 21,
+      "unpruned_nodes": 26,
+      "permutations": 24,
+      "independent_oracle_states": 26,
+      "epsilon": "1/4000"
+    },
+    {
+      "name": "rational_speed_outgoing",
+      "limit": "19/20",
+      "nodes": 10,
+      "unpruned_nodes": 16,
+      "permutations": 24,
+      "independent_oracle_states": 16,
+      "epsilon": "1/4000"
+    },
+    {
+      "name": "inward_outward",
+      "limit": "13/16",
+      "nodes": 13,
+      "unpruned_nodes": 26,
+      "permutations": 24,
+      "independent_oracle_states": 26,
+      "epsilon": "1/4000"
+    },
+    {
+      "name": "moving_coalescence",
+      "limit": "1/4",
+      "nodes": 7,
+      "unpruned_nodes": 9,
+      "permutations": 6,
+      "independent_oracle_states": 9,
+      "epsilon": "1/4000"
+    },
+    {
+      "name": "initial_tie_then_split",
+      "limit": "1/2",
+      "nodes": 8,
+      "unpruned_nodes": 13,
+      "permutations": 24,
+      "independent_oracle_states": 13,
+      "epsilon": "1/4000"
+    }
+  ],
+  "total_rational_permutations": 108,
+  "equality_radius_guard": true,
+  "exact_grid4_independent_capture_check": {
+    "paths": 18,
+    "epsilon": "1700401/42086014088",
+    "payoff": "730670335729987811547566960249987424598310683212218374083054751357326398493416208902267879/1032241910500665449614148896804020005139394526438245415864919880353282279924230390137183104"
+  }
+}

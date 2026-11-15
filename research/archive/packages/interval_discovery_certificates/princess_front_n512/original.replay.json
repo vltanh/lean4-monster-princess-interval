@@ -1,0 +1,22 @@
+{
+  "input_sha256": "a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10",
+  "verifier_source_sha256": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+  "pricing": {
+    "status": "PASS",
+    "scope": "exact integer dual pricing on the normalized physical grid bank",
+    "n": 512,
+    "field_denominator": "1600000000",
+    "minimum_units": "4663655453568",
+    "objective_denominator": "3276800000000",
+    "retained_states": 2609003114,
+    "generated_transitions": 5117238127,
+    "dominance_pruned": 2508235526,
+    "independent_pursuit_pruned": 50371986,
+    "late_center_pruned": 0,
+    "maximum_layer": 5114644,
+    "terminal_tours": 17900,
+    "witness_storage": "packed current-layer prefixes",
+    "peak_packed_trace_bytes": 0,
+    "paths": []
+  }
+}

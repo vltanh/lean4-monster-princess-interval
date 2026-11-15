@@ -1,0 +1,93 @@
+name: Independent compact fine lower replay
+
+on:
+  push:
+    branches: [research/interval-progress-2026-11-10]
+    paths:
+      - .github/workflows/compact-fine-replay.yml
+      - packages/interval_center_pricing/verify_bigint.cjs
+      - packages/interval_center_pricing/test_bigint.py
+      - packages/interval_center_pricing/verify_strategy.cjs
+      - packages/interval_center_pricing/test_strategy.cjs
+  workflow_dispatch:
+    inputs:
+      replay_complete_bank:
+        description: Recompute the complete retained n512 bank after the independent regressions
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  independent-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5
+      - name: Check exact refinement, overclaim rejection, and affine-cell reduction
+        run: |
+          mkdir -p reports
+          python3 packages/interval_center_pricing/test_refinement.py reports/refinement.json
+          python3 packages/interval_center_pricing/test_bigint.py reports/bigint.json
+          node packages/interval_center_pricing/test_strategy.cjs > reports/strategy.json
+          python3 packages/interval_center_pricing/test_affine_cell.py > reports/affine-cells.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: compact-independent-regressions
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90
+
+  independent-fine-lower:
+    needs: independent-regressions
+    if: github.event_name == 'workflow_dispatch' && inputs.replay_complete_bank
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Load the retained exact inputs without an expiring artifact dependency
+        run: |
+          mkdir -p reports/source
+          cp packages/interval_discovery_certificates/princess_front_n512/field.json reports/source/field.json
+          cp packages/interval_discovery_certificates/princess_front_n512/original.replay.json reports/source/original.replay.json
+          node packages/interval_discovery_certificates/princess_front_n512/check.cjs > reports/retention.json
+      - name: Bind the completed native discovery and its original verifier
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          root=Path('reports/source')
+          expected={'field.json':'a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10','original.replay.json':'008bbb4f42c4f92b8c9f31cdb957a070f79abffecf012e641448c01f114c187d'}
+          for name,digest in expected.items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name
+          report=json.loads((root/'original.replay.json').read_text())
+          source=Path('packages/interval_clock_grid/normalized_native/price_normalized.cpp')
+          assert report['input_sha256']==expected['field.json']
+          assert report['verifier_source_sha256']==hashlib.sha256(source.read_bytes()).hexdigest()
+          assert int(report['pricing']['minimum_units'])==4663655453568
+          PY
+      - name: Independently check every normalized-bank response with BigInt costs
+        run: node --max-old-space-size=6000 packages/interval_center_pricing/verify_bigint.cjs reports/source/field.json --front --progress 128 > reports/independent.replay.json
+      - name: Extract an explicit continuous Princess guarantee from the replay
+        run: node packages/interval_clock_grid/extract_normalized_princess.cjs generate reports/source/field.json reports/independent.replay.json 1/1024 reports/princess.json > reports/extraction.replay.json
+      - name: Preserve exact sources and runtime metadata
+        if: always()
+        run: |
+          mkdir -p reports
+          git rev-parse HEAD > reports/commit.txt
+          node --version > reports/node-version.txt
+          sha256sum packages/interval_center_pricing/verify_bigint.cjs packages/interval_clock_grid/extract_normalized_princess.cjs > reports/sources.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: independently-certified-front-lower
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90

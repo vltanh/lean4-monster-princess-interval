@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Exact affine-cell moment, physical capture integration, fixed-budget chain vertices. No two-cell or global-prefix assertion.",
+  "counts": {
+    "closed_identities": 264,
+    "physical_integrals": 132,
+    "physical_segments": 4356,
+    "unit_legs": 308,
+    "hessian_entries": 880,
+    "budget_vertices": 3239,
+    "three_level_checks": 3239,
+    "polytope_comparisons": 440
+  }
+}

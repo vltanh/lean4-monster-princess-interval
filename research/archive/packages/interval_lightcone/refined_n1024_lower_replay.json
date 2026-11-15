@@ -1,0 +1,61 @@
+{
+ "scope": "exact full-width factor-2 refinement of the retained n512 field, priced by price_normalized.cpp; game-value lower bound by the existing 1/(2n) transfer",
+ "source_field_sha256": "a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10",
+ "engine_sha256": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+ "n": 1024,
+ "field_denominator": "3200000000",
+ "table_sha256": "9bda91423bbeab79f7456751c5648a21c1c31539a6a54011d96f304ea1935e08",
+ "order_closure_changed_nodes": 0,
+ "minimum_units": "18652368301398",
+ "objective_denominator": "13107200000000",
+ "normalized_bank_dual_value": "9326184150699/6553600000000",
+ "global_lower": "9322984150699/6553600000000",
+ "global_lower_decimal": 1.4225744858854674,
+ "previous_global_lower": "36409808231/25600000000",
+ "improves_previous": true,
+ "engine_report": {
+  "status": "PASS",
+  "scope": "exact integer dual pricing on the normalized physical grid bank",
+  "n": 1024,
+  "field_denominator": "3200000000",
+  "minimum_units": "18652368301398",
+  "objective_denominator": "13107200000000",
+  "retained_states": 36178048329,
+  "generated_transitions": 71614961981,
+  "dominance_pruned": 35436914677,
+  "independent_pursuit_pruned": 370538693,
+  "late_center_pruned": 0,
+  "maximum_layer": 36303227,
+  "terminal_tours": 42058,
+  "witness_storage": "packed current-layer prefixes",
+  "peak_packed_trace_bytes": 0
+ },
+ "seconds": 17861.7,
+ "max_rss_kb": 16161868,
+ "run": "2026-11-15, one run of the native engine (g++ -O3 -std=c++17, binary byte-identical to a fresh build of the repository source) on the table whose sha256 is recorded here; the table priced was checked byte for byte against the one refine_retained_field.py rebuilds. The second native engine price_center.cpp (policies 3 and 4) returns the same minimum; there is no independent BigInt replay.",
+ "second_engine": {
+  "program": "packages/interval_center_pricing/price_center.cpp",
+  "program_sha256": "1835b5a33da7fb256bfe80317df8edc01e7ed166ee3d490c037b5d645da3c4fa",
+  "compiler": "g++ -O3 -std=c++17",
+  "input": "the same binary table (sha256 above)",
+  "runs": [
+   {
+    "policy": 4,
+    "minimum_units": "18652368301398",
+    "seconds": 1515.28,
+    "max_rss_kb": 6309936,
+    "retained_states": 6711010516,
+    "generated_transitions": 11791338882
+   },
+   {
+    "policy": 3,
+    "minimum_units": "18652368301398",
+    "seconds": 1535.18,
+    "max_rss_kb": 8593728,
+    "retained_states": 7366755383,
+    "generated_transitions": 12458630510
+   }
+  ],
+  "check_on_n512": "policies 3 and 4 return the certified n512 minimum 4663655453568 (148 s and 144 s)"
+ }
+}

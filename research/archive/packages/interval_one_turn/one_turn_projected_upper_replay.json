@@ -1,0 +1,57 @@
+{
+  "benchmark": "291849329389899/204800000000000",
+  "certificate_sha256": "3d4b8def5cd7ab61fd86a2b4e82204db21ac951ce47f60570603668846233130",
+  "coordinate_scale": "67108864",
+  "counterexample_gate_required": false,
+  "disproves_strict_separation_target": false,
+  "exact_upper": "478205958821456999/335544320000000000",
+  "exact_upper_minus_benchmark": "200087745232387/1677721600000000000",
+  "exact_upper_minus_frozen_benchmark": "200087745232387/1677721600000000000",
+  "formal_label_row_claimed_as_physical_witness": false,
+  "frozen_benchmark": "291849329389899/204800000000000",
+  "integer_certificate": {
+    "arcs": 328157,
+    "constant_units": "2639222631148291316",
+    "flow_equals_cut_units": "1319509476882613482",
+    "nodes": 112604,
+    "positive_flow_entries": 203621,
+    "positive_units": "2505934516305978158",
+    "score_units": "3825647670571655992",
+    "source_side_nodes": 111094
+  },
+  "law_sha256": "9d5b5a091e564faf755472e921b08196fbf16fc48ea420ba44f5424d9be9ca68",
+  "law_uncompressed_sha256": "b8ee3b60c66f3caaea04bd48188890d70c0161c9b71844332c35ee3aca4b1d4a",
+  "physical": {
+    "class_counts": {
+      "endpoint_start": 1,
+      "interior_endpoint_first": 51,
+      "one_interior_reversal": 323
+    },
+    "class_probability": {
+      "endpoint_start": "614170753/1000000000",
+      "interior_endpoint_first": "2105144763/10000000000",
+      "one_interior_reversal": "1753147707/10000000000"
+    },
+    "irrelevant_postcapture_legs": 0,
+    "maximum_canonical_completion": "136314829/33554432",
+    "positive_weight_pairs": 375,
+    "reflected_pairs": 375,
+    "rows_with_irrelevant_postcapture_continuation": 0
+  },
+  "projection_completeness_required": false,
+  "reconstructed": {
+    "auxiliary_nodes": 74314,
+    "base_levels": 423,
+    "full_threshold_nodes": 135195,
+    "projected_threshold_nodes": 38288,
+    "query_rows": 323,
+    "reward_clauses": 103776,
+    "sound_supplied_threshold_edges": 75755
+  },
+  "scope": "all-Princess upper for the supplied fair-reflected canonical B1 Monster law",
+  "status": "PASS",
+  "supplied_geometry_defs_units_labels_and_float_scores_used": false,
+  "upper_at_most_frozen_benchmark": false,
+  "upper_decimal": 1.4251648152514012,
+  "weights_denominator": "10000000000"
+}

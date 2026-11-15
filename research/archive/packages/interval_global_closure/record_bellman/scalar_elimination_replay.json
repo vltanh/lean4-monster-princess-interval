@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Exact bounded scalar elimination; independent rational fiber optima and direct original-polynomial substitution. This is a component, not a game-value certificate.",
+  "counts": {
+    "random_parameter_fibers": 3060,
+    "eligible_substitutions": 2845,
+    "point_and_empty_fibers": 7,
+    "zero_parameter_cases": 765,
+    "malformed_rejections": 5
+  },
+  "source_sha256": "2d0bb8adbd5be8319d73c258624ca6fbcb20b4f086abcd09b16f39e5487f96e8"
+}

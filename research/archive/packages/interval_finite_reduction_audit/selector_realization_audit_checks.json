@@ -1,0 +1,13 @@
+{
+  "scope": "Independent exact ingredients for the history-selector physical realization; no optimization or all-field claim is inferred from fixtures.",
+  "contact_side_inequalities": 112,
+  "ordered_label_assignments": 84,
+  "physical_cone_and_speed_checks": 3693,
+  "signed_physical_point_checks": 4872,
+  "clipped_fill_and_error_checks": 14112,
+  "horizontal_ramp_error_checks": 4704,
+  "independent_physical_vertical_ray_pieces": 4503,
+  "independent_physical_horizontal_ray_pieces": 5011,
+  "delta": "1/128",
+  "eta": "1/16384"
+}

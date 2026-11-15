@@ -1,0 +1,9 @@
+Symbolic counterexample payoff: (27356900849985340679/32725087316430052712)+(-84148771486765172/240625642032573917)*eps
+Valid for 0 < epsilon < 1/64
+Limit = 0.835961126259561 against the proposed dual family, not a full-game bound.
+PASS: exact primal and dual equalities; all seven starting chambers.
+Fixed-support minimax value: 13394119476306831993/9350024947551443632
+PASS: a different monster mixture has a strictly smaller unrestricted upper guarantee.
+Therefore none of the reweightings of the original 32 paths is globally optimal.
+PASS: displayed approaching dual family is defeated by the explicit omitted monster.
+SCOPE: this is NOT an exact solution of the unrestricted game.

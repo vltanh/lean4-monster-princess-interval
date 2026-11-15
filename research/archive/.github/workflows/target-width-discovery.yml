@@ -1,0 +1,155 @@
+name: Target-width strategy discovery
+
+on:
+  workflow_dispatch:
+    inputs:
+      resume_run_id:
+        description: Earlier target-width run whose matching artifacts should resume
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  PYTHONUNBUFFERED: '1'
+  OMP_NUM_THREADS: '2'
+  OPENBLAS_NUM_THREADS: '2'
+
+jobs:
+  discovery-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Check projected order, persistent LP updates, fields and physical contacts
+        run: |
+          python3 packages/interval_sparse_upper/test_projection.py
+          python3 packages/interval_lower_bundle/test_search.py
+          python3 packages/interval_monster_boundary/test_search.py
+      - name: Reproduce the retained upper through independent sparse geometry
+        run: |
+          python3 packages/interval_sparse_upper/make_certificate.py packages/interval_discovery_certificates/monster_mutations_n128.physical.json.gz --output /tmp/retained-sparse
+          node packages/interval_sparse_upper/sparse_certificate.cjs /tmp/retained-sparse.sparse.json
+
+  lower-discovery:
+    needs: discovery-regressions
+    name: Princess ${{ matrix.id }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 65
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: lower-p128-components
+            family: --contract-tight-cones --component-prox
+            lp_seconds: 90
+          - id: lower-p128-full
+            family: ''
+            lp_seconds: 180
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Restore the selected exact incumbent and response bank
+        if: inputs.resume_run_id != '' && inputs.resume_run_id != null
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.resume_run_id }}
+          name: target-${{ matrix.id }}
+          path: results/${{ matrix.id }}
+      - name: Optimize the finer Princess transport geometry with complete separation
+        shell: bash
+        run: |
+          mkdir -p results/${{ matrix.id }}
+          resume=()
+          if test -f results/${{ matrix.id }}/state.json.gz; then resume=(--resume); fi
+          python3 -u packages/interval_lower_bundle/search.py \
+            --n 256 --profile-grid 128 ${{ matrix.family }} \
+            --radius .001 --keep 32 --seconds 2400 --iterations 300 \
+            --lp-seconds ${{ matrix.lp_seconds }} "${resume[@]}" \
+            --output results/${{ matrix.id }} 2>&1 | tee results/${{ matrix.id }}/search.log
+      - name: Record reproducibility metadata
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p results/${{ matrix.id }}
+          git rev-parse HEAD > results/${{ matrix.id }}/commit.txt
+          python3 -m pip freeze > results/${{ matrix.id }}/dependencies.txt
+          g++ --version > results/${{ matrix.id }}/compiler.txt
+          sha256sum packages/interval_lower_bundle/*.py packages/interval_clock_grid/normalized_native/price_normalized.cpp > results/${{ matrix.id }}/source-sha256.txt
+      - name: Preserve exact candidates, rejected responses, logs and resumable state
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: target-${{ matrix.id }}
+          path: |
+            results/${{ matrix.id }}/
+            !results/${{ matrix.id }}/work/
+          retention-days: 90
+          if-no-files-found: error
+
+  upper-discovery:
+    needs: discovery-regressions
+    name: Monster ${{ matrix.id }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 95
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: upper-boundary-256
+            n: 256
+            seed: 577215
+          - id: upper-boundary-512
+            n: 512
+            seed: 173205
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Restore physical support and causal calendars
+        if: inputs.resume_run_id != '' && inputs.resume_run_id != null
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.resume_run_id }}
+          name: target-${{ matrix.id }}
+          path: results/${{ matrix.id }}
+      - name: Discover new starts, inward loops, separate fronts and probabilities
+        shell: bash
+        run: |
+          mkdir -p results/${{ matrix.id }}
+          resume=()
+          if test -f results/${{ matrix.id }}/checkpoint.json; then resume=(--resume results/${{ matrix.id }}/checkpoint.json); fi
+          python3 -u packages/interval_monster_boundary/search.py \
+            --n ${{ matrix.n }} --sparse-master --iterations 80 \
+            --seconds 3600 --lp-seconds 600 --boundary-points 48 \
+            --pricing-paths 256 --full-every 8 --certify-every 4 \
+            --seed ${{ matrix.seed }} "${resume[@]}" \
+            --output results/${{ matrix.id }} 2>&1 | tee results/${{ matrix.id }}/search.log
+      - name: Record reproducibility metadata
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p results/${{ matrix.id }}
+          git rev-parse HEAD > results/${{ matrix.id }}/commit.txt
+          python3 -m pip freeze > results/${{ matrix.id }}/dependencies.txt
+          g++ --version > results/${{ matrix.id }}/compiler.txt
+      - name: Preserve physical laws, exact replays, random state and solver logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: target-${{ matrix.id }}
+          path: |
+            results/${{ matrix.id }}/
+            !results/${{ matrix.id }}/work/
+          retention-days: 90
+          if-no-files-found: error

@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "kernel": {
+    "cases": 6084,
+    "case_counts": {
+      "initial_contact": 650,
+      "inside_long_loop": 715,
+      "inside_short_loop": 1716,
+      "outside_long_loop": 1716,
+      "outside_short_loop": 715,
+      "turn_contact": 572
+    },
+    "fast_sweep_cases": 78,
+    "scope": "finite exact regression of the analytic contact formula, including ties"
+  },
+  "physical_certificate": {
+    "file_sha256": "2a09355539fa015a0b281843a9db108c4a619243118eb0d57d14144cab20d89a",
+    "n": 64,
+    "calendar_plans": 736,
+    "total_weight_numerator": "1000000000000",
+    "endpoint_weight": "157610481511/250000000000",
+    "interior_gap": "1/64",
+    "stationary_endpoint_score": "2276326166273/1600000000000",
+    "stored_certified_upper": "364842628535291/256000000000000",
+    "upper_minus_boundary_limit": "5567/256000000000000",
+    "exact_loop_scores": [
+      {
+        "epsilon": "1/768",
+        "h": "1/256",
+        "score": "364369797085191/256000000000000"
+      },
+      {
+        "epsilon": "1/256",
+        "h": "1/256",
+        "score": "364369797085191/256000000000000"
+      },
+      {
+        "epsilon": "1/384",
+        "h": "1/128",
+        "score": "182263703783351/128000000000000"
+      },
+      {
+        "epsilon": "1/128",
+        "h": "1/128",
+        "score": "182263703783351/128000000000000"
+      },
+      {
+        "epsilon": "1/256",
+        "h": "3/256",
+        "score": "364685018048213/256000000000000"
+      },
+      {
+        "epsilon": "3/256",
+        "h": "3/256",
+        "score": "364685018048213/256000000000000"
+      }
+    ],
+    "cutoff_checks": 129,
+    "scope": "exact route legality, endpoint-tail, chronological loop-payoff and diagnostic replay; max-flow witness not replayed here"
+  },
+  "script_sha256": "d8cc555e3ed79303e655b8b6933f7e68842a3d2866833a82383bfa706622b086"
+}

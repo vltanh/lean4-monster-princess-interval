@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "Constrained earliest travel and pointwise final bridge; local finite-piece theorem also uses the affine Hessian and separately verified interface-return theorem.",
+  "checks": {
+    "earliest_target_cases": 258,
+    "physical_legs": 364,
+    "old_path_arrivals": 114,
+    "first_contact_comparisons": 220,
+    "right_bridge_bounds": 175
+  }
+}

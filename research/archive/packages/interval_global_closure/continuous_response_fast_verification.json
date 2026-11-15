@@ -1,0 +1,38 @@
+{
+  "scope": "Exact aggregate inverse-hit implementation and unchanged unrestricted finite capture-order objective; no game equilibrium claim.",
+  "cpp_sha256": "a33c316ea27c37310f75da7c777efb7457594a873bfaab0ed7221cd98c28649a",
+  "fixtures": [
+    {
+      "name": "four_actual_quantiles",
+      "value": "15733204782552570270341036958606907/19836365274636420914347123469685760",
+      "fixed_center_value": "1105747362731218683095287579926548838185/1171283392690024514014622100810834372608",
+      "scalar_inverse_point_checks": 976,
+      "independent_physical_captures": 4,
+      "stopped_frontier_checked": true
+    },
+    {
+      "name": "weighted_center_atom_H2",
+      "value": "9/16",
+      "fixed_center_value": "39/64",
+      "scalar_inverse_point_checks": 72,
+      "independent_physical_captures": 4,
+      "stopped_frontier_checked": true
+    },
+    {
+      "name": "weighted_center_atom_H3",
+      "value": "9/16",
+      "fixed_center_value": "39/64",
+      "scalar_inverse_point_checks": 72,
+      "independent_physical_captures": 4,
+      "stopped_frontier_checked": true
+    }
+  ],
+  "archived_quantile_regression": {
+    "paths": 32,
+    "value": "93532345436572606783748011246049524752508810003227904195531298311579818570882918386580946929523478871122233418216192651998394739/69923636453852307673508211899145469364645601478617763750390854701086723018730112241947670288537189027081112728886668281109053440",
+    "processed": 1398,
+    "inverse_pieces": 14232,
+    "scalar_inverse_point_checks": 6280,
+    "independent_physical_captures": 32
+  }
+}

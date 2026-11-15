@@ -1,0 +1,163 @@
+name: Unrestricted game discovery
+
+on:
+  workflow_dispatch:
+    inputs:
+      experiments:
+        description: 'Optional comma-separated experiment IDs; otherwise use campaign.json selection'
+        required: false
+        type: string
+      resume_run_id:
+        description: 'Optional earlier discovery run ID whose matching search artifacts should be resumed'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  PYTHONUNBUFFERED: '1'
+  OMP_NUM_THREADS: '2'
+  OPENBLAS_NUM_THREADS: '2'
+
+jobs:
+  campaign:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Select new or resumed experiments
+        id: plan
+        env:
+          SELECT_EXPERIMENTS: ${{ inputs.experiments }}
+          RESUME_RUN_ID: ${{ inputs.resume_run_id }}
+        run: python3 packages/interval_discovery/configure_campaign.py
+
+  search:
+    name: Discover ${{ matrix.id }}
+    needs: campaign
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix: ${{ fromJSON(needs.campaign.outputs.matrix) }}
+    steps:
+      - name: Check out discovery and exact verifiers
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned discovery dependencies
+        run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Restore matching experiment from an earlier run
+        if: ${{ matrix.resume_run_id != '' }}
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: discovery-${{ matrix.id }}
+          path: results
+          run-id: ${{ matrix.resume_run_id }}
+          github-token: ${{ github.token }}
+      - name: Search new Princess CDFs
+        if: ${{ matrix.kind == 'princess' }}
+        env:
+          EXPERIMENT: ${{ matrix.id }}
+          FAMILY: ${{ matrix.family }}
+          GRID: ${{ matrix.n }}
+          PROFILE: ${{ matrix.profile }}
+          RANDOM_SEED: ${{ matrix.seed }}
+          ITERATIONS: ${{ matrix.iterations }}
+        run: |
+          resume=()
+          if test -f "results/$EXPERIMENT/candidate.checkpoint.json"; then resume=(--resume); fi
+          python3 packages/interval_discovery/princess_search.py \
+            --n "$GRID" --profile-grid "$PROFILE" --family "$FAMILY" \
+            --seed "$RANDOM_SEED" --iterations "$ITERATIONS" --seconds 1200 \
+            --refine 512 --refine-seconds 1500 \
+            --profile-seed packages/interval_clock_grid/lower_n256_field.json \
+            --monster-seed packages/interval_clock_grid/upper_n64_physical.json.gz \
+            --output "results/$EXPERIMENT" "${resume[@]}"
+      - name: Discover and exactly certify new physical Monster mixtures
+        if: ${{ matrix.kind == 'monster' }}
+        env:
+          EXPERIMENT: ${{ matrix.id }}
+          FAMILY: ${{ matrix.family }}
+          GRID: ${{ matrix.n }}
+          RANDOM_SEED: ${{ matrix.seed }}
+          ITERATIONS: ${{ matrix.iterations }}
+        run: |
+          resume=()
+          if test -f "results/$EXPERIMENT/checkpoint.json"; then resume=(--resume "results/$EXPERIMENT/checkpoint.json"); fi
+          python3 packages/interval_discovery/monster_search.py \
+            --n "$GRID" --family "$FAMILY" --seed "$RANDOM_SEED" \
+            --iterations "$ITERATIONS" --seconds 1800 \
+            --profile-seed packages/interval_clock_grid/lower_n256_field.json \
+            --output "results/$EXPERIMENT" "${resume[@]}"
+      - name: Record execution environment
+        if: always()
+        env:
+          EXPERIMENT: ${{ matrix.id }}
+        run: |
+          mkdir -p "results/$EXPERIMENT"
+          python3 -m pip freeze > "results/$EXPERIMENT/dependencies.txt"
+          git rev-parse HEAD > "results/$EXPERIMENT/commit.txt"
+          g++ --version > "results/$EXPERIMENT/compiler.txt"
+          node --version > "results/$EXPERIMENT/node.txt"
+      - name: Preserve candidates, exact certificates, seeds and resumable checkpoints
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: discovery-${{ matrix.id }}
+          path: |
+            results/
+            !results/**/work/**
+            !results/**/*.work/**
+            !results/**/*.bin
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 9
+
+  driver-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Check new-path legality, exact pricing, refinement and restart
+        run: |
+          python3 packages/interval_discovery/test_princess_search.py
+          python3 packages/interval_discovery/test_monster_search.py
+          python3 packages/interval_clock_grid/normalized_native/test_persistent_highs.py --output /tmp/persistent-discovery-replay.json
+          python3 packages/interval_discovery/test_configure_campaign.py
+
+  certify-discoveries:
+    needs: [search, driver-regressions]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Collect completed and interrupted experiment artifacts
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: discovery-*
+          path: results
+          merge-multiple: true
+      - name: Independently replay prospective unrestricted improvements
+        run: python3 packages/interval_discovery/summarize.py results --output campaign
+      - name: Preserve the exact campaign outcome
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: discovery-campaign-summary
+          path: campaign/
+          if-no-files-found: error
+          retention-days: 90

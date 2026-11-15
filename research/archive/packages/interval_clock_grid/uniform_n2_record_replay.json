@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "model": "vertex_and_uniform_leg",
+  "n": 2,
+  "physical_calendar_plans": 4,
+  "pressure_types": 368,
+  "matching_edges": 1708,
+  "physical_record_states": 1531,
+  "transitions": 2764,
+  "max_layer_states": 56,
+  "exact_scaled_primal": "4893/422",
+  "exact_scaled_dual": "4893/422",
+  "exact_value": "4893/3376",
+  "global_lower": "4049/3376",
+  "enclosure_width": "1/4",
+  "baseline": "284/211",
+  "deficiency": "349/3376"
+}

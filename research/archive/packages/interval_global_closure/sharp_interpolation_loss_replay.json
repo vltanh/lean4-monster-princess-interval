@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "Self-contained n=1 optimal Qout profile, physical primal, exhaustive atomic bank dual, legal common-threshold field and exact attacking-path integrals. The attack is not claimed to be the field's globally optimal response.",
+  "finite_value": "47/32",
+  "profile_nodes": 26,
+  "profile_cone_checks": 83,
+  "physical_clock_prefixes": 16,
+  "full_bank_record_states": 177,
+  "full_bank_transitions": 274,
+  "rational_widths_checked": 90,
+  "exact_affine_integration_pieces": 1966,
+  "field_identity_checks": 3600,
+  "attack": "start a=1/2+epsilon, sweep to -1 at 1+a, optionally to +1 at 3+a",
+  "exact_attack_payoff": "31/32 + epsilon/2",
+  "exact_loss_from_finite_value": "1/2 - epsilon/2",
+  "limiting_loss": "1/2",
+  "full_width_fast_sweep_payoff": "39/32"
+}

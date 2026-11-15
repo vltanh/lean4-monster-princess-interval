@@ -1,0 +1,299 @@
+{
+  "scope": "Independently executed core checks. No Lean/CI/native Node I/O verification; no exact game value or matching saddle claim.",
+  "integer_incumbent": {
+    "scope": "Independent replay for the archived 67-atom monster law; no saddle or exact game-value claim.",
+    "legalMonsterAtoms": 465,
+    "positiveMassAtoms": 67,
+    "archivedMassesMatched": 67,
+    "thresholdNodes": 70473,
+    "events": 243,
+    "levels": 311,
+    "exactValue": "36563170811/25600000000",
+    "flow": "19296189851562500000000000",
+    "nodes": 80892,
+    "arcs": 176922,
+    "positiveFlows": 38427,
+    "sourceCutReconstructed": true,
+    "freeResidualNodes": 10425,
+    "residualSCCs": 10125,
+    "condensationEdges": 19729,
+    "exactExtremalRows": 2,
+    "elapsedMs": 3616
+  },
+  "finite_monster_oracle": {
+    "scope": "Exact finite rational polygonal laws, constant tails. No game-value or continuous-CDF certification.",
+    "archivedRaw": 40,
+    "archivedSorted": 40,
+    "arbitrarySearch": 24,
+    "arbitrarySorted": 24,
+    "rayChecks": 1920,
+    "sixty": {
+      "mode": "raw",
+      "complete": true,
+      "stopReason": null,
+      "paths": 60,
+      "weightTotal": "200000",
+      "value": "56305800187/40000000000",
+      "decimal": 1.407645004675,
+      "route": [
+        [
+          "0",
+          "-5/16"
+        ],
+        [
+          "131249/200000",
+          "68749/200000"
+        ],
+        [
+          "199999/100000",
+          "-1"
+        ],
+        [
+          "399999/100000",
+          "1"
+        ]
+      ],
+      "stats": {
+        "nodes": 25776,
+        "leaves": 3,
+        "bounded": 4411,
+        "dominated": 8483,
+        "improvements": 3,
+        "memoKeys": 7897,
+        "remaining": 0
+      }
+    },
+    "shell": {
+      "mode": "sorted",
+      "complete": true,
+      "stopReason": null,
+      "paths": 9,
+      "weightTotal": "5266",
+      "value": "381/2633",
+      "decimal": 0.14470186099506266,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/4",
+          "1/4"
+        ],
+        [
+          "1",
+          "-1/2"
+        ],
+        [
+          "9/4",
+          "3/4"
+        ],
+        [
+          "4",
+          "-1"
+        ],
+        [
+          "6",
+          "1"
+        ]
+      ],
+      "stats": {
+        "nodes": 171,
+        "leaves": 14,
+        "bounded": 56,
+        "dominated": 9,
+        "improvements": 14,
+        "memoKeys": 69,
+        "remaining": 0
+      },
+      "captureRecords": [
+        {
+          "time": "0",
+          "mass": "4096",
+          "lower": "585",
+          "upper": "4681"
+        },
+        {
+          "time": "1/4",
+          "mass": "512",
+          "lower": "585",
+          "upper": "5193"
+        },
+        {
+          "time": "3/4",
+          "mass": "512",
+          "lower": "73",
+          "upper": "5193"
+        },
+        {
+          "time": "1",
+          "mass": "64",
+          "lower": "9",
+          "upper": "5193"
+        },
+        {
+          "time": "2",
+          "mass": "64",
+          "lower": "9",
+          "upper": "5257"
+        },
+        {
+          "time": "9/4",
+          "mass": "8",
+          "lower": "9",
+          "upper": "5265"
+        },
+        {
+          "time": "15/4",
+          "mass": "8",
+          "lower": "1",
+          "upper": "5265"
+        },
+        {
+          "time": "4",
+          "mass": "1",
+          "lower": "0",
+          "upper": "5265"
+        },
+        {
+          "time": "6",
+          "mass": "1",
+          "lower": "0",
+          "upper": "5266"
+        }
+      ]
+    },
+    "crossing": {
+      "raw": "1/2",
+      "sorted": "9/4"
+    }
+  },
+  "mixed_cdf_scoring": {
+    "scope": "Independent root re-execution of exact mixed CDF scoring; no global lower certificate.",
+    "finiteChecks": 64,
+    "fieldChecks": 28,
+    "independentMixedMoment": true,
+    "exactThreshold": "7117/5000",
+    "attack": {
+      "value": "1679833727101009491716831780922980469153163933190108535099925178533618660109966738342487906362077785185334220161558372313707058598283625305162799385886292556162917835549343955027855711936510677770196144465098393803241469590024725175638552807030183978538325444456631470932111910902606732528640586779732193036532710734477049718908350192831679995245792562749614359815317089114397076505148645333691534496059597627066415900878471033646289124028243602200165658471218781191580931087803238638905746170624275149454493811005061832538747883615343874809808553325760161238631990555258699816264517272390790326002717331073015836967906970164481637115598823905780941729061302352220532463/1180169818756665290380096747379439263777549787867891398098865152841249793403912515233817912701512984954254550440701449679434847704919220280693625485290254880923578038480469838818686992303289136741992445903304851203864433544219534410203140981003128924255677381702550997475904928365171693045922944761637948668028907269443500704566765962792950295445474428580621180512116052687221574470036972379793978842633829336711635606504153884829225136745319636355391253783825864438869944777285340724816587356441826999561828329687743753759847835617767506873116610229121652740481202247790237243909442341236467797703237001096908387410638455261334412016316057705120792576000000000000000000",
+      "decimal": 1.4233830592878158,
+      "complete": true,
+      "lower": "0",
+      "upper": "1",
+      "horizon": "12/5",
+      "intervals": 1103,
+      "atomUpdates": 241
+    },
+    "earlyTailAttack": {
+      "value": "35205939750799153181659122997481930794805810969347904953126579722173323491001627598450497511218200858360532631183023833644250193113538017553497374520266757627395051439875678992209676039824338778703544752450853402348394655255363501539001453133239716056022944155463172295359396155685981617460138926341454003142846903316813541702109933342329748127501309131399695748117361917311457449253155979320865077134571/24736878956621844399664306002204653149343895678841111379634696666878405525435980700877948421281537905905657807114785033497814434241729458041203085476009092171614693548735245071788266583841265665473221980334699529205038064236990290260570485379376878471301996143986203803636488127905461856044572085932029630458023340723396914446047516391851668923761541910669124423371116208705637298733056000000000000000000",
+      "decimal": 1.4232167207728863,
+      "complete": true,
+      "lower": "0",
+      "upper": "1",
+      "horizon": "2097151/524288",
+      "intervals": 1395,
+      "atomUpdates": 351
+    },
+    "elapsedMs": 42816
+  },
+  "post_one_bellman_gate": {
+    "scope": "Complete s>=1 genuinely delayed-plan Bellman gate on the stated high-current domain; delayed U<s<1 remains open.",
+    "source": {
+      "blob_sha": "5c45d042ee9948faebc03354c3e1e2ee3cbec1a5",
+      "path": "packages/interval_cdf_discovery/snapshots/endpoint_joint_i1_field.json",
+      "exact_reader_blob_sha": "5714f57ada458f38ef8b46adb32be2472a009622"
+    },
+    "domain": {
+      "initial_start_floor": "255/256",
+      "current_U": [
+        "255/256",
+        "1"
+      ],
+      "current_U_upper_strict": true,
+      "current_record_M_floor": "17670484999841/19531250000000",
+      "current_M_equals_R": true,
+      "current_V_negative": true,
+      "first_V_ge_current_V": true,
+      "first_V_lt_current_U": true,
+      "second_U_ge_one": true,
+      "retained_L_ge": "R(max(a0,-V),V)",
+      "no_reset_at_U_one": true
+    },
+    "coverage": {
+      "tail": {
+        "completed": 156,
+        "cases": 45092,
+        "empty": 9160,
+        "trace_degenerate": 16835,
+        "pass": 18282,
+        "fail": 815,
+        "minpass": "0",
+        "algorithm_crosschecks": 50
+      },
+      "ratio_cap": {
+        "completed": 815,
+        "pass": 168,
+        "fail": 563,
+        "empty": 84,
+        "degenerate": 0
+      },
+      "endpoint_comparator": {
+        "completed": 290,
+        "pass": 290,
+        "fail": 0,
+        "empty": 0,
+        "degenerate": 0
+      },
+      "fixed_one_affine": {
+        "completed": 273,
+        "pass": 29,
+        "fail": 244,
+        "empty": 0,
+        "degenerate": 0
+      },
+      "fixed_one_comparator": {
+        "completed": 244,
+        "pass": 244,
+        "fail": 0,
+        "empty": 0,
+        "degenerate": 0
+      }
+    },
+    "wide_first_turn_gate": {
+      "w0": "-31876647474353/45229875167500",
+      "left_four_cost_margin": "2517209183656877666974201311/28268671979687500000000000000",
+      "right_four_cost_margin": "3680834990301/156250000000000"
+    },
+    "post_turn_gate": {
+      "triangles": 1156,
+      "vertex_checks": 3468,
+      "minimum": "91472232581/1000000000000"
+    },
+    "quadratic_certificates": {
+      "endpoint_regions": 290,
+      "endpoint_bernstein_pairs": 9321,
+      "fixed_one_regions": 244,
+      "fixed_one_bernstein_pairs": 8419
+    },
+    "alpha_time_regression": {
+      "s": "4/5",
+      "Vroot": "1/2",
+      "alpha": "13/20",
+      "radius": "3/20"
+    },
+    "delayed_s_ge_one_gate_proved": true,
+    "all_precenter_Bellman_gate_proved": false,
+    "game_bound_claimed": false
+  },
+  "post_one_bellman_ms": 211883,
+  "live_search_restore": {
+    "scope": "Research checkpoint only. Rational physical atom geometry and exact lex capture predicates. Finite master exact only for the stored Float64 dyadic matrix when basis feasible; current basis repair pending. Global response numerical except separately archived 67-law integer certificate. No game equilibrium or new interval claim.",
+    "atoms": 467,
+    "archiveRows": 877,
+    "activeRows": 740,
+    "basisWasFeasible": false,
+    "lastFiniteLevel": 1.4234295428517187,
+    "lastGlobalResponse": 1.4535862593137376,
+    "elapsedMs": 14118
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "scope": "Exact germ adapter regressions, not a game bound.",
+  "equality_and_division_radius_guard": true,
+  "fixtures": [
+    {
+      "name": "distinct_same_limit",
+      "mode": "raw",
+      "limit": "0",
+      "nodes": 7,
+      "unpruned_nodes": 11,
+      "specialized_value": "1/8",
+      "epsilon": "1/8"
+    },
+    {
+      "name": "distinct_same_limit",
+      "mode": "sorted",
+      "limit": "0",
+      "nodes": 7,
+      "unpruned_nodes": 11,
+      "specialized_value": "1/8",
+      "epsilon": "1/8"
+    },
+    {
+      "name": "asymmetric_stationary",
+      "mode": "raw",
+      "limit": "19/32",
+      "nodes": 11,
+      "unpruned_nodes": 26,
+      "specialized_value": "86593/147456",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "asymmetric_stationary",
+      "mode": "sorted",
+      "limit": "19/32",
+      "nodes": 11,
+      "unpruned_nodes": 26,
+      "specialized_value": "86593/147456",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "rational_speed_outgoing",
+      "mode": "raw",
+      "limit": "19/20",
+      "nodes": 10,
+      "unpruned_nodes": 16,
+      "specialized_value": "4781423556932740199642824705/5019318332045354051026550784",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "rational_speed_outgoing",
+      "mode": "sorted",
+      "limit": "19/20",
+      "nodes": 10,
+      "unpruned_nodes": 16,
+      "specialized_value": "4781423556932740199642824705/5019318332045354051026550784",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "inward_outward",
+      "mode": "raw",
+      "limit": "13/16",
+      "nodes": 13,
+      "unpruned_nodes": 26,
+      "specialized_value": "313/384",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "inward_outward",
+      "mode": "sorted",
+      "limit": "13/16",
+      "nodes": 13,
+      "unpruned_nodes": 26,
+      "specialized_value": "313/384",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "moving_coalescence",
+      "mode": "raw",
+      "limit": "1/4",
+      "nodes": 7,
+      "unpruned_nodes": 9,
+      "specialized_value": "1/4",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "moving_coalescence",
+      "mode": "sorted",
+      "limit": "1/4",
+      "nodes": 7,
+      "unpruned_nodes": 9,
+      "specialized_value": "1/4",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "initial_tie_then_split",
+      "mode": "raw",
+      "limit": "1/2",
+      "nodes": 8,
+      "unpruned_nodes": 13,
+      "specialized_value": "1/2",
+      "epsilon": "1/192"
+    },
+    {
+      "name": "initial_tie_then_split",
+      "mode": "sorted",
+      "limit": "1/2",
+      "nodes": 8,
+      "unpruned_nodes": 13,
+      "specialized_value": "1/2",
+      "epsilon": "1/192"
+    }
+  ],
+  "arithmetic": {
+    "radius": "1/96",
+    "comparisons": 17476,
+    "maxDegree": 24
+  },
+  "unchanged_finite_core_blob": "51dbac43b59c3041abf831837dc58fde2a9294b2",
+  "reference_python_germ_blob": "99f6b3f384a71f155280d1c7aa240b65a112ddcb"
+}

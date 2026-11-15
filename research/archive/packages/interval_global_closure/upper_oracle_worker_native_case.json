@@ -1,0 +1,129 @@
+{
+  "scope": "Reconstructible native worker run for a supplied numerical law; not a game-value certificate.",
+  "input_bank_sha256": "2b48a1a875e75ffcf312f456685796ca621779b262a44e97ca2c31d17f02825a",
+  "input_weights_sha256": "8370dd73a55a663ec50950df47f0a23e40528b292662933d891c8e4065723e7b",
+  "output_sha256": "5934616bd87b6833ae55feb3f4ac3c3506d57fa7009193cb59e8fc6b90e6b4cb",
+  "bank_size": 1087,
+  "positive_atoms": 119,
+  "input_weight_sum": "24999999999999999033250797/25000000000000000000000000",
+  "normalized_law_hash": "6c6d51fd579cd214514d9bd8eb826db7c7e3358d3bd0ffc089f79d79a59b8b48",
+  "germ_response": 1.4739435631318543,
+  "collapsed_response": 1.4529171597098223,
+  "query_count": 193,
+  "base_count": 247,
+  "threshold_nodes": 44271,
+  "rows": [
+    {
+      "id": "physical_2a30090bf0260a6d6daee2739178c0c5c1aab2333cb02b2f1a8a3356ed9e8947",
+      "witness_law": "original-germ",
+      "profile": "minimum",
+      "fill": "avoided",
+      "vertices": 128,
+      "initial_position": "germ:[[\"15/16\",\"-1\",\"0\",\"1\"],[\"1\"]]",
+      "bank_entries": 1087,
+      "path_sha256": "2a30090bf0260a6d6daee2739178c0c5c1aab2333cb02b2f1a8a3356ed9e8947",
+      "exact_payoff_row_sha256": "44b52265fe3356b1020fd53f4a59f39a9b3218f929f1799632c76f6f72223649",
+      "weighted_original_limit": "3333749539758792368774150537045912423203131895675048538321150299721/2261789137078762106177204222107467152287100378145227122144344539136",
+      "own_witness_limit": "3333749539758792368774150537045912423203131895675048538321150299721/2261789137078762106177204222107467152287100378145227122144344539136",
+      "own_recapture_difference": "0"
+    },
+    {
+      "id": "physical_5d8ec733bc58d1a5746637d64b5020fa64445a66879495a7bb91cb246e27b7a1",
+      "witness_law": "original-germ",
+      "profile": "maximum",
+      "fill": "avoided",
+      "vertices": 340,
+      "initial_position": "germ:[[\"15/16\",\"0\",\"-1\"],[\"1\"]]",
+      "bank_entries": 1087,
+      "path_sha256": "5d8ec733bc58d1a5746637d64b5020fa64445a66879495a7bb91cb246e27b7a1",
+      "exact_payoff_row_sha256": "33a50c2b843eb5047ff8cfe6b451fd05963bab79bad582f3e9183eebdc7d2692",
+      "weighted_original_limit": "1666874769879396222000872998003015015678136446368272343601684360795/1130894568539381053088602111053733576143550189072613561072172269568",
+      "own_witness_limit": "1666874769879396222000872998003015015678136446368272343601684360795/1130894568539381053088602111053733576143550189072613561072172269568",
+      "own_recapture_difference": "0"
+    },
+    {
+      "id": "physical_7f628f9427cbe42d7833b3b0a42af620a7a5e8a9e6057330bc0e86c7b2fe2607",
+      "witness_law": "collapsed-ordinary",
+      "profile": "minimum",
+      "fill": "avoided",
+      "vertices": 124,
+      "initial_position": "germ:[[\"63/64\",\"0\",\"1\"],[\"1\"]]",
+      "bank_entries": 1087,
+      "path_sha256": "7f628f9427cbe42d7833b3b0a42af620a7a5e8a9e6057330bc0e86c7b2fe2607",
+      "exact_payoff_row_sha256": "182441868b684ad75532a7a723e4290c849f0b50c31bcecb130a214467576d96",
+      "weighted_original_limit": "3263919528686035049753999692269313181233888585303977591144377179721/2261789137078762106177204222107467152287100378145227122144344539136",
+      "own_witness_limit": "3286192248907004941880552485249380056355088701430934434152377179721/2261789137078762106177204222107467152287100378145227122144344539136",
+      "own_recapture_difference": "0"
+    },
+    {
+      "id": "physical_900f5ed2e5eb9e2f7c31d728e38779889fd3f9ea22f7f13a1a8bed400791cd30",
+      "witness_law": "collapsed-ordinary",
+      "profile": "maximum",
+      "fill": "avoided",
+      "vertices": 401,
+      "initial_position": "germ:[[\"127/128\",\"-1\"],[\"1\"]]",
+      "bank_entries": 1087,
+      "path_sha256": "900f5ed2e5eb9e2f7c31d728e38779889fd3f9ea22f7f13a1a8bed400791cd30",
+      "exact_payoff_row_sha256": "ff4d53dbd3a896289a102cf3cd7604214269f463d433cb5ccfb40ac4339cae32",
+      "weighted_original_limit": "1638043516625597301543883755178715142990509267347044526205297800795/1130894568539381053088602111053733576143550189072613561072172269568",
+      "own_witness_limit": "1643096124453502508554073972104748832254114849246215291517297800795/1130894568539381053088602111053733576143550189072613561072172269568",
+      "own_recapture_difference": "0"
+    },
+    {
+      "id": "physical_c0b811cf98152fce2554119e8837273d63e33836c0c577782f0410adb0b55efc",
+      "witness_law": "collapsed-ordinary",
+      "profile": "minimum",
+      "fill": "common-wave",
+      "vertices": 124,
+      "initial_position": "germ:[[\"63/64\",\"0\",\"1\"],[\"1\"]]",
+      "bank_entries": 1087,
+      "path_sha256": "c0b811cf98152fce2554119e8837273d63e33836c0c577782f0410adb0b55efc",
+      "exact_payoff_row_sha256": "182441868b684ad75532a7a723e4290c849f0b50c31bcecb130a214467576d96",
+      "weighted_original_limit": "3263919528686035049753999692269313181233888585303977591144377179721/2261789137078762106177204222107467152287100378145227122144344539136",
+      "own_witness_limit": "3286192248907004941880552485249380056355088701430934434152377179721/2261789137078762106177204222107467152287100378145227122144344539136",
+      "own_recapture_difference": "0"
+    }
+  ],
+  "seconds": {
+    "compile": 0.957,
+    "cut": 0.36,
+    "realize_and_score": 8.791,
+    "collapsed": 0.749,
+    "total": 11.908
+  },
+  "arithmetic": {
+    "radius": "11/3602879003963640",
+    "comparisons": 354987,
+    "maxDegree": 14
+  },
+  "dependencies": {
+    "atomic": {
+      "filename": "atomic_survival_v8.cjs",
+      "sha256": "0e752e86f76632ec7c96f6e7095251670ef43553a252131248cd3074b7e4f37f"
+    },
+    "germAtomic": {
+      "filename": "germ_atomic_survival.cjs",
+      "sha256": "b3c34c5399ecc9117f5716b7a825c91fcce6ff187e7f4c00e5f597572833f635"
+    },
+    "germ": {
+      "filename": "germ_response_v8.cjs",
+      "sha256": "362d80044c5df44bf47652a32110ebd8987ade00956b9955ede59ad1caef7ed0"
+    },
+    "realizer": {
+      "filename": "germ_generalized_realizer.cjs",
+      "sha256": "06b01d80e8c5c5500d69264d536071463fe8077a2a4ca5968003c36632ddef0d"
+    },
+    "frozen": {
+      "filename": "germ_frozen_law_tools.cjs",
+      "sha256": "817af343bb40034d9682d090ffcc19126a6b55b56dd27748c41f8cda0ff48e8c"
+    },
+    "exact": {
+      "filename": "finite_quantile_response.mjs",
+      "sha256": "78aa3a3999c4ba911ccb01e42e175ae07b73a198bf78c43e2f95d5cd150daa1a"
+    },
+    "collapsed": {
+      "filename": "collapsed_companion.cjs",
+      "sha256": "034b82468922806ec38bd443a32c9891405196a3622e58ce1aeead969d3c7fa7"
+    }
+  }
+}

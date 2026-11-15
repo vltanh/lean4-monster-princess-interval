@@ -1,0 +1,122 @@
+{
+  "scope": "Independent chronological segment intersections; immutable physical Princess germs.",
+  "signed_capture_equalities": 1372,
+  "upper_maximizer_realizations": 24,
+  "cases": [
+    {
+      "name": "distinct_same_limit",
+      "paths": 3,
+      "monsters": 12,
+      "signed_comparisons": 72
+    },
+    {
+      "name": "asymmetric_stationary",
+      "paths": 4,
+      "monsters": 14,
+      "signed_comparisons": 112
+    },
+    {
+      "name": "rational_speed_outgoing",
+      "paths": 4,
+      "monsters": 14,
+      "signed_comparisons": 112
+    },
+    {
+      "name": "inward_outward",
+      "paths": 4,
+      "monsters": 14,
+      "signed_comparisons": 112
+    },
+    {
+      "name": "moving_coalescence",
+      "paths": 3,
+      "monsters": 12,
+      "signed_comparisons": 72
+    },
+    {
+      "name": "initial_tie_then_split",
+      "paths": 4,
+      "monsters": 12,
+      "signed_comparisons": 96
+    },
+    {
+      "name": "upper_constant_endpoint",
+      "signed_comparisons": 16
+    },
+    {
+      "name": "upper_shifted_M1",
+      "signed_comparisons": 32
+    },
+    {
+      "name": "upper_split_turn",
+      "signed_comparisons": 32
+    },
+    {
+      "name": "upper_split_start",
+      "signed_comparisons": 32
+    },
+    {
+      "name": "upper_general_inward",
+      "signed_comparisons": 24
+    },
+    {
+      "name": "upper_nested_initial_layer",
+      "signed_comparisons": 24
+    }
+  ],
+  "actual": {
+    "positive_paths": 159,
+    "signed_comparisons": 636,
+    "routes": [
+      {
+        "route": [
+          [
+            "0",
+            "germ:[[\"15/16\",\"-1\"],[\"1\"]]"
+          ],
+          [
+            "germ:[[\"31/16\",\"-1\"],[\"1\"]]",
+            "-1"
+          ],
+          [
+            "germ:[[\"63/16\",\"-1\"],[\"1\"]]",
+            "1"
+          ]
+        ],
+        "raw_pair_cost": "germ:[[\"4115606858452227030094659793/3276799999999999976930082816\",\"-55696725623177884288981/66666666666666666197308\",\"-2114377523005330764150/16666666666666666549327\"],[\"1\"]]",
+        "limit": "4115606858452227030094659793/3276799999999999976930082816"
+      },
+      {
+        "route": [
+          [
+            "0",
+            "7/8"
+          ],
+          [
+            "15/8",
+            "-1"
+          ],
+          [
+            "31/8",
+            "1"
+          ]
+        ],
+        "raw_pair_cost": "germ:[[\"18339429312017578045788928988179/13483358399999999905072033187808\",\"-25819826320033120237527/66666666666666666197308\",\"-1432791139626129204125/16666666666666666549327\",\"0\",\"0\",\"0\",\"-3027545961461035332727/33333333333333333098654\"],[\"1\"]]",
+        "limit": "18339429312017578045788928988179/13483358399999999905072033187808"
+      }
+    ]
+  },
+  "cache": {
+    "inverseQueries": 1474,
+    "inverseHits": 412,
+    "constantComputations": 62,
+    "germComputations": 1000,
+    "pairScores": 742
+  },
+  "arithmetic": {
+    "radius": "1/320000000000000000",
+    "comparisons": 407067,
+    "maxDegree": 19
+  },
+  "seconds": 50.32
+}

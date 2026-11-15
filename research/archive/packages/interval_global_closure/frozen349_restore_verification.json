@@ -1,0 +1,30 @@
+{
+  "scope": "Recoverable coupled discovery state. Physical paths are immutable; no unrestricted lower response or matching game value is certified.",
+  "identity": {
+    "rows_sha256": "b2612dab1e345408913181b596c599e5af379e84a4815c21294f3f41b064d881",
+    "atoms_sha256": "904be06bc899af6c2d9cf7fa1b8273846282fcaa63018b6f92337ba583baedc3",
+    "rows": 349,
+    "columns": 1465
+  },
+  "new_rows": 17,
+  "new_atoms": 22,
+  "master_report": {
+    "rows": 349,
+    "columns": 1465,
+    "packing_value": 1.4193714116482343,
+    "minimum_column_payoff": 1.4193714116482323,
+    "maximum_row_payoff": 1.419371411648235,
+    "duality_gap": 2.6645352591003757e-15,
+    "monster_support": 93,
+    "princess_support": 91,
+    "iterations": 233,
+    "seconds": 0.315963704000751,
+    "nonnegative_probability_repair": {
+      "monster_negative_count": 0,
+      "princess_negative_count": 0,
+      "monster_removed_negative_mass": -0.0,
+      "princess_removed_negative_mass": -0.0
+    }
+  },
+  "checkpoint_sha256": "cc5da3548c516dcc5e806d6593cf4686d6c8441b1dbc1d2de6665a79158b258b"
+}

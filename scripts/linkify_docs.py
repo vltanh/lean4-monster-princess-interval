@@ -32,7 +32,7 @@ from pathlib import Path
 
 # ---- configuration -------------------------------------------------------------------------
 # The Markdown documents to process.
-DOCS = ['README.md', 'REPORT.md', 'CREDITS.md']
+DOCS = ['README.md', 'REPORT.md', 'CREDITS.md', 'research/README.md']
 # Namespaces in which the documents name declarations without their prefix, most specific last.
 NAMESPACES = ['PrincessMonsterInterval', 'PrincessMonsterInterval.Challenge']
 # Top-level module names of the project: a code span naming such a module links to its file.

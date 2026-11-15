@@ -1,0 +1,95 @@
+{
+  "scope": "Curated continuum checkpoint; omit intermediate fields, live logs and redundant candidate wrappers.",
+  "files": [
+    {
+      "path": "packages/interval_global_closure/continuum_field.py",
+      "bytes": 12074,
+      "sha256": "0c84f3e82bc1993b02a8f25ffef010582a59f2da584b05cc83f46fbfb5cd75e5"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_synthesis.py",
+      "bytes": 5464,
+      "sha256": "2ec4bc4fc28c2d3ffe71fdf6c754f3b02bacb746bc0aeee39c81ba780855a055"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_master.py",
+      "bytes": 22523,
+      "sha256": "b1a1a4762900b5645b7839bf95c169a08b0c99e707f0f768320752c89e3563c1"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_inward_scan.py",
+      "bytes": 6597,
+      "sha256": "138e7d9173bbabc81016df11795874974ac5a19ef9cbbc40d683c54c44cffd10"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_hotstart.py",
+      "bytes": 3868,
+      "sha256": "801392cac944c055ed653437b4c55cc4d1c18251dc4c0b4689cfe96a2b96d925"
+    },
+    {
+      "path": "packages/interval_global_closure/verify_continuum_field.py",
+      "bytes": 4253,
+      "sha256": "4161c0e8dcf40cabb1de90b325a3949c8096d6f916da23ea3a8f7ddc4f645f9a"
+    },
+    {
+      "path": "research/12-global-closure/CONTINUUM_EXCHANGE.md",
+      "bytes": 9386,
+      "sha256": "a1d1cc99c365b12aa0dae461466dd97096644fcd5fe4fe60098b5a7d94bf5af7"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_checkpoint.json",
+      "bytes": 4984,
+      "sha256": "554f36e2cd1d9ef9a2a150b25518013548c0b489827e34e279c493360efea37b"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_free_candidate_12.json",
+      "bytes": 673162,
+      "sha256": "515cc2541dad42983b76fb411986ff69adcec7a08f0990235f455c6fb05aaa89"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_complete_h3_iter_01.json",
+      "bytes": 431267,
+      "sha256": "5092c9f3741416d2b41a107a39b74e940357f75183fbeb51b20ce0b07909b367"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_h2_attack_routes.json",
+      "bytes": 596408,
+      "sha256": "e79d085d0d648f60d467d7834b99430b07e548508562787958ca55f6629b0760"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_complete_h3_attack_routes.json",
+      "bytes": 712540,
+      "sha256": "2a073f552574b4108eb2cf42366d90bae6a9f055117cc03c4d54e51959a1af77"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_h2_upper_candidate.json",
+      "bytes": 245185,
+      "sha256": "8d93683adcd7a59aaf0a0e7a1f25f2f3a8e564a5911c336dfc7b831bfa4af711"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_inward_h2_12.json",
+      "bytes": 2779,
+      "sha256": "634294cd09560528a873aa8ab16a2328264e43f3bf5536ad02ad9c1d04fc2557"
+    },
+    {
+      "path": "packages/interval_global_closure/continuous_response_grid_h2_12.json",
+      "bytes": 10630,
+      "sha256": "25d061d6bf5a433169d7b7aaf0b022a9d46fa648c113fb492fe53078c6188130"
+    },
+    {
+      "path": "packages/interval_global_closure/continuous_response_grid_h3_iter01_128.json",
+      "bytes": 34197,
+      "sha256": "1dc3795c98865532414186c3137a434ffbca614b4e4401b58da689f8257933ff"
+    },
+    {
+      "path": "packages/interval_global_closure/continuum_complete_h3_node_dp_01.json",
+      "bytes": 25771,
+      "sha256": "468efeb26020356b490baccf1441a325b67d9746529f4eeec4f20bba0691c539"
+    },
+    {
+      "path": "packages/interval_global_closure/continuous_response_grid_h3_iter01_adaptive_complete.json",
+      "bytes": 42583,
+      "sha256": "6452cb61222ec957e7c501f39e206874a52b5c0a34a64bc82a6724ec92681d68"
+    }
+  ]
+}

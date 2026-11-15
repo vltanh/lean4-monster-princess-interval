@@ -1,0 +1,764 @@
+{
+  "file_sha256": "1171710b1fab0d3ae400b3995a1a918ed862a38fba0c3672ad0aae18751e01ce",
+  "n": 128,
+  "calendar_plans": 809,
+  "total_weight_numerator": "1000000000000",
+  "endpoint_weight": "314792314199/500000000000",
+  "interior_gap": "1/128",
+  "stationary_endpoint_score": "91124797889849/64000000000000",
+  "stored_certified_upper": "145925593551091/102400000000000",
+  "upper_minus_boundary_limit": "1653/102400000000000",
+  "exact_loop_scores": [
+    {
+      "epsilon": "1/1536",
+      "h": "1/512",
+      "score": "1458311558551783/1024000000000000"
+    },
+    {
+      "epsilon": "1/512",
+      "h": "1/512",
+      "score": "1458311558551783/1024000000000000"
+    },
+    {
+      "epsilon": "1/768",
+      "h": "1/256",
+      "score": "729313175432991/512000000000000"
+    },
+    {
+      "epsilon": "1/256",
+      "h": "1/256",
+      "score": "729313175432991/512000000000000"
+    },
+    {
+      "epsilon": "1/512",
+      "h": "3/512",
+      "score": "1458941143180181/1024000000000000"
+    },
+    {
+      "epsilon": "3/512",
+      "h": "3/512",
+      "score": "1458941143180181/1024000000000000"
+    }
+  ],
+  "scope": "exact route legality, endpoint-tail, chronological loop-payoff and diagnostic replay; max-flow witness not replayed here",
+  "status": "PASS",
+  "distinct_physical_pairs": 768,
+  "initial_start_rows": [
+    {
+      "initial_absolute_position": "0",
+      "weight_numerator": "207052908",
+      "maximum_center_time": "0"
+    },
+    {
+      "initial_absolute_position": "1/128",
+      "weight_numerator": "131741988",
+      "maximum_center_time": "1/128"
+    },
+    {
+      "initial_absolute_position": "1/64",
+      "weight_numerator": "450132235",
+      "maximum_center_time": "57/64"
+    },
+    {
+      "initial_absolute_position": "3/128",
+      "weight_numerator": "20576111",
+      "maximum_center_time": "3/128"
+    },
+    {
+      "initial_absolute_position": "1/32",
+      "weight_numerator": "278652765",
+      "maximum_center_time": "57/64"
+    },
+    {
+      "initial_absolute_position": "5/128",
+      "weight_numerator": "1908050",
+      "maximum_center_time": "17/128"
+    },
+    {
+      "initial_absolute_position": "3/64",
+      "weight_numerator": "432847869",
+      "maximum_center_time": "29/32"
+    },
+    {
+      "initial_absolute_position": "7/128",
+      "weight_numerator": "1473198",
+      "maximum_center_time": "7/128"
+    },
+    {
+      "initial_absolute_position": "1/16",
+      "weight_numerator": "338409448",
+      "maximum_center_time": "29/32"
+    },
+    {
+      "initial_absolute_position": "9/128",
+      "weight_numerator": "16720879",
+      "maximum_center_time": "9/128"
+    },
+    {
+      "initial_absolute_position": "5/64",
+      "weight_numerator": "343329165",
+      "maximum_center_time": "29/32"
+    },
+    {
+      "initial_absolute_position": "3/32",
+      "weight_numerator": "367882448",
+      "maximum_center_time": "29/32"
+    },
+    {
+      "initial_absolute_position": "13/128",
+      "weight_numerator": "14086773",
+      "maximum_center_time": "13/128"
+    },
+    {
+      "initial_absolute_position": "7/64",
+      "weight_numerator": "350154109",
+      "maximum_center_time": "29/32"
+    },
+    {
+      "initial_absolute_position": "1/8",
+      "weight_numerator": "338900195",
+      "maximum_center_time": "29/32"
+    },
+    {
+      "initial_absolute_position": "9/64",
+      "weight_numerator": "307918482",
+      "maximum_center_time": "59/64"
+    },
+    {
+      "initial_absolute_position": "5/32",
+      "weight_numerator": "599224107",
+      "maximum_center_time": "59/64"
+    },
+    {
+      "initial_absolute_position": "11/64",
+      "weight_numerator": "549680228",
+      "maximum_center_time": "59/64"
+    },
+    {
+      "initial_absolute_position": "23/128",
+      "weight_numerator": "83197657",
+      "maximum_center_time": "31/32"
+    },
+    {
+      "initial_absolute_position": "3/16",
+      "weight_numerator": "1128596765",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "25/128",
+      "weight_numerator": "246110242",
+      "maximum_center_time": "61/64"
+    },
+    {
+      "initial_absolute_position": "13/64",
+      "weight_numerator": "3744170529",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "27/128",
+      "weight_numerator": "6610549",
+      "maximum_center_time": "127/128"
+    },
+    {
+      "initial_absolute_position": "7/32",
+      "weight_numerator": "3891395211",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "29/128",
+      "weight_numerator": "5356429",
+      "maximum_center_time": "127/128"
+    },
+    {
+      "initial_absolute_position": "15/64",
+      "weight_numerator": "4056135966",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "1/4",
+      "weight_numerator": "4065828513",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "33/128",
+      "weight_numerator": "16392535",
+      "maximum_center_time": "31/32"
+    },
+    {
+      "initial_absolute_position": "17/64",
+      "weight_numerator": "4105592240",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "9/32",
+      "weight_numerator": "4125247871",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "37/128",
+      "weight_numerator": "1297759",
+      "maximum_center_time": "125/128"
+    },
+    {
+      "initial_absolute_position": "19/64",
+      "weight_numerator": "4174921119",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "39/128",
+      "weight_numerator": "6991527",
+      "maximum_center_time": "123/128"
+    },
+    {
+      "initial_absolute_position": "5/16",
+      "weight_numerator": "4130845428",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "21/64",
+      "weight_numerator": "4214168058",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "43/128",
+      "weight_numerator": "2171907",
+      "maximum_center_time": "127/128"
+    },
+    {
+      "initial_absolute_position": "11/32",
+      "weight_numerator": "4197702257",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "23/64",
+      "weight_numerator": "4227433663",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "47/128",
+      "weight_numerator": "1085950",
+      "maximum_center_time": "125/128"
+    },
+    {
+      "initial_absolute_position": "3/8",
+      "weight_numerator": "4290700862",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "25/64",
+      "weight_numerator": "4291561525",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "51/128",
+      "weight_numerator": "1591801",
+      "maximum_center_time": "123/128"
+    },
+    {
+      "initial_absolute_position": "13/32",
+      "weight_numerator": "4360793670",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "53/128",
+      "weight_numerator": "818776",
+      "maximum_center_time": "121/128"
+    },
+    {
+      "initial_absolute_position": "27/64",
+      "weight_numerator": "4404902751",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "7/16",
+      "weight_numerator": "4413131232",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "29/64",
+      "weight_numerator": "4420251210",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "15/32",
+      "weight_numerator": "4455429397",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "31/64",
+      "weight_numerator": "4442924924",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "1/2",
+      "weight_numerator": "4499219086",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "33/64",
+      "weight_numerator": "4492353541",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "17/32",
+      "weight_numerator": "4512374258",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "35/64",
+      "weight_numerator": "4625351248",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "9/16",
+      "weight_numerator": "4218452517",
+      "maximum_center_time": "23/16"
+    },
+    {
+      "initial_absolute_position": "73/128",
+      "weight_numerator": "413225",
+      "maximum_center_time": "121/128"
+    },
+    {
+      "initial_absolute_position": "37/64",
+      "weight_numerator": "4256300107",
+      "maximum_center_time": "91/64"
+    },
+    {
+      "initial_absolute_position": "19/32",
+      "weight_numerator": "4287654660",
+      "maximum_center_time": "45/32"
+    },
+    {
+      "initial_absolute_position": "39/64",
+      "weight_numerator": "4327602893",
+      "maximum_center_time": "89/64"
+    },
+    {
+      "initial_absolute_position": "79/128",
+      "weight_numerator": "1122163",
+      "maximum_center_time": "125/128"
+    },
+    {
+      "initial_absolute_position": "5/8",
+      "weight_numerator": "4364950994",
+      "maximum_center_time": "11/8"
+    },
+    {
+      "initial_absolute_position": "81/128",
+      "weight_numerator": "575268",
+      "maximum_center_time": "123/128"
+    },
+    {
+      "initial_absolute_position": "41/64",
+      "weight_numerator": "4548810354",
+      "maximum_center_time": "87/64"
+    },
+    {
+      "initial_absolute_position": "83/128",
+      "weight_numerator": "25259620",
+      "maximum_center_time": "31/32"
+    },
+    {
+      "initial_absolute_position": "21/32",
+      "weight_numerator": "3695827002",
+      "maximum_center_time": "43/32"
+    },
+    {
+      "initial_absolute_position": "85/128",
+      "weight_numerator": "981512077",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "43/64",
+      "weight_numerator": "3679221938",
+      "maximum_center_time": "85/64"
+    },
+    {
+      "initial_absolute_position": "87/128",
+      "weight_numerator": "978155108",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "11/16",
+      "weight_numerator": "3742895263",
+      "maximum_center_time": "21/16"
+    },
+    {
+      "initial_absolute_position": "89/128",
+      "weight_numerator": "970128250",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "45/64",
+      "weight_numerator": "3778501968",
+      "maximum_center_time": "83/64"
+    },
+    {
+      "initial_absolute_position": "91/128",
+      "weight_numerator": "968170091",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "23/32",
+      "weight_numerator": "3834320694",
+      "maximum_center_time": "41/32"
+    },
+    {
+      "initial_absolute_position": "93/128",
+      "weight_numerator": "953943564",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "47/64",
+      "weight_numerator": "3880167202",
+      "maximum_center_time": "81/64"
+    },
+    {
+      "initial_absolute_position": "95/128",
+      "weight_numerator": "950773881",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "3/4",
+      "weight_numerator": "3975354033",
+      "maximum_center_time": "5/4"
+    },
+    {
+      "initial_absolute_position": "97/128",
+      "weight_numerator": "948858929",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "49/64",
+      "weight_numerator": "4103735960",
+      "maximum_center_time": "79/64"
+    },
+    {
+      "initial_absolute_position": "99/128",
+      "weight_numerator": "944788662",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "25/32",
+      "weight_numerator": "4133595354",
+      "maximum_center_time": "39/32"
+    },
+    {
+      "initial_absolute_position": "101/128",
+      "weight_numerator": "941657629",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "51/64",
+      "weight_numerator": "4197909339",
+      "maximum_center_time": "77/64"
+    },
+    {
+      "initial_absolute_position": "103/128",
+      "weight_numerator": "938539130",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "13/16",
+      "weight_numerator": "4223139610",
+      "maximum_center_time": "19/16"
+    },
+    {
+      "initial_absolute_position": "105/128",
+      "weight_numerator": "936663928",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "53/64",
+      "weight_numerator": "4426742198",
+      "maximum_center_time": "75/64"
+    },
+    {
+      "initial_absolute_position": "107/128",
+      "weight_numerator": "933567824",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "27/32",
+      "weight_numerator": "4458942402",
+      "maximum_center_time": "37/32"
+    },
+    {
+      "initial_absolute_position": "109/128",
+      "weight_numerator": "930484044",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "55/64",
+      "weight_numerator": "4449649115",
+      "maximum_center_time": "73/64"
+    },
+    {
+      "initial_absolute_position": "111/128",
+      "weight_numerator": "928636011",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "7/8",
+      "weight_numerator": "4562240781",
+      "maximum_center_time": "9/8"
+    },
+    {
+      "initial_absolute_position": "113/128",
+      "weight_numerator": "924353157",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "57/64",
+      "weight_numerator": "7716864800",
+      "maximum_center_time": "71/64"
+    },
+    {
+      "initial_absolute_position": "29/32",
+      "weight_numerator": "16143850476",
+      "maximum_center_time": "35/32"
+    },
+    {
+      "initial_absolute_position": "117/128",
+      "weight_numerator": "771138150",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "59/64",
+      "weight_numerator": "16772615756",
+      "maximum_center_time": "69/64"
+    },
+    {
+      "initial_absolute_position": "119/128",
+      "weight_numerator": "762852340",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "15/16",
+      "weight_numerator": "26998429082",
+      "maximum_center_time": "17/16"
+    },
+    {
+      "initial_absolute_position": "121/128",
+      "weight_numerator": "755266200",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "61/64",
+      "weight_numerator": "29019773322",
+      "maximum_center_time": "67/64"
+    },
+    {
+      "initial_absolute_position": "123/128",
+      "weight_numerator": "748367725",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "31/32",
+      "weight_numerator": "30249378232",
+      "maximum_center_time": "33/32"
+    },
+    {
+      "initial_absolute_position": "125/128",
+      "weight_numerator": "740326141",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "63/64",
+      "weight_numerator": "33306634900",
+      "maximum_center_time": "65/64"
+    },
+    {
+      "initial_absolute_position": "127/128",
+      "weight_numerator": "632910119",
+      "maximum_center_time": "1"
+    },
+    {
+      "initial_absolute_position": "1",
+      "weight_numerator": "629584628398",
+      "maximum_center_time": "1"
+    }
+  ],
+  "law_specific_outward_cutoff": [
+    {
+      "left": "0",
+      "right": "9/16",
+      "cutoff": "23/16",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "9/16",
+      "right": "37/64",
+      "cutoff": "91/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "37/64",
+      "right": "19/32",
+      "cutoff": "45/32",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "19/32",
+      "right": "39/64",
+      "cutoff": "89/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "39/64",
+      "right": "5/8",
+      "cutoff": "11/8",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "5/8",
+      "right": "41/64",
+      "cutoff": "87/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "41/64",
+      "right": "21/32",
+      "cutoff": "43/32",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "21/32",
+      "right": "43/64",
+      "cutoff": "85/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "43/64",
+      "right": "11/16",
+      "cutoff": "21/16",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "11/16",
+      "right": "45/64",
+      "cutoff": "83/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "45/64",
+      "right": "23/32",
+      "cutoff": "41/32",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "23/32",
+      "right": "47/64",
+      "cutoff": "81/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "47/64",
+      "right": "3/4",
+      "cutoff": "5/4",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "3/4",
+      "right": "49/64",
+      "cutoff": "79/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "49/64",
+      "right": "25/32",
+      "cutoff": "39/32",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "25/32",
+      "right": "51/64",
+      "cutoff": "77/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "51/64",
+      "right": "13/16",
+      "cutoff": "19/16",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "13/16",
+      "right": "53/64",
+      "cutoff": "75/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "53/64",
+      "right": "27/32",
+      "cutoff": "37/32",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "27/32",
+      "right": "55/64",
+      "cutoff": "73/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "55/64",
+      "right": "7/8",
+      "cutoff": "9/8",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "7/8",
+      "right": "57/64",
+      "cutoff": "71/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "57/64",
+      "right": "29/32",
+      "cutoff": "35/32",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "29/32",
+      "right": "59/64",
+      "cutoff": "69/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "59/64",
+      "right": "15/16",
+      "cutoff": "17/16",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "15/16",
+      "right": "61/64",
+      "cutoff": "67/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "61/64",
+      "right": "31/32",
+      "cutoff": "33/32",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "31/32",
+      "right": "63/64",
+      "cutoff": "65/64",
+      "interval": "[left,right)"
+    },
+    {
+      "left": "63/64",
+      "right": "1",
+      "cutoff": "1",
+      "interval": "[left,right)"
+    }
+  ],
+  "cutoff_at_one": "0",
+  "cutoff_source_thresholds": 107,
+  "upper_minus_boundary_limit_decimal": 1.6142578125e-11,
+  "stationary_endpoint_score_decimal": 1.4238249670288907,
+  "script_sha256": "1ec86f34b55d5d387a63673ea5a28aad5607c6c2e81179936f2c907a1a8639f1"
+}

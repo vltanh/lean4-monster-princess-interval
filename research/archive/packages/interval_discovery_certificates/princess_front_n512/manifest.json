@@ -1,0 +1,96 @@
+{
+  "format": "retained-normalized-princess-certificate-v1",
+  "status": "COMPLETED_CI_CERTIFICATE_RETAINED",
+  "scope": "Exact complete normalized-bank lower with two native implementations and an independent BigInt target replay; game-value transfer and a distinct explicit continuous Princess extraction.",
+  "n": 512,
+  "field_denominator": "1600000000",
+  "verified_lower_units": "4663655453568",
+  "objective_denominator": "3276800000000",
+  "normalized_bank_lower": "36434808231/25600000000",
+  "game_value_transfer_loss": "1/1024",
+  "game_value_lower": "36409808231/25600000000",
+  "interpolation_epsilon": "1/1024",
+  "explicit_princess_transfer_loss": "1025/1048576",
+  "explicit_princess_security": "582556541071/409600000000",
+  "files": {
+    "field.json": {
+      "sha256": "a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10",
+      "bytes": 497733,
+      "artifact_member": "source/field.json"
+    },
+    "princess.json": {
+      "sha256": "b7ac0c124dfcf6d3d00fbfaa6fbf2872e04878572d0f5221e7f7de0b05a257d7",
+      "bytes": 498476,
+      "artifact_member": "princess.json"
+    },
+    "original.replay.json": {
+      "sha256": "008bbb4f42c4f92b8c9f31cdb957a070f79abffecf012e641448c01f114c187d",
+      "bytes": 794,
+      "artifact_member": "source/original.replay.json"
+    },
+    "center.replay.json": {
+      "sha256": "8f1de0a831256951e18b9e5f6a475fe3e5d8409cfaaddd6a88846eb05699044b",
+      "bytes": 1546,
+      "artifact_member": "source/center.replay.json"
+    },
+    "independent.replay.json": {
+      "sha256": "98ad748bd66963ee37ed0d9d7584e29e248c5d7f9db7a960452db6a89867baa3",
+      "bytes": 1421,
+      "artifact_member": "independent.replay.json"
+    },
+    "extraction.replay.json": {
+      "sha256": "2179df9f57d1e2fc1a4e903ee3535e96ac37c47707665f91b57ee23265f38856",
+      "bytes": 569,
+      "artifact_member": "extraction.replay.json"
+    }
+  },
+  "discovery": {
+    "run_id": 43545082756,
+    "run_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43545082756",
+    "commit": "43ecfa2140c22ce31b0d2469a8ae2862320bc7fe",
+    "artifact_id": 14093139934,
+    "artifact_name": "continuous-front-refinement",
+    "artifact_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43545082756/artifacts/14093139934",
+    "artifact_zip_sha256": "d0a518a73fc8d3bc23aee8519ff9395a3faa2db8d6dbd346f52bb44e2b7205d9",
+    "artifact_zip_bytes": 733542,
+    "download_digest_verified": true,
+    "source_n": 256,
+    "source_seed_sha256": "a8e1d84d67e66e08d6d1eeb02f18c6e5121108cb4368ededd9db2e792a97189e",
+    "exact_fullwidth_refinement": true,
+    "original_verifier_source_sha256": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+    "center_verifier_source_sha256": "1835b5a33da7fb256bfe80317df8edc01e7ed166ee3d490c037b5d645da3c4fa"
+  },
+  "independent_replay": {
+    "run_id": 43546803161,
+    "run_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43546803161",
+    "job_id": 132300097087,
+    "job_conclusion": "success",
+    "commit": "4503f3ea3eb360978b0d2632461ca748cd714899",
+    "artifact_id": 14095016913,
+    "artifact_name": "independently-certified-front-lower",
+    "artifact_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43546803161/artifacts/14095016913",
+    "artifact_zip_sha256": "ff3c36fe107a6c739b63ab77bacd41ae1816018c76f2182cca77c972aad240cc",
+    "artifact_zip_bytes": 1101814,
+    "download_digest_verified": true,
+    "node_version": "v22.23.4",
+    "verifier_source_sha256": "3ca39089073633d89e12a7ebec1b46257ee037d3ff4ed71d58614f5f6aa73092",
+    "extractor_source_sha256": "a8009cad475d59da202060fa3f84b43f793a540dfdf32541bd1db4d539e2811e",
+    "record_states": 507231825,
+    "generated_transitions": 893765461,
+    "elapsed_ms": 780246,
+    "source_hash_note": "The completed replay used the stated 3ca390 source. Later 9ff33b8b0cfe3afcd04829aade627e7465264f641246cc2a795c96609b4d2b97 only snapshots the verifier source hash before verification; it is not substituted into the saved report."
+  },
+  "retention_check": {
+    "artifact_members_preserved_byte_exact": true,
+    "discovery_and_independent_source_members_identical": true,
+    "full_bank_search_replayed_during_retention": false,
+    "command": "node packages/interval_discovery_certificates/princess_front_n512/check.cjs",
+    "scope": "Hashes, saved-report bindings, exact arithmetic, full nodal transport validation, and deterministic makeStrategy/assertSameStrategy comparison. This check does not rerun the response search."
+  },
+  "provenance": {
+    "file": "provenance.json",
+    "sha256": "4799cd12222b19063f871dc61254356694405ce3f8334f571f9c52cdaa890dbb",
+    "bytes": 13200,
+    "scope": "Reviewed source/proof hashes, preserved historical BigInt verifier, selected successful GitHub job/artifact metadata, and exact bindings for all eleven independent-artifact members; prepared field reconstructed without duplicating its nodal payload."
+  }
+}

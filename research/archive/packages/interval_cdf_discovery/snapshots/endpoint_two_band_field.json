@@ -1,0 +1,15 @@
+{
+  "scope": "Complete unmeshed ordered CDF from two disjoint incoming-band warps. Terminal negative M1 is repaired analytically; other changed response families require audit. This is not a game bound or equilibrium.",
+  "base_field": "endpoint_joint_i1_field.json",
+  "bands": [
+    "endpoint_low_band_warp.json",
+    "endpoint_high_band_warp.json"
+  ],
+  "repair_interval": ["127/128", "1"],
+  "rank_band_union": ["1/2", "113/125"],
+  "initial_front_cap": "Every warped band uses h_i(min(A_base(U),R_base(psi_i(U),V))); this cap preserves the initial front on bridge intervals and is inactive on the proved repair intervals.",
+  "global_source_gates": "Each warp is increasing in U, satisfies U<=psi(U)<=1 before U1, and is identity afterward. Disjoint rank-band CDFs preserve the transport cone and total mass.",
+  "terminal_ell_gate": "The low band repairs [127/128,255/256] and the high band repairs [255/256,1]. The initial-front cap preserves A everywhere. Both additional changes have nonnegative row gain and zero terminal H gain.",
+  "all_return_preservation": "On the terminal negative-V cone the low band is saturated. The high band gives Dnew>=min(Dbase,12/125), rnew<=rbase, and leaves post e unchanged. Since 12/125>1.9*e(1/128), the audited d>=1.9*min(r,e) gate is preserved.",
+  "open_gate": "High-band movement can change coarser f/g/I1 and endpoint columns; these costs are not asserted unchanged."
+}

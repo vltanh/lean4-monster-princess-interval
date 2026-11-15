@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "arithmetic": "fractions.Fraction only",
+  "scope": "structural regression; no new game bound",
+  "retiming": [
+    {
+      "name": "earlier-source",
+      "selected_time": "1/4",
+      "new_positions": [
+        "1/4",
+        "-1/4"
+      ],
+      "constructed_deficiency": "1/2"
+    },
+    {
+      "name": "earlier-target",
+      "selected_time": "0",
+      "new_positions": [
+        "1/4",
+        "-3/4"
+      ],
+      "constructed_deficiency": "1/2"
+    },
+    {
+      "name": "positive-time-sign-swap",
+      "selected_time": "1/4",
+      "new_positions": [
+        "-1/2",
+        "1/2"
+      ],
+      "constructed_deficiency": "1/2"
+    },
+    {
+      "name": "both-negative-at-zero",
+      "selected_time": "0",
+      "new_positions": [
+        "-1/2",
+        "-1/2"
+      ],
+      "constructed_deficiency": "1/2"
+    },
+    {
+      "name": "both-center",
+      "selected_time": "1/4",
+      "new_positions": [
+        "0",
+        "0"
+      ],
+      "constructed_deficiency": "1/2"
+    },
+    {
+      "name": "initial-sign-swap",
+      "selected_time": "0",
+      "new_positions": [
+        "-3/4",
+        "1/4"
+      ],
+      "constructed_deficiency": "1/2"
+    }
+  ],
+  "polygonal": {
+    "oriented_paths": 2,
+    "old_knots_each": 6,
+    "new_knots_each": 4,
+    "baseline": "11/4",
+    "matched_mass": "7/8",
+    "pressure_unchanged": true
+  },
+  "tracker": {
+    "princess_paths": 4,
+    "monster_paths": 10,
+    "exact_capture_comparisons": 40,
+    "input_output_contractions": 6,
+    "legal_input_fixed": true
+  }
+}

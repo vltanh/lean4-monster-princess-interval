@@ -1,0 +1,32 @@
+{
+  "scope": "Unfinished bounded computation of one fixed finite monster-bank minimax. No new candidate strategy, game bound, or equilibrium is claimed.",
+  "command_arguments": ["--grid", "4", "--archived-upper", "--field-support"],
+  "input": "packages/interval_cdf_discovery/snapshots/initial_inward_duals.json",
+  "model": {
+    "monster_pairs": 909,
+    "family_counts": {"M1": 37, "M2": 221, "M3": 364, "I": 287},
+    "queries": 215,
+    "lexicographic_labels": 783,
+    "variables": 254755,
+    "order_implications": 526228
+  },
+  "attempts": [
+    {
+      "method": "highs",
+      "result": "Interrupted after approximately 8.8 minutes without a solution returning.",
+      "exit_code": 130
+    },
+    {
+      "method": "highs-ipm",
+      "lp_time_limit_seconds": 180,
+      "outer_timeout_seconds": 240,
+      "result": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "exit_code": 1
+    }
+  ],
+  "completed": false,
+  "candidate_value": null,
+  "normalization_certificate": null,
+  "global_response_certificate": null,
+  "stopping_rule": "One fixed bank and one solver-method fallback. No new grids, parameter refinement, or additional strategy-bank expansion."
+}

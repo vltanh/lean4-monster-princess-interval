@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "Physical first-contact replay of the I-sheet cost, dominance and derivative identities; no active-sheet or equilibrium claim.",
+  "princess_family": "Uniform initial radius; stationary until T in{0,1,2}, then unit outward and endpoint-sticky.",
+  "counts": {
+    "physical_I_costs": 405,
+    "nontrivial_peak_below_initial_record": 203,
+    "peak_above_initial_record": 128,
+    "direct_inward_dominance": 232,
+    "monotone_scalar_chords": 1215,
+    "smooth_z_derivatives": 49,
+    "sweep_boundary": 45,
+    "principal_boundary": 45
+  },
+  "physical_affine_contact_branches": 4396
+}

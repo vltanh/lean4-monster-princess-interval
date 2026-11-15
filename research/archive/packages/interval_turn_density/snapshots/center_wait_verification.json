@@ -1,0 +1,10 @@
+{
+  "scope": "Initial-center-wait continuation compiler; exact rewards/cut and direct legal physical paths.",
+  "exactRewardChecks": 896,
+  "physicalChecks": 147,
+  "maximumNegativePhysicalDeviation": 4.547473508864641e-13,
+  "numerical": 2.1657226562500003,
+  "exact": "22177/10240",
+  "physical": 2.16572265625,
+  "difference": 0
+}

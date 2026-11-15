@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "model": "full_vertex_uniform_planning_DAG",
+  "n": 2,
+  "nodes": 192047,
+  "arcs": 584151,
+  "exact_scaled_primal": "4893/422",
+  "exact_scaled_dual": "4893/422",
+  "exact_value": "4893/3376"
+}

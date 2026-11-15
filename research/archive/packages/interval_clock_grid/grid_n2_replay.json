@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "n": 2,
+  "nodes": 64271,
+  "flow_arcs": 218923,
+  "pressure_nodes": 112,
+  "matching_edges": 156,
+  "physical_calendar_plans": 4,
+  "positive_matching_entries": 6,
+  "exact_scaled_primal": "4893/422",
+  "exact_scaled_dual": "4893/422",
+  "exact_value": "4893/3376",
+  "global_lower": "4049/3376",
+  "enclosure_width": "1/4",
+  "baseline": "284/211",
+  "deficiency": "349/3376"
+}

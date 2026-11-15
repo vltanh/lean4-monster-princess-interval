@@ -1,0 +1,78 @@
+{
+  "scope": "Reviewed frozen-seed and lower-separation implementation. Source matrix and 332-row instance are rebuilt from exact inputs; no new all-Monster bound is claimed.",
+  "artifacts": [
+    {
+      "path": "packages/interval_global_closure/certified_seed_source.cjs",
+      "sha": "c1be639f0d4277776e8ee2242edcd3362e078c37",
+      "length": 3804
+    },
+    {
+      "path": "packages/interval_global_closure/prepare_certified_seed.mjs",
+      "sha": "0a76df113d27ab0432f0e0bdeff03ca0b4ed3225",
+      "length": 5625
+    },
+    {
+      "path": "packages/interval_global_closure/separate_frozen_law.mjs",
+      "sha": "cdda3381d440eeed308c49883f343508acb05fdf",
+      "length": 11616
+    },
+    {
+      "path": "packages/interval_global_closure/verify_frozen_separator.mjs",
+      "sha": "4b0b529b4e4e0a6b500370b4df43d252739afda1",
+      "length": 3121
+    },
+    {
+      "path": "research/12-global-closure/CERTIFIED_FINITE_SEED_SOURCE.md",
+      "sha": "9b817054a20f8587b221729eb5f51e6a39114a32",
+      "length": 4830
+    },
+    {
+      "path": "research/12-global-closure/FROZEN_LOWER_SEPARATION_WORKER.md",
+      "sha": "d16ccd698939ed715e696c4977a98360d514c801",
+      "length": 5698
+    },
+    {
+      "path": "packages/interval_global_closure/frozen_separator_verification.json",
+      "sha": "4c6a77c0b486b58ac4b243420d8bf97a76055cba",
+      "length": 1861
+    },
+    {
+      "path": "packages/interval_global_closure/certified_seed_source_report.json",
+      "sha": "3b50e57232150aedd77405af1bf77a272e58c7f6",
+      "length": 3067
+    },
+    {
+      "path": "packages/interval_global_closure/frozen332_m1_universe_report.json",
+      "sha": "98994fd089703830b895e135178709f3fdcb14c2",
+      "length": 40300
+    }
+  ],
+  "inputs": {
+    "certified_source": {
+      "path": "packages/interval_uniform_reduction/princess_strategy.json",
+      "sha256": "25f86abe2a4d955fea8974d8fddf6aaf1e8e8e8ccec9cec76f9da0bf5c4a7bcc",
+      "git_blob_sha1": "1834b07a4e26687cecc38fdc274b7f4b10e3ad90"
+    },
+    "bank": {
+      "blob": "6cac47a4b2227fa1469bb463d35ed37ffb3af1b6",
+      "path": "efficient_checkpoint.json"
+    },
+    "fixture_blob": "771b51772f4138a5dc45403e7c5746dee42f13f0"
+  },
+  "native_root": "/workspace/scratch/f5595f62cf06/global_germ_exchange",
+  "native_instance": "/workspace/scratch/f5595f62cf06/frozen_exchange_20261112/lower332_all_m1",
+  "dependencies": {
+    "germ": "b7e9accdfa1471a6dc4b348e582abbcc9059172b",
+    "finite": "51dbac43b59c3041abf831837dc58fde2a9294b2",
+    "frozen": "27faeb50cf90d63a926d89a92fc0c8f20d21e40e",
+    "m1": "9e2eb3ca264ba7a7943a6f9e41f1e60d6191f3ba",
+    "unit": "73bcba8a13216a83e1feb4ca176c2fc1f681c898",
+    "cached": "1ba70ffcb1bd571675eae9894a7f7d325b304a87"
+  },
+  "commands": [
+    "node packages/interval_global_closure/prepare_certified_seed.mjs packages/interval_uniform_reduction/princess_strategy.json inputs/efficient_checkpoint.json certified_seed",
+    "node packages/interval_global_closure/verify_frozen_separator.mjs inputs/germ_v8_fixture_inputs.json reports/frozen_separator.json",
+    "node packages/interval_global_closure/separate_frozen_law.mjs FROZEN_ROWS.json MASTER.json OUTPREFIX --all-initial-columns --no-search"
+  ],
+  "instance_preservation": "The full332-row library/master state and large exact payoff matrix are native outputs owned by root's exchange controller; this compact report alone does not archive all instance bytes."
+}

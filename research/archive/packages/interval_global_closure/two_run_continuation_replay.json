@@ -1,0 +1,8 @@
+{
+  "exhaustive_unit_word_mixtures": 4840,
+  "hessian_identities": 12,
+  "rational_continuation_cases": 1200,
+  "status": "PASS",
+  "terminal_excursion_identities": 12,
+  "vertex_reductions": 26
+}

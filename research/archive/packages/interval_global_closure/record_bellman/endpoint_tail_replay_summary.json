@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "Exact endpoint-tail components; no global security claim",
+  "fixtures": {
+    "endpoint_tail_n1_fullwidth.json": {
+      "status": "PASS",
+      "pre_two_nodes": 5,
+      "cone_checks": 4,
+      "time_bands": 2,
+      "charts": 10,
+      "direct_integral_checks": 68
+    },
+    "endpoint_tail_n2_fullwidth.json": {
+      "status": "PASS",
+      "pre_two_nodes": 18,
+      "cone_checks": 24,
+      "time_bands": 4,
+      "charts": 18,
+      "direct_integral_checks": 124
+    },
+    "endpoint_tail_n2_narrow.json": {
+      "status": "PASS",
+      "pre_two_nodes": 18,
+      "cone_checks": 24,
+      "time_bands": 12,
+      "charts": 44,
+      "direct_integral_checks": 322
+    },
+    "endpoint_tail_n6_fullwidth.json": {
+      "status": "PASS",
+      "pre_two_nodes": 150,
+      "cone_checks": 264,
+      "time_bands": 12,
+      "charts": 138,
+      "direct_integral_checks": 964
+    }
+  }
+}

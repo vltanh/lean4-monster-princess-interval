@@ -1,0 +1,126 @@
+name: Refined physical clock discovery
+
+on:
+  push:
+    branches: [research/interval-progress-2026-11-10]
+    paths:
+      - .github/workflows/refined-clock-discovery.yml
+      - packages/interval_fixed_marginal/**
+      - packages/interval_integer_flow/**
+  workflow_dispatch:
+    inputs:
+      resume_run_id:
+        description: Earlier refined-clock run for matching family artifacts
+        required: false
+        default: ''
+      discover_fixed_law:
+        description: Run fixed-marginal searches after changing their physical input or target
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  PYTHONUNBUFFERED: '1'
+  OMP_NUM_THREADS: '2'
+  OPENBLAS_NUM_THREADS: '2'
+
+jobs:
+  exact-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Validate independent integer flow witnesses and exact fixed marginals
+        run: |
+          python3 packages/interval_integer_flow/test_flow.py
+          python3 packages/interval_fixed_marginal/test_search.py
+          python3 packages/interval_fixed_marginal/verify_seed.py
+          python3 packages/interval_fixed_marginal/verify_obstruction.py
+          python3 packages/interval_fixed_marginal/ci_n512_obstruction/verify.py
+
+  refined-clocks:
+    needs: exact-regressions
+    if: github.event_name == 'workflow_dispatch' && inputs.discover_fixed_law
+    name: Physical clocks ${{ matrix.id }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: n256-level08
+            n: 256
+            level: .8
+            seed: 223606
+          - id: n512-level08
+            n: 512
+            level: .8
+            seed: 244948
+          - id: n512-level04
+            n: 512
+            level: .4
+            seed: 264575
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - if: inputs.resume_run_id != '' && inputs.resume_run_id != null
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.resume_run_id }}
+          name: clocks-${{ matrix.id }}
+          path: results/${{ matrix.id }}
+      - name: Discover new causal clocks with unchanged physical probabilities
+        shell: bash
+        run: |
+          mkdir -p results/${{ matrix.id }}
+          resume=()
+          if test -f results/${{ matrix.id }}/checkpoint.json; then resume=(--resume results/${{ matrix.id }}/checkpoint.json); fi
+          python3 -u packages/interval_fixed_marginal/search.py \
+            --native-flow --n ${{ matrix.n }} --iterations 100 --seconds 1200 \
+            --lp-seconds 60 --pricing-rounds 2 --price-every 3 \
+            --level-fraction ${{ matrix.level }} --alternative-cuts 16 \
+            --seed ${{ matrix.seed }} "${resume[@]}" --output results/${{ matrix.id }} \
+            2>&1 | tee results/${{ matrix.id }}/search.log
+      - name: Independently reconstruct any new global upper on the full Qout grid
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from fractions import Fraction as Q
+          import json,subprocess
+          folder=Path('results/${{ matrix.id }}')
+          path=folder/'best.sparse.json'
+          if path.exists() and Q(json.loads(path.read_text())['global_upper'])<Q(291849329389899,204800000000000):
+              subprocess.run(['node','--max-old-space-size=6144','--stack-size=16384',
+                'packages/interval_mixture_cut/dense_replay.cjs',str(path),str(folder/'independent')],check=True)
+              subprocess.run(['node','--max-old-space-size=6144','--stack-size=16384',
+                'packages/interval_clock_grid/qout_primal_certificate.cjs',str(folder/'independent.physical.json')],check=True)
+          else:
+              print('No improved global upper to promote; retain the exact search and obstruction artifacts.')
+          PY
+      - name: Preserve versions and exact source bindings
+        if: always()
+        run: |
+          mkdir -p results/${{ matrix.id }}
+          git rev-parse HEAD > results/${{ matrix.id }}/commit.txt
+          python3 -m pip freeze > results/${{ matrix.id }}/dependencies.txt
+          g++ --version > results/${{ matrix.id }}/compiler.txt
+          sha256sum packages/interval_integer_flow/*.cpp packages/interval_integer_flow/*.cjs packages/interval_fixed_marginal/*.py > results/${{ matrix.id }}/sources.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: clocks-${{ matrix.id }}
+          path: |
+            results/${{ matrix.id }}/
+            !results/${{ matrix.id }}/work/
+          if-no-files-found: error
+          retention-days: 90

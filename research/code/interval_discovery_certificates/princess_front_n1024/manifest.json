@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE_EXACT_CENTER_PRICING",
+  "source_n": 512,
+  "target_n": 1024,
+  "global_value_lower": "9322984150699/6553600000000",
+  "source_seed_sha256": "a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10",
+  "exact_fullwidth_refinement": true,
+  "center_policy": 4,
+  "independent_original_replay": false,
+  "independent_bigint_replay": false,
+  "same_cdf_security_claimed": false,
+  "elapsed_seconds": 1458.072615195997,
+  "files_sha256": {
+    "field.json": "f210be8e2002d3e408cf3ff1f74ca6b750f19d91b9bc2a259bc229cca0dbfcd3",
+    "prepared.field.json": "e91e1c7bf8ca137638693906001473c9729a87c94b6fa6e2dbd4af6635f61f44",
+    "center.replay.json": "a8e10353f9f0c1ffff657b9cefb6b95aee3c8dc24ff9aae6296d41501a57d75d"
+  }
+}

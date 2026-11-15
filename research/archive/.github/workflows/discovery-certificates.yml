@@ -1,0 +1,77 @@
+name: Retained discovery certificates
+
+on:
+  push:
+    branches:
+      - research/interval-progress-2026-11-10
+    paths:
+      - .github/workflows/discovery-certificates.yml
+      - packages/interval_discovery_certificates/**
+      - packages/interval_global_closure/verify_center_heavier_first.py
+      - research/12-global-closure/CENTER_HEAVIER_FIRST_BALANCE.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  center-rank-balance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Independently check cap exchange, reflected continuation and legal tent merging
+        run: |
+          mkdir -p reports
+          python3 packages/interval_global_closure/verify_center_heavier_first.py > reports/center-rank-balance-regression.json
+      - name: Preserve exact center-exchange regression
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: center-rank-balance-regression
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90
+
+  retained-physical-upper:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verify strategy hashes and replay the exact all-Princess certificate
+        run: |
+          mkdir -p reports
+          python3 packages/interval_discovery_certificates/verify_manifest.py > reports/retained-discovery-replay.json
+          python3 packages/interval_discovery_certificates/verify_manifest.py packages/interval_discovery_certificates/monster_boundary_n256_manifest.json > reports/boundary-discovery-replay.json
+      - name: Preserve the independently replayed outcome
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: retained-discovery-certificate
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90
+
+  retained-front-lower:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Check retained exact CI reports and regenerate the explicit Princess law
+        run: |
+          mkdir -p reports
+          node packages/interval_discovery_certificates/princess_front_n512/check.cjs > reports/front512-retention.json
+      - name: Preserve the retention check without repeating the complete bank search
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: retained-front512-certificate
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90

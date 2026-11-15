@@ -1,0 +1,27 @@
+// Exact finite-hider best response. Geometry, costs, and all pruning comparisons
+// are arbitrary-precision integers. Input: n, node_limit, coordinate_scale;
+// then each path: vertex_count, positive integer weight, (time,position) pairs.
+#include <boost/multiprecision/cpp_int.hpp>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <tuple>
+#include <stdexcept>
+using namespace std;using I=boost::multiprecision::cpp_int;
+struct Path{vector<I>t,x,seq[2];vector<int>s;I w;};
+vector<Path> ps;I S,best;long long nodes=0,leaves=0,dominated=0,bounded=0,limit;bool naive=false;
+vector<pair<I,I>> route,bestpath;
+I pos(Path const&p,I const&t){int k=int(upper_bound(p.t.begin(),p.t.end(),t)-p.t.begin())-1;if(k+1==int(p.t.size()))return p.x.back();return p.x[k]+p.s[k]*(t-p.t[k]);}
+I hit(Path const&p,I const&t,I const&x,int d){I q=t-d*x;auto const&ss=p.seq[(d+1)/2];int k=int(lower_bound(ss.begin(),ss.end(),q)-ss.begin());I ans;if(k==int(ss.size()))ans=p.t.back()+q-ss.back();else if(k==0)ans=t;else{int den=1-d*p.s[k-1];I z=q-ss[k-1];if(den<=0||z%den!=0)throw runtime_error("Nonintegral capture");ans=p.t[k-1]+z/den;}if(ans<t)throw runtime_error("Backward capture");return ans;}
+struct Cache{vector<I>q,at,aa,bb;int n;void build(int d){n=ps.size();for(auto const&p:ps)for(auto const&z:p.seq[(d+1)/2])q.push_back(z);sort(q.begin(),q.end());q.erase(unique(q.begin(),q.end()),q.end());size_t z=q.size()*(n+1);at.resize(z);aa.resize(z);bb.resize(z);for(size_t k=0;k<q.size();++k){size_t o=k*(n+1);for(int j=0;j<n;++j){auto const&p=ps[j];auto const&ss=p.seq[(d+1)/2];int b=lower_bound(ss.begin(),ss.end(),q[k])-ss.begin();I tm2=0;if(b==int(ss.size()))tm2=2*(p.t.back()+q[k]-ss.back());else if(b>0){int den=1-d*p.s[b-1];if(den<=0)throw runtime_error("Zero inverse slope");tm2=2*p.t[b-1]+(2/den)*(q[k]-ss[b-1]);}at[o+j+1]=at[o+j]+p.w*tm2;b=upper_bound(ss.begin(),ss.end(),q[k])-ss.begin();I a=0,c=0;if(b==int(ss.size())){a=2;c=2*(p.t.back()-ss.back());}else if(b>0){int den=1-d*p.s[b-1];if(den<=0)throw runtime_error("Zero right inverse slope");a=2/den;c=2*p.t[b-1]-a*ss[b-1];}aa[o+j+1]=aa[o+j]+p.w*a;bb[o+j+1]=bb[o+j]+p.w*c;}}}
+ I eval(I const&z,int l,int r)const{if(l==r)return 0;size_t k=lower_bound(q.begin(),q.end(),z)-q.begin();if(k<q.size()&&q[k]==z){size_t o=k*(n+1);return at[o+r]-at[o+l];}if(!k)return 0;size_t o=(k-1)*(n+1);return (aa[o+r]-aa[o+l])*z+bb[o+r]-bb[o+l];}}cache[2];
+struct State{I t,c;};map<tuple<int,int,int>,vector<State>>memo;
+void walk(int l,int r,int anchor,I const&t,I const&x,I cost){if(++nodes>limit)return;while(l>0&&pos(ps[l-1],t)==x){--l;cost+=2*ps[l].w*t;}while(r+1<int(ps.size())&&pos(ps[r+1],t)==x){++r;cost+=2*ps[r].w*t;}if(l==0&&r+1==int(ps.size())){++leaves;if(cost<best){best=cost;bestpath=route;}return;}auto key=make_tuple(l,r,anchor);auto&v=memo[key];for(auto const&z:v)if(z.t<=t&&z.c<=cost){++dominated;return;}v.erase(remove_if(v.begin(),v.end(),[&](State const&z){return t<=z.t&&cost<=z.c;}),v.end());v.push_back({t,cost});I lb=cost;if(naive){for(int j=0;j<l;++j)lb+=2*ps[j].w*hit(ps[j],t,x,-1);for(int j=r+1;j<int(ps.size());++j)lb+=2*ps[j].w*hit(ps[j],t,x,1);}else lb+=cache[0].eval(t+x,0,l)+cache[1].eval(t-x,r+1,int(ps.size()));if(lb>=best){++bounded;return;}I a,b;if(l>0)a=hit(ps[l-1],t,x,-1);if(r+1<int(ps.size()))b=hit(ps[r+1],t,x,1);int first=l>0&&(r+1==int(ps.size())||a<b)?0:1;for(int k=0;k<2;++k){int d=k?1-first:first,j=d?r+1:l-1;if(j<0||j>=int(ps.size()))continue;I nt=d?b:a;I nx=x+(2*d-1)*(nt-t);route.push_back({nt,nx});walk(min(l,j),max(r,j),j,nt,nx,cost+2*ps[j].w*nt);route.pop_back();if(nodes>limit)return;}}
+int main(int argc,char**argv){try{if(argc>1&&string(argv[1])=="--naive")naive=true;int n;cin>>n>>limit>>S;if(n<=0||S<=0||limit<=0)throw runtime_error("Invalid header");ps.resize(n);I W=0;for(auto&p:ps){int k;cin>>k>>p.w;if(k<1||p.w<0)throw runtime_error("Invalid path");W+=p.w;for(int i=0;i<k;++i){I t,x;cin>>t>>x;if(t<0||x< -S||x>S)throw runtime_error("Invalid vertex");p.t.push_back(t);p.x.push_back(x);}if(p.t[0]!=0)throw runtime_error("Nonzero start time");for(int i=0;i<k-1;++i){I dt=p.t[i+1]-p.t[i],dx=p.x[i+1]-p.x[i];if(dt<=0)throw runtime_error("Time order");if(dx==0)p.s.push_back(0);else if(dx==dt)p.s.push_back(1);else if(dx==-dt)p.s.push_back(-1);else throw runtime_error("Non-bang-bang path");}for(int i=0;i<k;++i){p.seq[0].push_back(p.t[i]+p.x[i]);p.seq[1].push_back(p.t[i]-p.x[i]);}}
+ if(W<=0)throw runtime_error("Zero total weight");for(int i=0;i<n-1;++i){vector<I>tt=ps[i].t;for(auto const&t:ps[i+1].t)tt.push_back(t);for(auto const&t:tt)if(pos(ps[i],t)>pos(ps[i+1],t))throw runtime_error("Paths cross");}
+ // Validate reflection symmetry before exploiting it in the starting-position search.
+ for(int i=0;i<n;++i){auto const&a=ps[i];auto const&b=ps[n-1-i];if(a.w!=b.w)throw runtime_error("Weights not symmetric");vector<I>tt=a.t;for(auto const&t:b.t)tt.push_back(t);for(auto const&t:tt)if(pos(a,t)!=-pos(b,t))throw runtime_error("Paths not symmetric");}
+ best=0;for(auto const&p:ps)best+=2*p.w*hit(p,I(0),-S,1);bestpath={{I(0),-S},{2*S,S}};if(!naive){cache[0].build(-1);cache[1].build(1);}for(int i=0;i<n;++i){if(ps[i].x[0]<0)continue;if(i>0&&ps[i].x[0]==ps[i-1].x[0])continue;route={{I(0),ps[i].x[0]}};walk(i,i,i,I(0),ps[i].x[0],I(0));if(nodes>limit)break;}
+ cout<<best<<" "<<2*W*S<<" "<<nodes<<" "<<leaves<<" "<<dominated<<" "<<bounded<<" "<<(nodes<=limit)<<" "<<bestpath.size()<<"\n";for(auto const&z:bestpath)cout<<z.first<<" "<<z.second<<"\n";return nodes<=limit?0:2;
+ }catch(exception const&e){cerr<<e.what()<<"\n";return 3;}}

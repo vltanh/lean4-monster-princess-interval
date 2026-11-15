@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "Independent raw-CDF chronological replay and exact initial-curve exhaustion of the saved precenter envelope; the source proof/regeneration supplies completeness over all legal responses.",
+  "precenter_json_sha256": "a03c21d2f03cbcee0ef3d5bedd08cb71d8016d3586cd69169d9afd369e1c2ee3",
+  "fixed_field_security": "39/32",
+  "initial_curve_route_checks": 67,
+  "initial_profile_exact_interval_comparisons": 29,
+  "fixed_initial_position_value": [
+    {
+      "interval": [
+        "0",
+        "7/8"
+      ],
+      "coefficients_1_x_x2": [
+        "79/64",
+        "1/32",
+        "-15/448"
+      ]
+    },
+    {
+      "interval": [
+        "7/8",
+        "1"
+      ],
+      "coefficients_1_x_x2": [
+        "37/64",
+        "49/32",
+        "-57/64"
+      ]
+    }
+  ],
+  "edge_route_checks": 97,
+  "affine_field_interval_checks": 1989,
+  "maximum_initial_witness_legs": 5,
+  "attaining_response": {
+    "value": "39/32",
+    "initial_position": "1",
+    "path": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "2",
+        "-1"
+      ],
+      [
+        "4",
+        "1"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "Exact fixtures for the upper supremum replacement; the general theorem is in CENTER_WAIT_UNITIZATION.md.",
+  "fixtures": [
+    {
+      "name": "initial",
+      "original_vertices": 4,
+      "unit_vertices": 5,
+      "final_time": "7/2",
+      "timestamps_preserved": true,
+      "both_orientations": "pass"
+    },
+    {
+      "name": "intermediate",
+      "original_vertices": 5,
+      "unit_vertices": 6,
+      "final_time": "17/4",
+      "timestamps_preserved": true,
+      "both_orientations": "pass"
+    },
+    {
+      "name": "two_waits",
+      "original_vertices": 8,
+      "unit_vertices": 10,
+      "final_time": "21/4",
+      "timestamps_preserved": true,
+      "both_orientations": "pass"
+    },
+    {
+      "name": "long_wait",
+      "original_vertices": 4,
+      "unit_vertices": 9,
+      "final_time": "15/2",
+      "timestamps_preserved": true,
+      "both_orientations": "pass"
+    }
+  ],
+  "strict_positive_capture_comparisons": 56,
+  "original_timestamp_checks": 21,
+  "unchanged_leg_checks": 36,
+  "center_contact_counterexample": {
+    "old_pair": "1/4",
+    "unitized_pair": "5/16",
+    "conclusion": "No pointwise lower-law domination"
+  }
+}

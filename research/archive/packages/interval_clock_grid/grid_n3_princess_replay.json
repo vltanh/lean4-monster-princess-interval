@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "n": 3,
+  "radial_nodes": 172,
+  "finite_value": "3153038167/2187120435",
+  "epsilon": "1/6",
+  "exact_transfer_loss": "7/36",
+  "guaranteed_security": "32733176989/26245445220",
+  "checks": {
+    "closure": 172,
+    "nodes": 172,
+    "symmetry": 3577,
+    "transport": 7008,
+    "outward": 600
+  },
+  "scope": "The exact finite dual and regenerated extraction certify the stated guarantee. Sampled CDF checks are implementation regressions; the extraction proof establishes legality on the entire continuous strip."
+}

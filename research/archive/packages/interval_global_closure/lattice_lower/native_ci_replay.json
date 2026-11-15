@@ -1,0 +1,579 @@
+{
+  "workflow_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43515627093",
+  "commit": "7253c339e34c246ec9252d6faa74b83e71b5087e",
+  "job_id": 132196748026,
+  "report": {
+    "compiler_warnings": "/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_global_closure/lattice_lower/verify_integer_lattice.cpp: In lambda function:\n/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_global_closure/lattice_lower/verify_integer_lattice.cpp:113:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]\n  113 |         if(a.l!=b.l)return a.l<b.l;if(a.r!=b.r)return a.r<b.r;\n      |         ^~\n/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_global_closure/lattice_lower/verify_integer_lattice.cpp:113:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’\n  113 |         if(a.l!=b.l)return a.l<b.l;if(a.r!=b.r)return a.r<b.r;\n      |                                    ^~\n/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_global_closure/lattice_lower/verify_integer_lattice.cpp:114:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]\n  114 |         if(a.cost!=b.cost)return a.cost<b.cost;return a.center>b.center;\n      |         ^~\n/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_global_closure/lattice_lower/verify_integer_lattice.cpp:114:48: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’\n  114 |         if(a.cost!=b.cost)return a.cost<b.cost;return a.center>b.center;\n      |                                                ^~~~~~\n",
+    "fixtures": [
+      {
+        "B": 2,
+        "D": 2,
+        "name": "endpoint_only_B2_scale1",
+        "reference": {
+          "exact_minimum_scaled": "8",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 8,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 4,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 6,
+          "maximum_node_frontier": 1,
+          "rounded_minimum_units": 8
+        }
+      },
+      {
+        "B": 2,
+        "D": 1994,
+        "name": "endpoint_only_B2_scale997",
+        "reference": {
+          "exact_minimum_scaled": "7976",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 7976,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 2,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 2,
+          "maximum_node_frontier": 0,
+          "rounded_minimum_units": 7976
+        }
+      },
+      {
+        "B": 2,
+        "D": 4,
+        "name": "uniform_immediate_B2_scale1",
+        "reference": {
+          "exact_minimum_scaled": "18",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 18,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 2,
+          "deadline_pruned": 0,
+          "dominated": 1,
+          "generated": 8,
+          "maximum_node_frontier": 1,
+          "rounded_minimum_units": 18
+        }
+      },
+      {
+        "B": 2,
+        "D": 3988,
+        "name": "uniform_immediate_B2_scale997",
+        "reference": {
+          "exact_minimum_scaled": "17946",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 17946,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 2,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 2,
+          "maximum_node_frontier": 0,
+          "rounded_minimum_units": 17946
+        }
+      },
+      {
+        "B": 2,
+        "D": 16,
+        "name": "two_releases_B2_scale1",
+        "reference": {
+          "exact_minimum_scaled": "76",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 76,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 6,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 14,
+          "maximum_node_frontier": 2,
+          "rounded_minimum_units": 76
+        }
+      },
+      {
+        "B": 2,
+        "D": 15952,
+        "name": "two_releases_B2_scale997",
+        "reference": {
+          "exact_minimum_scaled": "75772",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 75772,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 2,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 6,
+          "maximum_node_frontier": 1,
+          "rounded_minimum_units": 75772
+        }
+      },
+      {
+        "B": 2,
+        "D": 6,
+        "name": "endpoint_and_released_annulus_B2_scale1",
+        "reference": {
+          "exact_minimum_scaled": "28",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 28,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 4,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 10,
+          "maximum_node_frontier": 2,
+          "rounded_minimum_units": 28
+        }
+      },
+      {
+        "B": 2,
+        "D": 5982,
+        "name": "endpoint_and_released_annulus_B2_scale997",
+        "reference": {
+          "exact_minimum_scaled": "27916",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 27916,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 2,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 2,
+          "maximum_node_frontier": 0,
+          "rounded_minimum_units": 27916
+        }
+      },
+      {
+        "B": 2,
+        "D": 48,
+        "name": "early_two_annuli_B2_scale1",
+        "reference": {
+          "exact_minimum_scaled": "216",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 216,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 2,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 2,
+          "maximum_node_frontier": 0,
+          "rounded_minimum_units": 216
+        }
+      },
+      {
+        "B": 2,
+        "D": 47856,
+        "name": "early_two_annuli_B2_scale997",
+        "reference": {
+          "exact_minimum_scaled": "215352",
+          "late_center_paths_rejected": 0,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 15,
+          "partial_record_crossings": 0,
+          "prefix_edges": 18,
+          "rounded_minimum_units": 215352,
+          "tail_edges": 76
+        },
+        "verifier": {
+          "bounded": 2,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 2,
+          "maximum_node_frontier": 0,
+          "rounded_minimum_units": 215352
+        }
+      },
+      {
+        "B": 4,
+        "D": 2,
+        "name": "endpoint_only_B4_scale1",
+        "reference": {
+          "exact_minimum_scaled": "16",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 584,
+          "partial_record_crossings": 0,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 16,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 8,
+          "deadline_pruned": 0,
+          "dominated": 5,
+          "generated": 24,
+          "maximum_node_frontier": 1,
+          "rounded_minimum_units": 16
+        }
+      },
+      {
+        "B": 4,
+        "D": 1994,
+        "name": "endpoint_only_B4_scale997",
+        "reference": {
+          "exact_minimum_scaled": "15952",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 584,
+          "partial_record_crossings": 0,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 15952,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 4,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 4,
+          "maximum_node_frontier": 0,
+          "rounded_minimum_units": 15952
+        }
+      },
+      {
+        "B": 4,
+        "D": 8,
+        "name": "uniform_immediate_B4_scale1",
+        "reference": {
+          "exact_minimum_scaled": "72",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 584,
+          "partial_record_crossings": 0,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 72,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 9,
+          "deadline_pruned": 0,
+          "dominated": 10,
+          "generated": 42,
+          "maximum_node_frontier": 2,
+          "rounded_minimum_units": 72
+        }
+      },
+      {
+        "B": 4,
+        "D": 7976,
+        "name": "uniform_immediate_B4_scale997",
+        "reference": {
+          "exact_minimum_scaled": "71784",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 584,
+          "partial_record_crossings": 0,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 71784,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 5,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 6,
+          "maximum_node_frontier": 1,
+          "rounded_minimum_units": 71784
+        }
+      },
+      {
+        "B": 4,
+        "D": 32,
+        "name": "two_releases_B4_scale1",
+        "reference": {
+          "exact_minimum_scaled": "304",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 7,
+          "maximum_path_rounding_loss": "2/3",
+          "normalized_paths": 584,
+          "partial_record_crossings": 20,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 304,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 12,
+          "deadline_pruned": 0,
+          "dominated": 8,
+          "generated": 52,
+          "maximum_node_frontier": 3,
+          "rounded_minimum_units": 304
+        }
+      },
+      {
+        "B": 4,
+        "D": 31904,
+        "name": "two_releases_B4_scale997",
+        "reference": {
+          "exact_minimum_scaled": "303088",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 26,
+          "maximum_path_rounding_loss": "4/5",
+          "normalized_paths": 584,
+          "partial_record_crossings": 20,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 303088,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 13,
+          "deadline_pruned": 0,
+          "dominated": 2,
+          "generated": 30,
+          "maximum_node_frontier": 2,
+          "rounded_minimum_units": 303088
+        }
+      },
+      {
+        "B": 4,
+        "D": 6,
+        "name": "endpoint_and_released_annulus_B4_scale1",
+        "reference": {
+          "exact_minimum_scaled": "56",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 584,
+          "partial_record_crossings": 0,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 56,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 16,
+          "deadline_pruned": 1,
+          "dominated": 16,
+          "generated": 72,
+          "maximum_node_frontier": 3,
+          "rounded_minimum_units": 56
+        }
+      },
+      {
+        "B": 4,
+        "D": 5982,
+        "name": "endpoint_and_released_annulus_B4_scale997",
+        "reference": {
+          "exact_minimum_scaled": "55832",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 584,
+          "partial_record_crossings": 0,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 55832,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 7,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 10,
+          "maximum_node_frontier": 2,
+          "rounded_minimum_units": 55832
+        }
+      },
+      {
+        "B": 4,
+        "D": 48,
+        "name": "early_two_annuli_B4_scale1",
+        "reference": {
+          "exact_minimum_scaled": "10127/24",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 5,
+          "maximum_path_rounding_loss": "23/24",
+          "normalized_paths": 584,
+          "partial_record_crossings": 2,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 421,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 13,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 24,
+          "maximum_node_frontier": 2,
+          "rounded_minimum_units": 421
+        }
+      },
+      {
+        "B": 4,
+        "D": 47856,
+        "name": "early_two_annuli_B4_scale997",
+        "reference": {
+          "exact_minimum_scaled": "10096619/24",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 25,
+          "maximum_path_rounding_loss": "11/24",
+          "normalized_paths": 584,
+          "partial_record_crossings": 2,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 420692,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 11,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 20,
+          "maximum_node_frontier": 1,
+          "rounded_minimum_units": 420692
+        }
+      },
+      {
+        "B": 4,
+        "D": 320000000608,
+        "name": "two_releases_B4_scale10000000019",
+        "reference": {
+          "exact_minimum_scaled": "3040000005776",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 73,
+          "maximum_path_rounding_loss": "8/11",
+          "normalized_paths": 584,
+          "partial_record_crossings": 20,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 3040000005776,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 13,
+          "deadline_pruned": 0,
+          "dominated": 2,
+          "generated": 30,
+          "maximum_node_frontier": 2,
+          "rounded_minimum_units": 3040000005776
+        }
+      },
+      {
+        "B": 4,
+        "D": 60000000114,
+        "name": "endpoint_and_released_annulus_B4_scale10000000019",
+        "reference": {
+          "exact_minimum_scaled": "560000001064",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 0,
+          "maximum_path_rounding_loss": "0",
+          "normalized_paths": 584,
+          "partial_record_crossings": 0,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 560000001064,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 7,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 10,
+          "maximum_node_frontier": 2,
+          "rounded_minimum_units": 560000001064
+        }
+      },
+      {
+        "B": 4,
+        "D": 480000000912,
+        "name": "early_two_annuli_B4_scale10000000019",
+        "reference": {
+          "exact_minimum_scaled": "101270000192413/24",
+          "late_center_paths_rejected": 28,
+          "maximum_crossing_square_bits": 72,
+          "maximum_path_rounding_loss": "13/24",
+          "normalized_paths": 584,
+          "partial_record_crossings": 2,
+          "prefix_edges": 690,
+          "rounded_minimum_units": 4219583341350,
+          "tail_edges": 6880
+        },
+        "verifier": {
+          "bounded": 11,
+          "deadline_pruned": 0,
+          "dominated": 0,
+          "generated": 20,
+          "maximum_node_frontier": 1,
+          "rounded_minimum_units": 4219583341350
+        }
+      }
+    ],
+    "reference_arithmetic": "Python fractions.Fraction; edge-by-edge polygon integration",
+    "rejections": [
+      {
+        "exit_code": 6,
+        "name": "bad_transport"
+      },
+      {
+        "exit_code": 12,
+        "name": "bad_outward_tail"
+      },
+      {
+        "exit_code": 5,
+        "name": "bad_symmetry"
+      }
+    ],
+    "scope": "Small exhaustive exact regression; no unrestricted-game numerical certificate.",
+    "status": "passed"
+  }
+}

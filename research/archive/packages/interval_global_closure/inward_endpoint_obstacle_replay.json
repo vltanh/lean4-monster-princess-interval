@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Exact inward-valley/endpoint cost and trace identities; no family sufficiency or equilibrium claim.",
+  "princess_family": "Uniform initial radius, stationary until T in {0,1,2}, then outward/sticky, mixed with stationary endpoint-pair mass p in {0,1/3,1}.",
+  "counts": {
+    "physical_rows": 81,
+    "initial_endpoint_trace_jumps": 27,
+    "endpoint_first_boundary": 27,
+    "lower_obstacle_chords": 243
+  },
+  "physical_affine_contact_branches": 414
+}

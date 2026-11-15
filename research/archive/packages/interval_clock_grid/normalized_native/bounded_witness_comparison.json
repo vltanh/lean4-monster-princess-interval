@@ -1,0 +1,176 @@
+{
+  "status": "PASS",
+  "scope": "Every packed witness independently Fraction-replayed; value-only and witness minima agree. Optional old-source comparison includes all routes and every search/pruning count.",
+  "source_sha256": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+  "cases": [
+    {
+      "n": 2,
+      "input_sha256": "cd5b7e11042836f6dc1f84d6bf649b56669fc4db965da7a9cd33bf110260e4c3",
+      "runs": [
+        {
+          "keep": 0,
+          "minimum_units": "808",
+          "seconds": 0.0020124559996475,
+          "routes_fraction_replayed": 0,
+          "maximum_witness_prefix_steps": 0,
+          "peak_packed_trace_bytes": 0,
+          "retained_states": 3,
+          "maximum_layer": 3,
+          "reference_seconds": 0.0013725240005442174,
+          "all_original_output_fields_identical": true
+        },
+        {
+          "keep": 1,
+          "minimum_units": "808",
+          "seconds": 0.001959205999810365,
+          "routes_fraction_replayed": 1,
+          "maximum_witness_prefix_steps": 0,
+          "peak_packed_trace_bytes": 0,
+          "retained_states": 3,
+          "maximum_layer": 3,
+          "reference_seconds": 0.0022885609996592393,
+          "all_original_output_fields_identical": true
+        },
+        {
+          "keep": 48,
+          "minimum_units": "808",
+          "seconds": 0.0014750279997315374,
+          "routes_fraction_replayed": 18,
+          "maximum_witness_prefix_steps": 8,
+          "peak_packed_trace_bytes": 104,
+          "retained_states": 45,
+          "maximum_layer": 7,
+          "reference_seconds": 0.0016059149993452593,
+          "all_original_output_fields_identical": true
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "input_sha256": "960d21929c5cec8eb1ba0c84aaa06d60c61babaf9fb1789c3735a4acbc2e8287",
+      "runs": [
+        {
+          "keep": 0,
+          "minimum_units": "882",
+          "seconds": 0.0018691109999053879,
+          "routes_fraction_replayed": 0,
+          "maximum_witness_prefix_steps": 0,
+          "peak_packed_trace_bytes": 0,
+          "retained_states": 6,
+          "maximum_layer": 3,
+          "reference_seconds": 0.0015360099996541976,
+          "all_original_output_fields_identical": true
+        },
+        {
+          "keep": 1,
+          "minimum_units": "882",
+          "seconds": 0.0019620510001914226,
+          "routes_fraction_replayed": 1,
+          "maximum_witness_prefix_steps": 0,
+          "peak_packed_trace_bytes": 24,
+          "retained_states": 6,
+          "maximum_layer": 3,
+          "reference_seconds": 0.010015822000241315,
+          "all_original_output_fields_identical": true
+        },
+        {
+          "keep": 48,
+          "minimum_units": "882",
+          "seconds": 0.001684754000052635,
+          "routes_fraction_replayed": 18,
+          "maximum_witness_prefix_steps": 8,
+          "peak_packed_trace_bytes": 104,
+          "retained_states": 45,
+          "maximum_layer": 7,
+          "reference_seconds": 0.0014664350001112325,
+          "all_original_output_fields_identical": true
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "input_sha256": "ee7b4aaad117d96810c09225a07ba72d7a46708a1b726f126eabf90dc816ca16",
+      "runs": [
+        {
+          "keep": 0,
+          "minimum_units": "951",
+          "seconds": 0.0013021889999436098,
+          "routes_fraction_replayed": 0,
+          "maximum_witness_prefix_steps": 0,
+          "peak_packed_trace_bytes": 0,
+          "retained_states": 13,
+          "maximum_layer": 3,
+          "reference_seconds": 0.002075491000141483,
+          "all_original_output_fields_identical": true
+        },
+        {
+          "keep": 1,
+          "minimum_units": "951",
+          "seconds": 0.0020839639992118464,
+          "routes_fraction_replayed": 1,
+          "maximum_witness_prefix_steps": 0,
+          "peak_packed_trace_bytes": 48,
+          "retained_states": 13,
+          "maximum_layer": 3,
+          "reference_seconds": 0.0017496310001661186,
+          "all_original_output_fields_identical": true
+        },
+        {
+          "keep": 48,
+          "minimum_units": "951",
+          "seconds": 0.0015490389996557496,
+          "routes_fraction_replayed": 18,
+          "maximum_witness_prefix_steps": 8,
+          "peak_packed_trace_bytes": 104,
+          "retained_states": 45,
+          "maximum_layer": 7,
+          "reference_seconds": 0.001425172999915958,
+          "all_original_output_fields_identical": true
+        }
+      ]
+    },
+    {
+      "n": 64,
+      "input_sha256": "1476cd2d987a8e763c6041e32212bfefe92741436d99f77d9ef004fa6e271da8",
+      "runs": [
+        {
+          "keep": 0,
+          "minimum_units": "364813332198",
+          "seconds": 0.23622165699998732,
+          "routes_fraction_replayed": 0,
+          "maximum_witness_prefix_steps": 0,
+          "peak_packed_trace_bytes": 0,
+          "retained_states": 1580023,
+          "maximum_layer": 17651,
+          "reference_seconds": 0.2521053220007161,
+          "all_original_output_fields_identical": true
+        },
+        {
+          "keep": 1,
+          "minimum_units": "364813332198",
+          "seconds": 0.2543444950006233,
+          "routes_fraction_replayed": 1,
+          "maximum_witness_prefix_steps": 256,
+          "peak_packed_trace_bytes": 841128,
+          "retained_states": 1580023,
+          "maximum_layer": 17651,
+          "reference_seconds": 0.26435576800031413,
+          "all_original_output_fields_identical": true
+        },
+        {
+          "keep": 48,
+          "minimum_units": "364813332198",
+          "seconds": 0.25438106000001426,
+          "routes_fraction_replayed": 48,
+          "maximum_witness_prefix_steps": 256,
+          "peak_packed_trace_bytes": 841128,
+          "retained_states": 1580090,
+          "maximum_layer": 17651,
+          "reference_seconds": 0.2777624290001768,
+          "all_original_output_fields_identical": true
+        }
+      ]
+    }
+  ],
+  "reference_source_sha256": "496cd8e62b6ed436e9b4cbc346f9173beb3f9092032e2f6107848bcf3705031e"
+}

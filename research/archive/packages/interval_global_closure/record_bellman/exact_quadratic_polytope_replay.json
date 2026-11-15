@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "Exact global quadratic minima on compact rational polytopes; independent one- and two-dimensional analytic references, manufactured higher-dimensional minima, singular and boundary cases, empty-domain handling, and rational unboundedness witnesses.",
+  "counts": {
+    "one_dimensional": 100,
+    "independent_rectangles": 160,
+    "independent_rational_polygons": 80,
+    "known_high_dimensional": 15,
+    "lower_dimensional": 7,
+    "empty_domains": 4,
+    "unbounded_rejections": 4,
+    "malformed_rejections": 5,
+    "singular_stationary_fixtures": 10
+  },
+  "source_sha256": "7187dd02b66d43ea1ced49b92f7199adf22804df7b3c1024416b9a5788c26853"
+}

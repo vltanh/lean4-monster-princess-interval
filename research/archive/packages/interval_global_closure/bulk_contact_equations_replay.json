@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Exact physical capture tests of contact-moment identities; not an equilibrium certificate.",
+  "counts": {
+    "physical_M2": 549,
+    "physical_endpoint": 51,
+    "quadratic_M2": 78,
+    "quadratic_endpoint": 17,
+    "smooth_start_derivatives": 49,
+    "smooth_turn_derivatives": 49,
+    "endpoint_trace_jump": 45,
+    "negative_start_balance_dominance": 236,
+    "endpoint_survivor_derivatives": 14
+  },
+  "physical_affine_contact_branches": 3800,
+  "princess_family": "uniform initial radius; stationary until T in{0,1,2}, then unit outward and endpoint-sticky"
+}

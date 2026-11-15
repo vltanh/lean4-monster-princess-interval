@@ -1,0 +1,56 @@
+name: Geometry structural regressions
+
+on:
+  push:
+    branches: [research/interval-progress-2026-11-10]
+    paths:
+      - .github/workflows/geometry-structural-checks.yml
+      - research/13-equilibrium-geometry/**
+      - packages/interval_global_closure/verify_initial_inward_contact.py
+      - packages/interval_global_closure/verify_inward_endpoint_obstacle.py
+      - packages/interval_global_closure/verify_bulk_contact_equations.py
+      - packages/interval_global_closure/verify_boundary_shadow_kernel.py
+      - packages/interval_global_closure/verify_curved_initial_phase.py
+      - packages/interval_global_closure/verify_positive_prefront_boundary.py
+      - packages/interval_global_closure/verify_front_one_contact_moments.py
+      - packages/interval_global_closure/verify_finite_initial_support_obstruction.py
+      - research/12-global-closure/POSITIVE_PREFRONT_RESPONSE_AND_MODULUS.md
+      - research/12-global-closure/GLOBAL_FREE_START_ZENO_COUNTEREXAMPLE.md
+      - research/12-global-closure/COMPENSATED_CURVATURE_AND_CUSP_RESPONSE.md
+      - research/12-global-closure/FRONT_ONE_PROJECTION_SECURITY_LOSS.md
+      - research/12-global-closure/SYNCHRONIZED_PRESSURE_AND_FINITE_SUPPORT.md
+      - packages/interval_global_closure/verify_front_one_projection_counterexample.py
+      - packages/interval_global_closure/verify_synchronized_pressure.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  physical-contact-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Independently check exact contact moments and competing obstacle families
+        run: |
+          python3 -B packages/interval_global_closure/verify_bulk_contact_equations.py /tmp/geometry-bulk.json
+          python3 -B packages/interval_global_closure/verify_initial_inward_contact.py /tmp/geometry-inward.json
+          python3 -B packages/interval_global_closure/verify_inward_endpoint_obstacle.py /tmp/geometry-inward-endpoint.json
+          python3 -B packages/interval_global_closure/verify_boundary_shadow_kernel.py
+          python3 -B packages/interval_global_closure/verify_front_one_contact_moments.py /tmp/geometry-front-one.json
+      - name: Check conditional phase geometry and finite-start obstruction fixtures
+        run: |
+          python3 -B packages/interval_global_closure/verify_curved_initial_phase.py /tmp/geometry-curved.json
+          python3 -B packages/interval_global_closure/verify_finite_initial_support_obstruction.py
+      - name: Check first-exit geometry against actual physical captures
+        run: python3 -B packages/interval_global_closure/verify_positive_prefront_boundary.py /tmp/geometry-positive-prefront.json
+      - name: Exhaust the exact front-one security-loss counterexample
+        run: python3 -B packages/interval_global_closure/verify_front_one_projection_counterexample.py --output /tmp/geometry-front-one-projection.json
+      - name: Check physical retiming, finite support knots and rate-limited tracking
+        run: python3 -B packages/interval_global_closure/verify_synchronized_pressure.py /tmp/geometry-synchronized-pressure.json
+      - name: State precisely what this run does not prove
+        run: |
+          echo 'Exact fixtures passed; no unrestricted equilibrium, finite phase sufficiency, or Lean formalization is claimed.' >> "$GITHUB_STEP_SUMMARY"

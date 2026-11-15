@@ -1,4 +1,4 @@
-# The princess and monster game on an interval — a Lean formalization
+# The princess and monster game on an interval
 
 [![Lean Action CI](https://github.com/vltanh/lean4-monster-princess-interval/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/vltanh/lean4-monster-princess-interval/actions/workflows/lean_action_ci.yml)
 
@@ -9,10 +9,21 @@ the hider the time until they meet. S. Alpern, R. Fokkink, R. Lindelauf and G.-J
 Control Optim. 47(3) (2008), 1178–1190, showed that this game, long thought trivial with value
 `3/2`, is not: its value `V` satisfies `15/11 ≤ V ≤ 13/9`.
 
-This repository formalizes the whole paper in Lean 4 with Mathlib. That covers every numbered
-result, the existence of the value, and the main bounds. It also proves the two results the paper
-cites, the minimax theorem of Alpern and Gal and Alpern and Asic's invariance theorem, so nothing
-is assumed. The paper's informal arguments in Sections 3–5 are completed into proofs.
+This repository has two parts.
+
+- **A Lean formalization of the paper** ([`PrincessMonsterInterval/AlpernEtAl2008/`](PrincessMonsterInterval/AlpernEtAl2008)).
+  It covers every numbered result, the existence of the value, and the main bounds. It also proves the two results
+  the paper cites, the minimax theorem of Alpern and Gal and Alpern and Asic's invariance theorem,
+  so nothing is assumed. The paper's informal arguments in Sections 3–5 are completed into proofs.
+- **Our attempt at the exact value** ([`research/`](research/README.md)). It does not find `V`.
+  Computer-assisted bounds narrow the paper's bracket to
+  `1.4225745 ≤ V ≤ 1.4240199`, so the paper's conjecture `V = 1.4` is false if they hold.
+  The bounds rest on written proofs and exact integer computations. They are not formalized,
+  and no one outside the project has reviewed them. See
+  [the research summary](research/README.md) and an
+  [interactive page of both strategies](https://vltanh.me/princess-monster-interval/).
+
+The rest of this page is about the formalization.
 
 ## Status
 
@@ -91,12 +102,14 @@ The only dependency is Mathlib.
 
 | Path | Contents |
 | --- | --- |
-| [`PrincessMonsterInterval/`](PrincessMonsterInterval) | the paper: definitions (`Defs.lean`), capture times, the value, and one directory per section |
+| [`PrincessMonsterInterval/`](PrincessMonsterInterval) | the game: definitions (`Defs.lean`), capture times, and the existence of the value (`Value.lean`) |
+| [`PrincessMonsterInterval/AlpernEtAl2008/`](PrincessMonsterInterval/AlpernEtAl2008) | the paper's results, one directory per section, and the main result (`Main.lean`) |
 | [`External/`](External) | the cited results: Alpern–Gal's minimax theorem, Alpern–Asic's Theorem 3 |
 | [`Basic/`](Basic) | general mathematics: the triangle wave that folds a motion onto `[-1, 1]` |
 | [`Challenge.lean`](Challenge.lean), [`Solution.lean`](Solution.lean), [`comparator.json`](comparator.json) | the statements of record and their proofs, for [Palomar](https://palomar-registry.org) |
 | [`docs/`](docs) | the routes of the paper's proofs and the recorded differences |
 | [`scripts/`](scripts) | the audit, the route check, and documentation checks |
+| [`research/`](research/README.md) | our attempt at the exact value: the bounds, the strategies, and the programs and certificates behind them (not Lean) |
 
 ## Related work and credits
 
@@ -104,8 +117,11 @@ The only dependency is Mathlib.
   numerical study by the same authors (2009) and two bachelor's theses (Geupel 2011, van Laere
   2018) have revisited the game, without improving the bounds; the theses already correct some
   of the slips listed in the report (E1, E14, E15, E17). See
-  [the report's Section 10](REPORT.md#10-the-paper-in-the-literature).
+  [the report's Section 10](REPORT.md#10-the-paper-in-the-literature). Our own bounds are in
+  [`research/`](research/README.md).
 - Author and maintainer: The-Anh Vu-Le.
 - The Lean code, the audit and the documents were written by Claude (Anthropic) agents, using the
   `formalize-math-paper` procedure at the maintainer's request; see [`CREDITS.md`](CREDITS.md).
+  The research in [`research/`](research/README.md) was also done by Claude agents, at the
+  maintainer's direction.
 - License: [Apache-2.0](LICENSE).

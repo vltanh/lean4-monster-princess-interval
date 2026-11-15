@@ -1,0 +1,63 @@
+{
+  "scope": "Native active-support worker, frozen physical witnesses, original-bank and companion separation.",
+  "exact_checks": 191,
+  "fixtures": [
+    {
+      "name": "constant_endpoint",
+      "upper": "3/2",
+      "companion": "3/2",
+      "physical_rows": 3,
+      "original_rows": 3,
+      "companion_rows": 0
+    },
+    {
+      "name": "shifted_M1",
+      "upper": "7/4",
+      "companion": "53/32",
+      "physical_rows": 5,
+      "original_rows": 3,
+      "companion_rows": 2
+    },
+    {
+      "name": "split_turn",
+      "upper": "33/16",
+      "companion": "33/16",
+      "physical_rows": 7,
+      "original_rows": 3,
+      "companion_rows": 4
+    },
+    {
+      "name": "split_start",
+      "upper": "27/16",
+      "companion": "27/16",
+      "physical_rows": 6,
+      "original_rows": 3,
+      "companion_rows": 3
+    },
+    {
+      "name": "general_inward",
+      "upper": "9/4",
+      "companion": "33/16",
+      "physical_rows": 7,
+      "original_rows": 3,
+      "companion_rows": 4
+    },
+    {
+      "name": "nested_initial_layer",
+      "upper": "2",
+      "companion": "3/2",
+      "physical_rows": 5,
+      "original_rows": 2,
+      "companion_rows": 3
+    }
+  ],
+  "ordinary_formats": 10,
+  "parser_response": "269/120",
+  "inactive_germ_geometry_test": {
+    "preserved_rows": 3,
+    "maximum_gap_order": 0,
+    "full_bank_size": 2,
+    "active_size": 1
+  },
+  "seconds": 3.09
+}

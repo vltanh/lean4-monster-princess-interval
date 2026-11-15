@@ -1,0 +1,17 @@
+{
+  "full_minimax_reduction": "NOT ESTABLISHED; G5 remains open",
+  "exact_canonical_orders": 349780,
+  "shells_checked": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "extra_compact_fixture": {
+    "k": 4,
+    "base": 8,
+    "requires_turns": 4,
+    "three_turn_gap": "1/110923024"
+  },
+  "local_derivative_identities": 5280,
+  "critical_speed_comparisons": 5280,
+  "quadratic_solver_fixtures": 7,
+  "complete_endpoint_law_certificates": 5,
+  "verification": "Python 3 exact rational arithmetic; no Lean or CI",
+  "scope": "A specified-law obstruction plus finite certificate verification, not an equilibrium."
+}

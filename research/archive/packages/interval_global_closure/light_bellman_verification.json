@@ -1,0 +1,47 @@
+{
+  "scope": "Independent finite verification of the global light-cell certificate algorithm; no new optimal-strategy claim",
+  "cases": [
+    {
+      "field": "ordinary",
+      "cells": 52,
+      "independent_mask_states": 275,
+      "exact_numerator": 14,
+      "interpolated_numerators": [
+        11,
+        11,
+        14,
+        14,
+        14
+      ]
+    },
+    {
+      "field": "outward",
+      "cells": 52,
+      "independent_mask_states": 349,
+      "exact_numerator": 40,
+      "interpolated_numerators": [
+        33,
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "field": "mixture",
+      "cells": 52,
+      "independent_mask_states": 389,
+      "exact_numerator": 34,
+      "interpolated_numerators": [
+        30,
+        31,
+        34,
+        34,
+        34
+      ]
+    }
+  ],
+  "independent_rank_mask_equalities": 3,
+  "coarse_lower_bounds": 12,
+  "integer_overflow_guard_verified": true
+}

@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "scope": "Fixed weights and routes under all continuous strictly increasing odd two-periodic light-coordinate warps; not an unrestricted game lower bound.",
+  "source_sha256": "2a09355539fa015a0b281843a9db108c4a619243118eb0d57d14144cab20d89a",
+  "certificate_sha256": "061fc0b582961b9911ad0e9a66395ba0662b059596db0660eeb80754fdc58ddd",
+  "calendar_plans": 736,
+  "distinct_physical_pairs": 703,
+  "queries": 209,
+  "base_levels": 273,
+  "profiles": 41,
+  "warp_increments": 64,
+  "exact_symbolic_captures": 57646,
+  "equal_capture_limits": 57646,
+  "later_capture_limits": 0,
+  "family_lower": "2850080016475247253999527/2000000000000000000000000",
+  "maximum_possible_upper_improvement": "253018956713683500473/2000000000000000000000000",
+  "minimum_column_indices": [
+    37
+  ],
+  "realization": "Late connectors of width e^2; queried side offsets e; clipping to [e^6,1-e^6]; all comparisons use exact leading polynomial coefficients.",
+  "profile_audit": [
+    {
+      "profile": 0,
+      "path_vertices": 962,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 1,
+      "path_vertices": 474,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 2,
+      "path_vertices": 660,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 3,
+      "path_vertices": 670,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 4,
+      "path_vertices": 696,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 5,
+      "path_vertices": 643,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 6,
+      "path_vertices": 641,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 7,
+      "path_vertices": 674,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 8,
+      "path_vertices": 675,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 9,
+      "path_vertices": 668,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 10,
+      "path_vertices": 687,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 11,
+      "path_vertices": 700,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 12,
+      "path_vertices": 689,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 13,
+      "path_vertices": 681,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 14,
+      "path_vertices": 676,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 15,
+      "path_vertices": 691,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 16,
+      "path_vertices": 665,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 17,
+      "path_vertices": 699,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 18,
+      "path_vertices": 691,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 19,
+      "path_vertices": 692,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 20,
+      "path_vertices": 692,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 21,
+      "path_vertices": 682,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 22,
+      "path_vertices": 692,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 23,
+      "path_vertices": 692,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 24,
+      "path_vertices": 681,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 25,
+      "path_vertices": 698,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 26,
+      "path_vertices": 697,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 27,
+      "path_vertices": 782,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 28,
+      "path_vertices": 803,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 29,
+      "path_vertices": 1013,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 30,
+      "path_vertices": 688,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 31,
+      "path_vertices": 688,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 32,
+      "path_vertices": 681,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 33,
+      "path_vertices": 697,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 34,
+      "path_vertices": 806,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 35,
+      "path_vertices": 674,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 36,
+      "path_vertices": 785,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 37,
+      "path_vertices": 770,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 38,
+      "path_vertices": 661,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 39,
+      "path_vertices": 674,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    },
+    {
+      "profile": 40,
+      "path_vertices": 683,
+      "equal_capture_limits": 1406,
+      "later_capture_limits": 0
+    }
+  ],
+  "source_n64_upper": "364842628535291/256000000000000"
+}

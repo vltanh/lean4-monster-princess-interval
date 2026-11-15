@@ -1,0 +1,4 @@
+PASS: C++ cached exact response = 36290299773897097/25600000000000000
+Nodes, terminal, dominated, lower-bound pruned: 48228 7 21262 2904
+PASS: C++ naive exact response = 36290299773897097/25600000000000000
+Nodes, terminal, dominated, lower-bound pruned: 48228 7 21262 2904

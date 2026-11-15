@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "Fixed-interface epoch and scale cancellation only; no global atlas-count theorem.",
+  "counts": {
+    "scale_identities": 240,
+    "cone_margins": 360,
+    "opposing_trace_bounds": 5760,
+    "productive_duration_implications": 746
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "check": "complete exact precenter regeneration",
+  "initial_minimum": {
+    "value": "39/32",
+    "initial_position": "1",
+    "initial_piece": 173,
+    "constant_candidates": 29
+  },
+  "edges": 10,
+  "source_sha256": {
+    "EXACT_N1_CONTINUOUS_RESPONSE.md": "8eb86e973f0e5ae498901a1ab3aecae1901fee5258319b811969e40195f1c796",
+    "exact_n1_precenter.py": "5b23059827df3d7f464cd9ebb7c9f40384b7079f5707126d0d292f6ab27977a0",
+    "replay_n1_precenter.py": "51b8dc397cd4fda567dc721d498fef064f25b31ed160c7bf278aff1c69d1eb5d",
+    "n1_precenter_complete.json.gz": "f2b0b62eb37046b67da9c6493cee41e6def9e5a43777d47658b6af88dfa1f6b6",
+    "n1_precenter_replay.json": "4a8a3f3cd996482d33ab466ded2731b99511ff471d0326cccc5e9fc696fdc3fb"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "scope": "Collapsed companion comparison, ordinary flow replay, and geometry/semicontinuity regressions.",
+  "exact_checks": 462,
+  "fixtures": [
+    {
+      "name": "constant_endpoint",
+      "germ_response": "3/2",
+      "ordinary_response": "3/2",
+      "input_atoms": 1,
+      "ordinary_atoms": 1,
+      "collapsed_segments": 0,
+      "flow_replay": {
+        "exactValue": "3/2",
+        "flow": "0",
+        "nodes": 8,
+        "arcs": 5,
+        "positiveFlows": 0
+      }
+    },
+    {
+      "name": "shifted_M1",
+      "germ_response": "7/4",
+      "ordinary_response": "53/32",
+      "input_atoms": 3,
+      "ordinary_atoms": 3,
+      "collapsed_segments": 0,
+      "flow_replay": {
+        "exactValue": "53/32",
+        "flow": "11",
+        "nodes": 79,
+        "arcs": 136,
+        "positiveFlows": 19
+      }
+    },
+    {
+      "name": "split_turn",
+      "germ_response": "33/16",
+      "ordinary_response": "33/16",
+      "input_atoms": 3,
+      "ordinary_atoms": 2,
+      "collapsed_segments": 0,
+      "flow_replay": {
+        "exactValue": "33/16",
+        "flow": "7",
+        "nodes": 34,
+        "arcs": 52,
+        "positiveFlows": 13
+      }
+    },
+    {
+      "name": "split_start",
+      "germ_response": "27/16",
+      "ordinary_response": "27/16",
+      "input_atoms": 3,
+      "ordinary_atoms": 2,
+      "collapsed_segments": 0,
+      "flow_replay": {
+        "exactValue": "27/16",
+        "flow": "3",
+        "nodes": 52,
+        "arcs": 83,
+        "positiveFlows": 13
+      }
+    },
+    {
+      "name": "general_inward",
+      "germ_response": "9/4",
+      "ordinary_response": "33/16",
+      "input_atoms": 2,
+      "ordinary_atoms": 2,
+      "collapsed_segments": 0,
+      "flow_replay": {
+        "exactValue": "33/16",
+        "flow": "14",
+        "nodes": 54,
+        "arcs": 93,
+        "positiveFlows": 19
+      }
+    },
+    {
+      "name": "nested_initial_layer",
+      "germ_response": "2",
+      "ordinary_response": "3/2",
+      "input_atoms": 2,
+      "ordinary_atoms": 1,
+      "collapsed_segments": 2,
+      "flow_replay": {
+        "exactValue": "3/2",
+        "flow": "0",
+        "nodes": 8,
+        "arcs": 5,
+        "positiveFlows": 0
+      }
+    }
+  ],
+  "uniform_convergence_checks": 282,
+  "fixed_princess_lsc_checks": 70,
+  "zero_probability_germ_response": "3/2",
+  "varying_princess_counterexample": {
+    "original": "germ:[[\"0\",\"1\"],[\"1\"]]",
+    "collapsed": "germ:[[\"1\",\"1\"],[\"1\"]]",
+    "original_limit": "0",
+    "collapsed_limit": "1"
+  },
+  "rejected_cases": [
+    {
+      "name": "nonunit ordinary response",
+      "message": "collapsed law is legal, but the standard atomic engine requires complete unit-leg routes; a genuinely nonunit limit is not silently replaced"
+    },
+    {
+      "name": "negative probability",
+      "message": "negative eventual probability"
+    },
+    {
+      "name": "unnormalized probabilities",
+      "message": "probabilities must sum exactly to one"
+    },
+    {
+      "name": "instantaneous displacement",
+      "message": "illegal Monster speed or time order"
+    },
+    {
+      "name": "missing endpoint completion",
+      "message": "original Monster route lacks endpoint completion"
+    },
+    {
+      "name": "nonzero initial time",
+      "message": "Monster must start at time zero"
+    },
+    {
+      "name": "diverging vertex time",
+      "message": "infinite germ limit"
+    }
+  ],
+  "arithmetic": {
+    "radius": "1/48",
+    "comparisons": 9100,
+    "maxDegree": 5
+  },
+  "seconds": 0.477
+}

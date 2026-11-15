@@ -1,0 +1,15 @@
+{
+  "closure_arcs": 151953,
+  "closure_excess": "629584636663/512000000000000",
+  "closure_nodes": 65666,
+  "distinct_physical_pairs": 768,
+  "endpoint_baseline": "91124797889849/64000000000000",
+  "exact_cut": "93007371780317",
+  "exact_flow": "93007371780317",
+  "global_upper": "145925593551091/102400000000000",
+  "n": 128,
+  "physical_calendar_plans": 809,
+  "positive_flow_entries": 39500,
+  "scope": "global physical Monster upper via centered-law Princess normalization and exact Qout closure",
+  "status": "PASS"
+}

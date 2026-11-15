@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "source_uncompressed_sha256": "5c736b0c6ef59b418cce0e2e2ef24b0a8dbe4d017a6eca7578d9e1c79616b31d",
+  "scope": "Exact fixed-law decomposition and ablation; no exclusion of all continuous E/P mixtures, no new best unrestricted bound, no Lean formalization.",
+  "physical_pairs": 752,
+  "calendar_plans": 770,
+  "groups": {
+    "2_interior_turns": {"pairs": 387, "probability": "1513679849/250000000000", "percent": 0.6054719396},
+    "3_interior_turns": {"pairs": 31, "probability": "92665891/1000000000000", "percent": 0.0092665891},
+    "4_interior_turns": {"pairs": 2, "probability": "269063/31250000000", "percent": 0.0008610016},
+    "endpoint_first": {"pairs": 41, "probability": "195416487863/1000000000000", "percent": 19.5416487863},
+    "one_interior_turn_off_t2": {"pairs": 150, "probability": "245444161/40000000000", "percent": 0.6136104025},
+    "one_interior_turn_t2": {"pairs": 140, "probability": "81378181893/500000000000", "percent": 16.2756363786},
+    "sweep": {"pairs": 1, "probability": "629535049023/1000000000000", "percent": 62.9535049023}
+  },
+  "witness_route": [["0", "1/65536"], ["1", "1/65536"], ["131071/65536", "1"], ["8", "1"]],
+  "independent_oriented_capture_comparisons": 1504,
+  "outcomes": {
+    "original": {"retained_mass": "1", "exact_payoff": "373447515557123123/262144000000000000", "decimal": 1.4245892164502072, "exceeds_original_upper": false},
+    "three_families_renormalized": {"retained_mass": "3858233987/3906250000", "exact_payoff": "370929262655146955/258921699913760768", "decimal": 1.4325924122184144, "exceeds_original_upper": true},
+    "remove_off_schedule_only": {"retained_mass": "39754555839/40000000000", "exact_payoff": "124018100879436817/86845152382156800", "decimal": 1.428037115228985, "exceeds_original_upper": true},
+    "remove_extra_turns_only": {"retained_mass": "993844004697/1000000000000", "exact_payoff": "372322475573959627/260530242767290368", "decimal": 1.4290950318060534, "exceeds_original_upper": true}
+  },
+  "timing_discontinuity": {"fraction_regressions": 102, "epsilon": "1/65536", "uniform_path_distance": "1/32768", "early_switch_payoff": "32767/32768", "on_front_payoff": "196607/131072", "payoff_difference": "65539/131072"},
+  "minimum_replacement_of_fixed_core": "95412375319086671352367/18111780403083347412109375",
+  "simplified_at_most_two_interior_turns": {
+    "pairs": 719,
+    "deleted_probability": "101275907/1000000000000",
+    "inherited_global_upper": "1459246646949495/1023896293471232",
+    "decimal": 1.4251898910604806,
+    "proof": "For nonnegative capture time, retaining mass w and renormalizing increases a verified all-Princess upper by at most the factor 1/w.",
+    "original_upper_replayed": false
+  }
+}

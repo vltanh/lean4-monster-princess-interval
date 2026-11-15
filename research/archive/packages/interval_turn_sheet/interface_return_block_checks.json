@@ -1,0 +1,27 @@
+{
+  "scope": "Exact ingredients for the <=5-tent initial-interface RETURN-BLOCK theorem. The all-finite-sequence face reduction is the accompanying proof, not inferred from these fixtures. Arbitrary-endpoint bridges and global counts remain separate.",
+  "terminal_kernels": {
+    "strict_sos_identities": 1944,
+    "terminal_clock_identities": 648,
+    "scope": "Both variable parities and both final signs, with final rank and interface-return time fixed. These are exact algebra identities, not sampled feasibility assertions."
+  },
+  "left_margin_factorizations": 180,
+  "arbitrary_left_physical": {
+    "complete_ordered_fan_comparisons": 81,
+    "affine_capture_pieces": 3618,
+    "minimum_difference_minus_margin": "0"
+  },
+  "terminal_connector": {
+    "active_zero_amplitude_terminal_records": 30,
+    "inactive_terminal_connectors": 69
+  },
+  "old_record_extension": {
+    "physical_old_band_identities": 1134,
+    "with_later_active_hinges": 270,
+    "fixed_initial_left_resets": 252
+  },
+  "dependencies": {
+    "interface_audit": "b2d70f275029f312ca8de45790ab02920bea84e6",
+    "arbitrary_left_normalization": "2ad880d9ab22b8b96217f29410c02c82bfbcb628"
+  }
+}

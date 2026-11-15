@@ -1,0 +1,6 @@
+DIRECT 82 11 vars 35289 eq 12269 ub 12257 seconds 0.16399407386779785
+/workspace/scratch/f5595f62cf06/lean4-monster-princess/packages/interval_continuum_discovery/direct_support.py:31: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  sol=linprog(obj,A_ub=Aub,b_ub=ubs,A_eq=Aeq,b_eq=rhs,bounds=bounds,method='highs-ipm',options={'dual_feasibility_tolerance':1e-9,'primal_feasibility_tolerance':1e-9,'ipm_optimality_tolerance':1e-10,'threads':1})
+RESULT 1.432522324960688 UPPER 1.4325223249606889 seconds 20.90213680267334
+ACTIVE [(['M1', -1.0], 0.3184519245465336), (['M2', -0.875], 0.015320985191448486), (['M2', -0.75], 0.015014565487619515), (['M2', -0.625], 0.01472016224276423), (['M2', -0.5], 0.01429958617868525), (['M2', -0.375], 0.014299586178685255), (['M2', -0.25], 0.012184873100297089), (['M2', 0.25], 0.0227450964538879), (['M2', 0.375], 0.027114614013332802), (['M2', 0.5], 0.027968949202310894), (['M1', 0.625], 0.014937235163184612), (['M2', 0.625], 0.011572402768711836), (['M1', 0.75], 0.017127100639700552), (['M2', 0.75], 0.011556033437122172), (['M1', 0.875], 0.018792507515794688), (['M2', 0.875], 0.011618028045479066), (['M1', 1.0], 0.43227634983444213)]
+Q_MASS 0

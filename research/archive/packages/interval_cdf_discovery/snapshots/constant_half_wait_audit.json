@@ -1,0 +1,40 @@
+{
+  "scope": "Exact realized-CDF legality and declared local conditions; no unrestricted payoff certificate",
+  "input": "constant_half_wait_candidate.json",
+  "nodes": 3571,
+  "triangles": 6936,
+  "transport_cone": "PASS",
+  "minimum_R_U": "0",
+  "minimum_minus_R_V": "0",
+  "initial_center_atom": 0,
+  "initial_endpoint_atom": 0,
+  "outgoing_time_one_atom": 0,
+  "optional_late_inequalities": {
+    "positive_v": {
+      "minimum_slack": "-698283/500000000000",
+      "minimum_slack_float": -1.396566e-06,
+      "negative_vertex_rows": 124
+    },
+    "negative_v": {
+      "minimum_slack": "-1279073/1000000000000",
+      "minimum_slack_float": -1.279073e-06,
+      "negative_vertex_rows": 94
+    }
+  },
+  "constant_early_cone": {
+    "cutoff": "1/2",
+    "density": "704044057/2500000000",
+    "density_float": 0.2816176228,
+    "checked_nodes": 55,
+    "status": "PASS"
+  },
+  "future_rank_barrier": {
+    "cutoff": "15/16",
+    "rank": "81481882477/125000000000",
+    "rank_float": 0.651855059816,
+    "future_interior_envelope": "81481882477/125000000000",
+    "past_center_maximum": "81481882477/125000000000",
+    "checked_boundary_nodes": 16,
+    "status": "PASS"
+  }
+}

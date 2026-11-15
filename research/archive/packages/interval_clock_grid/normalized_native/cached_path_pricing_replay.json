@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "scope": "Cached-route separation only; exact upper witnesses for the dual minimum, never a lower certificate.",
+  "stats": {
+    "profiles": 8,
+    "fraction_route_checks": 1644,
+    "native_minimum_comparisons": 8,
+    "native_witness_checks": 80,
+    "normalization_checks": 5,
+    "incremental_cache_checks": 11,
+    "level_checks": 1636,
+    "malformed_rejections": 15,
+    "maximum_exact_units_bits": 63
+  },
+  "cases": [
+    {
+      "n": 1,
+      "case": 0,
+      "cached_paths": 8,
+      "minimum_units": "4000000000"
+    },
+    {
+      "n": 1,
+      "case": 1,
+      "cached_paths": 8,
+      "minimum_units": "4000000000"
+    },
+    {
+      "n": 1,
+      "case": 2,
+      "cached_paths": 8,
+      "minimum_units": "5696862316"
+    },
+    {
+      "n": 1,
+      "case": 3,
+      "cached_paths": 8,
+      "minimum_units": "4921592681"
+    },
+    {
+      "n": 2,
+      "case": 0,
+      "cached_paths": 401,
+      "minimum_units": "8000000000"
+    },
+    {
+      "n": 2,
+      "case": 1,
+      "cached_paths": 401,
+      "minimum_units": "7918692308"
+    },
+    {
+      "n": 2,
+      "case": 2,
+      "cached_paths": 401,
+      "minimum_units": "8447225178"
+    },
+    {
+      "n": 2,
+      "case": 3,
+      "cached_paths": 401,
+      "minimum_units": "8000000000"
+    }
+  ],
+  "source_sha256": "e1137a9460b2f4503f6d8be4492c67ada754f26f626d04b110fce33798017ffb",
+  "native_source_sha256": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd"
+}

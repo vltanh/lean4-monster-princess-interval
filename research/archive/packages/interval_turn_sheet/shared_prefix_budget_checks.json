@@ -1,0 +1,16 @@
+{
+  "scope": "Exact universal low-record same-side-prefix enclosure for the fixed supplied CDF, not a global game proof",
+  "passed": true,
+  "target": "7131/5000",
+  "bound": "16385201286137840537456238199878549282378183289053/11488705337148601898000000000000000000000000000000",
+  "numeric": 1.4262008472927297,
+  "leaves": 874,
+  "discarded": 0,
+  "coverage_slabs": 22,
+  "logical_checks": 12385,
+  "envelope_line_checks": 3061252,
+  "exterior_identity_checks": 7542,
+  "physical_prefix_comparisons": 108,
+  "unique_moments": 874,
+  "unique_exterior": 42
+}

@@ -1,0 +1,13 @@
+verify_corridor.py:
+PASS: 100504 exact capture-integral/envelope checks
+PASS: 33 exact sheet moment and effective-price checks
+PASS: 23355 exact step-density capture/moment/envelope checks
+Scope: global upper response theorem in UPPER_EQUALITY_CORRIDOR.md;
+no assertion of a matching lower law or an equilibrium value.
+
+verify_separated.py:
+PASS: 80 zero-sheet regressions; max error 1.3877787807814457e-16
+PASS: 4 independent first-segment-capture epsilon limits; max error 8.881784197001252e-16
+PASS: genuinely affine-turn direct capture limit; error 2.220446049250313e-16
+PASS: nonflat-k lower-edge-sheet direct capture limit; error 2.220446049250313e-16
+Scope: implementation verification, not numerical equilibrium certification.

@@ -1,0 +1,33 @@
+{
+  "arithmetic": "Python integers and fractions.Fraction only",
+  "benchmark": "291849329389899/204800000000000",
+  "benchmark_minus_upper": "-66111055169/256000000000000",
+  "causal_prefix_checks": 1204680,
+  "class_counts": {
+    "endpoint_first": 45,
+    "endpoint_start": 1,
+    "one_interior_reversal": 367
+  },
+  "class_probability": {
+    "endpoint_first": "190419854979/1000000000000",
+    "endpoint_start": "158373491249/250000000000",
+    "one_interior_reversal": "7043447201/40000000000"
+  },
+  "closure_arcs": 139253,
+  "closure_excess": "253397587959/204800000000000",
+  "closure_nodes": 35132,
+  "compact_law_sha256": "f560ed0593fd93b6c73ab287a3e2efa5e061df3ab4413c37e49fc85e7ea534cb",
+  "compact_law_uncompressed_sha256": "66a3e4cef01902a4ec4a4a72ad0dcee6f0585569ecef98122a89efd07460c6bf",
+  "distinct_reflected_path_pairs": 326,
+  "endpoint_baseline": "182280512903797/128000000000000",
+  "exact_cut": "304215454060541",
+  "exact_flow": "304215454060541",
+  "global_upper": "1459511091170171/1024000000000000",
+  "global_upper_decimal": 1.4253037999708702,
+  "maximum_completion_time": "65/16",
+  "n": 256,
+  "one_turn_separation_target_disproved": false,
+  "physical_calendar_plans": 413,
+  "scope": "all-Princess upper for a physical law in canonical B1",
+  "status": "PASS"
+}

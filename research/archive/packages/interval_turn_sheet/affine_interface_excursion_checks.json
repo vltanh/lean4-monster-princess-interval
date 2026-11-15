@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Arbitrary confined-left excursion dominance with a fixed continuation and explicit affine future persistence; no global finite-prefix assertion.",
+  "checks": {
+    "algebraic_bounds": 520,
+    "capture_order_traces": 2275,
+    "arbitrary_excursions": 88,
+    "old_record_cases": 1056,
+    "physical_integrals": 2112,
+    "physical_segment_inspections": 16817,
+    "nonproductive_wait_checks": 76,
+    "right_tent_checks": 71
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "n": 512,
+  "field_sha256": "9b0fdf3c4c05c28399d3806ff0e65a360af7ae139081529a7f7b54e2d78470e8",
+  "physical_marginals_sha256": "eb5babb024a74c30fe178e20e7b5a5207321c30447126f2f1543bb84c68e1d3a",
+  "all_calendar_family_floor": "145931157143161/102400000000000",
+  "global_target_upper": "291849329389899/204800000000000",
+  "scope": "This grid's entire causal-clock certificate family for the fixed physical law cannot improve the target. This is not an obstruction for the actual continuous physical law.",
+  "source_physical_marginals_sha256": "e8b545eada71bffcc910635be7ad24d11ab8d17a2d5f322148c1a69c65169f58",
+  "provenance": {
+    "run_id": 43546004339,
+    "run_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43546004339",
+    "artifact_id": 14094262180,
+    "artifact_zip_sha256": "3f49a11f6baf0b70b31e5b3f335e16fc6b9e372bb917d77869bd80bfcd227e2a",
+    "head_sha": "23deb6624fdefe3bc716be4b3d251938b600e26b",
+    "random_seed": 244948,
+    "source_report_sha256": "3100df7fb04999bc32196a62efe260fd15e971617a96ad5954febd4169cfc8f8",
+    "committed_seed_compressed_sha256": "ed78d05cb047e6c11ec9b39e351c6b3b5bab5cac0f9758e5aac41ff6e44126d5",
+    "refinement_factor": 4,
+    "all_676_physical_marginals_checked_against_seed": true
+  }
+}

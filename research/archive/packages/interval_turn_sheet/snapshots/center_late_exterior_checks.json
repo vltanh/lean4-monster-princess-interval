@@ -1,0 +1,165 @@
+{
+  "scope": "Exact conditional unrestricted center continuation on the late ALL-rank slab, plus extended high-rank region before it. No global game value or all-initial-prefix claim.",
+  "field_blob": "5c45d042ee9948faebc03354c3e1e2ee3cbec1a5",
+  "front_exterior": {
+    "scope": "Complete immediate FRONT exterior comparison with the single return at b; not the full repeated-return value.",
+    "field_blob": "5c45d042ee9948faebc03354c3e1e2ee3cbec1a5",
+    "domain": [
+      "7/8",
+      "15/16"
+    ],
+    "Wb_coefficients": [
+      "849601117714489/128000000000000",
+      "-27448361981463/4000000000000",
+      "639479517081/500000000000"
+    ],
+    "primitive_builder_checks": 168,
+    "regions": 207,
+    "vertices": 513,
+    "checks": 210,
+    "candidates": 515,
+    "stationary": 881,
+    "best": {
+      "value": "0",
+      "point": [
+        "7/8",
+        "15/16",
+        "0"
+      ],
+      "label": "cross:797:center:",
+      "kind": "vertex"
+    },
+    "failures": []
+  },
+  "last_two": {
+    "scope": "Complete front-rank last-two comparison to the direct b return on the exact rational single-return time interval. It must be combined with rank monotonicity, front-exterior and wait proofs.",
+    "field_blob": "5c45d042ee9948faebc03354c3e1e2ee3cbec1a5",
+    "domain": {
+      "t": [
+        "9321277864605/10363024948016",
+        "15/16"
+      ],
+      "u": "t<=u<=b",
+      "e": [
+        "15/16",
+        "17/16"
+      ],
+      "gate": "R(e,u)>=R(u,t); endpoint second action separate"
+    },
+    "H1": "24628626510/647689059251",
+    "left_numeric": 0.8994746139629393,
+    "Wb_coefficients": [
+      "849601117714489/128000000000000",
+      "-27448361981463/4000000000000",
+      "639479517081/500000000000"
+    ],
+    "primitive_builder_checks": 168,
+    "regions": 130,
+    "vertices": 582,
+    "checks": 133,
+    "candidates": 587,
+    "stationary": 1346,
+    "wait_minimum_derivative": "2021897479230249267/1619222648127500000000",
+    "best": {
+      "value": "0",
+      "point": [
+        "9321277864605/10363024948016",
+        "9321277864605/10363024948016",
+        "15/16"
+      ],
+      "label": "cross:798:center:",
+      "kind": "vertex"
+    },
+    "failures": []
+  },
+  "physical": {
+    "scope": "Independent signed-record capture regression for the exact action identities; these examples are not the whole-region certificate.",
+    "two_tent_capture_identities": 36,
+    "rank_monotonicity_checks": 24,
+    "endpoint_second_capture_identities": 9,
+    "largest_same_exit_merge_difference": {
+      "t": "29/32",
+      "u": "59/64",
+      "e": "1",
+      "n": "10184278599/31250000000",
+      "delta": "1933182453825998553/33554432000000000000",
+      "fixedGap": "-538705415731718519/6710886400000000000"
+    },
+    "largest_two_option_diagnostic": "-2504775134029/4096000000000000",
+    "warning": "A same-exterior merge alone is false. The full proof uses the direct-b comparator and the exact all-region gate."
+  },
+  "extended_high_rank_region": {
+    "scope": "Exact unrestricted immediate-exterior center value for every t in the stated interval and every captured rank n>=ncrit(t), through n=1. The theorem includes arbitrary later returns and accumulation.",
+    "interval": [
+      "7/8",
+      "9321277864605/10363024948016"
+    ],
+    "terminal_time": "15/16",
+    "terminal_rank": "10184278599/15625000000",
+    "J_coefficients": [
+      "1499993496472898751/2097152000000000000",
+      "33250875365717409/65536000000000000",
+      "7559351910113219/8192000000000000"
+    ],
+    "threshold_coefficients": [
+      "A[10783942107049086143/1114112000000000000;-5903087412789/531250000000]",
+      "11892895133267361/34816000000000000",
+      "7559351910113219/4352000000000000"
+    ],
+    "incoming_coefficients": [
+      "-713310167489/500000000000",
+      "1735432447/781250000",
+      "0"
+    ],
+    "primitiveChecks": 4,
+    "interior_V_knots": 0,
+    "interior_U_knots": 0,
+    "margins": {
+      "rank_above_center": {
+        "point": "9321277864605/10363024948016",
+        "value": "A[40663983511324088928974766063795284380597/3651337726488868663079432704000000000000;-5903087412789/531250000000]",
+        "numeric": 0.306771981158587
+      },
+      "rank_below_terminal": {
+        "point": "9321277864605/10363024948016",
+        "value": "A[-39216025846989691655743690484103579077557/3651337726488868663079432704000000000000;5903087412789/531250000000]",
+        "numeric": 0.08978341108302713
+      },
+      "all_negative_V_arrivals": {
+        "point": "9321277864605/10363024948016",
+        "value": "A[-39509458499698401154744356197948016447413/3651337726488868663079432704000000000000;5903087412789/531250000000]",
+        "numeric": 0.009420356583854638
+      }
+    },
+    "front_trace_lower_value": {
+      "point": "9321277864605/10363024948016",
+      "value": "A[-2754905702584355576002601/647689059251000000000000;5903087412789/1000000000000]",
+      "numeric": 1.499979581014489
+    },
+    "examples": [
+      {
+        "time": "7/8",
+        "center_rank": "0",
+        "threshold": "A[503943045806510527/44564480000000000;-5903087412789/531250000000]",
+        "incoming_rank": "258532002831/500000000000",
+        "threshold_numeric": 0.4782136041135239
+      },
+      {
+        "time": "57/64",
+        "center_rank": "10184278599/62500000000",
+        "threshold": "A[40505313649902628687/3565158400000000000;-5903087412789/531250000000]",
+        "incoming_rank": "275886327301/500000000000",
+        "threshold_numeric": 0.5314707007355947
+      },
+      {
+        "time": "9321277864605/10363024948016",
+        "center_rank": "2583049122719489317509/10120141550796875000000",
+        "threshold": "A[41595945249588213290119473391265684786101/3651337726488868663079432704000000000000;-5903087412789/531250000000]",
+        "incoming_rank": "185054730814411938646661/323844529625500000000000",
+        "threshold_numeric": 0.5620104192529729
+      }
+    ],
+    "formula": "W(t,n)=min{useful crossing returns e in [b,17/16], direct endpoint tour}; ncrit(t)<=n<=1",
+    "remaining": "First-center prefixes with records below ncrit(t), or first-center times outside the stated interval; the saved field still has separate global deficits."
+  }
+}

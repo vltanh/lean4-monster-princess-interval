@@ -1,0 +1,9 @@
+CLOSED (0,1/4): exact response supremum 458409/320000; 3 rational witnesses verified
+CLOSED (1/4,3/8): exact response supremum 91681/64000; 3 rational witnesses verified
+CLOSED (3/8,1/2): exact response supremum 57301/40000; 3 rational witnesses verified
+CLOSED (1/2,5/8): exact response supremum 114601/80000; 3 rational witnesses verified
+CLOSED (5/8,3/4): exact response supremum 458403/320000; 3 rational witnesses verified
+CLOSED (3/4,7/8): exact response supremum 229201/160000; 3 rational witnesses verified
+CLOSED (7/8,1): exact response supremum 229233/160000; 3 rational witnesses verified
+CLOSED four-hider response test: {'value': Fraction(151, 128), 'path': [(Fraction(0, 1), Fraction(-1, 1)), (Fraction(2, 1), Fraction(1, 1))], 'captures': [Fraction(2, 1), Fraction(23, 32), Fraction(2, 1), Fraction(0, 1)], 'states': 16, 'leaves': 6, 'initial_positions': 4, 'universal_leaf_bound': 32}
+PASS: exact response reductions checked; no claim of a full-game saddle point.

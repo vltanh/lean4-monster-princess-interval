@@ -1,0 +1,50 @@
+{
+  "scope": "Exact reflected-fan marginal, ordered supplied-route cost, weight supergradients and causal history upper planes. No basis-optimality or unrestricted-response claim.",
+  "cases": [
+    {
+      "row": "static_low",
+      "supplied_routes": 6
+    },
+    {
+      "row": "static_partial_fold",
+      "supplied_routes": 6
+    },
+    {
+      "row": "endpoint_avoiding",
+      "supplied_routes": 6
+    },
+    {
+      "row": "multiple_waves",
+      "supplied_routes": 6
+    },
+    {
+      "row": "subunit_waves",
+      "supplied_routes": 6
+    },
+    {
+      "row": "germ_window",
+      "supplied_routes": 6
+    },
+    {
+      "row": "germ_base_and_window",
+      "supplied_routes": 6
+    }
+  ],
+  "physical_marginal_checks": 245,
+  "direct_single_ordered_scores": 42,
+  "direct_raw_scores": 42,
+  "strict_rearrangement_improvements": 2,
+  "direct_segment_capture_checks": 780,
+  "affine_capture_branch_checks": 260,
+  "component_feature_integral_checks": 112,
+  "independent_mixed_rank_moments": 20,
+  "weight_superplane_checks": 80,
+  "causal_nonactive_planes": 20,
+  "history_coefficient_equalities": 102,
+  "invalid_inputs_rejected": 3,
+  "arithmetic": {
+    "radius": "1/18816",
+    "comparisons": 352106,
+    "maxDegree": 6
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "scope": "Exact immutable uniform-translation fan rows and supplied-route integration; fixed-width double limiting discovery, with actual Monster endpoint flags. No unrestricted response certificate or new game bound.",
+  "files": [
+    {
+      "path": "packages/interval_global_closure/germ_translation_fan.cjs",
+      "sha": "4828e031f569c98863fadfd850707ce3ddd6b035",
+      "bytes": 5597
+    },
+    {
+      "path": "packages/interval_global_closure/verify_translation_fan.mjs",
+      "sha": "8db8d9cce87ec52b64d2670c4b58515243c819c2",
+      "bytes": 7787
+    },
+    {
+      "path": "packages/interval_global_closure/trial_translation_fans.mjs",
+      "sha": "468a9fffdecf73f4039c40cac0b8557f11c86940",
+      "bytes": 6076
+    },
+    {
+      "path": "packages/interval_global_closure/translation_fan_float.cjs",
+      "sha": "3cd54695f33c4509952a8fa76eba5fd2684345e1",
+      "bytes": 3862
+    },
+    {
+      "path": "packages/interval_global_closure/export_translation_fan_float.mjs",
+      "sha": "fb7871219d5449bad04513bcf2623b674c8b9651",
+      "bytes": 5702
+    },
+    {
+      "path": "research/12-global-closure/UNIFORM_TRANSLATION_FANS.md",
+      "sha": "bebf9dcf2d7bc0f9c9cc62631396e1f3ff1e842c",
+      "bytes": 12101
+    },
+    {
+      "path": "packages/interval_global_closure/snapshots/translation_fan_verification.json",
+      "sha": "aa960f5c5f0c244c4b6840cc84e7b0a9f55077c0",
+      "bytes": 3088
+    },
+    {
+      "path": "packages/interval_global_closure/snapshots/translation_fan_trial349.json.gz.b64",
+      "sha": "6de0035612c454b07c7a9a6a3d7184748ead9e93",
+      "bytes": 98017
+    },
+    {
+      "path": "packages/interval_global_closure/snapshots/translation_fan_float349.json.gz.b64",
+      "sha": "fda615eb0e468517270800010411ae7eef8c754f",
+      "bytes": 491897
+    },
+    {
+      "path": "packages/interval_global_closure/verify_static_tail_turns.mjs",
+      "sha": "5156d738400f8a986fd8b2aa308e1edc0e9b3ca0",
+      "bytes": 7245
+    },
+    {
+      "path": "research/12-global-closure/STATIC_TAIL_BOUNDARY_REDUCTION.md",
+      "sha": "e78d8a40669357968709ce9a5c4be8c76237e1fa",
+      "bytes": 11036
+    },
+    {
+      "path": "packages/interval_global_closure/snapshots/static_tail_turns_verification.json",
+      "sha": "7de3826e65d59a40759c95ed497f5a43c5618911",
+      "bytes": 948
+    },
+    {
+      "path": "packages/interval_global_closure/static_tail_dp.cjs",
+      "sha": "e74c8e9debd2a94c1b60beac8526a7c70f6e47ef",
+      "bytes": 6740
+    },
+    {
+      "path": "packages/interval_global_closure/verify_static_tail_dp.mjs",
+      "sha": "11fcea3750c1ad74836d9f680a9908941e130bac",
+      "bytes": 5247
+    },
+    {
+      "path": "packages/interval_global_closure/snapshots/static_tail_dp_verification.json",
+      "sha": "1c5d54629df031c21310ba9767f044851d5cc77f",
+      "bytes": 10562
+    }
+  ],
+  "archives": [
+    {
+      "path": "packages/interval_global_closure/snapshots/translation_fan_trial349.json.gz.b64",
+      "source": "translation_fan_trial349.json",
+      "bytes": 1089294,
+      "sha256": "e9823205dc846d38aed2a12c4ef1ef9bcbf3038675cc3ceb236c6d4b9bcd0eed",
+      "archive_text_bytes": 98017
+    },
+    {
+      "path": "packages/interval_global_closure/snapshots/translation_fan_float349.json.gz.b64",
+      "source": "translation_fan_float349.json",
+      "bytes": 6021327,
+      "sha256": "637b425fbc2dde85a798d4c0bdd5279f246b1e6e6b1823b6b99a72c8ab53e11f",
+      "archive_text_bytes": 491897
+    }
+  ],
+  "inputs": [
+    {
+      "path": "frozen_exchange_20261112/restored349/rows.json",
+      "sha256": "445f4b911e77b2da8e8d80365ff7703e7560909c292f3a7c943675a3a9ae2efa"
+    },
+    {
+      "path": "frozen_exchange_20261112/restored349/master.json",
+      "sha256": "c4e773b989b6c818ae0e26f2b6a8426b32a632bad8a4f19659ea4462f11cef3a"
+    },
+    {
+      "path": "global_germ_exchange/inputs/efficient_checkpoint.json",
+      "sha256": "50984e019ffc64a33101706fd6812121ecf159574f8be54a5c1077b437e0ff35"
+    },
+    {
+      "path": "global_germ_exchange/certified_seed/princess_strategy.json",
+      "sha256": "25f86abe2a4d955fea8974d8fddf6aaf1e8e8e8ccec9cec76f9da0bf5c4a7bcc"
+    }
+  ],
+  "float_inputs": {
+    "rows_sha256": "445f4b911e77b2da8e8d80365ff7703e7560909c292f3a7c943675a3a9ae2efa",
+    "bank_sha256": "31decc4f84a2946ab4d8ca4e3a651f246116b83881692dff999978f8a8baa3ea"
+  },
+  "dependencies": {
+    "germ_core": "b7e9accdfa1471a6dc4b348e582abbcc9059172b",
+    "finite_core": "51dbac43b59c3041abf831837dc58fde2a9294b2",
+    "frozen_pair": "27faeb50cf90d63a926d89a92fc0c8f20d21e40e",
+    "hydrator": "1ba70ffcb1bd571675eae9894a7f7d325b304a87",
+    "frozen_separator": "bf2607f4c793fe9d8bd3d80ce697323aa777379a",
+    "fixture_input": "771b51772f4138a5dc45403e7c5746dee42f13f0",
+    "old159_master": "6cac47a4b2227fa1469bb463d35ed37ffb3af1b6",
+    "certified169_input": "1834b07a4e26687cecc38fdc274b7f4b10e3ad90",
+    "pinned349_state": "Parent-owned frozen349 checkpoint delta; byte hashes above identify the restored inputs."
+  },
+  "verification": {
+    "exact_fan_scores": 2088,
+    "independent_affine_translation_pieces": 7666,
+    "clipping_crossings": 1181,
+    "strict_closed_marginal_checks": 3915,
+    "common_radius": "1/7440",
+    "max_degree": 30,
+    "float_exact_comparisons": 6282,
+    "float_max_error": 1.1368683772161603e-13,
+    "endpoint_flag_fixture_error_if_omitted": 1,
+    "interval_fan_replay": "Portable V8 replay after native environment outage; actual source blobs are authoritative.",
+    "static_tail": {
+      "second_derivative_checks": 77,
+      "closed_atom_traces": 27,
+      "collision_deletions": 48,
+      "physical_route_comparisons": 564,
+      "spatial_pieces": 5027,
+      "atom_captures": 2752,
+      "radius": "1/48"
+    },
+    "static_tail_dp": {
+      "states": 24,
+      "exhaustive_boundary_routes": 164,
+      "independent_spatial_pieces": 555,
+      "independent_atom_hits": 438,
+      "fan_marginal_checks": 36,
+      "ordered_survivor_trace_checks": 156,
+      "radius": "39747/680680",
+      "max_degree": 2
+    }
+  },
+  "replay": [
+    "node packages/interval_global_closure/verify_translation_fan.mjs GERM_FIXTURES.json REPORT.json",
+    "node packages/interval_global_closure/trial_translation_fans.mjs ROWS349.json MASTER349.json EFFICIENT_CHECKPOINT.json PRINCESS_STRATEGY.json TRIAL.json",
+    "node packages/interval_global_closure/export_translation_fan_float.mjs ROWS349.json BANK1465.json FLOAT_PACKET.json TRIAL.json",
+    "node packages/interval_global_closure/verify_static_tail_turns.mjs STATIC_REPORT.json",
+    "node packages/interval_global_closure/verify_static_tail_dp.mjs STATIC_DP_REPORT.json"
+  ],
+  "archive_decode": "gzip.decompress(base64.b64decode(Path(archive).read_text())); verify the recorded uncompressed sha256 before writing.",
+  "float_api": "const M=require('./translation_fan_float.cjs'); const V=M.createFloatFanEvaluator(packet); V.score(rowIndex,monsterIndex,delta); delta has a fixed positive limit.",
+  "exact_interval_api": "const T=createTranslationFan(G); row=T.prepareInterval(path,lo,hi,{id,provenance}); T.score(row,monster); T.marginal(row,time,position). Negative orientation uses[-hi,-lo].",
+  "note": "The pinned trial and float packet remain the symmetric-fan experiment. The interval provider is verified, but an outward full-bank trial is not claimed here.",
+  "static_dp_api": "const D=createStaticTailDP(G); D.solve({cells,atoms},start,{absoluteTime}); D.fromFans(rows); D.removeRankBand(measure,L,H). All outputs are exact; pre-stationary motion is outside this DP."
+}

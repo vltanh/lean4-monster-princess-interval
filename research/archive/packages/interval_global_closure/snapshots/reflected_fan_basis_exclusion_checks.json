@@ -1,0 +1,28 @@
+{
+  "scope": "Exact finite reflected-fan basis exclusion by arbitrary history selectors; not a game upper bound.",
+  "complete": true,
+  "stats": {
+    "profiles": 342,
+    "planes": 26,
+    "source_vertices": 43921,
+    "rounded_vertices": 43149,
+    "coalesced_vertices": 772,
+    "uniform_profile_enclosure_checks": 87070,
+    "integral_cells": 269119,
+    "coefficients": 8892
+  },
+  "upper_numerator": "1711141066194169545376440",
+  "upper_denominator": "1208925818523913639952384",
+  "upper_decimal": 1.415422716576155,
+  "maximizing_profile": 341,
+  "strictly_below_certified_game_lower": true,
+  "no_numerical_solver_assumption": true,
+  "profile_error_bound": "4/17592186044416",
+  "selector_plane_error_bound": "8*T/(S*delta)",
+  "execution": {
+    "engine": "Exact BigInt rational V8 replay",
+    "native_executor": "unavailable",
+    "lean_or_CI": "not run",
+    "elapsed_ms": 1718
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "Exact cached witness upper bound only; benchmark does not certify a lower.",
+  "checkpoint_sha256": "2ffef8e0d8afa1b2e177e8f6a5afdc087464f9c2277f23bf8c0ea347715d5213",
+  "field_sha256": "000d7ce119f0023dc3358a9376adc98a7c5ef211f872b614944bd98489a04e02",
+  "source_grid": 64,
+  "physical_grid": 256,
+  "input_columns": 4164,
+  "unique_cached_paths": 1923,
+  "ingest_seconds": 2.2686144339995735,
+  "first_price_seconds": 0.10460760899968591,
+  "warm_price_seconds": [
+    0.060648935999779496,
+    0.061639597000066715
+  ],
+  "fraction_checked_top_routes": 48,
+  "cached_minimum_units": "1456290157565",
+  "known_exhaustive_minimum_units": "1455554756372",
+  "objective_denominator": "1024000000000"
+}

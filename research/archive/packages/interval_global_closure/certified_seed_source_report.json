@@ -1,0 +1,90 @@
+{
+  "scope": "Exact pure-pair payoff matrix and full quantile-family source oracle for a fixed certified finite law; no new equilibrium or improved unrestricted lower value claimed.",
+  "source": {
+    "path": "packages/interval_uniform_reduction/princess_strategy.json",
+    "sha256": "25f86abe2a4d955fea8974d8fddf6aaf1e8e8e8ccec9cec76f9da0bf5c4a7bcc",
+    "git_blob_sha1": "1834b07a4e26687cecc38fdc274b7f4b10e3ad90"
+  },
+  "bank": {
+    "sha256": "50984e019ffc64a33101706fd6812121ecf159574f8be54a5c1077b437e0ff35",
+    "git_blob_sha1": "8e380d138b8c7c0a81d7bc753da516f25709b2dd",
+    "old_atoms": 1086
+  },
+  "counts": {
+    "positive_paths": 169,
+    "signed_paths": 338,
+    "columns": 1087,
+    "source_vertices": 3545,
+    "compressed_vertices": 3545,
+    "adjacent_order_vertex_checks": 7051,
+    "direct_segment_checks": 724
+  },
+  "certified_value": "36290299773897097/25600000000000000",
+  "certified_value_decimal": 1.4175898349178553,
+  "attaining_route": [
+    [
+      "0",
+      "11/16"
+    ],
+    [
+      "107999999/128000000",
+      "-19999999/128000000"
+    ],
+    [
+      "127999999/64000000",
+      "1"
+    ],
+    [
+      "255999999/64000000",
+      "-1"
+    ]
+  ],
+  "attaining_rescore": "36290299773897097/25600000000000000",
+  "old_bank_and_extra_minimum": {
+    "id": "old:429",
+    "cost": "36290299931533693/25600000000000000",
+    "decimal": 1.417589841075535
+  },
+  "extra_attack": {
+    "id": "inward-M1:15/16-eps",
+    "route": [
+      [
+        "0",
+        "germ:[[\"15/16\",\"-1\"],[\"1\"]]"
+      ],
+      [
+        "germ:[[\"31/16\",\"-1\"],[\"1\"]]",
+        "-1"
+      ],
+      [
+        "germ:[[\"63/16\",\"-1\"],[\"1\"]]",
+        "1"
+      ]
+    ],
+    "exact_source_cost": "germ:[[\"7746196340152363/5120000000000000\",\"-36905259/50000000\"],[\"1\"]]",
+    "limit": "7746196340152363/5120000000000000",
+    "decimal": 1.5129289726860085
+  },
+  "source_best_response_to_old_best_weights": {
+    "value": "2345923773662375382272822424961304056780395553138385794565579094725676310705474751687152360084606992942118500504242695546094292312929597/1645059034295049836956851683952855441254059009670190893004607297608215927768996230515042232448651851843463023947205965112408227375396864",
+    "decimal": 1.4260423028938072,
+    "ids": [
+      "certified169:168"
+    ],
+    "sourceMean": "9755194428636397781836223223158840185681483344553494040238217905148231295956586791325369877344974272084080698540123503910715243295538679754933318381/6854412642896040987320215349803564338558579206959128720852530406700899699037484293812675968536049382681095933113358187968367614064153600000000000000",
+    "sourceMeanDecimal": 1.4231991764818457,
+    "scope": "Exact maximum over every quantile path of the supplied finite ordered source; not the unrestricted Princess maximum."
+  },
+  "cache": {
+    "inverseQueries": 531792,
+    "inverseHits": 492845,
+    "constantComputations": 38609,
+    "germComputations": 338,
+    "pairScores": 183872
+  },
+  "arithmetic": {
+    "radius": "639/128000000",
+    "comparisons": 565915,
+    "maxDegree": 1
+  }
+}

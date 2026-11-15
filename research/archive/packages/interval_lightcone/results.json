@@ -1,0 +1,153 @@
+{
+ "scope": "Floating-point LP values (HiGHS), duality gap below 1e-9. Numerical results, not certificates.",
+ "date": "2026-11-14",
+ "half_offset_lattice_value_L_n": {
+  "unrestricted": {
+   "1": 1.21875,
+   "2": 1.3243483412322274,
+   "3": 1.3583056896224366,
+   "4": 1.375600204530593,
+   "6": 1.3926500017955068,
+   "8": 1.401192171854722,
+   "16": 1.4129228387002377,
+   "24": 1.4166043659265877,
+   "32": 1.418473089382883
+  },
+  "at_most_k_interior_turns": {
+   "4": {
+    "0": 1.4261363636363638,
+    "1": 1.3757731801187416,
+    "2": 1.3756034211836303,
+    "3": 1.375600204530593
+   },
+   "8": {
+    "0": 1.4457663156676697,
+    "1": 1.4012708504842006,
+    "2": 1.4011928620886793,
+    "3": 1.4011921718547213,
+    "4": 1.401192171854722
+   },
+   "16": {
+    "1": 1.412974526070138,
+    "2": 1.412923483668861
+   }
+  },
+  "one_turn_family_abs_a_le_b_le_2_minus_a": {
+   "4": 1.375773180118741,
+   "8": 1.4012723249606884,
+   "16": 1.4129750040811826,
+   "24": 1.416823264394781,
+   "32": 1.4186954417787387
+  },
+  "one_turn_family_levels_b_1_and_2_minus_a_only": {
+   "8": 1.4012723249606884,
+   "16": 1.41374272937424
+  }
+ },
+ "clock_grid_identity": "U_n = L_n + 1/(4n): proved for the lattice game in research/14-light-cone-lattice/LIGHT_CONE_LATTICE_GAME.md, Section 3; checked against the exact U_n for n = 1, 2, 3, 4, 6 (max difference 2e-15)",
+ "continuum_one_turn_piecewise_constant_levels_1_and_2_minus_a": {
+  "4": 1.4271576924367353,
+  "8": 1.4263703339022769,
+  "16": 1.425485671310643,
+  "32": 1.425413110897442
+ },
+ "exact_engine_bank_minima_of_lattice_optima": {
+  "scope": "price_normalized.cpp on the optimal fields, floored to denominator 1e9; exact integers; feasible-dual lower bounds on U_n, no new bound on V",
+  "own_grid": {
+   "8": "45838149486/32000000000",
+   "16": "91427061649/64000000000"
+  },
+  "interpolated_from_16": {
+   "32": "181380354750/128000000000",
+   "64": "362017571431/256000000000",
+   "128": "723047545551/512000000000"
+  },
+  "interpolated_from_8": {
+   "16": "90245855069/64000000000",
+   "32": "179778910873/128000000000"
+  }
+ },
+ "continuum_turn_levels_16_bins_2_level_bins": {
+  "scope": "floating-point LP; Princess response on the mesh refined twice (LP value) and on meshes refined 4 and 8 times (response); upper estimates, not certificates",
+  "one_turn": {
+   "lp": 1.4244766263828077,
+   "response_x4_x8": 1.4244888158
+  },
+  "one_turn_4_level_bins": {
+   "lp": 1.424469845668854,
+   "response_x4_x8_x16": 1.4244820358
+  },
+  "two_turn_c_below_1_16": {
+   "lp": 1.4241367830921854,
+   "response_x4_x8": 1.4241522945
+  },
+  "two_turn_c_below_3_16": {
+   "lp": 1.4240983273482035,
+   "response_x4_x8": 1.4241135888
+  },
+  "two_turn_c_below_3_8": {
+   "lp": 1.424089469587586
+  },
+  "two_turn_all_c": {
+   "lp": 1.4240833120500986,
+   "response_x4": 1.4240989985,
+   "response_x8": 1.4240990081
+  },
+  "eight_bins_one_turn": {
+   "lp": 1.424921952855028,
+   "response_x4": 1.4250713909
+  },
+  "eight_bins_two_turn_c_below_1_4": {
+   "lp": 1.42490815843595
+  }
+ },
+ "atomic_upper_bounds": {
+  "scope": "exact integers from atomic_upper.cpp; with the proof in research/14-light-cone-lattice/ATOMIC_TWO_TURN_UPPER.md these are upper bounds, not floating-point estimates",
+  "one_turn_and_two_turn_law_bounds_V": {
+   "256": "12530916837897/8796093022208",
+   "512": "12528697760753/8796093022208",
+   "1024": "400883078890815/281474976710656",
+   "2048": "6413850440217381/4503599627370496",
+   "4096": "51309688667845787/36028797018963968"
+  },
+  "one_turn_law_bounds_W_1": {
+   "256": "6267166206733/4398046511104",
+   "512": "25064232993901/17592186044416",
+   "1024": "6265511896573/4398046511104",
+   "2048": "25060959676621/17592186044416",
+   "4096": "25661865897887875/18014398509481984"
+  },
+  "law_optimized_for_grid_1024_bounds_V": {
+   "1024": "6263120207237/4398046511104"
+  },
+  "optimizer_floor_for_32_bins_on_grid_1024_floating_point": 1.4240491,
+  "law_optimized_for_grid_2048_bounds_V": {
+   "2048": "1603303881142469/1125899906842624"
+  },
+  "optimizer_floor_for_32_bins_on_grid_2048_floating_point": 1.4240143
+ },
+ "princess_three_parameter_family_lattice_value": {
+  "scope": "floating-point LP; Princess restricted to out/in/(wait at the center)/out/stay paths, Monster unrestricted; keys are N, then the longest outward run in lattice steps",
+  "8": {
+   "0": 1.398253578123,
+   "2": 1.401183987405,
+   "16": 1.4011840660335972
+  },
+  "16": {
+   "0": 1.4102416353143996,
+   "3": 1.4128775628388963,
+   "8": 1.412892779556806
+  },
+  "24": {
+   "6": 1.416567551233777
+  }
+ },
+ "refined_n1024_lower_bound": {
+  "scope": "exact integer pricing of the retained n512 field refined to n = 1024 with price_normalized.cpp; game-value lower bound by the 1/(2n) transfer; one run, no independent replay",
+  "minimum_units": "18652368301398",
+  "objective_denominator": "13107200000000",
+  "bank_minimum": "9326184150699/6553600000000",
+  "lower_bound": "9322984150699/6553600000000",
+  "lower_bound_decimal": 1.4225744858854674
+ }
+}

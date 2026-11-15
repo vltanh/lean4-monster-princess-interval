@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "scope": "full-bank profile dual via exact sticky/outward2 normalization; global lower via common quantization",
+  "n": 2,
+  "qout_verified": true,
+  "verification_mode": "exact minimum",
+  "attainment_checked": true,
+  "verified_lower_units": "429",
+  "objective_denominator": "392",
+  "exact_scaled_dual": "429/49",
+  "normalized_bank_lower": "429/392",
+  "global_lower": "331/392",
+  "record_states": 225,
+  "generated_transitions": 316,
+  "max_layer_states": 42,
+  "cached_suffixes": 18,
+  "covering_queries": 64,
+  "covering_method": "quadratic cone suffix minima",
+  "pareto": false,
+  "pursuit_pruning": false,
+  "pursuit_pruned_states": 0,
+  "center_unreachable_states": 6,
+  "complete_path_checks": 92,
+  "attaining_calendar": {
+    "start_grid": 0,
+    "moves": [
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "minus_charges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        12
+      ]
+    ],
+    "plus_charges": [
+      [
+        0,
+        7
+      ],
+      [
+        7,
+        15
+      ]
+    ]
+  },
+  "input_sha256": "682d1204c352948bd32702ac24f4a18bfd5b13af1b9a399493cccc422865d788",
+  "elapsed_ms": 3
+}

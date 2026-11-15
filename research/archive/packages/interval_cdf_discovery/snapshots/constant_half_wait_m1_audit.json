@@ -1,0 +1,20 @@
+{
+  "scope": "Exact minimum over all signed M1 starting positions for this rational field only.",
+  "input": "constant_half_wait_candidate.json",
+  "families": [
+    {
+      "sign": "negative",
+      "cells": 34,
+      "start": "-1194754684939212910253/1194756963757275086848",
+      "value": "136035306840667070572622389744227101/95580557100582006947840000000000000",
+      "decimal": 1.423252918451955
+    },
+    {
+      "sign": "positive",
+      "cells": 148,
+      "start": "915087276465246389069591735/1274028781962594134031770912",
+      "value": "237673235848926130333482134925508498453137187/166989500509401138335812276977664000000000000",
+      "decimal": 1.4232825125166815
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "scope": "Complete ordered common-quantile fan M1 arrangements, independently checked by continuous rank-band first-contact moments; no other Monster family is certified.",
+  "models": [
+    {
+      "name": "subunit_asymmetric",
+      "minimum": "27/56",
+      "start": "1/2",
+      "cells": 34,
+      "stationary_candidates": 0,
+      "polynomial_checks": 68,
+      "time_events": 19,
+      "time_intersection_cuts": 14,
+      "rank_refinement_cuts": 6,
+      "route": [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "3/2",
+          "-1"
+        ],
+        [
+          "7/2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "stationary_outward",
+      "minimum": "3/5",
+      "start": "3/5",
+      "cells": 5,
+      "stationary_candidates": 0,
+      "polynomial_checks": 10,
+      "time_events": 7,
+      "time_intersection_cuts": 0,
+      "rank_refinement_cuts": 0,
+      "route": [
+        [
+          "0",
+          "3/5"
+        ],
+        [
+          "8/5",
+          "-1"
+        ],
+        [
+          "18/5",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "moving_symmetric",
+      "minimum": "7/16",
+      "start": "3/8",
+      "cells": 12,
+      "stationary_candidates": 0,
+      "polynomial_checks": 24,
+      "time_events": 11,
+      "time_intersection_cuts": 0,
+      "rank_refinement_cuts": 0,
+      "route": [
+        [
+          "0",
+          "3/8"
+        ],
+        [
+          "11/8",
+          "-1"
+        ],
+        [
+          "27/8",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "two_outward_waves",
+      "minimum": "343/320",
+      "start": "7/8",
+      "cells": 13,
+      "stationary_candidates": 0,
+      "polynomial_checks": 26,
+      "time_events": 15,
+      "time_intersection_cuts": 1,
+      "rank_refinement_cuts": 1,
+      "route": [
+        [
+          "0",
+          "7/8"
+        ],
+        [
+          "15/8",
+          "-1"
+        ],
+        [
+          "31/8",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "asymmetric_negative_window",
+      "minimum": "1/2",
+      "start": "1/2",
+      "cells": 21,
+      "stationary_candidates": 0,
+      "polynomial_checks": 42,
+      "time_events": 18,
+      "time_intersection_cuts": 4,
+      "rank_refinement_cuts": 5,
+      "route": [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "3/2",
+          "-1"
+        ],
+        [
+          "7/2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "germ_turns_and_width",
+      "minimum": "germ:[[\"1/2\",\"-1/2\",\"1/2\"],[\"1\"]]",
+      "start": "germ:[[\"1/2\",\"-1\",\"1\"],[\"1\"]]",
+      "cells": 11,
+      "stationary_candidates": 0,
+      "polynomial_checks": 22,
+      "time_events": 14,
+      "time_intersection_cuts": 0,
+      "rank_refinement_cuts": 1,
+      "route": [
+        [
+          "0",
+          "germ:[[\"1/2\",\"-1\",\"1\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"3/2\",\"-1\",\"1\"],[\"1\"]]",
+          "-1"
+        ],
+        [
+          "germ:[[\"7/2\",\"-1\",\"1\"],[\"1\"]]",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "germ_endpoint_band",
+      "minimum": "1",
+      "start": "-1",
+      "cells": 3,
+      "stationary_candidates": 0,
+      "polynomial_checks": 6,
+      "time_events": 5,
+      "time_intersection_cuts": 0,
+      "rank_refinement_cuts": 0,
+      "route": [
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "endpoint_atom_jump",
+      "minimum": "1",
+      "start": "-1",
+      "cells": 2,
+      "stationary_candidates": 0,
+      "polynomial_checks": 4,
+      "time_events": 3,
+      "time_intersection_cuts": 0,
+      "rank_refinement_cuts": 0,
+      "route": [
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "independent_physical_scores": 413,
+  "independent_affine_CDF_pieces": 5246,
+  "independent_polynomial_checks": 202,
+  "arithmetic": {
+    "radius": "1/56",
+    "comparisons": 744695,
+    "maxDegree": 2
+  }
+}

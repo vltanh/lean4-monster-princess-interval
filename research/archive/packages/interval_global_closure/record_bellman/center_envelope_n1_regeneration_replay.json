@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "check": "complete exact regeneration",
+  "layers": 6,
+  "final_pieces": 48,
+  "initial_center": "79/64",
+  "certificate_json_sha256": "3461fd3d86330a149b0b2d3f3c99c99975afdc1d62265d25f44e50648de5d87b"
+}

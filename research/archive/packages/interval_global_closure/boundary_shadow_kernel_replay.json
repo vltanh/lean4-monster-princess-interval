@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "source_sha256": "9c39ecf69686517b87b55bc22a1d96829f726e1181a9dd06ac96a0a027e5bb4d",
+  "physical_evaluator_sha256": "d8cc555e3ed79303e655b8b6933f7e68842a3d2866833a82383bfa706622b086",
+  "I_cases": 9075,
+  "I_case_counts": {
+    "front_before_start": 2871,
+    "late_initial_inward_hit": 1287,
+    "initial": 825,
+    "escaped_front": 1254,
+    "final_front": 792,
+    "outward_hit": 792,
+    "initial_inward_hit": 1254
+  },
+  "D_cases": 1650,
+  "D_case_counts": {
+    "late": 495,
+    "initial": 165,
+    "behind": 660,
+    "early": 330
+  },
+  "fast_sweeps": 165,
+  "gain_checks": {
+    "direct": 1365,
+    "outward": 1365
+  },
+  "scope": "Exact rational chronological intersections, including initial, first-turn and front ties; no global equilibrium assertion."
+}

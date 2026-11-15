@@ -1,0 +1,44 @@
+{
+  "scope": "Actual positive-weight center-wait support from the earlier H2 dual; its payoff is not transferred after upper-law unitization.",
+  "attacks": [
+    {
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "3/16",
+          "0"
+        ],
+        [
+          "11/32",
+          "-5/32"
+        ],
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "3/4",
+          "1/4"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "-1"
+        ],
+        [
+          "4",
+          "1"
+        ]
+      ],
+      "source": "continuum_h2_upper_candidate.json",
+      "source_index": 464,
+      "original_weight": 6.970955717764481e-06
+    }
+  ]
+}

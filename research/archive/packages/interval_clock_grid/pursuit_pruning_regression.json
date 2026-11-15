@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "scope": "Exact pursuit/no-pursuit comparison on deterministic legal Qout fields, plus one-unit false-target rejection",
+  "cases": 20,
+  "incorrect_targets_rejected": 20,
+  "results": [
+    {
+      "n": 1,
+      "seed": 101,
+      "minimum_units": "5113",
+      "unpruned_states": 19,
+      "pruned_states": 5,
+      "target_states": 5,
+      "target_pursuit_pruned": 4
+    },
+    {
+      "n": 1,
+      "seed": 2027,
+      "minimum_units": "4963",
+      "unpruned_states": 13,
+      "pruned_states": 5,
+      "target_states": 5,
+      "target_pursuit_pruned": 4
+    },
+    {
+      "n": 1,
+      "seed": 65537,
+      "minimum_units": "4712",
+      "unpruned_states": 13,
+      "pruned_states": 5,
+      "target_states": 5,
+      "target_pursuit_pruned": 4
+    },
+    {
+      "n": 1,
+      "seed": 314159,
+      "minimum_units": "4712",
+      "unpruned_states": 13,
+      "pruned_states": 5,
+      "target_states": 5,
+      "target_pursuit_pruned": 4
+    },
+    {
+      "n": 2,
+      "seed": 101,
+      "minimum_units": "8627",
+      "unpruned_states": 71,
+      "pruned_states": 11,
+      "target_states": 11,
+      "target_pursuit_pruned": 8
+    },
+    {
+      "n": 2,
+      "seed": 2027,
+      "minimum_units": "5555",
+      "unpruned_states": 71,
+      "pruned_states": 48,
+      "target_states": 32,
+      "target_pursuit_pruned": 17
+    },
+    {
+      "n": 2,
+      "seed": 65537,
+      "minimum_units": "8625",
+      "unpruned_states": 137,
+      "pruned_states": 41,
+      "target_states": 31,
+      "target_pursuit_pruned": 18
+    },
+    {
+      "n": 2,
+      "seed": 314159,
+      "minimum_units": "9403",
+      "unpruned_states": 143,
+      "pruned_states": 17,
+      "target_states": 17,
+      "target_pursuit_pruned": 10
+    },
+    {
+      "n": 3,
+      "seed": 101,
+      "minimum_units": "12899",
+      "unpruned_states": 178,
+      "pruned_states": 17,
+      "target_states": 17,
+      "target_pursuit_pruned": 12
+    },
+    {
+      "n": 3,
+      "seed": 2027,
+      "minimum_units": "12827",
+      "unpruned_states": 237,
+      "pruned_states": 103,
+      "target_states": 103,
+      "target_pursuit_pruned": 36
+    },
+    {
+      "n": 3,
+      "seed": 65537,
+      "minimum_units": "11300",
+      "unpruned_states": 232,
+      "pruned_states": 101,
+      "target_states": 49,
+      "target_pursuit_pruned": 28
+    },
+    {
+      "n": 3,
+      "seed": 314159,
+      "minimum_units": "11615",
+      "unpruned_states": 256,
+      "pruned_states": 25,
+      "target_states": 25,
+      "target_pursuit_pruned": 14
+    },
+    {
+      "n": 4,
+      "seed": 101,
+      "minimum_units": "15788",
+      "unpruned_states": 494,
+      "pruned_states": 91,
+      "target_states": 91,
+      "target_pursuit_pruned": 30
+    },
+    {
+      "n": 4,
+      "seed": 2027,
+      "minimum_units": "14781",
+      "unpruned_states": 474,
+      "pruned_states": 111,
+      "target_states": 111,
+      "target_pursuit_pruned": 38
+    },
+    {
+      "n": 4,
+      "seed": 65537,
+      "minimum_units": "13804",
+      "unpruned_states": 314,
+      "pruned_states": 217,
+      "target_states": 116,
+      "target_pursuit_pruned": 44
+    },
+    {
+      "n": 4,
+      "seed": 314159,
+      "minimum_units": "14649",
+      "unpruned_states": 431,
+      "pruned_states": 260,
+      "target_states": 163,
+      "target_pursuit_pruned": 55
+    },
+    {
+      "n": 6,
+      "seed": 101,
+      "minimum_units": "24519",
+      "unpruned_states": 1148,
+      "pruned_states": 255,
+      "target_states": 152,
+      "target_pursuit_pruned": 48
+    },
+    {
+      "n": 6,
+      "seed": 2027,
+      "minimum_units": "9608",
+      "unpruned_states": 755,
+      "pruned_states": 567,
+      "target_states": 79,
+      "target_pursuit_pruned": 28
+    },
+    {
+      "n": 6,
+      "seed": 65537,
+      "minimum_units": "18980",
+      "unpruned_states": 851,
+      "pruned_states": 357,
+      "target_states": 25,
+      "target_pursuit_pruned": 18
+    },
+    {
+      "n": 6,
+      "seed": 314159,
+      "minimum_units": "16218",
+      "unpruned_states": 773,
+      "pruned_states": 619,
+      "target_states": 166,
+      "target_pursuit_pruned": 57
+    }
+  ]
+}

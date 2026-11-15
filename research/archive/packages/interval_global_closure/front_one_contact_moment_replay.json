@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Exact physical front-one moment identities and endpoint jumps; the asymptotic nonalgebraicity theorem remains analytic, and no fixture contact or game-value claim is made.",
+  "princess_family": "Uniform initial radius r, stationary until1\u2212r then outward/sticky; mixed with stationary endpoint-pair mass p in {0,1/3,1}.",
+  "counts": {
+    "physical_P_and_S": 90,
+    "positive_SP_identity": 21,
+    "negative_SP_identity": 21,
+    "center_start_identity": 3,
+    "front_column_extension": 24,
+    "front_moment_difference": 24,
+    "physical_I_and_J": 36,
+    "JI_difference_and_nonnegative_remainder": 18,
+    "J_outer_moment_and_column": 36,
+    "endpoint_trace_jumps": 18,
+    "actual_endpoint_sweep": 3
+  },
+  "physical_affine_contact_branches": 1062
+}

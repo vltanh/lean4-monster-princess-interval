@@ -1,0 +1,575 @@
+{
+  "scope": "Exact stationary-tail DP with independent exhaustive physical boundary-route verification; fan marginal and ordered survivor-band adapters are checked separately.",
+  "cases": [
+    {
+      "measure": "uniform",
+      "start": "0",
+      "cost": "3/2",
+      "boundaries": 3,
+      "states": 8,
+      "exhaustive_routes": 2,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "-1"
+        ],
+        [
+          "3",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "uniform",
+      "start": "-3/7",
+      "cost": "69/49",
+      "boundaries": 3,
+      "states": 8,
+      "exhaustive_routes": 2,
+      "route": [
+        [
+          "0",
+          "-3/7"
+        ],
+        [
+          "4/7",
+          "-1"
+        ],
+        [
+          "18/7",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "uniform",
+      "start": "3/5",
+      "cost": "33/25",
+      "boundaries": 3,
+      "states": 8,
+      "exhaustive_routes": 2,
+      "route": [
+        [
+          "0",
+          "3/5"
+        ],
+        [
+          "8/5",
+          "-1"
+        ],
+        [
+          "18/5",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "uniform",
+      "start": "germ:[[\"0\",\"1/2\"],[\"1\"]]",
+      "cost": "germ:[[\"3/2\",\"0\",\"-1/8\"],[\"1\"]]",
+      "boundaries": 3,
+      "states": 8,
+      "exhaustive_routes": 2,
+      "route": [
+        [
+          "0",
+          "germ:[[\"0\",\"1/2\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"1\",\"1/2\"],[\"1\"]]",
+          "-1"
+        ],
+        [
+          "germ:[[\"3\",\"1/2\"],[\"1\"]]",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "asymmetric_steps",
+      "start": "0",
+      "cost": "75045109/73513440",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/4",
+          "1/4"
+        ],
+        [
+          "3/2",
+          "-1"
+        ],
+        [
+          "7/2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "asymmetric_steps",
+      "start": "-3/7",
+      "cost": "551313479/514594080",
+      "boundaries": 5,
+      "states": 16,
+      "exhaustive_routes": 4,
+      "route": [
+        [
+          "0",
+          "-3/7"
+        ],
+        [
+          "10/7",
+          "1"
+        ],
+        [
+          "24/7",
+          "-1"
+        ]
+      ]
+    },
+    {
+      "measure": "asymmetric_steps",
+      "start": "3/5",
+      "cost": "73925407/73513440",
+      "boundaries": 5,
+      "states": 16,
+      "exhaustive_routes": 4,
+      "route": [
+        [
+          "0",
+          "3/5"
+        ],
+        [
+          "8/5",
+          "-1"
+        ],
+        [
+          "18/5",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "asymmetric_steps",
+      "start": "germ:[[\"0\",\"1/2\"],[\"1\"]]",
+      "cost": "germ:[[\"75045109/73513440\",\"-1601023/6126120\",\"-1/6\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "germ:[[\"0\",\"1/2\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"1/4\",\"-1/2\"],[\"1\"]]",
+          "1/4"
+        ],
+        [
+          "germ:[[\"3/2\",\"-1/2\"],[\"1\"]]",
+          "-1"
+        ],
+        [
+          "germ:[[\"7/2\",\"-1/2\"],[\"1\"]]",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "pure_atoms",
+      "start": "0",
+      "cost": "6/5",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/5",
+          "1/5"
+        ],
+        [
+          "7/5",
+          "-1"
+        ],
+        [
+          "17/5",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "pure_atoms",
+      "start": "-3/7",
+      "cost": "41/35",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "-3/7"
+        ],
+        [
+          "6/35",
+          "-3/5"
+        ],
+        [
+          "62/35",
+          "1"
+        ],
+        [
+          "132/35",
+          "-1"
+        ]
+      ]
+    },
+    {
+      "measure": "pure_atoms",
+      "start": "3/5",
+      "cost": "7/5",
+      "boundaries": 5,
+      "states": 16,
+      "exhaustive_routes": 4,
+      "route": [
+        [
+          "0",
+          "3/5"
+        ],
+        [
+          "8/5",
+          "-1"
+        ],
+        [
+          "18/5",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "pure_atoms",
+      "start": "germ:[[\"0\",\"1/2\"],[\"1\"]]",
+      "cost": "germ:[[\"6/5\",\"-1/2\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "germ:[[\"0\",\"1/2\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"1/5\",\"-1/2\"],[\"1\"]]",
+          "1/5"
+        ],
+        [
+          "germ:[[\"7/5\",\"-1/2\"],[\"1\"]]",
+          "-1"
+        ],
+        [
+          "germ:[[\"17/5\",\"-1/2\"],[\"1\"]]",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "germ_center_band",
+      "start": "0",
+      "cost": "germ:[[\"10/21\",\"253/126\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "germ:[[\"0\",\"1\"],[\"1\"]]",
+          "germ:[[\"0\",\"1\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"1\",\"2\"],[\"1\"]]",
+          "-1"
+        ],
+        [
+          "germ:[[\"3\",\"2\"],[\"1\"]]",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "germ_center_band",
+      "start": "-3/7",
+      "cost": "germ:[[\"149/147\",\"32/63\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 16,
+      "exhaustive_routes": 4,
+      "route": [
+        [
+          "0",
+          "-3/7"
+        ],
+        [
+          "germ:[[\"3/7\",\"1\"],[\"1\"]]",
+          "germ:[[\"0\",\"1\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"10/7\",\"2\"],[\"1\"]]",
+          "-1"
+        ],
+        [
+          "germ:[[\"24/7\",\"2\"],[\"1\"]]",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "germ_center_band",
+      "start": "3/5",
+      "cost": "43/35",
+      "boundaries": 5,
+      "states": 16,
+      "exhaustive_routes": 4,
+      "route": [
+        [
+          "0",
+          "3/5"
+        ],
+        [
+          "8/5",
+          "-1"
+        ],
+        [
+          "18/5",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "germ_center_band",
+      "start": "germ:[[\"0\",\"1/2\"],[\"1\"]]",
+      "cost": "germ:[[\"10/21\",\"295/168\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "germ:[[\"0\",\"1/2\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"0\",\"1/2\"],[\"1\"]]",
+          "germ:[[\"0\",\"1\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"1\",\"3/2\"],[\"1\"]]",
+          "-1"
+        ],
+        [
+          "germ:[[\"3\",\"3/2\"],[\"1\"]]",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "fan_tail:0",
+      "start": "0",
+      "cost": "16/9",
+      "boundaries": 7,
+      "states": 32,
+      "exhaustive_routes": 20,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "-1"
+        ],
+        [
+          "3",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "fan_tail:0",
+      "start": "-3/7",
+      "cost": "10075/7056",
+      "boundaries": 7,
+      "states": 30,
+      "exhaustive_routes": 15,
+      "route": [
+        [
+          "0",
+          "-3/7"
+        ],
+        [
+          "4/7",
+          "-1"
+        ],
+        [
+          "18/7",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "fan_tail:0",
+      "start": "3/5",
+      "cost": "4723/3600",
+      "boundaries": 7,
+      "states": 30,
+      "exhaustive_routes": 15,
+      "route": [
+        [
+          "0",
+          "3/5"
+        ],
+        [
+          "2/5",
+          "1"
+        ],
+        [
+          "12/5",
+          "-1"
+        ]
+      ]
+    },
+    {
+      "measure": "fan_tail:0",
+      "start": "germ:[[\"0\",\"1/2\"],[\"1\"]]",
+      "cost": "germ:[[\"16/9\",\"-1/2\"],[\"1\"]]",
+      "boundaries": 7,
+      "states": 32,
+      "exhaustive_routes": 20,
+      "route": [
+        [
+          "0",
+          "germ:[[\"0\",\"1/2\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"1\",\"-1/2\"],[\"1\"]]",
+          "1"
+        ],
+        [
+          "germ:[[\"3\",\"-1/2\"],[\"1\"]]",
+          "-1"
+        ]
+      ]
+    },
+    {
+      "measure": "fan_tail:1",
+      "start": "0",
+      "cost": "germ:[[\"2\",\"-1/4\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "-1"
+        ],
+        [
+          "3",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "fan_tail:1",
+      "start": "-3/7",
+      "cost": "germ:[[\"11/7\",\"-1/4\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "-3/7"
+        ],
+        [
+          "4/7",
+          "-1"
+        ],
+        [
+          "18/7",
+          "1"
+        ]
+      ]
+    },
+    {
+      "measure": "fan_tail:1",
+      "start": "3/5",
+      "cost": "germ:[[\"7/5\",\"-1/4\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "3/5"
+        ],
+        [
+          "2/5",
+          "1"
+        ],
+        [
+          "12/5",
+          "-1"
+        ]
+      ]
+    },
+    {
+      "measure": "fan_tail:1",
+      "start": "germ:[[\"0\",\"1/2\"],[\"1\"]]",
+      "cost": "germ:[[\"2\",\"-3/4\"],[\"1\"]]",
+      "boundaries": 5,
+      "states": 18,
+      "exhaustive_routes": 6,
+      "route": [
+        [
+          "0",
+          "germ:[[\"0\",\"1/2\"],[\"1\"]]"
+        ],
+        [
+          "germ:[[\"1\",\"-1/2\"],[\"1\"]]",
+          "1"
+        ],
+        [
+          "germ:[[\"3\",\"-1/2\"],[\"1\"]]",
+          "-1"
+        ]
+      ]
+    }
+  ],
+  "exhaustive_boundary_routes": 164,
+  "independent_affine_spatial_pieces": 555,
+  "independent_atom_captures": 438,
+  "fan_marginal_checks": 36,
+  "ordered_rank_survivor_checks": 156,
+  "arithmetic": {
+    "radius": "39747/680680",
+    "comparisons": 49091,
+    "maxDegree": 2
+  }
+}

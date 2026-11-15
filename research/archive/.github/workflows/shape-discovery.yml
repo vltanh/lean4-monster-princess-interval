@@ -1,0 +1,152 @@
+name: CDF shape discovery
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  PYTHONUNBUFFERED: '1'
+  OMP_NUM_THREADS: '2'
+  OPENBLAS_NUM_THREADS: '2'
+
+jobs:
+  shape-search:
+    name: Shape ${{ matrix.id }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        include:
+          - id: fixed-variation
+            source: regularized
+            profile: 32
+            objective: variation
+            fixed: 'true'
+          - id: free-curvature
+            source: regularized
+            profile: 32
+            objective: curvature
+            fixed: 'false'
+          - id: current-fixed-variation
+            source: current
+            profile: 64
+            objective: variation
+            fixed: 'true'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install pinned discovery dependencies
+        run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Retrieve observed original CI discovery provenance
+        if: ${{ matrix.source == 'regularized' }}
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: discovery-princess-proximal
+          run-id: '43532597339'
+          github-token: ${{ github.token }}
+          path: source-artifact
+      - name: Verify exact source hashes and compact seed provenance
+        if: ${{ matrix.source == 'regularized' }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          base=Path('packages/interval_cdf_shape')
+          saved=json.loads((base/'regularization_checkpoint.json').read_text())
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          for name,expected in saved['files'].items():
+              assert sha(base/name)==expected, name
+          roots=[p.parent for p in Path('source-artifact').rglob('manifest.json')
+                 if (p.parent/'candidate.dual.json').exists()]
+          assert len(roots)==1, roots
+          source=roots[0];manifest=json.loads((source/'manifest.json').read_text())
+          for name,key in [('candidate.dual.json','candidate_sha256'),('candidate.checkpoint.json','checkpoint_sha256')]:
+              actual=sha(source/name)
+              assert actual==saved['ci_source'][key]==manifest['artifacts_sha256'][name], name
+          print(json.dumps({'status':'PASS','source_run':saved['ci_source']['run_id'],
+                            'seed_candidate_sha256':saved['ci_source']['candidate_sha256']}))
+          PY
+      - name: Optimize a new shape at an explicit security allowance
+        env:
+          EXPERIMENT: ${{ matrix.id }}
+          SOURCE: ${{ matrix.source }}
+          PROFILE: ${{ matrix.profile }}
+          OBJECTIVE: ${{ matrix.objective }}
+          FIXED_INITIAL: ${{ matrix.fixed }}
+        run: |
+          mkdir -p "results/$EXPERIMENT"
+          if test "$SOURCE" = regularized; then
+            seed=packages/interval_cdf_shape/regularized_seed_field.json
+            bank=packages/interval_cdf_shape/regularized_response_bank.json.gz
+          else
+            seed=packages/interval_clock_grid/lower_n256_field.json
+            bank=packages/interval_clock_grid/upper_n64_physical.json.gz
+          fi
+          fixed=()
+          if test "$FIXED_INITIAL" = true; then fixed=(--fixed-initial); fi
+          python3 packages/interval_cdf_shape/shape_search.py \
+            --seed-field "$seed" --response-checkpoint "$bank" \
+            --n 64 --profile-grid "$PROFILE" --objective "$OBJECTIVE" \
+            --loss 1/100000 --iterations 100 --seconds 300 \
+            --output "results/$EXPERIMENT" "${fixed[@]}" \
+            | tee "results/$EXPERIMENT/search.log"
+      - name: Independently certify acceptance and test accepted shapes on a finer bank
+        env:
+          EXPERIMENT: ${{ matrix.id }}
+        run: python3 packages/interval_cdf_shape/certify_shape.py "results/$EXPERIMENT" --refine 256 --refine-seconds 240
+      - name: Record the exact environment and provenance
+        if: always()
+        env:
+          EXPERIMENT: ${{ matrix.id }}
+        run: |
+          mkdir -p "results/$EXPERIMENT"
+          python3 -m pip freeze > "results/$EXPERIMENT/dependencies.txt"
+          git rev-parse HEAD > "results/$EXPERIMENT/commit.txt"
+          cp packages/interval_cdf_shape/regularization_checkpoint.json "results/$EXPERIMENT/source_provenance.json"
+          g++ --version > "results/$EXPERIMENT/compiler.txt"
+          node --version > "results/$EXPERIMENT/node.txt"
+      - name: Preserve new candidates, rejected fields, attacks and resumable calendars
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: shape-${{ matrix.id }}
+          path: |
+            results/
+            !results/**/*.work/**
+            !results/**/*.bin
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 9
+
+  exact-shape-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Verify exact anchors, independent pricing, and initial endpoint capture
+        run: python3 packages/interval_cdf_shape/test_shape_search.py
+      - name: Replay the concrete physical attack against naive smoothing
+        run: |
+          mkdir -p reports
+          python3 packages/interval_cdf_shape/verify_shape_attack.py \
+            packages/interval_cdf_shape/naive_tv_rejected.dual.json.gz \
+            packages/interval_cdf_shape/naive_tv_attack.json \
+            --output reports/naive_tv_attack_replay.json
+      - name: Independently verify the compact regularized seed
+        run: node packages/interval_clock_grid/normalized_record_pricing.cjs packages/interval_cdf_shape/regularized_seed_field.json --target-bound > reports/regularized_seed_bigint.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: shape-exact-regressions
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90

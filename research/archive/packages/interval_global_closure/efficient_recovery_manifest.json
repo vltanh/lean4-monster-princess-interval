@@ -1,0 +1,21 @@
+{
+  "status": "Recovered source; original working-copy byte identity unverified; numerical execution has not been repeated.",
+  "parent_commit": "cc81521e146f2999ead1b56f47a6e81afd6d8a37",
+  "parent_tree": "0c6959daf82698a0610cfa4eb9641e4d5b9405cf",
+  "files": [
+    {
+      "path": "packages/interval_global_closure/efficient_separator_recovered.cjs",
+      "sha256": "d39d7f0837942532573ad336eac10249b99acab78a8a28c67d622798bf4e8892",
+      "characters": 10168,
+      "validation": "Recovered JavaScript parses; repository execution not repeated."
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_semantic_dual.py",
+      "sha256": "d2a090e4e9d2c9fd11aaebde8ee08420944fdfb9b8a7c3ef128e31fbd87829e9",
+      "characters": 13516,
+      "validation": "Recovered source not executed or syntax-checked."
+    }
+  ],
+  "frozen_checkpoint_unchanged": true,
+  "unreferenced_commit": true
+}

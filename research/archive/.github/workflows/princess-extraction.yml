@@ -1,0 +1,73 @@
+name: Explicit Princess extraction certificates
+
+on:
+  push:
+    branches:
+      - research/interval-progress-2026-11-10
+    paths:
+      - .github/workflows/princess-extraction.yml
+      - packages/interval_princess_lift/**
+      - research/12-global-closure/PHYSICAL_LATTICE_PRINCESS_EXTRACTION.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native-certificate-extraction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Check native-report binding and canonical explicit-law extraction
+        run: |
+          mkdir -p reports
+          node packages/interval_princess_lift/test_native_princess_extraction.cjs > reports/native-extraction-regression.json
+      - name: Preserve exact small-grid regression and rejection checks
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-princess-extraction-regression
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90
+
+  lattice-to-explicit-law:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Independently check the unchanged frozen source field and arithmetic
+        run: python3 packages/interval_global_closure/lattice_lower/replay_h3_lattice.py --check-only
+      - name: Verify the new explicit law and all nodal transport constraints
+        run: |
+          mkdir -p reports
+          python3 packages/interval_princess_lift/extract_lattice_princess.py verify --output reports/explicit_princess_replay.json
+      - name: Check physical-to-clock domination with independent rational enumeration
+        run: python3 packages/interval_princess_lift/test_lattice_princess_lift.py
+      - name: Preserve the portable strategy and exact scope
+        run: |
+          cp packages/interval_princess_lift/lattice_b1536_princess.json reports/
+          cp packages/interval_princess_lift/lattice_princess_lift_regression.json reports/
+          python3 - <<'PY'
+          import json, os
+          from fractions import Fraction
+          from pathlib import Path
+          report=json.loads(Path('reports/explicit_princess_replay.json').read_text())
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as output:
+              output.write('# New explicit Princess law\n\n')
+              output.write('All-Monster security: **'+report['guaranteed_security']+'** = '+str(float(Fraction(report['guaranteed_security'])))+'.\n\n')
+              output.write('This is a newly interpolated law, not a security claim for the original frozen CDF. The completed source lattice search is an unchanged, previously verified dependency; this job checks source binding and the new extraction without repeating that large search.\n')
+          PY
+      - name: Upload explicit strategy and verification reports
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: explicit-lattice-princess
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90

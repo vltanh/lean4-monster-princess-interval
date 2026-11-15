@@ -1,0 +1,6 @@
+PASS: all-monster response to the supplied 338 hider paths: 36290299773897097/25600000000000000
+Exact search statistics: {'nodes': 48228, 'leaves': 7, 'dominated': 21262, 'bounded': 2904}
+PASS: exhaustive finite-grid saddle certificate: 227/196 hiders 259 monsters 720
+PASS: explicit princess defeats the rationalized monster candidate at payoff 1674493271312017851/1024000000000000000
+Seconds: 1.0589914321899414
+SCOPE: exact response certificate plus an exact finite-grid saddle. No full-game saddle is claimed.

@@ -1,0 +1,151 @@
+{
+  "scope": "Exact uniform interval translation fans against supplied unit Monsters only; continuous z integration is exact, with no quadrature or full-response claim.",
+  "outward_edge_example": {
+    "interval": [
+      "0",
+      "1/64"
+    ],
+    "fixed_monster_cost": "257/128",
+    "edge_monster_cost": "33/64"
+  },
+  "exact_fan_equalities": 2088,
+  "independent_midpoint_pieces": 7666,
+  "independent_clipping_crossings": 1181,
+  "exact_strict_closed_marginal_checks": 3915,
+  "fixture_checks": [
+    {
+      "path": "center_stationary",
+      "comparisons": 72
+    },
+    {
+      "path": "interior_stationary",
+      "comparisons": 72
+    },
+    {
+      "path": "near_endpoint_stationary",
+      "comparisons": 72
+    },
+    {
+      "path": "endpoint_stationary",
+      "comparisons": 72
+    },
+    {
+      "path": "outgoing_and_clipped",
+      "comparisons": 72
+    },
+    {
+      "path": "isolated_center_bounce",
+      "comparisons": 72
+    },
+    {
+      "path": "two_waves",
+      "comparisons": 72
+    },
+    {
+      "path": "distinct_same_limit:0",
+      "comparisons": 72
+    },
+    {
+      "path": "distinct_same_limit:1",
+      "comparisons": 72
+    },
+    {
+      "path": "distinct_same_limit:2",
+      "comparisons": 72
+    },
+    {
+      "path": "asymmetric_stationary:0",
+      "comparisons": 72
+    },
+    {
+      "path": "asymmetric_stationary:1",
+      "comparisons": 72
+    },
+    {
+      "path": "asymmetric_stationary:2",
+      "comparisons": 72
+    },
+    {
+      "path": "asymmetric_stationary:3",
+      "comparisons": 72
+    },
+    {
+      "path": "rational_speed_outgoing:0",
+      "comparisons": 72
+    },
+    {
+      "path": "rational_speed_outgoing:1",
+      "comparisons": 72
+    },
+    {
+      "path": "rational_speed_outgoing:2",
+      "comparisons": 72
+    },
+    {
+      "path": "rational_speed_outgoing:3",
+      "comparisons": 72
+    },
+    {
+      "path": "inward_outward:0",
+      "comparisons": 72
+    },
+    {
+      "path": "inward_outward:1",
+      "comparisons": 72
+    },
+    {
+      "path": "inward_outward:2",
+      "comparisons": 72
+    },
+    {
+      "path": "inward_outward:3",
+      "comparisons": 72
+    },
+    {
+      "path": "moving_coalescence:0",
+      "comparisons": 72
+    },
+    {
+      "path": "moving_coalescence:1",
+      "comparisons": 72
+    },
+    {
+      "path": "moving_coalescence:2",
+      "comparisons": 72
+    },
+    {
+      "path": "initial_tie_then_split:0",
+      "comparisons": 72
+    },
+    {
+      "path": "initial_tie_then_split:1",
+      "comparisons": 72
+    },
+    {
+      "path": "initial_tie_then_split:2",
+      "comparisons": 72
+    },
+    {
+      "path": "initial_tie_then_split:3",
+      "comparisons": 72
+    }
+  ],
+  "adaptive_edge_example": {
+    "delta": "1/64",
+    "fixed_monster_cost": "321/256",
+    "edge_monster_cost": "33/64"
+  },
+  "cache": {
+    "primitiveQueries": 6956,
+    "primitiveHits": 3307,
+    "bandQueries": 5378,
+    "bandHits": 1704,
+    "rows": 263,
+    "scores": 2092
+  },
+  "arithmetic": {
+    "radius": "1/7440",
+    "comparisons": 1377629,
+    "maxDegree": 30
+  }
+}

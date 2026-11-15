@@ -1,0 +1,44 @@
+{
+  "scope": "Exact order projection; numerical cuts independently rescored by rational physical first capture.",
+  "oldThresholds": 11571,
+  "pricedThresholds": 3465,
+  "projectedEdges": 6686,
+  "fixtures": [
+    {
+      "name": "certified67",
+      "value": 1.428248859804687,
+      "ordinary": 1.428248859804687,
+      "error": 0,
+      "seconds": 0.434,
+      "nodes": 7604,
+      "arcs": 21653
+    },
+    {
+      "name": "initial_inward_mixture",
+      "value": 2.198499427691406,
+      "ordinary": 2.198499427691406,
+      "error": 0,
+      "seconds": 0.241,
+      "nodes": 7673,
+      "arcs": 21931
+    },
+    {
+      "name": "four_family_mixture",
+      "value": 1.744161575787499,
+      "ordinary": 1.744161575787499,
+      "error": 0,
+      "seconds": 0.358,
+      "nodes": 7895,
+      "arcs": 22657
+    },
+    {
+      "name": "single_center_M3",
+      "value": 3,
+      "ordinary": 3,
+      "error": 0,
+      "seconds": 0.008,
+      "nodes": 3545,
+      "arcs": 6962
+    }
+  ]
+}

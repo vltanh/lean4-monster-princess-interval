@@ -1,0 +1,3 @@
+All 60 capture times and the attaining payoff checked with Fraction arithmetic.
+All 40 regression instances agree with unpruned exact enumeration.
+The rejected monster candidate is defeated by the exact supplied princess path.

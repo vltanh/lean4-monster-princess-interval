@@ -1,0 +1,157 @@
+{
+ "description": "Exact all-Princess upper bounds for the atomic one-turn and two-turn Monster law; output of atomic_upper.cpp",
+ "program": "atomic_upper.cpp",
+ "program_sha256": "b818d9f362829eda9df594ea79b9b1abc26e90f934cbcc5b87d2b313cdc7792d",
+ "compiler": "g++ -O3 -fopenmp -std=c++17",
+ "previous_upper": "142472349375511/100000000000003",
+ "laws": [
+  {
+   "law": "atomic_law_32bins_grid2048.txt",
+   "law_sha256": "2d9c8415a15d3a954c18af039eb326c9a23d6dea6b73cbe4ebe455197e54d01e",
+   "bounds": "unrestricted value V; law optimized for the grid 1/2048",
+   "runs": [
+    {
+     "N": 2048,
+     "total_weight": 274877906944,
+     "maximum": 6413215524569876,
+     "best_start_cell": 867,
+     "bound": "1603303881142469/1125899906842624",
+     "bound_decimal": "1.4240199074521955",
+     "below_previous_upper": true,
+     "wall_seconds": 16.0
+    }
+   ]
+  },
+  {
+   "law": "atomic_law_32bins_grid1024.txt",
+   "law_sha256": "03ec355a09966c995cdb758c9b316dd3590b027f449f9060ee93b0db5c6ac38c",
+   "bounds": "unrestricted value V; law optimized for the grid 1/1024",
+   "runs": [
+    {
+     "N": 1024,
+     "total_weight": 68719476736,
+     "maximum": 801679386526336,
+     "best_start_cell": 864,
+     "bound": "6263120207237/4398046511104",
+     "bound_decimal": "1.4240686612622540",
+     "below_previous_upper": true,
+     "wall_seconds": 1.9
+    }
+   ]
+  },
+  {
+   "law": "atomic_law_16bins.txt",
+   "law_sha256": "b704fe0f366ab64ebb00325e8a4333ce6fc111b207703d912264800bb4d021ef",
+   "bounds": "unrestricted value V",
+   "runs": [
+    {
+     "N": 256,
+     "total_weight": 17179869184,
+     "maximum": 50123667351588,
+     "best_start_cell": 192,
+     "bound": "12530916837897/8796093022208",
+     "bound_decimal": "1.4246003090530621",
+     "below_previous_upper": true,
+     "wall_seconds": 0.0
+    },
+    {
+     "N": 512,
+     "total_weight": 68719476736,
+     "maximum": 400918328344096,
+     "best_start_cell": 384,
+     "bound": "12528697760753/8796093022208",
+     "bound_decimal": "1.4243480291899004",
+     "below_previous_upper": true,
+     "wall_seconds": 0.2
+    },
+    {
+     "N": 1024,
+     "total_weight": 274877906944,
+     "maximum": 3207064631126520,
+     "best_start_cell": 831,
+     "bound": "400883078890815/281474976710656",
+     "bound_decimal": "1.4242227979750588",
+     "below_previous_upper": true,
+     "wall_seconds": 1.9
+    },
+    {
+     "N": 2048,
+     "total_weight": 1099511627776,
+     "maximum": 25655401760869524,
+     "best_start_cell": 1663,
+     "bound": "6413850440217381/4503599627370496",
+     "bound_decimal": "1.4241608870463065",
+     "below_previous_upper": true,
+     "wall_seconds": 15.0
+    },
+    {
+     "N": 4096,
+     "total_weight": 4398046511104,
+     "maximum": 205238754671383148,
+     "best_start_cell": 3328,
+     "bound": "51309688667845787/36028797018963968",
+     "bound_decimal": "1.4241299436347716",
+     "below_previous_upper": true,
+     "wall_seconds": 122.2
+    }
+   ]
+  },
+  {
+   "law": "atomic_law_16bins_one_turn.txt",
+   "law_sha256": "b9e71f47dd4228c57dfb2caea0b905bf8c764f21534d07c685f06f14484264fa",
+   "bounds": "one-turn value W_1 (and therefore V)",
+   "runs": [
+    {
+     "N": 256,
+     "total_weight": 17179869184,
+     "maximum": 50137329653864,
+     "best_start_cell": 191,
+     "bound": "6267166206733/4398046511104",
+     "bound_decimal": "1.4249886150385009",
+     "below_previous_upper": false,
+     "wall_seconds": 0.0
+    },
+    {
+     "N": 512,
+     "total_weight": 68719476736,
+     "maximum": 401027727902416,
+     "best_start_cell": 383,
+     "bound": "25064232993901/17592186044416",
+     "bound_decimal": "1.4247366944971986",
+     "below_previous_upper": false,
+     "wall_seconds": 0.2
+    },
+    {
+     "N": 1024,
+     "total_weight": 274877906944,
+     "maximum": 3207942091045376,
+     "best_start_cell": 832,
+     "bound": "6265511896573/4398046511104",
+     "bound_decimal": "1.4246124684570987",
+     "below_previous_upper": true,
+     "wall_seconds": 2.0
+    },
+    {
+     "N": 2048,
+     "total_weight": 1099511627776,
+     "maximum": 25662422708859904,
+     "best_start_cell": 1664,
+     "bound": "25060959676621/17592186044416",
+     "bound_decimal": "1.4245506279519873",
+     "below_previous_upper": true,
+     "wall_seconds": 15.7
+    },
+    {
+     "N": 4096,
+     "total_weight": 4398046511104,
+     "maximum": 205294927183103000,
+     "best_start_cell": 3328,
+     "bound": "25661865897887875/18014398509481984",
+     "bound_decimal": "1.4245197187339118",
+     "below_previous_upper": true,
+     "wall_seconds": 121.3
+    }
+   ]
+  }
+ ]
+}

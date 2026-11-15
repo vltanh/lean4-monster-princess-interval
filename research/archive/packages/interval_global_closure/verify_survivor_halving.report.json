@@ -1,0 +1,19 @@
+{
+  "two_tour_pointwise_checks": 2145,
+  "models": 31,
+  "initial_states": 155,
+  "iterative_brackets": 1085,
+  "physical_routes": 155,
+  "all_order_oracles": 155,
+  "posterior_identities": 28334,
+  "memory_counterexample": {
+    "same_time": 2,
+    "same_position": 0,
+    "same_survival": "1/2",
+    "two_outer_tails_value": "2",
+    "right_tail_only_value": "3/4"
+  },
+  "executed_source_git_blob": "6d04ae3bd7129909142cf24e9f51bccbf6e0f80a",
+  "scope": "Finite stationary and moving ordered-target regression models. Analytic continuum claims are proved separately; this is not a full-game numerical certificate.",
+  "lean_or_ci_run": false
+}

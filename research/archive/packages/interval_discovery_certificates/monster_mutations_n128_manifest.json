@@ -1,0 +1,87 @@
+{
+  "certificate": "monster_mutations_n128.physical.json.gz",
+  "certificate_gzip_sha256": "1171710b1fab0d3ae400b3995a1a918ed862a38fba0c3672ad0aae18751e01ce",
+  "ci_provenance": {
+    "artifact_archive_sha256": "e0d2f99f3cb881ac40501e732a02dcc5da16e4de7730160f6eb322b51aeda3bc",
+    "artifact_id": 14088158597,
+    "artifact_member": "monster-mutations/best.physical.json",
+    "artifact_name": "discovery-monster-mutations",
+    "budget_qualification": "The original persistent backend applied this budget cumulatively across solves. The native persistent backend was corrected in concurrent commit 665576574197873af99aa232b2eecf529a13a525. The unfinished LP supplied no new certificate.",
+    "completed_iterations": 17,
+    "configured_lp_budget_seconds": 600,
+    "discovery_status": "BUDGET_STOPPED",
+    "elapsed_seconds": 1012.432990461,
+    "family": "mutations",
+    "head_sha": "840d255e2443e8f8278e11c6e4c3c19507e9cb25",
+    "random_seed": 161803,
+    "repository": "vltanh/lean4-monster-princess",
+    "run_attempt": 1,
+    "run_id": 43532597339,
+    "run_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43532597339",
+    "source_sha256": {
+      "packages/interval_clock_grid/exact_certificate.cjs": "571838d0f524fee041ba11b84d963532221ecd822b43eeb34c25dac03e6d774e",
+      "packages/interval_clock_grid/normalized_native/cached_path_pricing.py": "e1137a9460b2f4503f6d8be4492c67ada754f26f626d04b110fce33798017ffb",
+      "packages/interval_clock_grid/normalized_native/persistent_highs.py": "e464d4257c909d03695eefcec2893dfd1c0830ed3a1528eb6089edf739f42ca0",
+      "packages/interval_clock_grid/normalized_native/price_normalized.cpp": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+      "packages/interval_clock_grid/normalized_native/solve_normalized.py": "aaa5edb121f47fe38a4d2ea656828933c921f4187eb51cd22082117253f92352",
+      "packages/interval_clock_grid/qout_primal_certificate.cjs": "c479218cab8551cf851eb6fb23f9f0f6e83ac1285e006f65d1cc143c47a0178d",
+      "packages/interval_discovery/monster_search.py": "9525bc9e906c7c1743953dc67f465feb4bd918adec574f71a192ef58e51d658e"
+    },
+    "stop_reason": "lp_time_limit",
+    "subsequent_native_budget_fix_commit": "665576574197873af99aa232b2eecf529a13a525"
+  },
+  "comparison": {
+    "concurrent_explicit_princess_security": "582289859141/409600000000",
+    "concurrent_game_value_lower": "582291421641/409600000000",
+    "explicit_strategy_gap": "353128765841/102400000000000",
+    "game_value_gap": "352738140841/102400000000000",
+    "lower_scope": "Concurrent independently supplied lower certificates; this upper archive does not replay them.",
+    "previous_upper": "364842628535291/256000000000000",
+    "upper_improvement": "57289315127/512000000000000"
+  },
+  "exact_result": {
+    "closure_arcs": 151953,
+    "closure_excess": "629584636663/512000000000000",
+    "closure_nodes": 65666,
+    "distinct_physical_pairs": 768,
+    "endpoint_baseline": "91124797889849/64000000000000",
+    "exact_cut": "93007371780317",
+    "exact_flow": "93007371780317",
+    "global_upper": "145925593551091/102400000000000",
+    "n": 128,
+    "physical_calendar_plans": 809,
+    "positive_flow_entries": 39500,
+    "scope": "global physical Monster upper via centered-law Princess normalization and exact Qout closure",
+    "status": "PASS"
+  },
+  "files_sha256": {
+    "monster_mutations_ci_structure.json": "a5d2dc3e84d251311319475791ed782cee7c8297d841dc5d560b1821b5e744c0",
+    "monster_mutations_n128.physical.json.gz": "1171710b1fab0d3ae400b3995a1a918ed862a38fba0c3672ad0aae18751e01ce",
+    "monster_mutations_n128_replay.json": "0f342bf644388d68d11d678c75f2281ec2fb1b0d850cb561a97b086f2dd03c16",
+    "verify_manifest.py": "dbf23945013f942ab15e8fe0e5b6d07a865cab5010050fe50e8c26ae003c2462"
+  },
+  "format": "ci-discovered-physical-monster-upper-v1",
+  "gzip_mtime": 0,
+  "gzip_original_filename": "",
+  "replay": "monster_mutations_n128_replay.json",
+  "replay_sha256": "0f342bf644388d68d11d678c75f2281ec2fb1b0d850cb561a97b086f2dd03c16",
+  "scope": "Exact rational physical Monster law bounds every Princess via centered-law normalization and exact Qout flow/cut. No equilibrium or unrestricted Princess best-response attainment is claimed.",
+  "status": "PASS",
+  "structure": "monster_mutations_ci_structure.json",
+  "structure_sha256": "a5d2dc3e84d251311319475791ed782cee7c8297d841dc5d560b1821b5e744c0",
+  "uncompressed_bytes": 16439559,
+  "uncompressed_certificate_sha256": "5794d9a17f2170488aa920de75697f2d3aaaed1d58d3cc0678a1ec521a953aec",
+  "verification": {
+    "fresh_existing_node_replay": true,
+    "independent_python_verifier": "verify_manifest.py",
+    "independent_python_verifier_sha256": "dbf23945013f942ab15e8fe0e5b6d07a865cab5010050fe50e8c26ae003c2462",
+    "lean_kernel_checked": false,
+    "node_verifier_sha256": "c479218cab8551cf851eb6fb23f9f0f6e83ac1285e006f65d1cc143c47a0178d",
+    "physical_clock_verifier_sha256": "571838d0f524fee041ba11b84d963532221ecd822b43eeb34c25dac03e6d774e",
+    "proof_dependencies": [
+      "research/12-global-closure/NORMALIZED_GRID_BANK_PRICING.md",
+      "packages/interval_clock_grid/QOUT_PRIMAL_CERTIFICATES.md"
+    ],
+    "separate_python_integer_reconstruction": true
+  }
+}

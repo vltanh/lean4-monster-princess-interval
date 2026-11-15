@@ -1,0 +1,142 @@
+{
+  "scope": "Exact local scalar gap for one rationalized signed-density law; not a game-value certificate.",
+  "source": "discovery.json, each coefficient rounded to the nearest integer after multiplication by 1000000, followed by one common exact normalization",
+  "knots": [
+    "0",
+    "1/8",
+    "1/4",
+    "3/8",
+    "1/2",
+    "5/8",
+    "3/4",
+    "7/8",
+    "15/16",
+    "31/32",
+    "63/64",
+    "1"
+  ],
+  "raw_endpoint_mass": 658819,
+  "raw_densities": {
+    "f": [
+      0,
+      0,
+      0,
+      0,
+      100362,
+      114123,
+      131539,
+      181542,
+      1256903,
+      1311840,
+      1403706
+    ],
+    "g": [
+      0,
+      130914,
+      176271,
+      181702,
+      81340,
+      80958,
+      81221,
+      81151,
+      74975,
+      79865,
+      81384
+    ],
+    "h": [
+      0,
+      68785,
+      92091,
+      92091,
+      103225,
+      106153,
+      110668,
+      110356,
+      0,
+      0,
+      0
+    ],
+    "ell": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      11651,
+      386184,
+      386184,
+      386184
+    ]
+  },
+  "normalization": "64000047/64",
+  "initial_interval": [
+    "31/32",
+    "63/64"
+  ],
+  "forcing_interval": [
+    "31/32",
+    "125/128"
+  ],
+  "suffix_width": "1/16",
+  "reference_tuple": [
+    "31/32",
+    "31/32",
+    "3/4",
+    "15/16"
+  ],
+  "shift_eta": "1/65536",
+  "expected": {
+    "normalization": "64000047/64",
+    "endpoint_mass": "42164416/64000047",
+    "reference_tuple": [
+      "31/32",
+      "31/32",
+      "3/4",
+      "15/16"
+    ],
+    "reference_payoff": "631234171/442811136",
+    "negative_c_maximum": "543669789287969/381780248369664",
+    "negative_c_maximizer": [
+      "63/64",
+      "63/64",
+      "-1/2",
+      "329021/372832"
+    ],
+    "negative_c_closed_cells": 678,
+    "short_suffix_maximum": "7782693893/5461337344",
+    "short_suffix_maximizer": [
+      "31/32",
+      "31/32",
+      "7/8",
+      "15/16"
+    ],
+    "short_suffix_closed_cells": 268,
+    "bad_region_ceiling": "7782693893/5461337344",
+    "reference_minus_bad_ceiling": "947831/2048001504",
+    "local_near_optimality_threshold": "947831/4096003008",
+    "tail_density_margin": "19747328/21333349",
+    "forcing_mass": "218640/21333349",
+    "forcing_rho": "1/769",
+    "shift_eta": "1/65536",
+    "h_total": "1675176/21333349",
+    "h_maximum": "7082752/64000047",
+    "mixture_L0": "376468/64000047",
+    "mixture_omega": "48187904/49216036143",
+    "mixture_Cstar_candidates": [
+      "25385045996/809949",
+      "24093952/947831",
+      "6023488/31525155"
+    ],
+    "mixture_Cstar": "25385045996/809949",
+    "mixture_total": "12693332947/809949",
+    "normalized_improving_mixture": {
+      "M": "133377105164657878/133386429540260595",
+      "M_rest": "17168785432805497568/2845579253246288824082655",
+      "F_r": "13009914885632/208238511031561567807",
+      "M_eta": "809949/12693332947"
+    },
+    "guaranteed_decrease_from_original_S": "285894191351167/1705889882370552363474944"
+  }
+}

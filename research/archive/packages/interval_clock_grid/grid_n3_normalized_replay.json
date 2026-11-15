@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "normalized physical bank dual; global lower uses exact bank normalization and common quantization",
+  "n": 3,
+  "qout_verified": false,
+  "exact_scaled_dual": "12612152668/729040145",
+  "normalized_bank_lower": "3153038167/2187120435",
+  "global_lower": "1859012063/1458080290",
+  "record_states": 555,
+  "generated_transitions": 964,
+  "max_layer_states": 82,
+  "cached_suffixes": 30,
+  "covering_queries": 144,
+  "covering_method": "quadratic cone suffix minima",
+  "pareto": true,
+  "primal_global_upper": "3153038167/2187120435",
+  "exact_primal_dual_equality": true
+}

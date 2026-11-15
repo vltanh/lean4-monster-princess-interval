@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "Unrestricted physical Monster upper from individually checked Qout inequalities and integer flow/cut; no finite-bank lower claim",
+  "n": 128,
+  "physical_calendar_plans": 947,
+  "closure_nodes": 15859,
+  "closure_arcs": 62806,
+  "exact_flow": "133714422188475",
+  "exact_cut": "133714422188475",
+  "global_upper": "729770894042503/512000000000000",
+  "endpoint_baseline": "91028180448393/64000000000000",
+  "closure_excess": "1545450455359/512000000000000"
+}

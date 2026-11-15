@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Generic signed unary order-label closure only; no physical response theorem is assumed.",
+  "counts": {
+    "games": 180,
+    "feasible_assignments": 3430,
+    "exact_values": 288,
+    "extremal_faces": 288,
+    "float_replays": 28,
+    "infeasible_bounds": 36
+  }
+}

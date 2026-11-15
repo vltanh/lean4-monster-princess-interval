@@ -1,0 +1,48 @@
+{
+  "scope": "Exact early-cone and middle-duration gates for a finite center-renewal attachment. The outside low-record continuation and initial prefixes remain explicit dependencies.",
+  "cone": {
+    "scope": "Exact local primitive identities and saved-field constant-cone gate for the parameter-level attachment theorem. The outside continuation is an explicit unresolved input, not a constant.",
+    "field_blob": "5c45d042ee9948faebc03354c3e1e2ee3cbec1a5",
+    "field_cone": {
+      "h": "1/2",
+      "lambda": "3521265547/12500000000",
+      "triangles": 81,
+      "boundary_crossings": 0,
+      "center_rank_at_h": "3521265547/25000000000"
+    },
+    "primitive_checks": {
+      "offfront_actions": 288,
+      "front_triangle_wait": 288,
+      "constant_boundary_stationarity": 48
+    }
+  },
+  "middle": {
+    "scope": "Whole-middle-cone productive-duration certificate, using the universal past-center frontier H.",
+    "domain": [
+      "1/2",
+      "7/8"
+    ],
+    "H": "3521265547/25000000000",
+    "maximum_center_rank": "3521265547/25000000000",
+    "clipped_triangles": 120,
+    "active_triangles": 102,
+    "threshold_vertices": 331,
+    "minimum_duration": "3521265547/358964317046",
+    "minimum_numeric": 0.00980951414886389,
+    "strict_above_threshold": true,
+    "maximum_productive_returns": 38,
+    "witness": {
+      "point": [
+        "1643509551083/2871714536368",
+        "9/16"
+      ],
+      "rank": "3521265547/25000000000",
+      "triangle": 336,
+      "coefficients": [
+        "179482158523/12500000000",
+        "-17606327733/1562500000",
+        "-347683829931/200000000000"
+      ]
+    }
+  }
+}

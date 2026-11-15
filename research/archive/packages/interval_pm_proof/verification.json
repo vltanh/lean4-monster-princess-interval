@@ -1,0 +1,83 @@
+{
+  "upper_bound": "229233/160000",
+  "decimal": 1.43270625,
+  "chambers": [
+    {
+      "initial_chamber": [
+        "0",
+        "1/4"
+      ],
+      "flow_value": 821591,
+      "scale": 320000,
+      "upper_bound": "458409/320000",
+      "nodes": 834,
+      "edges": 1908
+    },
+    {
+      "initial_chamber": [
+        "1/4",
+        "3/8"
+      ],
+      "flow_value": 821595,
+      "scale": 320000,
+      "upper_bound": "91681/64000",
+      "nodes": 930,
+      "edges": 2096
+    },
+    {
+      "initial_chamber": [
+        "3/8",
+        "1/2"
+      ],
+      "flow_value": 821592,
+      "scale": 320000,
+      "upper_bound": "57301/40000",
+      "nodes": 930,
+      "edges": 2084
+    },
+    {
+      "initial_chamber": [
+        "1/2",
+        "5/8"
+      ],
+      "flow_value": 821596,
+      "scale": 320000,
+      "upper_bound": "114601/80000",
+      "nodes": 930,
+      "edges": 2064
+    },
+    {
+      "initial_chamber": [
+        "5/8",
+        "3/4"
+      ],
+      "flow_value": 821597,
+      "scale": 320000,
+      "upper_bound": "458403/320000",
+      "nodes": 866,
+      "edges": 1891
+    },
+    {
+      "initial_chamber": [
+        "3/4",
+        "7/8"
+      ],
+      "flow_value": 821598,
+      "scale": 320000,
+      "upper_bound": "229201/160000",
+      "nodes": 802,
+      "edges": 1700
+    },
+    {
+      "initial_chamber": [
+        "7/8",
+        "1"
+      ],
+      "flow_value": 821534,
+      "scale": 320000,
+      "upper_bound": "229233/160000",
+      "nodes": 674,
+      "edges": 1363
+    }
+  ]
+}

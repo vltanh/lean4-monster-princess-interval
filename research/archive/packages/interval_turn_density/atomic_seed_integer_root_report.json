@@ -1,0 +1,20 @@
+{
+  "scope": "Independent replay for the archived 67-atom monster law; no saddle or exact game-value claim.",
+  "legalMonsterAtoms": 465,
+  "positiveMassAtoms": 67,
+  "archivedMassesMatched": 67,
+  "thresholdNodes": 70473,
+  "events": 243,
+  "levels": 311,
+  "exactValue": "36563170811/25600000000",
+  "flow": "19296189851562500000000000",
+  "nodes": 80892,
+  "arcs": 176922,
+  "positiveFlows": 38427,
+  "sourceCutReconstructed": true,
+  "freeResidualNodes": 10425,
+  "residualSCCs": 10125,
+  "condensationEdges": 19729,
+  "exactExtremalRows": 2,
+  "elapsedMs": 3616
+}

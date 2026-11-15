@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "scope": "Exact local curvature/record-exchange checks; no equilibrium, global phase-existence, or unrestricted game-value claim.",
+  "counts": {
+    "global_polynomial_shape_checks": 3,
+    "direct_RLR_integrals": 27,
+    "bilinear_closed_formula": 9,
+    "peak_derivative_monotonicity": 24,
+    "exact_concavity_chords_with_suffix": 756,
+    "unproductive_boundary_domination": 18,
+    "endpoint_minimum_comparisons": 81,
+    "explicit_initial_LRL_guards": 6,
+    "guard_peak_below_initial_record": 2,
+    "guard_peak_above_initial_record": 4
+  },
+  "fixtures": [
+    {
+      "name": "bilinear_active_final_record",
+      "log_mixed_numerator": "0",
+      "productive_turn_interval": [
+        "5/4",
+        "3/2"
+      ],
+      "entry_survivor_records": [
+        "13/25",
+        "189/400"
+      ]
+    },
+    {
+      "name": "curved_rank_one",
+      "log_mixed_numerator": "0",
+      "productive_turn_interval": [
+        "5/4",
+        "7/4"
+      ],
+      "entry_survivor_records": [
+        "433/800",
+        "1333/3200"
+      ]
+    },
+    {
+      "name": "curved_strict_log_submodular",
+      "log_mixed_numerator": "-1/2",
+      "productive_turn_interval": [
+        "5/4",
+        "7/4"
+      ],
+      "entry_survivor_records": [
+        "359/640",
+        "2547/6400"
+      ]
+    }
+  ]
+}

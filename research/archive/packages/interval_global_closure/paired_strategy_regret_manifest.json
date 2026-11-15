@@ -1,0 +1,28 @@
+{
+  "scope": "New exact cross-play computation in V8 after executor loss; archived unrestricted-response certificates are imported.",
+  "execution_runtime": "V8 code-mode isolate; the complete exported run function was evaluated, including after the addition of exact decimal strings. Node CLI filesystem wrapper was not executed after the outage.",
+  "princess_source_commit": "cc81521e146f2999ead1b56f47a6e81afd6d8a37",
+  "princess_source_git_blob": "1834b07a4e26687cecc38fdc274b7f4b10e3ad90",
+  "princess_source_sha256": "25f86abe2a4d955fea8974d8fddf6aaf1e8e8e8ccec9cec76f9da0bf5c4a7bcc",
+  "monster_source_commit": "cc81521e146f2999ead1b56f47a6e81afd6d8a37",
+  "monster_source_sha256": "e52809886f413630dd8707589802c81cb596e8a71587987887c4e27e832b94a1",
+  "cross_play_source_sha256": "9fefde8f1451cfa10fba00f18d9926617c6a3392cd2ffcbbbf0a389fece7852c",
+  "cross_play_report_sha256": "2bb19c40915f7ea58d26f510d7f8561bd5e23d8561acbecf33fefe038009e430",
+  "captures_per_implementation": 94640,
+  "archived_best_response_captures": 338,
+  "result": {
+    "cross_payoff": 1.4231991766241818,
+    "monster_improvement": 0.0056093417063262565,
+    "princess_improvement_supremum": 0.002936148401647379,
+    "maximum_unilateral_improvement": 0.0056093417063262565
+  },
+  "exact_decimal_expansions": {
+    "lower_response": "1.417589834917855351562500000000",
+    "upper_response": "1.426135325025828985869884490966",
+    "cross_payoff": "1.423199176624181607215739554462",
+    "monster_improvement": "0.005609341706326255653239554462",
+    "princess_improvement_supremum": "0.002936148401647378654144936504",
+    "maximum_unilateral_improvement": "0.005609341706326255653239554462",
+    "total_response_gap": "0.008545490107973634307384490966"
+  }
+}

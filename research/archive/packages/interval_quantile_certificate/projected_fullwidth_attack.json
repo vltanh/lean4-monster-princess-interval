@@ -1,0 +1,24 @@
+{
+  "source_sha256": "a8e1d84d67e66e08d6d1eeb02f18c6e5121108cb4368ededd9db2e792a97189e",
+  "source_field": "packages/interval_global_closure/lower_n256_front2_field.json",
+  "interpolation_epsilon": "1/2",
+  "route": [
+    [
+      "0",
+      "7/8"
+    ],
+    [
+      "123/128",
+      "-11/128"
+    ],
+    [
+      "131/64",
+      "1"
+    ],
+    [
+      "259/64",
+      "-1"
+    ]
+  ],
+  "scope": "One physical attack on the fixed projected full-width CDF, not a global game upper bound."
+}

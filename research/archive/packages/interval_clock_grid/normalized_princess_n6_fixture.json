@@ -1,0 +1,17 @@
+{
+  "format": "qout-clock-grid-field-u32-zlib-v1",
+  "n": 6,
+  "field_denominator": "1000000000",
+  "normalized_profile": true,
+  "encoding": {
+    "domain": "pre-two radial nodes: j=0..4n, then k=1..2n in ascending order with j+k even; center is zero; after time2 use outward footpoint, zero if footpoint<=0",
+    "integer_type": "uint32 little-endian",
+    "compression": "zlib",
+    "count": 150,
+    "uncompressed_sha256": "5fbfc9192dc721c3a9861f45fa02d8921e652bbd9b49dd55c34fc09a851abd7f"
+  },
+  "pre_two_values_base64": "eNoT/CbHnDhbj71k6g+uxcpNonLh01UYTs2yfnVpDZNFzF6229t3cwYwKQsdfrlb5tBOcwvXrfUoYm8iTE1B6iNrfVDE15RlGoPktq/oRxEDYZB6BgYGBnRxEMYmBlIv+E2OGV0chEFi1gp6xujqQeLLTikZo8v9mCpjgC4OUn/kyjEddDl84iD3Y5XDIg5Tj1UOiziyegw5LOLo6lHksIhjUw+XwwZwqMcJgOoBDJa7PQ==",
+  "minimum_units": "34423600038",
+  "objective_denominator": "24000000000",
+  "normalized_bank_dual_value": "5737266673/4000000000"
+}

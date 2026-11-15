@@ -1,0 +1,40 @@
+{
+  "value": "4674200578946657/3276800000000000",
+  "decimal_value": 1.4264528133992485,
+  "atoms": 162,
+  "network": {
+    "scale": "1310720",
+    "weightDenominator": "10000000000",
+    "maximumFlow": "25686879215071872",
+    "cutCapacity": "25686879215071872",
+    "totalRewardCeiling": "100474088478218384",
+    "score": "74787209263146512",
+    "denominator": "52428800000000000",
+    "phases": 363,
+    "pushes": 24761,
+    "nodes": 51345,
+    "arcs": 126871
+  },
+  "verification": {
+    "scope": "Exact unrestricted princess response to the supplied normalized rational monster law; no equilibrium claim",
+    "positive_reflected_pairs": 162,
+    "normalization_verified": true,
+    "physical_routes_verified": true,
+    "flow_replayed": true,
+    "extremal_responses_checked": 2,
+    "exactValue": "4674200578946657/3276800000000000",
+    "flow": "25686879215071872",
+    "nodes": 51345,
+    "arcs": 126871,
+    "positiveFlows": 53973
+  },
+  "seconds": 3.849,
+  "certificate_sha256": "39c67707f657a8f9fa2e6c2505622ca13ec222d9cf50b84591196d86068b6d03",
+  "independent_python_check": {
+    "independent_python_fraction_rows": 2,
+    "physical_pairs": 162,
+    "value": "4674200578946657/3276800000000000",
+    "geometry_queries": 171,
+    "geometry_levels": 651
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "certificate_method": "complete-lattice-physical-cost-to-all-vertex-clock-domination",
+  "scope": "Exact source binding, full Qout validation and deterministic extraction. The source complete lattice minimum is a previously certified dependency; this command does not replay its exhaustive search.",
+  "strategy_sha256": "ac8c900e9247a5d9b5f185b521321fd56b43e909e1b80487a660826fb32e7773",
+  "decoded_nodal_profile_sha256": "4a95fcbc862f5538fef70a86d8eabd6d653fe47456a4b8da009edbc54b638961",
+  "guaranteed_security": "27450199627/19327352832",
+  "guaranteed_security_decimal": "1.4202772550181382",
+  "exact_transfer_loss": "1537/2359296",
+  "lattice_search_replayed": false,
+  "independent_normalized_repricing_performed": false,
+  "validation": {
+    "stored_radial_nodes": 2360064,
+    "cone_inequalities": 4715520,
+    "sticky_endpoint_inequalities": 1536,
+    "inherited_outward1_equalities": 1180416
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Exact finite regression of left-floor atomization; no LP/game value computed.",
+  "status": "passed",
+  "checks": {
+    "selected_events": 3960,
+    "earlier_vertex": 3960,
+    "scoring_causality": 101970,
+    "reflections": 3960,
+    "own_endpoint_exclusions": 3977,
+    "type_pairs": 7938,
+    "matched_event_pairs": 5697,
+    "target_center_forces_source_center": 48,
+    "deficiency_tests": 12
+  },
+  "physical_paths": 60,
+  "selected_type_counts": {
+    "positive": 98,
+    "active_negative": 81
+  },
+  "conclusion_tested": "Earlier selection on the same physical path, unchanged scoring causality, no new own-endpoint atoms, preserved matching, and nonincreasing deficiency."
+}

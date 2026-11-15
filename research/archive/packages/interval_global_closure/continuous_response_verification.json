@@ -1,0 +1,41 @@
+{
+  "scope": "Exact extraction, independent unrestricted finite-response, and stopped-frontier checks; no equilibrium claim.",
+  "fixtures": [
+    {
+      "name": "actual_four_quantiles",
+      "exact_value": "15733204782552570270341036958606907/19836365274636420914347123469685760",
+      "independent_states": 24,
+      "exact_search_states": 2,
+      "stopped_lower": "2597274109021448172576024697712878208162707257522131999/6466036608514516863590038526410227264031367720373959680",
+      "stopped_upper": "584593583685791699/617415450818110496",
+      "exact_fixed_center_value": "1105747362731218683095287579926548838185/1171283392690024514014622100810834372608",
+      "fixed_center_independent_states": 19
+    },
+    {
+      "name": "center_coalescence_then_split",
+      "exact_value": "9/16",
+      "independent_states": 22,
+      "exact_search_states": 2,
+      "stopped_lower": "9/32",
+      "stopped_upper": "25/32",
+      "exact_fixed_center_value": "39/64",
+      "fixed_center_independent_states": 17
+    },
+    {
+      "name": "time_three_late_center_split",
+      "exact_value": "9/16",
+      "independent_states": 24,
+      "exact_search_states": 2,
+      "stopped_lower": "9/32",
+      "stopped_upper": "3/4",
+      "exact_fixed_center_value": "39/64",
+      "fixed_center_independent_states": 19
+    }
+  ],
+  "field_sha256": "1e4d8f5e88a5061cde0c069113e60cfc83cf44320e2bb8f0a3ce26348b576db1",
+  "quantile_level_checks": 1464,
+  "center_atom_checks": 42,
+  "endpoint_atom_checks": 48,
+  "independent_32_path_captures": 32,
+  "complete_32_path_value": "93532345436572606783748011246049524752508810003227904195531298311579818570882918386580946929523478871122233418216192651998394739/69923636453852307673508211899145469364645601478617763750390854701086723018730112241947670288537189027081112728886668281109053440"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "method": "physical-path running-minimum dual",
+  "n": 6,
+  "exact_scaled_primal": "2325063055913038265555400200/67542704801429234257167849",
+  "exact_scaled_dual": "2325063055913038265555400200/67542704801429234257167849",
+  "exact_value": "290632881989129783194425025/202628114404287702771503547",
+  "physical_record_states": 132141,
+  "transitions": 258964,
+  "max_layer_states": 1656,
+  "cone_inequalities": 13308
+}

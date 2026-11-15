@@ -1,0 +1,4 @@
+PASS: seven exact analytic fixtures, including all three atom locations.
+PASS: fixed-word quadratics and a positive-mass equality-face jump.
+PASS: six exact/float comparisons and independent polygonal capture checks.
+PASS: five-leg degeneration, two central waves, and six independent path checks.

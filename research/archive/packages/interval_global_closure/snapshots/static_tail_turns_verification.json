@@ -1,0 +1,35 @@
+{
+  "scope": "Exact static piecewise-constant-density turning-point identities and atom/collision boundaries; the finite/infinite-history reduction is stated separately in the proof note.",
+  "exact_second_derivative_checks": 77,
+  "closed_atom_trace_checks": 27,
+  "collision_deletion_checks": 48,
+  "independent_physical_route_comparisons": 564,
+  "independent_affine_spatial_pieces": 5027,
+  "independent_atom_captures": 2752,
+  "measures": [
+    {
+      "measure": "uniform"
+    },
+    {
+      "measure": "asymmetric_steps_and_atoms"
+    },
+    {
+      "measure": "overlapping_fan_intervals"
+    },
+    {
+      "measure": "atomic_only"
+    }
+  ],
+  "stationary_countercheck": {
+    "start": "0",
+    "interior_turn": "-99/100",
+    "detour_cost": "495001/250000",
+    "direct_endpoint_cost": "99500001/50000000",
+    "detour_completion": "249/50"
+  },
+  "arithmetic": {
+    "radius": "1/48",
+    "comparisons": 577837,
+    "maxDegree": 2
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "Exact extraction from the supplied hash-bound pricing report; this command does not rerun pricing. Use verify for independent replay.",
+  "input_sha256": "a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10",
+  "n": 512,
+  "stored_radial_nodes": 1049088,
+  "finite_dual_lower": "36434808231/25600000000",
+  "epsilon": "1/1024",
+  "exact_transfer_loss": "1025/1048576",
+  "guaranteed_security": "582556541071/409600000000",
+  "validation": {
+    "cone_inequalities": 2095104,
+    "sticky_endpoint_inequalities": 1024
+  }
+}

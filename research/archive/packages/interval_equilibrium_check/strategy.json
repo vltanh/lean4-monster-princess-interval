@@ -1,0 +1,85 @@
+{
+  "weight_denominator": 1168753118443930454,
+  "families": [
+    {
+      "kind": 1,
+      "start": "-1",
+      "weight_numerator": 877416011786796300
+    },
+    {
+      "kind": 1,
+      "start": "5/8",
+      "weight_numerator": 17457940177903148
+    },
+    {
+      "kind": 1,
+      "start": "3/4",
+      "weight_numerator": 20017352282551661
+    },
+    {
+      "kind": 1,
+      "start": "7/8",
+      "weight_numerator": 21963801762466200
+    },
+    {
+      "kind": 2,
+      "start": "-7/8",
+      "weight_numerator": 17906449220138700
+    },
+    {
+      "kind": 2,
+      "start": "-3/4",
+      "weight_numerator": 17548320235735926
+    },
+    {
+      "kind": 2,
+      "start": "-5/8",
+      "weight_numerator": 17204235525231300
+    },
+    {
+      "kind": 2,
+      "start": "-1/2",
+      "weight_numerator": 16712685938796120
+    },
+    {
+      "kind": 2,
+      "start": "-3/8",
+      "weight_numerator": 16712685938796120
+    },
+    {
+      "kind": 2,
+      "start": "-1/4",
+      "weight_numerator": 14241108433815900
+    },
+    {
+      "kind": 2,
+      "start": "1/4",
+      "weight_numerator": 26583402409789680
+    },
+    {
+      "kind": 2,
+      "start": "3/8",
+      "weight_numerator": 31690289683486980
+    },
+    {
+      "kind": 2,
+      "start": "1/2",
+      "weight_numerator": 32688796599799704
+    },
+    {
+      "kind": 2,
+      "start": "5/8",
+      "weight_numerator": 13525281823821096
+    },
+    {
+      "kind": 2,
+      "start": "3/4",
+      "weight_numerator": 13506150116478919
+    },
+    {
+      "kind": 2,
+      "start": "7/8",
+      "weight_numerator": 13578606508322700
+    }
+  ]
+}

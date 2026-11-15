@@ -1,0 +1,1330 @@
+{
+  "scope": "Physical node-route attack discovery with continuous CDF costs; interpolation estimate is not an unrestricted lower certificate",
+  "nodes": 14043,
+  "rank_bins": 64,
+  "states": 12057156,
+  "input": "continuum_complete_h3_iter_01.json",
+  "input_sha256": "5092c9f3741416d2b41a107a39b74e940357f75183fbeb51b20ce0b07909b367",
+  "terminal_time": "3",
+  "axis_size": 171,
+  "attacks": [
+    {
+      "payoff": "12554109563293958271067148713/8822380203868160000000000000",
+      "decimal": 1.4229844183987477,
+      "route": [
+        [
+          "0",
+          "127/128"
+        ],
+        [
+          "1/128",
+          "1"
+        ],
+        [
+          "257/128",
+          "-1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "852457700273799484384516778013716579396993417678671/599030409319621543892675560137669738496000000000000",
+      "decimal": 1.423062480654397,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/16",
+          "1/16"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "15/32",
+          "3/32"
+        ],
+        [
+          "25/32",
+          "-7/32"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "4",
+          "-1"
+        ]
+      ],
+      "interior_turns": 8,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "311734058533697237770107700883/219023192694456320000000000000",
+      "decimal": 1.4232924591167624,
+      "route": [
+        [
+          "0",
+          "2047/2048"
+        ],
+        [
+          "1/2048",
+          "1"
+        ],
+        [
+          "4097/2048",
+          "-1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "62347504546239785851887772713/43804638538891264000000000000",
+      "decimal": 1.4233082756951763,
+      "route": [
+        [
+          "0",
+          "262143/262144"
+        ],
+        [
+          "1/262144",
+          "1"
+        ],
+        [
+          "524289/262144",
+          "-1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "152775609373317765633920805151/107335767786782720000000000000",
+      "decimal": 1.423342959420564,
+      "route": [
+        [
+          "0",
+          "1023/1024"
+        ],
+        [
+          "1/1024",
+          "1"
+        ],
+        [
+          "2049/1024",
+          "-1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "2966007382860156639880678631/2083793559879680000000000000",
+      "decimal": 1.423369109093233,
+      "route": [
+        [
+          "0",
+          "511/512"
+        ],
+        [
+          "1/512",
+          "1"
+        ],
+        [
+          "1025/512",
+          "-1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "702259371307685597934525313362676376811403776514051174802353/493361674544287072965058902224124329352815443968000000000000",
+      "decimal": 1.423416952596399,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/32",
+          "3/32"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "15/32",
+          "3/32"
+        ],
+        [
+          "25/32",
+          "-7/32"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "4",
+          "-1"
+        ]
+      ],
+      "interior_turns": 8,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "2985276152521644041/2097152000000000000",
+      "decimal": 1.4234905970199796,
+      "route": [
+        [
+          "0",
+          "127/128"
+        ],
+        [
+          "255/128",
+          "-1"
+        ],
+        [
+          "511/128",
+          "1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "1492638076270976913/1048576000000000000",
+      "decimal": 1.4234905970296639,
+      "route": [
+        [
+          "0",
+          "2047/2048"
+        ],
+        [
+          "4095/2048",
+          "-1"
+        ],
+        [
+          "8191/2048",
+          "1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "5830617485435179/4096000000000000",
+      "decimal": 1.423490597030073,
+      "route": [
+        [
+          "0",
+          "511/512"
+        ],
+        [
+          "1023/512",
+          "-1"
+        ],
+        [
+          "2047/512",
+          "1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "14926382851024707607/10485760000000000000",
+      "decimal": 1.4234907961868961,
+      "route": [
+        [
+          "0",
+          "1023/1024"
+        ],
+        [
+          "2047/1024",
+          "-1"
+        ],
+        [
+          "4095/1024",
+          "1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "2352782197932216139433356695716709109031/1652797108002703944438513664000000000000",
+      "decimal": 1.4235154372791696,
+      "route": [
+        [
+          "0",
+          "1023/1024"
+        ],
+        [
+          "31/2048",
+          "2015/2048"
+        ],
+        [
+          "1/32",
+          "1"
+        ],
+        [
+          "65/32",
+          "-1"
+        ]
+      ],
+      "interior_turns": 1,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "2112105549061012204397987180943214951/1483698371740471332630953984000000000",
+      "decimal": 1.4235410574612817,
+      "route": [
+        [
+          "0",
+          "127/128"
+        ],
+        [
+          "7/256",
+          "247/256"
+        ],
+        [
+          "1/16",
+          "1"
+        ],
+        [
+          "33/16",
+          "-1"
+        ]
+      ],
+      "interior_turns": 1,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "853117303790158562041639537829854807285506740633423/599030409319621543892675560137669738496000000000000",
+      "decimal": 1.424163599238858,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "15/32",
+          "3/32"
+        ],
+        [
+          "25/32",
+          "-7/32"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "4",
+          "-1"
+        ]
+      ],
+      "interior_turns": 7,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "14933627491522125339/10485760000000000000",
+      "decimal": 1.4241816989442946,
+      "route": [
+        [
+          "0",
+          "262143/262144"
+        ],
+        [
+          "524287/262144",
+          "-1"
+        ],
+        [
+          "1048575/262144",
+          "1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "42861059324193282282138597169361208169/30050856509140071717063884800000000000",
+      "decimal": 1.4262841164329856,
+      "route": [
+        [
+          "0",
+          "2047/2048"
+        ],
+        [
+          "63/4096",
+          "4031/4096"
+        ],
+        [
+          "1/32",
+          "1"
+        ],
+        [
+          "65/32",
+          "-1"
+        ]
+      ],
+      "interior_turns": 1,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "230163677532087046467828540501/139153440751222784000000000000",
+      "decimal": 1.6540279298129,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "7/8",
+          "1"
+        ],
+        [
+          "23/8",
+          "-1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "23502454515250768327577422517/13915344075122278400000000000",
+      "decimal": 1.6889596396878346,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "15/16",
+          "1"
+        ],
+        [
+          "47/16",
+          "-1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "3617895410355328271/2097152000000000000",
+      "decimal": 1.7251469661499634,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "-1"
+        ],
+        [
+          "3",
+          "1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "3617895410355328271/2097152000000000000",
+      "decimal": 1.7251469661499634,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "3",
+          "-1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "18326823449477760843/10485760000000000000",
+      "decimal": 1.7477820825078736,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "17/16",
+          "-1"
+        ],
+        [
+          "49/16",
+          "1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "15263827221952309280334355321/8636075952046080000000000000",
+      "decimal": 1.7674493956176898,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/32",
+          "3/32"
+        ],
+        [
+          "9/8",
+          "-1"
+        ],
+        [
+          "25/8",
+          "1"
+        ]
+      ],
+      "interior_turns": 1,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "18539086901432403847/10485760000000000000",
+      "decimal": 1.7680251027519611,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "9/8",
+          "-1"
+        ],
+        [
+          "25/8",
+          "1"
+        ]
+      ],
+      "interior_turns": 0,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "18552916149931542407/10485760000000000000",
+      "decimal": 1.769343962662844,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/16",
+          "1/16"
+        ],
+        [
+          "9/8",
+          "-1"
+        ],
+        [
+          "25/8",
+          "1"
+        ]
+      ],
+      "interior_turns": 1,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "18764485398346529757/10485760000000000000",
+      "decimal": 1.7895207784983187,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/16",
+          "1/16"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "19/16",
+          "1"
+        ],
+        [
+          "51/16",
+          "-1"
+        ]
+      ],
+      "interior_turns": 2,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "15457498607490109167942538531/8636075952046080000000000000",
+      "decimal": 1.7898752504403208,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/32",
+          "3/32"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "19/16",
+          "1"
+        ],
+        [
+          "51/16",
+          "-1"
+        ]
+      ],
+      "interior_turns": 2,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "18776031463554726877/10485760000000000000",
+      "decimal": 1.7906218970827796,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "19/16",
+          "1"
+        ],
+        [
+          "51/16",
+          "-1"
+        ]
+      ],
+      "interior_turns": 1,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "3777667298177925433977483029/2038188778455040000000000000",
+      "decimal": 1.8534432816578557,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/16",
+          "1/16"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "23/16",
+          "-1"
+        ],
+        [
+          "55/16",
+          "1"
+        ]
+      ],
+      "interior_turns": 3,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "3111883269035530836970893720992086507/1678653058561873092280320000000000000",
+      "decimal": 1.8537977535998578,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/32",
+          "3/32"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "23/16",
+          "-1"
+        ],
+        [
+          "55/16",
+          "1"
+        ]
+      ],
+      "interior_turns": 3,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "3779911585720522014970015509/2038188778455040000000000000",
+      "decimal": 1.8545444002423166,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "23/16",
+          "-1"
+        ],
+        [
+          "55/16",
+          "1"
+        ]
+      ],
+      "interior_turns": 2,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "4502729468275635967742341042411071270190054910801869/2396121637278486175570702240550678953984000000000000",
+      "decimal": 1.8791739944345371,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/16",
+          "1/16"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "15/32",
+          "3/32"
+        ],
+        [
+          "25/16",
+          "-1"
+        ],
+        [
+          "57/16",
+          "1"
+        ]
+      ],
+      "interior_turns": 7,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "3709149246100740683522106830728991232635186061989125218601267/1973446698177148291860235608896497317411261775872000000000000",
+      "decimal": 1.8795284663765393,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/32",
+          "3/32"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "15/32",
+          "3/32"
+        ],
+        [
+          "25/16",
+          "-1"
+        ],
+        [
+          "57/16",
+          "1"
+        ]
+      ],
+      "interior_turns": 7,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "4505367882341072278370832081675624181744108202620877/2396121637278486175570702240550678953984000000000000",
+      "decimal": 1.880275113018998,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "15/32",
+          "3/32"
+        ],
+        [
+          "25/16",
+          "-1"
+        ],
+        [
+          "57/16",
+          "1"
+        ]
+      ],
+      "interior_turns": 6,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "638159664651144532666572250137/339236612215930880000000000000",
+      "decimal": 1.8811638887754933,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/16",
+          "1/16"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "21/16",
+          "1"
+        ],
+        [
+          "53/16",
+          "-1"
+        ]
+      ],
+      "interior_turns": 4,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "525687582053187457142231360875129303271/279395403748663151469527040000000000000",
+      "decimal": 1.8815183607174955,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/32",
+          "3/32"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "21/16",
+          "1"
+        ],
+        [
+          "53/16",
+          "-1"
+        ]
+      ],
+      "interior_turns": 4,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "638533204389385062455343004697/339236612215930880000000000000",
+      "decimal": 1.8822650073599543,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "21/16",
+          "1"
+        ],
+        [
+          "53/16",
+          "-1"
+        ]
+      ],
+      "interior_turns": 3,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "30351214073745780263190528335161229325919/16069380599221979220751155200000000000000",
+      "decimal": 1.888760670415341,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/16",
+          "1/16"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "31/20",
+          "-1"
+        ],
+        [
+          "71/20",
+          "1"
+        ]
+      ],
+      "interior_turns": 5,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "25001962882483187874249078055098430339891159458977/13234748016091991588228692970412441600000000000000",
+      "decimal": 1.8891151423573431,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/32",
+          "3/32"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "31/20",
+          "-1"
+        ],
+        [
+          "71/20",
+          "1"
+        ]
+      ],
+      "interior_turns": 5,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "30368908367364359620571713151638482548319/16069380599221979220751155200000000000000",
+      "decimal": 1.889861788999802,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "31/20",
+          "-1"
+        ],
+        [
+          "71/20",
+          "1"
+        ]
+      ],
+      "interior_turns": 4,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "178814411121498799686715363121784882974999/92805157806674534931009372160000000000000",
+      "decimal": 1.9267723405415995,
+      "route": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/16",
+          "1/16"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "11/8",
+          "1"
+        ],
+        [
+          "27/8",
+          "-1"
+        ]
+      ],
+      "interior_turns": 6,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "147298711322856358705934533640524513537082914890217/76434363513952586925526197487565537280000000000000",
+      "decimal": 1.9271268124836018,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/32",
+          "3/32"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "11/8",
+          "1"
+        ],
+        [
+          "27/8",
+          "-1"
+        ]
+      ],
+      "interior_turns": 6,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    {
+      "payoff": "178916600605493559073793968742793193328919/92805157806674534931009372160000000000000",
+      "decimal": 1.9278734591260605,
+      "route": [
+        [
+          "0",
+          "1/8"
+        ],
+        [
+          "5/32",
+          "-1/32"
+        ],
+        [
+          "5/16",
+          "1/8"
+        ],
+        [
+          "3/8",
+          "1/16"
+        ],
+        [
+          "69/160",
+          "19/160"
+        ],
+        [
+          "37/80",
+          "7/80"
+        ],
+        [
+          "11/8",
+          "1"
+        ],
+        [
+          "27/8",
+          "-1"
+        ]
+      ],
+      "interior_turns": 5,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    }
+  ],
+  "best_attack": {
+    "payoff": "12554109563293958271067148713/8822380203868160000000000000",
+    "decimal": 1.4229844183987477,
+    "route": [
+      [
+        "0",
+        "127/128"
+      ],
+      [
+        "1/128",
+        "1"
+      ],
+      [
+        "257/128",
+        "-1"
+      ]
+    ],
+    "interior_turns": 0,
+    "center_waits": 0,
+    "origin": "Endpoint completion of a globally discovered route prefix"
+  },
+  "all_prefixes": true,
+  "center_wait_edges": true,
+  "seconds": 16.242329359054565
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Direct chronological segment checks of the fixed-tail start-gap theorem, ordered-law checks, legality boundaries, and the essential exact initial-atom trace.",
+  "fixtures": [
+    {
+      "name": "distinct_same_limit",
+      "gaps": 13
+    },
+    {
+      "name": "asymmetric_stationary",
+      "gaps": 25
+    },
+    {
+      "name": "rational_speed_outgoing",
+      "gaps": 15
+    },
+    {
+      "name": "inward_outward",
+      "gaps": 15
+    },
+    {
+      "name": "moving_coalescence",
+      "gaps": 14
+    },
+    {
+      "name": "initial_tie_then_split",
+      "gaps": 14
+    }
+  ],
+  "pointwise_capture_inequalities": 1428,
+  "ordered_capture_inequalities": 192,
+  "legal_boundary_routes": 48,
+  "atom_trace": {
+    "at": "0",
+    "right": "1/2"
+  },
+  "arithmetic": {
+    "radius": "1/240",
+    "comparisons": 185830,
+    "maxDegree": 18
+  }
+}

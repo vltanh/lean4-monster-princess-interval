@@ -1,0 +1,72 @@
+{
+  "scope": "Exact BigInt rational regression of the randomized interpolation construction; no optimal LP or game value evaluated.",
+  "checks": {
+    "map": 6060,
+    "physical": 8460,
+    "buffer": 12,
+    "field": 2472,
+    "affine": 1800
+  },
+  "summaries": [
+    {
+      "n": 1,
+      "epsilon": "1/2",
+      "expected_buffer": "3/4"
+    },
+    {
+      "n": 1,
+      "epsilon": "1/4",
+      "expected_buffer": "5/8"
+    },
+    {
+      "n": 1,
+      "epsilon": "1/8",
+      "expected_buffer": "9/16"
+    },
+    {
+      "n": 2,
+      "epsilon": "1/2",
+      "expected_buffer": "3/8"
+    },
+    {
+      "n": 2,
+      "epsilon": "1/4",
+      "expected_buffer": "5/16"
+    },
+    {
+      "n": 2,
+      "epsilon": "1/8",
+      "expected_buffer": "9/32"
+    },
+    {
+      "n": 3,
+      "epsilon": "1/2",
+      "expected_buffer": "1/4"
+    },
+    {
+      "n": 3,
+      "epsilon": "1/4",
+      "expected_buffer": "5/24"
+    },
+    {
+      "n": 3,
+      "epsilon": "1/8",
+      "expected_buffer": "3/16"
+    },
+    {
+      "n": 4,
+      "epsilon": "1/2",
+      "expected_buffer": "3/16"
+    },
+    {
+      "n": 4,
+      "epsilon": "1/4",
+      "expected_buffer": "5/32"
+    },
+    {
+      "n": 4,
+      "epsilon": "1/8",
+      "expected_buffer": "9/64"
+    }
+  ]
+}

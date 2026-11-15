@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "Independent direct chronological integration of reconstructed exact-envelope minimizers; sampled raw/pruned regression. Finite-depth completeness is supplied by the normal-form proof and complete exact regeneration.",
+  "certificate_sha256": "3461fd3d86330a149b0b2d3f3c99c99975afdc1d62265d25f44e50648de5d87b",
+  "certificate_sha256_scope": "decompressed JSON bytes",
+  "depth": 5,
+  "final_pieces": 48,
+  "physical_route_checks": 297,
+  "affine_field_interval_checks": 3886,
+  "raw_pruned_sample_checks": 120,
+  "maximum_checked_legs": 4,
+  "initial_center_example": {
+    "state": [
+      "0",
+      "1/2",
+      "1/2"
+    ],
+    "value": "79/64",
+    "physical_path": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "2",
+        "-1"
+      ],
+      [
+        "4",
+        "1"
+      ]
+    ]
+  }
+}

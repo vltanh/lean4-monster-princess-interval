@@ -1,0 +1,37 @@
+name: Exact switch-time geometry audit
+
+on:
+  push:
+    branches: [research/interval-progress-2026-11-10]
+    paths:
+      - .github/workflows/switch-geometry.yml
+      - packages/interval_switch_geometry/**
+      - research/13-equilibrium-geometry/SWITCH_TIME_DISTRIBUTIONS.md
+      - research/13-equilibrium-geometry/ONE_TURN_SUBGAME_BRACKET.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-switch-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Replay exact physical decomposition, ablation and timing contacts
+        run: |
+          mkdir -p reports
+          python3 packages/interval_switch_geometry/audit_switch_geometry.py --output reports/switch-geometry.json
+          python3 packages/interval_switch_geometry/verify_one_turn_subgame.py > reports/one-turn-subgame.json
+          git rev-parse HEAD > reports/commit.txt
+          sha256sum packages/interval_switch_geometry/audit_switch_geometry.py packages/interval_switch_geometry/verify_one_turn_subgame.py research/13-equilibrium-geometry/SWITCH_TIME_DISTRIBUTIONS.md research/13-equilibrium-geometry/ONE_TURN_SUBGAME_BRACKET.md > reports/sources.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: exact-switch-geometry
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90

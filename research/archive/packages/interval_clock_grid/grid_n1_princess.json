@@ -1,0 +1,146 @@
+{
+  "format": "clock-grid-princess-p1-v1",
+  "scope": "Legal symmetric ordered Princess law, stopped at its first endpoint and forced outward after time 2. The guarantee follows from the verified finite dual and randomized common-coordinate interpolation.",
+  "n": 1,
+  "interpolation_epsilon": "1/2",
+  "cdf_denominator": "8",
+  "radial_nodal": [
+    [
+      0,
+      0,
+      "0"
+    ],
+    [
+      2,
+      0,
+      "0"
+    ],
+    [
+      4,
+      0,
+      "0"
+    ],
+    [
+      6,
+      0,
+      "0"
+    ],
+    [
+      8,
+      0,
+      "0"
+    ],
+    [
+      10,
+      0,
+      "0"
+    ],
+    [
+      12,
+      0,
+      "0"
+    ],
+    [
+      14,
+      0,
+      "0"
+    ],
+    [
+      16,
+      0,
+      "0"
+    ],
+    [
+      1,
+      1,
+      "7"
+    ],
+    [
+      3,
+      1,
+      "0"
+    ],
+    [
+      5,
+      1,
+      "8"
+    ],
+    [
+      7,
+      1,
+      "7"
+    ],
+    [
+      9,
+      1,
+      "8"
+    ],
+    [
+      11,
+      1,
+      "8"
+    ],
+    [
+      13,
+      1,
+      "8"
+    ],
+    [
+      15,
+      1,
+      "0"
+    ],
+    [
+      0,
+      2,
+      "8"
+    ],
+    [
+      2,
+      2,
+      "8"
+    ],
+    [
+      4,
+      2,
+      "8"
+    ],
+    [
+      6,
+      2,
+      "8"
+    ],
+    [
+      8,
+      2,
+      "8"
+    ],
+    [
+      10,
+      2,
+      "8"
+    ],
+    [
+      12,
+      2,
+      "8"
+    ],
+    [
+      14,
+      2,
+      "8"
+    ],
+    [
+      16,
+      2,
+      "0"
+    ]
+  ],
+  "cell_orientation": "k modulo 2n is positive for 0 <= k < n, negative otherwise",
+  "quantile_rule": "Choose u uniformly in [0,1), use inf {r in [0,1] : radialCDF(t,r) > u}, and choose an independent fair sign.",
+  "outward_time": 2,
+  "absorption_time": 3,
+  "finite_value": "47/32",
+  "exact_transfer_loss": "3/4",
+  "guaranteed_security": "23/32"
+}

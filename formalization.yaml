@@ -19,6 +19,11 @@ project:
     paper cites, are proved too, so the formalization is unconditional. Where the paper's
     arguments are informal (Theorems 10, 14, 16) they are completed; two statements and two
     formulas of the paper are corrected.
+
+
+    The repository also contains, in research/, the maintainer's computer-assisted attempt at the
+    exact value (1.4225745 ≤ V ≤ 1.4240199). It is not formalized and is not part of this
+    submission.
   authors:
     - "The-Anh Vu-Le"
   license: "Apache-2.0"

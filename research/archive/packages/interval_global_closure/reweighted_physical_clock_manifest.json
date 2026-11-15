@@ -1,0 +1,37 @@
+{
+  "scope": "Exact physical clock/front-localization certificate and explicit continuum zero-deficiency completion; not the full-game solution.",
+  "certificate_sha256": "37175c842b97bb5f3774815be076450f5852ddb51d530e4956d7b9a71b7fc652",
+  "source_law_sha256": "77c81c7a0c96ea961202806c166c90cfa637a947795df1069a13324d00599051",
+  "exact_upper": "1140799301969009059644426513/800000000000000000000000000",
+  "endpoint_baseline": "356499183697229725947074931/250000000000000000000000000",
+  "matching_deficiency": "9570689369683068933669/4000000000000000000000000000",
+  "continuum_completion": {
+    "cutoff_b": "9570689369683068933669/2509099800140000000000000000",
+    "pair_density_q_over_2": "125454990007/400000000000",
+    "total_pair_weight": "9570689369683068933669/8000000000000000000000000000",
+    "remaining_sweep_pair_weight": "5018190029590630316931066331/8000000000000000000000000000",
+    "zero_deficiency_exact_value": "1140799301969009059644426513/800000000000000000000000000"
+  },
+  "standalone_replay": "PASS; independently replayed by a second agent.",
+  "files": {
+    "packages/interval_global_closure/replay_continuum_clock_certificate.py": {
+      "sha256": "6e97516067816ad67d25a35bc753b92f6a79edf2019a9d5dc4727138c9977008",
+      "bytes": 8937
+    },
+    "packages/interval_global_closure/reweighted_physical_clock_certificate.json.gz": {
+      "sha256": "37175c842b97bb5f3774815be076450f5852ddb51d530e4956d7b9a71b7fc652",
+      "bytes": 491006
+    },
+    "research/12-global-closure/ENDPOINT_FRONT_DEFICIENCY_COMPLETION.md": {
+      "sha256": "ceb02111aa50800ce2f8774aac31cea56d413d0f7c47aee6903a4731a3c0a987",
+      "bytes": 11958
+    },
+    "research/12-global-closure/FINITE_BANK_CLOCK_HOMOGENIZATION.md": {
+      "sha256": "3e08f5c3b9fa00f1fd589e102799f13e0f428b906464da00937d98f7fd6c5ba7",
+      "bytes": 15674
+    }
+  },
+  "committed_source_law": "packages/interval_global_closure/full_order_upper_exact.json",
+  "committed_source_law_sha256": "03266a4b3e742332315fb9c8bb9bb08bc0bcfc3e71d4ce5a3300fa79846653f5",
+  "source_law_equivalence": "Exact reflected physical routes and pair probabilities checked after removing collinear vertices."
+}

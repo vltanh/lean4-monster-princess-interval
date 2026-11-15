@@ -1,0 +1,3 @@
+PASS: 40 cached / naive / unpruned exact searches agree.
+PASS: 40 CDF survival identities agree with direct capture-time integration.
+PASS: exhaustive finite-grid saddle certificate: 227/196 hiders 259 monsters 720

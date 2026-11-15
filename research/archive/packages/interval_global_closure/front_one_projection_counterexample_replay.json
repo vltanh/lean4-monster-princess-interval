@@ -1,0 +1,198 @@
+{
+  "format": "front-one-projection-counterexample-v1",
+  "source_sha256": "6ef6c14528283216ba47b376568364fdf540098be3ef67b653533245e61d4370",
+  "radial_weights": [
+    "1/10",
+    "7/10",
+    "1/5"
+  ],
+  "source_radii": [
+    [
+      [
+        "0",
+        "1/20"
+      ],
+      [
+        "21/20",
+        "1/20"
+      ],
+      [
+        "2",
+        "1"
+      ]
+    ],
+    [
+      [
+        "0",
+        "4/5"
+      ],
+      [
+        "13/20",
+        "3/20"
+      ],
+      [
+        "17/20",
+        "3/20"
+      ],
+      [
+        "17/10",
+        "1"
+      ]
+    ],
+    [
+      [
+        "0",
+        "19/20"
+      ],
+      [
+        "1/20",
+        "19/20"
+      ],
+      [
+        "1/10",
+        "1"
+      ]
+    ]
+  ],
+  "front_hit_times": [
+    "19/20",
+    "17/20",
+    "1/20"
+  ],
+  "projected_radii": [
+    [
+      [
+        "0",
+        "1/20"
+      ],
+      [
+        "19/20",
+        "1/20"
+      ],
+      [
+        "19/10",
+        "1"
+      ]
+    ],
+    [
+      [
+        "0",
+        "4/5"
+      ],
+      [
+        "13/20",
+        "3/20"
+      ],
+      [
+        "17/20",
+        "3/20"
+      ],
+      [
+        "17/10",
+        "1"
+      ]
+    ],
+    [
+      [
+        "0",
+        "19/20"
+      ],
+      [
+        "1/20",
+        "19/20"
+      ],
+      [
+        "1/10",
+        "1"
+      ]
+    ]
+  ],
+  "ordered_law_knot_checks": 16,
+  "attaining_monster": [
+    [
+      "0",
+      "4/5"
+    ],
+    [
+      "1/5",
+      "1"
+    ],
+    [
+      "11/5",
+      "-1"
+    ]
+  ],
+  "cases": {
+    "source": {
+      "capture_orders": 720,
+      "exact_security": "47/40",
+      "best_initial_target_order": [
+        2,
+        4,
+        0,
+        1,
+        3,
+        5
+      ],
+      "planned_hits_for_best_order": [
+        "11/10",
+        "11/5",
+        "0",
+        "11/5",
+        "1/5",
+        "11/5"
+      ],
+      "minimum_by_positive_initial_target": [
+        "43/32",
+        "47/40",
+        "501/400"
+      ],
+      "independent_displayed_route_hits": [
+        "11/10",
+        "11/5",
+        "0",
+        "11/5",
+        "1/5",
+        "11/5"
+      ],
+      "independent_displayed_route_cost": "47/40"
+    },
+    "projected": {
+      "capture_orders": 720,
+      "exact_security": "469/400",
+      "best_initial_target_order": [
+        2,
+        4,
+        0,
+        1,
+        3,
+        5
+      ],
+      "planned_hits_for_best_order": [
+        "21/20",
+        "11/5",
+        "0",
+        "11/5",
+        "1/5",
+        "11/5"
+      ],
+      "minimum_by_positive_initial_target": [
+        "43/32",
+        "469/400",
+        "13/10"
+      ],
+      "independent_displayed_route_hits": [
+        "21/20",
+        "11/5",
+        "0",
+        "11/5",
+        "1/5",
+        "11/5"
+      ],
+      "independent_displayed_route_cost": "469/400"
+    }
+  },
+  "scope": "Exact six-target fixed-law security; not a game-value bound or a high-security counterexample.",
+  "strict_security_loss": "1/400",
+  "status": "PASS"
+}

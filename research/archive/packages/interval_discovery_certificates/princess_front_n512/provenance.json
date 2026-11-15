@@ -1,0 +1,288 @@
+{
+  "format": "retained-front-refinement-provenance-v1",
+  "scope": "Selected successful GitHub job/artifact metadata independently retrieved during retention; exact historical artifact contents and verifier source; current reviewed extraction/source/proof commitments. This metadata does not replace the completed exhaustive pricing reports.",
+  "source_commitment_scope": "The historical BigInt source is preserved separately and hash-bound to its completed report. Repository source/proof commitments are the reviewed retention snapshot, not a claim that every proof file was hashed by the earlier CI.",
+  "repository_sources": {
+    "packages/interval_clock_grid/normalized_native/price_normalized.cpp": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+    "packages/interval_center_pricing/price_center.cpp": "1835b5a33da7fb256bfe80317df8edc01e7ed166ee3d490c037b5d645da3c4fa",
+    "packages/interval_center_pricing/verify_strategy.cjs": "b4615cb26a0fc1201a1b909cd05203a6db7b335f571b692be60d0467b1d7ab46",
+    "packages/interval_clock_grid/extract_normalized_princess.cjs": "a8009cad475d59da202060fa3f84b43f793a540dfdf32541bd1db4d539e2811e",
+    "packages/interval_clock_grid/extract_princess.cjs": "c34c6113eb928aff5767968204dd33f12d3034dbb2031130543b6493acd40ee2",
+    "packages/interval_clock_grid/record_pricing.cjs": "4f555f56b8887e58912fd3b15abbdbe65c5f0fc1c11a085a9b8547799a4ce44b",
+    "packages/interval_clock_grid/exact_certificate.cjs": "571838d0f524fee041ba11b84d963532221ecd822b43eeb34c25dac03e6d774e"
+  },
+  "proof_sources": {
+    "research/12-global-closure/EFFECTIVE_FINITE_UPPER_REDUCTION.md": "dcdf3c34d7fb9a2a044f3c8f4a8199c2af4530a72b91311d006319221261040f",
+    "research/12-global-closure/CONSTRUCTIVE_PRINCESS_GRID_DUAL.md": "7f543d172a7cb31a979e5d771570c7995035dfe1316267112d53fba0d9d6b19c",
+    "research/12-global-closure/NORMALIZED_GRID_BANK_PRICING.md": "3d075abfa5814ba2b396e3726d2ab086f46035577c44794c0785a29125b9718a",
+    "research/12-global-closure/LEFT_FLOOR_CLOCK_ATOMIZATION.md": "48e27ea0f74df83a2b32cc1f9f5b1048025fb887af25690f895469e2116b4ae1",
+    "research/12-global-closure/GLOBAL_INCOMING_FRONT_COMPLETION.md": "04f9bf3182346d50251e71eb9b644f94ae16fe56fe91a730ef3bbdd9f346890a",
+    "research/12-global-closure/CENTER_HEAVIER_FIRST_BALANCE.md": "5dd615446fc9ed1937e8fe2af3e864fccafb0a7e809ec4cfcc45070726bafb09",
+    "research/12-global-closure/DISCRETE_CENTER_BALANCE_PRICING.md": "0a1e0107f3a45e7e4a8bad3e27ad89b69189948258c86311414c04f963fa8681",
+    "research/12-global-closure/FULL_WIDTH_INTERPOLATION_REFINEMENT.md": "37671f60855ccf7d9385020bfacb6a8986f47579b739b29621cd471d096d4514",
+    "packages/interval_clock_grid/PURSUIT_PRUNING.md": "f39ab3c4208d917ddff8c17a6aefc7af5d213e78e99be637294c1c8649c10263"
+  },
+  "historical_verifier": {
+    "path": "provenance/verify_bigint_4503f3e.cjs",
+    "sha256": "3ca39089073633d89e12a7ebec1b46257ee037d3ff4ed71d58614f5f6aa73092",
+    "bytes": 11414,
+    "repository_path": "packages/interval_center_pricing/verify_bigint.cjs",
+    "commit": "4503f3ea3eb360978b0d2632461ca748cd714899"
+  },
+  "actions": {
+    "format": "front-refinement-actions-provenance-v1",
+    "repository": "vltanh/lean4-monster-princess",
+    "scope": "Selected completed discovery and independent replay jobs and their artifact metadata, retrieved from GitHub. The overall discovery workflow also contained unrelated jobs; this packet makes no assertion about their completion.",
+    "discovery": {
+      "job": {
+        "id": 132294619792,
+        "name": "front-refinement",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43545082756,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run python3 -m pip install numpy==2.3.5 scipy==1.17.0",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Exactly refine the globally sufficient front geometry and price every response",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Gate independent certification on a stronger native result",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          }
+        ]
+      },
+      "artifact": {
+        "id": 14093139934,
+        "name": "continuous-front-refinement",
+        "size_in_bytes": 733542,
+        "url": "https://api.github.com/repos/vltanh/lean4-monster-princess/actions/artifacts/14093139934",
+        "archive_download_url": "https://api.github.com/repos/vltanh/lean4-monster-princess/actions/artifacts/14093139934/zip",
+        "expired": false,
+        "created_at": "2026-11-14T02:28:51Z",
+        "expires_at": "2027-02-12T02:13:34Z",
+        "updated_at": "2026-11-14T02:28:51Z",
+        "digest": "sha256:d0a518a73fc8d3bc23aee8519ff9395a3faa2db8d6dbd346f52bb44e2b7205d9",
+        "workflow_run": {
+          "id": 43545082756,
+          "repository_id": 1453480094,
+          "head_repository_id": 1453480094,
+          "head_branch": "research/interval-progress-2026-11-10",
+          "head_sha": "43ecfa2140c22ce31b0d2469a8ae2862320bc7fe"
+        }
+      }
+    },
+    "independent": {
+      "job": {
+        "id": 132300097087,
+        "name": "independent-fine-lower",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43546803161,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Bind the completed native discovery and its original verifier",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Independently check every normalized-bank response with BigInt costs",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Extract an explicit continuous Princess guarantee from the replay",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve exact sources and runtime metadata",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      },
+      "artifact": {
+        "id": 14095016913,
+        "name": "independently-certified-front-lower",
+        "size_in_bytes": 1101814,
+        "url": "https://api.github.com/repos/vltanh/lean4-monster-princess/actions/artifacts/14095016913",
+        "archive_download_url": "https://api.github.com/repos/vltanh/lean4-monster-princess/actions/artifacts/14095016913/zip",
+        "expired": false,
+        "created_at": "2026-11-14T02:45:37Z",
+        "expires_at": "2027-02-12T02:31:43Z",
+        "updated_at": "2026-11-14T02:45:37Z",
+        "digest": "sha256:ff3c36fe107a6c739b63ab77bacd41ae1816018c76f2182cca77c972aad240cc",
+        "workflow_run": {
+          "id": 43546803161,
+          "repository_id": 1453480094,
+          "head_repository_id": 1453480094,
+          "head_branch": "research/interval-progress-2026-11-10",
+          "head_sha": "4503f3ea3eb360978b0d2632461ca748cd714899"
+        }
+      }
+    }
+  },
+  "archive": {
+    "format": "front-refinement-artifact-members-v1",
+    "artifact_id": 14095016913,
+    "archive_sha256": "ff3c36fe107a6c739b63ab77bacd41ae1816018c76f2182cca77c972aad240cc",
+    "archive_bytes": 1101814,
+    "members": [
+      {
+        "artifact_path": "commit.txt",
+        "bytes": 41,
+        "sha256": "e0e4863ded9d5393633340fba831bd98836fdae60d332fa8915e7a5c04ec5356"
+      },
+      {
+        "artifact_path": "extraction.replay.json",
+        "bytes": 569,
+        "sha256": "2179df9f57d1e2fc1a4e903ee3535e96ac37c47707665f91b57ee23265f38856"
+      },
+      {
+        "artifact_path": "independent.replay.json",
+        "bytes": 1421,
+        "sha256": "98ad748bd66963ee37ed0d9d7584e29e248c5d7f9db7a960452db6a89867baa3"
+      },
+      {
+        "artifact_path": "node-version.txt",
+        "bytes": 9,
+        "sha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906"
+      },
+      {
+        "artifact_path": "princess.json",
+        "bytes": 498476,
+        "sha256": "b7ac0c124dfcf6d3d00fbfaa6fbf2872e04878572d0f5221e7f7de0b05a257d7"
+      },
+      {
+        "artifact_path": "source/center.replay.json",
+        "bytes": 1546,
+        "sha256": "8f1de0a831256951e18b9e5f6a475fe3e5d8409cfaaddd6a88846eb05699044b"
+      },
+      {
+        "artifact_path": "source/field.json",
+        "bytes": 497733,
+        "sha256": "a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10"
+      },
+      {
+        "artifact_path": "source/manifest.json",
+        "bytes": 839,
+        "sha256": "0517a8d29ab88e7301a76dd980a663e6158d5277d4901afe7d8f46c50a05767c"
+      },
+      {
+        "artifact_path": "source/original.replay.json",
+        "bytes": 794,
+        "sha256": "008bbb4f42c4f92b8c9f31cdb957a070f79abffecf012e641448c01f114c187d"
+      },
+      {
+        "artifact_path": "source/prepared.field.json",
+        "bytes": 497415,
+        "sha256": "7bc3b75518a17b3838fdbbe03a97aaaf1fba14dc34190512550bf1a99937c700"
+      },
+      {
+        "artifact_path": "sources.sha256",
+        "bytes": 244,
+        "sha256": "e9d3c5621bcc8a98283ae546a1af2bbc0f8584ba1f4e582fe0de25efa6c0be03"
+      }
+    ]
+  },
+  "artifact_texts": {
+    "commit.txt": "4503f3ea3eb360978b0d2632461ca748cd714899\n",
+    "node-version.txt": "v22.23.4\n",
+    "sources.sha256": "3ca39089073633d89e12a7ebec1b46257ee037d3ff4ed71d58614f5f6aa73092  packages/interval_center_pricing/verify_bigint.cjs\na8009cad475d59da202060fa3f84b43f793a540dfdf32541bd1db4d539e2811e  packages/interval_clock_grid/extract_normalized_princess.cjs\n",
+    "source/manifest.json": "{\n  \"status\": \"COMPLETE_EXACT_CENTER_PRICING\",\n  \"source_n\": 256,\n  \"target_n\": 512,\n  \"global_value_lower\": \"36409808231/25600000000\",\n  \"source_seed_sha256\": \"a8e1d84d67e66e08d6d1eeb02f18c6e5121108cb4368ededd9db2e792a97189e\",\n  \"exact_fullwidth_refinement\": true,\n  \"center_policy\": 4,\n  \"independent_original_replay\": true,\n  \"independent_bigint_replay\": false,\n  \"same_cdf_security_claimed\": false,\n  \"elapsed_seconds\": 859.1415890999999,\n  \"files_sha256\": {\n    \"original.replay.json\": \"008bbb4f42c4f92b8c9f31cdb957a070f79abffecf012e641448c01f114c187d\",\n    \"field.json\": \"a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10\",\n    \"center.replay.json\": \"8f1de0a831256951e18b9e5f6a475fe3e5d8409cfaaddd6a88846eb05699044b\",\n    \"prepared.field.json\": \"7bc3b75518a17b3838fdbbe03a97aaaf1fba14dc34190512550bf1a99937c700\"\n  }\n}\n"
+  },
+  "prepared_field_reconstruction": {
+    "drop_keys": [
+      "minimum_units",
+      "objective_denominator",
+      "normalized_bank_dual_value",
+      "global_lower",
+      "global_lower_decimal",
+      "native_source_sha256",
+      "center_policy"
+    ],
+    "serialization": "JSON.stringify without indentation, followed by one LF"
+  }
+}

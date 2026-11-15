@@ -1,0 +1,716 @@
+{
+  "scope": "fixed-mesh LP support; not a continuous upper certificate",
+  "constant_early_density": 0.28804814664,
+  "exact_cone_anchor_scaled_1e12": 144024073320,
+  "families": {
+    "M1": 0.8219115638579617,
+    "M2": 0.16452289871846168,
+    "M2_negative_first_turn": 0.0,
+    "known_negative_first_turn": 1.194975361289329e-06,
+    "M3": 0.013541940153948412,
+    "external_separator": 2.240229426377065e-05
+  },
+  "structural": {
+    "transport": 1.042362896162216,
+    "late_negative_v": 8.638359132028963e-06,
+    "late_positive_v": 4.767248424702748e-05,
+    "terminal_center_barrier": 0.0,
+    "optional_constant_early_cone": 0.0039727815447347485
+  },
+  "genuine_M3_mass": 0.0035788162707151793,
+  "genuine_M3": [
+    {
+      "multiplier": 0.0020194378369798975,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.1875,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 0.0002460529261582521,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 0.00017744752003831952,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 0.00012140007006526852,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 0.00011578902218874067,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 9.762341918377018e-05,
+      "kind": "M3",
+      "start": 0.125,
+      "first_turn": 0.4375,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 9.335689866320215e-05,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.4375,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 8.767870006326208e-05,
+      "kind": "M3",
+      "start": 0.125,
+      "first_turn": 0.25,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 8.366076831903109e-05,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.3125,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 7.883928275443579e-05,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.25,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 7.708557815581441e-05,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 6.401700909522359e-05,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.45,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 4.619921337333012e-05,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.575,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 3.039778059510867e-05,
+      "kind": "M3",
+      "start": 0.125,
+      "first_turn": 0.3125,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 3.033571150945084e-05,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.375,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 2.6917864331783022e-05,
+      "kind": "M3",
+      "start": 0.0,
+      "first_turn": 0.8125,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 2.6760788264866257e-05,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.984375
+    },
+    {
+      "multiplier": 2.637831161347638e-05,
+      "kind": "M3",
+      "start": 0.1875,
+      "first_turn": 0.25,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 2.5971934565577005e-05,
+      "kind": "M3",
+      "start": 0.125,
+      "first_turn": 0.1875,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 1.6481433386711454e-05,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.1875,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 1.3556921371226538e-05,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.9921875
+    },
+    {
+      "multiplier": 1.308222248516253e-05,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.5625,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 7.283323240551189e-06,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.99609375
+    },
+    {
+      "multiplier": 7.166655191733444e-06,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 0.99609375
+    },
+    {
+      "multiplier": 7.040387589705541e-06,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.99609375
+    },
+    {
+      "multiplier": 6.499040627347928e-06,
+      "kind": "M3",
+      "start": 0.125,
+      "first_turn": 0.45,
+      "second_turn": 1.0
+    },
+    {
+      "multiplier": 3.7341638817575794e-06,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.998046875
+    },
+    {
+      "multiplier": 3.7269345196963655e-06,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.998046875
+    },
+    {
+      "multiplier": 3.6767599872485317e-06,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 0.998046875
+    },
+    {
+      "multiplier": 3.6145749231590417e-06,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.998046875
+    },
+    {
+      "multiplier": 1.952570081273354e-06,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.9990234375
+    },
+    {
+      "multiplier": 1.9481086794735756e-06,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.9990234375
+    },
+    {
+      "multiplier": 1.924730688263029e-06,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 0.9990234375
+    },
+    {
+      "multiplier": 1.8945182218123331e-06,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.9990234375
+    },
+    {
+      "multiplier": 1.0230457307155614e-06,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.99951171875
+    },
+    {
+      "multiplier": 1.0203519647757105e-06,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.99951171875
+    },
+    {
+      "multiplier": 9.862623981127246e-07,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.99951171875
+    },
+    {
+      "multiplier": 9.26827460691565e-07,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 0.99951171875
+    },
+    {
+      "multiplier": 5.230995473628067e-07,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.999755859375
+    },
+    {
+      "multiplier": 5.216380252138512e-07,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.999755859375
+    },
+    {
+      "multiplier": 5.164911376938346e-07,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 0.999755859375
+    },
+    {
+      "multiplier": 4.7362846911875634e-07,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 0.999755859375
+    },
+    {
+      "multiplier": 3.3261929159035416e-07,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.999755859375
+    },
+    {
+      "multiplier": 2.6524430161212937e-07,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.9998779296875
+    },
+    {
+      "multiplier": 2.644769566360299e-07,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.9998779296875
+    },
+    {
+      "multiplier": 2.619773998647292e-07,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 0.9998779296875
+    },
+    {
+      "multiplier": 2.5842045607257883e-07,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.9998779296875
+    },
+    {
+      "multiplier": 2.4007411737986364e-07,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 0.9998779296875
+    },
+    {
+      "multiplier": 1.6412062145553235e-07,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.4375,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 1.3335366243460901e-07,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.575,
+      "second_turn": 0.9998779296875
+    },
+    {
+      "multiplier": 1.328129018024527e-07,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.99993896484375
+    },
+    {
+      "multiplier": 1.3242733974041234e-07,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.99993896484375
+    },
+    {
+      "multiplier": 1.3118137370200295e-07,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 0.99993896484375
+    },
+    {
+      "multiplier": 1.2940486345865295e-07,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.99993896484375
+    },
+    {
+      "multiplier": 1.2020536997307825e-07,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 0.99993896484375
+    },
+    {
+      "multiplier": 8.267331401808819e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.4375,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 6.86610954679843e-08,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 6.844599085553011e-08,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 6.802696065386881e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.375,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 6.786810473990302e-08,
+      "kind": "M3",
+      "start": 0.0,
+      "first_turn": 0.8125,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 6.758047687794079e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.3125,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 6.700308761451698e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 6.676960977708664e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.575,
+      "second_turn": 0.99993896484375
+    },
+    {
+      "multiplier": 6.209207741640821e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 4.133643006703809e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.4375,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 3.459873679716938e-08,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 3.448852908066476e-08,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 3.448142192903298e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.575,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 3.426648865082725e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.375,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 3.42049501774366e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 3.4040882065002184e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.3125,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 3.3817717380190326e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.25,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 3.377520561735526e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 3.2234834529139514e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.4375,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 3.1282676191616904e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 2.6879300278354692e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.5625,
+      "second_turn": 0.99993896484375
+    },
+    {
+      "multiplier": 1.737115315055636e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.575,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 1.7299269134570157e-08,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 1.724416624248157e-08,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 1.7133150632297684e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.375,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 1.7102374761341526e-08,
+      "kind": "M3",
+      "start": 0.0,
+      "first_turn": 0.8125,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 1.7020348182850112e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.3125,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 1.6908766668634505e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.25,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 1.688750139063828e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 1.5641250531430166e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 1.387744531053646e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.5625,
+      "second_turn": 0.999969482421875
+    },
+    {
+      "multiplier": 1.3579127531262975e-08,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.75,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 1.3522132028113127e-08,
+      "kind": "M3",
+      "start": -0.0625,
+      "first_turn": 0.6875,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 1.346853410393953e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.8125,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 1.3352554479748351e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.375,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 1.3346376501250353e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.875,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 1.3259311183185582e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.3125,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 1.3167215948838824e-08,
+      "kind": "M3",
+      "start": 0.0625,
+      "first_turn": 0.25,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 1.2233042784643539e-08,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.625,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 8.685528305029836e-09,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.575,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 6.990798239916276e-09,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.5625,
+      "second_turn": 0.9999847412109375
+    },
+    {
+      "multiplier": 6.785625251628822e-09,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.575,
+      "second_turn": 0.9999961853027344
+    },
+    {
+      "multiplier": 3.4953798559188275e-09,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.5625,
+      "second_turn": 0.9999923706054688
+    },
+    {
+      "multiplier": 2.7275894359438116e-09,
+      "kind": "M3",
+      "start": -0.125,
+      "first_turn": 0.5625,
+      "second_turn": 0.9999961853027344
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "Exact targeted physical regressions; the universal security and regularity statements are proved in GLOBAL_INCOMING_FRONT_COMPLETION.md.",
+  "radial_paths": 10,
+  "Monster_paths": 32,
+  "early_center_signed_pair_checks": 580,
+  "late_center_endpoint_floor_checks": 380,
+  "ordered_completion_checks": 99,
+  "atomic_departure_distribution_checks": 8160,
+  "double_trace_closure_checks": 4,
+  "lingering_front_raw_trace_counterexample": {
+    "C": "2",
+    "first_hit": "5/4",
+    "departure_W": "1/2",
+    "old_G_at_front_2_1": "1",
+    "new_G_at_9_4_1": "0"
+  },
+  "slow_approach_trace_counterexample": {
+    "C": "2",
+    "first_hit": "3/2",
+    "departure_W": "1",
+    "incoming_U_trace_at_W_1": "0",
+    "correct_left_W_representative": "1"
+  },
+  "script_sha256": "f1916b39ee5e1ee5803a0641a0c25ecb6f2b61ef2d8474313a5c9cf8a4fabc3c"
+}

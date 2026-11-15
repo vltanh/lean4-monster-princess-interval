@@ -1,0 +1,78 @@
+{
+  "scope": "Independent ordinary rational end-to-end selector-plane audit. Ordered labels are optimized by a separate prefix-max DP; physical first captures and signed-CDF integrals are independent of compiler scoring.",
+  "selector_games": [
+    {
+      "id": 0,
+      "value": "67/22",
+      "physical": "3518868546736226938149449023440511051/1155449624965959727980508680000000000",
+      "gap": "69605464087336389268778135359/105040874996905429816409880000000000",
+      "vertices": 7,
+      "unary_entries": 137
+    },
+    {
+      "id": 1,
+      "value": "157/44",
+      "physical": "60016135146686374683669/16819811208232488280000",
+      "gap": "853798140855121/1529073746202953480000",
+      "vertices": 13,
+      "unary_entries": 767
+    },
+    {
+      "id": 2,
+      "value": "871/176",
+      "physical": "348399923/70400000",
+      "gap": "7/6400000",
+      "vertices": 16,
+      "unary_entries": 2063
+    },
+    {
+      "id": 3,
+      "value": "113/44",
+      "physical": "113/44",
+      "gap": "0",
+      "vertices": 28,
+      "unary_entries": 235
+    },
+    {
+      "id": 4,
+      "value": "449/88",
+      "physical": "42224145374902291182622665845005402384684523587708433/8275556689370405244045342048092286420281250000000000",
+      "gap": "165842882572836326431025786356254176832935597/752323335397309567640485640735662401843750000000000",
+      "vertices": 18,
+      "unary_entries": 1271
+    },
+    {
+      "id": 5,
+      "value": "191/66",
+      "physical": "95053726298990932785359/32845798909478332800000",
+      "gap": "2280960000001331/2985981719043484800000",
+      "vertices": 8,
+      "unary_entries": 389
+    },
+    {
+      "id": 6,
+      "value": "327/88",
+      "physical": "97078103/26125000",
+      "gap": "1/1187500",
+      "vertices": 15,
+      "unary_entries": 615
+    },
+    {
+      "id": 7,
+      "value": "499/88",
+      "physical": "499/88",
+      "gap": "0",
+      "vertices": 49,
+      "unary_entries": 1033
+    }
+  ],
+  "source_point_checks": 89,
+  "physical_ray_pieces": 133,
+  "tight_selector_first_capture_identities": 40,
+  "cancellation": {
+    "value": "0",
+    "physical": "0",
+    "error_bound": "0",
+    "retained_point_queries": 4
+  }
+}

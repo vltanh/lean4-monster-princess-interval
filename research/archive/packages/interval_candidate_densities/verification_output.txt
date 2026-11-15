@@ -1,0 +1,4 @@
+PASS: 81 exact derivative cases for original and modified payoffs
+PASS: 594 exact ODE and homogeneous-factor identities
+PASS: negative-transition intermediate-detour counterexample
+Scope: conditional algebra only; no equilibrium or new value bound

@@ -1,0 +1,792 @@
+{
+  "format": "joint-physical-discovery-campaign-v1",
+  "status": "COMPLETED_NO_GLOBAL_BOUND_IMPROVEMENT",
+  "run_id": 43548450417,
+  "run_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43548450417",
+  "source_commit": "855d87ab5695249a21acb87cb67a5c9ffb27d588",
+  "observed_completion_utc": "2026-11-14T03:12:51Z",
+  "scope": "Read-only review of completed CI artifacts, exact file hashes, exact arithmetic and fixed-field physical attacks. No repeated exhaustive bank search was run because no candidate improved the authoritative bound. A green job does not mean optimization converged.",
+  "comparison_bounds": {
+    "global_game_value_lower": "36409808231/25600000000",
+    "global_game_value_upper": "291849329389899/204800000000000",
+    "width": "570863541899/204800000000000",
+    "requested_width": "1/10000",
+    "requested_width_met": false,
+    "new_unrestricted_improvement": false
+  },
+  "totals": {
+    "families": 3,
+    "proposals": 111,
+    "actual_physical_loop_rejections": 8,
+    "calendar_only_loop_rejections": 81,
+    "completed_all_princess_candidate_certifications": 22,
+    "complete_native_princess_pricing_calls": 19
+  },
+  "experiments": [
+    {
+      "family": "n256-complete",
+      "n": 256,
+      "seed": 693147,
+      "options": {
+        "n": 256,
+        "initial_law": "packages/interval_discovery_certificates/monster_boundary_n256.physical.json.gz",
+        "profile_seed": "/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_clock_grid/lower_n256_field.json",
+        "resume": null,
+        "iterations": 120,
+        "seconds": 1200.0,
+        "lp_seconds": 120.0,
+        "seed": 693147,
+        "initial_cuts": 24,
+        "boundary_points": 48,
+        "pricing_paths": 128,
+        "price_every": 3,
+        "full_every": 1,
+        "mutation_count": 128,
+        "level_fraction": 0.8,
+        "alternative_cuts": 16,
+        "native_flow": true,
+        "loop_screen": true,
+        "output": "results/mixture-n256-complete"
+      },
+      "job_id": 132305292378,
+      "job_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43548450417/job/132305292378",
+      "observed_job_conclusion": "success",
+      "artifact_id": 14095728984,
+      "artifact_name": "adaptive-mixture-n256-complete",
+      "artifact_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43548450417/artifacts/14095728984",
+      "artifact_zip_sha256": "6653f307d148ca368a6d80c156ffd015dc8862209ffd938f162b8474c2fa4405",
+      "artifact_zip_bytes": 11115669,
+      "artifact_digest_verified": true,
+      "all_original_manifest_file_hashes_verified": true,
+      "manifest_sha256": "37b237184ff3571791a9aa0af307d3fdf1330570ea67183890ea27325d9a7d5b",
+      "metadata_sha256": "090a8a1e7c0f134f16d3914acf6241b0e52bd58cdca0844a08e9a7cc2a0a1bd4",
+      "checkpoint_sha256": "76d915a429b1b88888f27fd57f342a70edcb92831272c0d4a166faf0dfae37c5",
+      "summary": {
+        "status": "BUDGET_STOPPED",
+        "stop_reason": "wall_time_limit",
+        "iterations_total": 32,
+        "best_certified_global_upper": "291849329389899/204800000000000",
+        "baseline_global_upper": "291849329389899/204800000000000",
+        "certified_improvement": "0",
+        "best_certificate": "seed.physical.json",
+        "exact_physical_loop_rejections": 2,
+        "exact_calendar_loop_rejections": 20,
+        "completed_candidate_certifications": 10,
+        "native_flow": true,
+        "scope": "Only exact replayed physical uppers have unrestricted meaning. Restricted-cut LP values are not global lower bounds.",
+        "elapsed_seconds": 1200.92684523
+      },
+      "final_calendar_columns": 1799,
+      "final_response_cuts": 349,
+      "history_event_counts": {
+        "endpoint_loop_cut_rejected": 21,
+        "iteration": 10,
+        "physical_loop_rejected": 1
+      },
+      "positive_new_physical_path_proposals": 31,
+      "maximum_new_physical_paths_in_one_proposal": 8,
+      "maximum_new_physical_path_mass_in_one_proposal": "162202731/250000000000",
+      "maximum_physical_total_variation_from_seed": "2380364333/1000000000000",
+      "endpoint_sweep_probability_range": [
+        "629535048921/1000000000000",
+        "629535049023/1000000000000"
+      ],
+      "last_proposal_physical_change": {
+        "physical_probability_l1_from_seed": "2380364333/500000000000",
+        "physical_probability_total_variation_from_seed": "2380364333/1000000000000",
+        "new_physical_path_mass": "257116907/500000000000",
+        "new_physical_paths": 8,
+        "only_calendars_changed": false
+      },
+      "minimum_completed_proposal_upper": "1459541102466561/1024000000000000",
+      "median_completed_candidate_closure_seconds": 9.6725,
+      "last_restricted_cut_lp_estimate": 1.4235917028929366,
+      "princess_pricing": {
+        "complete_calls": 10,
+        "complete_native_results": [
+          {
+            "iteration": 2,
+            "complete_exact_bank_minimum": "11661854437/8192000000",
+            "new_complete_calendars": 238
+          },
+          {
+            "iteration": 5,
+            "complete_exact_bank_minimum": "1457744294959/1024000000000",
+            "new_complete_calendars": 115
+          },
+          {
+            "iteration": 8,
+            "complete_exact_bank_minimum": "1457728920687/1024000000000",
+            "new_complete_calendars": 236
+          },
+          {
+            "iteration": 11,
+            "complete_exact_bank_minimum": "1457749954691/1024000000000",
+            "new_complete_calendars": 77
+          },
+          {
+            "iteration": 14,
+            "complete_exact_bank_minimum": "91109199943/64000000000",
+            "new_complete_calendars": 26
+          },
+          {
+            "iteration": 17,
+            "complete_exact_bank_minimum": "1457750844767/1024000000000",
+            "new_complete_calendars": 23
+          },
+          {
+            "iteration": 20,
+            "complete_exact_bank_minimum": "728878676501/512000000000",
+            "new_complete_calendars": 6
+          },
+          {
+            "iteration": 23,
+            "complete_exact_bank_minimum": "1457757398071/1024000000000",
+            "new_complete_calendars": 20
+          },
+          {
+            "iteration": 26,
+            "complete_exact_bank_minimum": "1457755825461/1024000000000",
+            "new_complete_calendars": 37
+          },
+          {
+            "iteration": 29,
+            "complete_exact_bank_minimum": "728878867507/512000000000",
+            "new_complete_calendars": 17
+          }
+        ],
+        "cached_results": [
+          {
+            "iteration": 2,
+            "cached_minimum_only": "91109463347/64000000000"
+          },
+          {
+            "iteration": 5,
+            "cached_minimum_only": "1457750369579/1024000000000"
+          },
+          {
+            "iteration": 8,
+            "cached_minimum_only": "364435656177/256000000000"
+          },
+          {
+            "iteration": 11,
+            "cached_minimum_only": "1457753164959/1024000000000"
+          },
+          {
+            "iteration": 14,
+            "cached_minimum_only": "91109199943/64000000000"
+          },
+          {
+            "iteration": 17,
+            "cached_minimum_only": "91109831843/64000000000"
+          },
+          {
+            "iteration": 20,
+            "cached_minimum_only": "728878676501/512000000000"
+          },
+          {
+            "iteration": 23,
+            "cached_minimum_only": "1457757398071/1024000000000"
+          },
+          {
+            "iteration": 26,
+            "cached_minimum_only": "145775746403/102400000000"
+          },
+          {
+            "iteration": 29,
+            "cached_minimum_only": "728878867507/512000000000"
+          }
+        ],
+        "cached_scope": "Minimum only over the cached physical response bank. It is not an unrestricted Princess lower or a complete bank minimum.",
+        "complete_scope": "Reported complete native integer bank minima. Subtract 1/(2n) for the game-value transfer. Earlier minima without their fields are historical solver evidence, not independently replayed new certificates.",
+        "n_dependent_bank_threshold_to_improve_current_L": "36459808231/25600000000",
+        "largest_cached_minimum": "728878867507/512000000000",
+        "largest_reported_complete_minimum": "728878867507/512000000000",
+        "complete_native_search_replayed_during_this_review": false,
+        "new_unrestricted_bound_claimed": false,
+        "retained_last_field": {
+          "artifact_member": "last_complete_bank.dual.json",
+          "sha256": "3b6ed312e77f40a9310a0b68608a344d77f1fbda0cdbcd946aad2bbb42ece00b",
+          "bank_minimum": "728878867507/512000000000",
+          "game_value_lower": "727878867507/512000000000",
+          "is_strongest_reported_field": true,
+          "native_source_sha256": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+          "minimum_units": "1457757735014",
+          "objective_denominator": "1024000000000"
+        },
+        "geometry_from_seed": {
+          "scope": "Exact nodal comparison to the original n256 seed; it does not certify an equilibrium or imply continuum security.",
+          "seed_file": "packages/interval_clock_grid/lower_n256_field.json",
+          "seed_sha256": "81483589b60c14d823d2bb467015a321d77cf555076fe8d69a36d63cd829d7d5",
+          "compared_pre_two_parity_nodes": 262400,
+          "maximum_absolute_nodal_change": "142661/1000000000",
+          "mean_absolute_nodal_change": "22289371/2099200000000",
+          "maximum_initial_CDF_nodal_change": "3249/125000000",
+          "changed_nodes_above_1e_6": 187866,
+          "reported_coarse_bank_gain_over_seed": "58361823/2048000000000"
+        }
+      }
+    },
+    {
+      "family": "n256-bold",
+      "n": 256,
+      "seed": 271828,
+      "options": {
+        "n": 256,
+        "initial_law": "packages/interval_discovery_certificates/monster_boundary_n256.physical.json.gz",
+        "profile_seed": "/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_clock_grid/lower_n256_field.json",
+        "resume": null,
+        "iterations": 120,
+        "seconds": 1200.0,
+        "lp_seconds": 120.0,
+        "seed": 271828,
+        "initial_cuts": 24,
+        "boundary_points": 48,
+        "pricing_paths": 128,
+        "price_every": 3,
+        "full_every": 2,
+        "mutation_count": 128,
+        "level_fraction": 0.4,
+        "alternative_cuts": 16,
+        "native_flow": true,
+        "loop_screen": true,
+        "output": "results/mixture-n256-bold"
+      },
+      "job_id": 132305292344,
+      "job_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43548450417/job/132305292344",
+      "observed_job_conclusion": "success",
+      "artifact_id": 14095861283,
+      "artifact_name": "adaptive-mixture-n256-bold",
+      "artifact_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43548450417/artifacts/14095861283",
+      "artifact_zip_sha256": "e47799b1fc3e1cf5d310876b99ddff1d1b813f349738b5cdbab9111e02d6a57f",
+      "artifact_zip_bytes": 11188860,
+      "artifact_digest_verified": true,
+      "all_original_manifest_file_hashes_verified": true,
+      "manifest_sha256": "b4ecb7e901a003301eb91b92091347edc470d229e1a2705f23dd3ea99158073b",
+      "metadata_sha256": "e3a406e98c54bcbb3e4393597960fcc1d0264060f9bc6c45be1f592cf5e1337f",
+      "checkpoint_sha256": "b12d6b651089b75da34b562bce4e43f0fc3d4933287aaa9e08a628db27c73cbb",
+      "summary": {
+        "status": "BUDGET_STOPPED",
+        "stop_reason": "wall_time_limit",
+        "iterations_total": 57,
+        "best_certified_global_upper": "291849329389899/204800000000000",
+        "baseline_global_upper": "291849329389899/204800000000000",
+        "certified_improvement": "0",
+        "best_certificate": "seed.physical.json",
+        "exact_physical_loop_rejections": 6,
+        "exact_calendar_loop_rejections": 44,
+        "completed_candidate_certifications": 7,
+        "native_flow": true,
+        "scope": "Only exact replayed physical uppers have unrestricted meaning. Restricted-cut LP values are not global lower bounds.",
+        "elapsed_seconds": 1202.600004019
+      },
+      "final_calendar_columns": 1806,
+      "final_response_cuts": 369,
+      "history_event_counts": {
+        "endpoint_loop_cut_rejected": 48,
+        "physical_loop_rejected": 2,
+        "iteration": 7
+      },
+      "positive_new_physical_path_proposals": 53,
+      "maximum_new_physical_paths_in_one_proposal": 20,
+      "maximum_new_physical_path_mass_in_one_proposal": "5630192993/500000000000",
+      "maximum_physical_total_variation_from_seed": "3726630727/250000000000",
+      "endpoint_sweep_probability_range": [
+        "629535049023/1000000000000",
+        "314800761651/500000000000"
+      ],
+      "last_proposal_physical_change": {
+        "physical_probability_l1_from_seed": "3726630727/125000000000",
+        "physical_probability_total_variation_from_seed": "3726630727/250000000000",
+        "new_physical_path_mass": "5336225263/500000000000",
+        "new_physical_paths": 17,
+        "only_calendars_changed": false
+      },
+      "minimum_completed_proposal_upper": "1460837220785509/1024000000000000",
+      "median_completed_candidate_closure_seconds": 8.394,
+      "last_restricted_cut_lp_estimate": 1.423592906759235,
+      "princess_pricing": {
+        "complete_calls": 9,
+        "complete_native_results": [
+          {
+            "iteration": 5,
+            "complete_exact_bank_minimum": "1457736379567/1024000000000",
+            "new_complete_calendars": 196
+          },
+          {
+            "iteration": 11,
+            "complete_exact_bank_minimum": "728866987183/512000000000",
+            "new_complete_calendars": 119
+          },
+          {
+            "iteration": 17,
+            "complete_exact_bank_minimum": "1457716566191/1024000000000",
+            "new_complete_calendars": 172
+          },
+          {
+            "iteration": 23,
+            "complete_exact_bank_minimum": "728875051971/512000000000",
+            "new_complete_calendars": 59
+          },
+          {
+            "iteration": 29,
+            "complete_exact_bank_minimum": "1457757335551/1024000000000",
+            "new_complete_calendars": 44
+          },
+          {
+            "iteration": 35,
+            "complete_exact_bank_minimum": "728879245557/512000000000",
+            "new_complete_calendars": 23
+          },
+          {
+            "iteration": 41,
+            "complete_exact_bank_minimum": "1457754689949/1024000000000",
+            "new_complete_calendars": 34
+          },
+          {
+            "iteration": 47,
+            "complete_exact_bank_minimum": "91109914089/64000000000",
+            "new_complete_calendars": 18
+          },
+          {
+            "iteration": 53,
+            "complete_exact_bank_minimum": "364437351353/256000000000",
+            "new_complete_calendars": 87
+          }
+        ],
+        "cached_results": [
+          {
+            "iteration": 2,
+            "cached_minimum_only": "364430592929/256000000000"
+          },
+          {
+            "iteration": 5,
+            "cached_minimum_only": "291551764313/204800000000"
+          },
+          {
+            "iteration": 8,
+            "cached_minimum_only": "728867113081/512000000000"
+          },
+          {
+            "iteration": 11,
+            "cached_minimum_only": "18221962879/12800000000"
+          },
+          {
+            "iteration": 14,
+            "cached_minimum_only": "182218434177/128000000000"
+          },
+          {
+            "iteration": 17,
+            "cached_minimum_only": "1457720509267/1024000000000"
+          },
+          {
+            "iteration": 20,
+            "cached_minimum_only": "1457758079973/1024000000000"
+          },
+          {
+            "iteration": 23,
+            "cached_minimum_only": "1457758170047/1024000000000"
+          },
+          {
+            "iteration": 26,
+            "cached_minimum_only": "728879145721/512000000000"
+          },
+          {
+            "iteration": 29,
+            "cached_minimum_only": "364439589573/256000000000"
+          },
+          {
+            "iteration": 32,
+            "cached_minimum_only": "1457758402569/1024000000000"
+          },
+          {
+            "iteration": 35,
+            "cached_minimum_only": "728879245557/512000000000"
+          },
+          {
+            "iteration": 38,
+            "cached_minimum_only": "364439284437/256000000000"
+          },
+          {
+            "iteration": 41,
+            "cached_minimum_only": "1457758571647/1024000000000"
+          },
+          {
+            "iteration": 44,
+            "cached_minimum_only": "728879306009/512000000000"
+          },
+          {
+            "iteration": 47,
+            "cached_minimum_only": "91109914089/64000000000"
+          },
+          {
+            "iteration": 50,
+            "cached_minimum_only": "182219829567/128000000000"
+          },
+          {
+            "iteration": 53,
+            "cached_minimum_only": "1457759096717/1024000000000"
+          },
+          {
+            "iteration": 56,
+            "cached_minimum_only": "91109946001/64000000000"
+          }
+        ],
+        "cached_scope": "Minimum only over the cached physical response bank. It is not an unrestricted Princess lower or a complete bank minimum.",
+        "complete_scope": "Reported complete native integer bank minima. Subtract 1/(2n) for the game-value transfer. Earlier minima without their fields are historical solver evidence, not independently replayed new certificates.",
+        "n_dependent_bank_threshold_to_improve_current_L": "36459808231/25600000000",
+        "largest_cached_minimum": "91109946001/64000000000",
+        "largest_reported_complete_minimum": "91109914089/64000000000",
+        "complete_native_search_replayed_during_this_review": false,
+        "new_unrestricted_bound_claimed": false,
+        "retained_last_field": {
+          "artifact_member": "last_complete_bank.dual.json",
+          "sha256": "1db973f734dd1160b01cf1a73267dbc25673ff94217cfbc08a1f48272ad9d51c",
+          "bank_minimum": "364437351353/256000000000",
+          "game_value_lower": "363937351353/256000000000",
+          "is_strongest_reported_field": false,
+          "native_source_sha256": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+          "minimum_units": "1457749405412",
+          "objective_denominator": "1024000000000"
+        },
+        "geometry_from_seed": {
+          "scope": "Exact nodal comparison to the original n256 seed; it does not certify an equilibrium or imply continuum security.",
+          "seed_file": "packages/interval_clock_grid/lower_n256_field.json",
+          "seed_sha256": "81483589b60c14d823d2bb467015a321d77cf555076fe8d69a36d63cd829d7d5",
+          "compared_pre_two_parity_nodes": 262400,
+          "maximum_absolute_nodal_change": "917/3906250",
+          "mean_absolute_nodal_change": "41147519/3280000000000",
+          "maximum_initial_CDF_nodal_change": "15831/400000000",
+          "changed_nodes_above_1e_6": 164408,
+          "reported_coarse_bank_gain_over_seed": "41702619/2048000000000"
+        }
+      }
+    },
+    {
+      "family": "n512-priced",
+      "n": 512,
+      "seed": 707106,
+      "options": {
+        "n": 512,
+        "initial_law": "packages/interval_discovery_certificates/monster_boundary_n256.physical.json.gz",
+        "profile_seed": "/home/runner/work/lean4-monster-princess/lean4-monster-princess/packages/interval_clock_grid/lower_n256_field.json",
+        "resume": null,
+        "iterations": 120,
+        "seconds": 1200.0,
+        "lp_seconds": 120.0,
+        "seed": 707106,
+        "initial_cuts": 24,
+        "boundary_points": 48,
+        "pricing_paths": 128,
+        "price_every": 3,
+        "full_every": 0,
+        "mutation_count": 128,
+        "level_fraction": 0.8,
+        "alternative_cuts": 16,
+        "native_flow": true,
+        "loop_screen": true,
+        "output": "results/mixture-n512-priced"
+      },
+      "job_id": 132305292387,
+      "job_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43548450417/job/132305292387",
+      "observed_job_conclusion": "success",
+      "artifact_id": 14095846688,
+      "artifact_name": "adaptive-mixture-n512-priced",
+      "artifact_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43548450417/artifacts/14095846688",
+      "artifact_zip_sha256": "8cadbd648ef955fbe9706d572efc54156660dc19d285e068256d60e859ab00bb",
+      "artifact_zip_bytes": 17423209,
+      "artifact_digest_verified": true,
+      "all_original_manifest_file_hashes_verified": true,
+      "manifest_sha256": "ab5ae3b5b4651f11e52ac2e3e47e3c1dc1a5eb8f59c535608e77c3438d6436eb",
+      "metadata_sha256": "6905dda722df43d1f772f462e2a1b71698b8374377624f308dc47ec31814797b",
+      "checkpoint_sha256": "1f594108c940563f633b6d8e0e4d32885ebdc0a302a4b3d29f969edd523f5a7a",
+      "summary": {
+        "status": "BUDGET_STOPPED",
+        "stop_reason": "wall_time_limit",
+        "iterations_total": 22,
+        "best_certified_global_upper": "291849329389899/204800000000000",
+        "baseline_global_upper": "291849329389899/204800000000000",
+        "certified_improvement": "0",
+        "best_certificate": "seed.physical.json",
+        "exact_physical_loop_rejections": 0,
+        "exact_calendar_loop_rejections": 17,
+        "completed_candidate_certifications": 5,
+        "native_flow": true,
+        "scope": "Only exact replayed physical uppers have unrestricted meaning. Restricted-cut LP values are not global lower bounds.",
+        "elapsed_seconds": 1289.0683829480001
+      },
+      "final_calendar_columns": 1622,
+      "final_response_cuts": 223,
+      "history_event_counts": {
+        "iteration": 5,
+        "endpoint_loop_cut_rejected": 17
+      },
+      "positive_new_physical_path_proposals": 12,
+      "maximum_new_physical_paths_in_one_proposal": 2,
+      "maximum_new_physical_path_mass_in_one_proposal": "405387177/500000000000",
+      "maximum_physical_total_variation_from_seed": "1253380031/500000000000",
+      "endpoint_sweep_probability_range": [
+        "629535049023/1000000000000",
+        "629535049023/1000000000000"
+      ],
+      "last_proposal_physical_change": {
+        "physical_probability_l1_from_seed": "1253380031/250000000000",
+        "physical_probability_total_variation_from_seed": "1253380031/500000000000",
+        "new_physical_path_mass": "405387177/500000000000",
+        "new_physical_paths": 2,
+        "only_calendars_changed": false
+      },
+      "minimum_completed_proposal_upper": "1459427975027521/1024000000000000",
+      "median_completed_candidate_closure_seconds": 45.98,
+      "last_restricted_cut_lp_estimate": 1.4233212080030233,
+      "princess_pricing": {
+        "complete_calls": 0,
+        "complete_native_results": [],
+        "cached_results": [
+          {
+            "iteration": 2,
+            "cached_minimum_only": "2914419400517/2048000000000"
+          },
+          {
+            "iteration": 5,
+            "cached_minimum_only": "2914768779479/2048000000000"
+          },
+          {
+            "iteration": 8,
+            "cached_minimum_only": "2914787794039/2048000000000"
+          },
+          {
+            "iteration": 11,
+            "cached_minimum_only": "1457475982117/1024000000000"
+          },
+          {
+            "iteration": 14,
+            "cached_minimum_only": "2914791169841/2048000000000"
+          },
+          {
+            "iteration": 17,
+            "cached_minimum_only": "1457480317443/1024000000000"
+          },
+          {
+            "iteration": 20,
+            "cached_minimum_only": "182181879699/128000000000"
+          }
+        ],
+        "cached_scope": "Minimum only over the cached physical response bank. It is not an unrestricted Princess lower or a complete bank minimum.",
+        "complete_scope": "Reported complete native integer bank minima. Subtract 1/(2n) for the game-value transfer. Earlier minima without their fields are historical solver evidence, not independently replayed new certificates.",
+        "n_dependent_bank_threshold_to_improve_current_L": "36434808231/25600000000",
+        "largest_cached_minimum": "1457480317443/1024000000000",
+        "largest_reported_complete_minimum": null,
+        "complete_native_search_replayed_during_this_review": false,
+        "new_unrestricted_bound_claimed": false
+      }
+    }
+  ],
+  "exact_continuous_screens": {
+    "status": "PASS",
+    "source_hashes": {
+      "packages/interval_quantile_certificate/score_continuous_attack.py": "38126a212930446bc3b9e9bc33da555b330319d53387f352a35cbea48245f055",
+      "packages/interval_global_closure/record_bellman/replay_center_renewal_paths.py": "536f89976461bdec90ccd81c64125589b98ef28888839c85fafbda0b255f659e",
+      "packages/interval_global_closure/record_bellman/build_endpoint_tail_charts.py": "01b6a732a03e1747d90fa8987711b971df8ded4935dbb54a1039e5e2339d72f8",
+      "packages/interval_quantile_certificate/current_fullwidth_attack.json": "1cd8b24941d6c1c693756988c8aaceb3e0a1fe2fb87e7b4c6b496b405382460b",
+      "packages/interval_quantile_certificate/projected_fullwidth_attack.json": "06e1a9dc5d517bb0d0abab3724c2f6ca1b63ae3db872e55b9c9c1d0cd745c1a3"
+    },
+    "screens": [
+      {
+        "family": "n256-complete",
+        "source_sha256": "3b6ed312e77f40a9310a0b68608a344d77f1fbda0cdbcd946aad2bbb42ece00b",
+        "interpolation_epsilon": "1/2",
+        "scope": "Exact actual physical attacks on these two fixed full-width CDFs only. Neither a global game upper nor a certified Princess lower, and not an exhaustive response optimization. The incoming-front2 projection is a separate field.",
+        "original_fullwidth": {
+          "value": "2913696850359/2048000000000",
+          "decimal": 1.4227035402143555,
+          "affine_intervals_checked": 2032,
+          "independent_affine_intervals_checked": 2032,
+          "route": [
+            [
+              "0",
+              "31/32"
+            ],
+            [
+              "63/32",
+              "-1"
+            ],
+            [
+              "127/32",
+              "1"
+            ]
+          ]
+        },
+        "front2_fullwidth": {
+          "value": "364269322577/256000000000",
+          "decimal": 1.4229270413164063,
+          "affine_intervals_checked": 2072,
+          "independent_affine_intervals_checked": 2072,
+          "route": [
+            [
+              "0",
+              "7/8"
+            ],
+            [
+              "123/128",
+              "-11/128"
+            ],
+            [
+              "131/64",
+              "1"
+            ],
+            [
+              "259/64",
+              "-1"
+            ]
+          ]
+        }
+      },
+      {
+        "family": "n256-bold",
+        "source_sha256": "1db973f734dd1160b01cf1a73267dbc25673ff94217cfbc08a1f48272ad9d51c",
+        "interpolation_epsilon": "1/2",
+        "scope": "Exact actual physical attacks on these two fixed full-width CDFs only. Neither a global game upper nor a certified Princess lower, and not an exhaustive response optimization. The incoming-front2 projection is a separate field.",
+        "original_fullwidth": {
+          "value": "2913708085397/2048000000000",
+          "decimal": 1.422709026072754,
+          "affine_intervals_checked": 2032,
+          "independent_affine_intervals_checked": 2032,
+          "route": [
+            [
+              "0",
+              "31/32"
+            ],
+            [
+              "63/32",
+              "-1"
+            ],
+            [
+              "127/32",
+              "1"
+            ]
+          ]
+        },
+        "front2_fullwidth": {
+          "value": "2914158403831/2048000000000",
+          "decimal": 1.4229289081206056,
+          "affine_intervals_checked": 2072,
+          "independent_affine_intervals_checked": 2072,
+          "route": [
+            [
+              "0",
+              "7/8"
+            ],
+            [
+              "123/128",
+              "-11/128"
+            ],
+            [
+              "131/64",
+              "1"
+            ],
+            [
+              "259/64",
+              "-1"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "retention_caveat": {
+    "running_source_saved_only_last_complete_field": true,
+    "bold_best_reported_value": "91109914089/64000000000",
+    "bold_best_round_iteration": 47,
+    "bold_retained_last_is_weaker": true,
+    "earlier_bold_field_reconstructed_or_replayed": false,
+    "complete_family_best_is_retained": true,
+    "future_fix": "Every complete-priced field is now retained in an immutable compact capsule with best_complete_bank.json selected by exact bank value. The fix is not retroactively attributed to this run.",
+    "implementation": "packages/interval_mixture_cut/princess_retention.py",
+    "implementation_sha256": "97cbbcf73a64c44f736612538016229a3c75b07aa8aba63fe79da22a31251d74",
+    "regression": "python packages/interval_mixture_cut/test_princess_retention.py"
+  },
+  "reassessment": {
+    "decision": "No automatic additional large refinement or budget extension for these candidates.",
+    "reasons": [
+      "All nineteen complete n256 minima are below the exact direct-improvement threshold.",
+      "The retained fields are small nodal perturbations of the original seed, with maximum changes below0.000235 and initial-CDF changes below0.00004.",
+      "Two independent exact integrators agree on the displayed known attacks before and after front2 projection; the projected known-attack scores move only about0.00002 from the old seed. These attacks are fixed-field diagnostics, not game bounds.",
+      "All n512 cached minima remain below1.424 and none is a complete-bank certificate.",
+      "The new family did explore genuinely new physical paths and changed probabilities, but all exact certified proposals remained worse than the seed. Most rejected proposals failed only as calendar mixtures; their physical laws are not thereby excluded."
+    ],
+    "next_mathematical_requirement": "Change the coupled Princess transport geometry and Monster physical law sufficiently to control the active physical response families. Neither the finite response cuts nor the endpoint-loop screen is an equilibrium-sufficient classification."
+  },
+  "earlier_negative_campaigns": [
+    {
+      "n": 256,
+      "run_id": 43542930772,
+      "run_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43542930772",
+      "source_commit": "cc94527ee66035e185428cfc3b9f06bdbf14afa4",
+      "artifact_id": 14094742330,
+      "artifact_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43542930772/artifacts/14094742330",
+      "artifact_zip_sha256": "a9d8a2d1e3b55963986552f691232b6934392a63d0009fd9f1e19c98f2c22a41",
+      "artifact_digest_verified": true,
+      "all_manifest_hashes_verified": true,
+      "summary": {
+        "status": "BUDGET_STOPPED",
+        "stop_reason": "wall_time_limit",
+        "iterations_total": 38,
+        "best_certified_global_upper": "145925593551091/102400000000000",
+        "baseline_global_upper": "145925593551091/102400000000000",
+        "certified_improvement": "0",
+        "best_certificate": "seed.physical.json",
+        "scope": "Only exact replayed physical uppers have unrestricted meaning. Restricted-cut LP values are not global lower bounds.",
+        "elapsed_seconds": 3614.0775949659997
+      },
+      "final_calendar_columns": 1374,
+      "final_response_cuts": 402,
+      "last_certified_proposal_physical_change": {
+        "physical_probability_l1_from_seed": "4498576489/500000000000",
+        "physical_probability_total_variation_from_seed": "4498576489/1000000000000",
+        "new_physical_path_mass": "0",
+        "new_physical_paths": 0,
+        "only_calendars_changed": false
+      },
+      "last_certified_proposal_upper": "146021596874381/102400000000000",
+      "last_fixed_law_endpoint_loop_lower": "365053992185797/256000000000000",
+      "complete_princess_pricing_performed": false,
+      "interpretation": "Successful CI execution, but budget stopped and no improved bound. The endpoint-loop lower concerns one supplied Monster law only."
+    },
+    {
+      "n": 512,
+      "run_id": 43542930772,
+      "run_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43542930772",
+      "source_commit": "cc94527ee66035e185428cfc3b9f06bdbf14afa4",
+      "artifact_id": 14094752937,
+      "artifact_url": "https://github.com/vltanh/lean4-monster-princess/actions/runs/43542930772/artifacts/14094752937",
+      "artifact_zip_sha256": "b7bf77d8cb403d2477ceb0bcd24d17450edf3159f5870747cfcb6d3fc6c04c24",
+      "artifact_digest_verified": true,
+      "all_manifest_hashes_verified": true,
+      "summary": {
+        "status": "BUDGET_STOPPED",
+        "stop_reason": "wall_time_limit",
+        "iterations_total": 11,
+        "best_certified_global_upper": "145925593551091/102400000000000",
+        "baseline_global_upper": "145925593551091/102400000000000",
+        "certified_improvement": "0",
+        "best_certificate": "seed.physical.json",
+        "scope": "Only exact replayed physical uppers have unrestricted meaning. Restricted-cut LP values are not global lower bounds.",
+        "elapsed_seconds": 3872.958657087
+      },
+      "final_calendar_columns": 1815,
+      "final_response_cuts": 142,
+      "last_certified_proposal_physical_change": {
+        "physical_probability_l1_from_seed": "965728911/250000000000",
+        "physical_probability_total_variation_from_seed": "965728911/500000000000",
+        "new_physical_path_mass": "16704751/100000000000",
+        "new_physical_paths": 1,
+        "only_calendars_changed": false
+      },
+      "last_certified_proposal_upper": "182558882452647/128000000000000",
+      "last_fixed_law_endpoint_loop_lower": "729764554246743/512000000000000",
+      "complete_princess_pricing_performed": false,
+      "interpretation": "Successful CI execution, but budget stopped and no improved bound. The endpoint-loop lower concerns one supplied Monster law only."
+    }
+  ]
+}

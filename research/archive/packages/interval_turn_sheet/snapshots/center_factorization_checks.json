@@ -1,0 +1,46 @@
+{
+  "scope": "Exact physical finite-route repair, renewal kernel, and sign comparisons; not an optimized game value",
+  "checks": {
+    "order": 26,
+    "legality": 1276,
+    "repaired_upper_tail": 1260,
+    "earliest_unmatched": 7350,
+    "full_cost_comparison": 4410,
+    "lagging_sign_pair_comparison": 5040,
+    "balanced_renewal_kernel": 360
+  },
+  "total_recorded_checks": 19722,
+  "repair_case_counts": {
+    "productive_triangle": 814,
+    "capped_triangle": 578,
+    "productive_wait": 96,
+    "no_upper_tail": 210,
+    "empty_band": 140
+  },
+  "productive_wait_examples": [
+    {
+      "law": 0,
+      "t": "0",
+      "n": 1,
+      "kind": "productive_wait",
+      "chi": "1/6",
+      "tau": "1/2"
+    },
+    {
+      "law": 0,
+      "t": "0",
+      "n": 2,
+      "kind": "productive_wait",
+      "chi": "2/7",
+      "tau": "1/2"
+    },
+    {
+      "law": 0,
+      "t": "0",
+      "n": 1,
+      "kind": "productive_wait",
+      "chi": "1/6",
+      "tau": "1/2"
+    }
+  ]
+}

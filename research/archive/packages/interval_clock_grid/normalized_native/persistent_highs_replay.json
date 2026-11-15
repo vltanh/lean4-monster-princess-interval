@@ -1,0 +1,1081 @@
+{
+  "checkpoint_benchmark": [
+    {
+      "cuts": 6789,
+      "level": 1.4262786856351215,
+      "n": 32,
+      "persistent": {
+        "highs_version": "1.8.0",
+        "main": {
+          "basis_valid_after": true,
+          "basis_valid_before": false,
+          "columns": 4129,
+          "max_dual_infeasibility": 0.0,
+          "max_primal_infeasibility": 0.0,
+          "nonzeros": 374644,
+          "rows": 14917,
+          "seconds": 8.815240609000284,
+          "simplex_iterations": 10083
+        },
+        "prox": {
+          "basis_valid_after": true,
+          "basis_valid_before": false,
+          "columns": 12385,
+          "l1_distance": 0.0,
+          "level": 1.4262786856351215,
+          "max_dual_infeasibility": 0.0,
+          "max_primal_infeasibility": 0.0,
+          "nonzeros": 399412,
+          "rows": 23173,
+          "seconds": 0.3960000229999423,
+          "simplex_iterations": 3002
+        }
+      },
+      "persistent_l1": 0.0,
+      "persistent_seconds": 9.51972363599998,
+      "scipy_l1": 0.0,
+      "scipy_seconds": 9.28576559999965,
+      "scipy_upper": 1.4262856385514933,
+      "stage": 0,
+      "upper": 1.4262856385514933,
+      "variables": 4128
+    },
+    {
+      "cuts": 6853,
+      "level": 1.4262786615761804,
+      "n": 32,
+      "persistent": {
+        "highs_version": "1.8.0",
+        "main": {
+          "basis_valid_after": true,
+          "basis_valid_before": true,
+          "columns": 4129,
+          "max_dual_infeasibility": 0.0,
+          "max_primal_infeasibility": 0.0,
+          "nonzeros": 376971,
+          "rows": 14981,
+          "seconds": 0.09618153200062807,
+          "simplex_iterations": 82
+        },
+        "prox": {
+          "basis_valid_after": true,
+          "basis_valid_before": true,
+          "columns": 12385,
+          "l1_distance": 0.0,
+          "level": 1.4262786615761804,
+          "max_dual_infeasibility": 0.0,
+          "max_primal_infeasibility": 0.0,
+          "nonzeros": 401739,
+          "rows": 23237,
+          "seconds": 0.014699160000418487,
+          "simplex_iterations": 0
+        }
+      },
+      "persistent_l1": 0.0,
+      "persistent_seconds": 0.11987486599991826,
+      "scipy_l1": 0.0,
+      "scipy_seconds": 10.340738449000128,
+      "scipy_upper": 1.4262855904328542,
+      "stage": 1,
+      "upper": 1.426285590433611,
+      "variables": 4128
+    },
+    {
+      "cuts": 6917,
+      "level": 1.4262786610944724,
+      "n": 32,
+      "persistent": {
+        "highs_version": "1.8.0",
+        "main": {
+          "basis_valid_after": true,
+          "basis_valid_before": true,
+          "columns": 4129,
+          "max_dual_infeasibility": 0.0,
+          "max_primal_infeasibility": 0.0,
+          "nonzeros": 379066,
+          "rows": 15045,
+          "seconds": 0.09305155600031867,
+          "simplex_iterations": 36
+        },
+        "prox": {
+          "basis_valid_after": true,
+          "basis_valid_before": true,
+          "columns": 12385,
+          "l1_distance": 0.0,
+          "level": 1.4262786610944724,
+          "max_dual_infeasibility": 0.0,
+          "max_primal_infeasibility": 0.0,
+          "nonzeros": 403834,
+          "rows": 23301,
+          "seconds": 0.022547180999936245,
+          "simplex_iterations": 0
+        }
+      },
+      "persistent_l1": 0.0,
+      "persistent_seconds": 0.12666537599943695,
+      "scipy_l1": 0.0,
+      "scipy_seconds": 11.13852615399992,
+      "scipy_upper": 1.4262855894701865,
+      "stage": 2,
+      "upper": 1.4262855894701951,
+      "variables": 4128
+    },
+    {
+      "cuts": 6917,
+      "level": 1.4262286610944725,
+      "n": 32,
+      "persistent": {
+        "highs_version": "1.8.0",
+        "main": {
+          "basis_valid_after": true,
+          "basis_valid_before": true,
+          "columns": 4129,
+          "max_dual_infeasibility": 0.0,
+          "max_primal_infeasibility": 0.0,
+          "nonzeros": 379066,
+          "rows": 15045,
+          "seconds": 0.007147798000005423,
+          "simplex_iterations": 0
+        },
+        "prox": {
+          "basis_valid_after": true,
+          "basis_valid_before": true,
+          "columns": 12385,
+          "l1_distance": 0.1593814298377344,
+          "level": 1.4262286610944725,
+          "max_dual_infeasibility": 0.0,
+          "max_primal_infeasibility": 0.0,
+          "nonzeros": 403834,
+          "rows": 23301,
+          "seconds": 0.34533735900004103,
+          "simplex_iterations": 6033
+        }
+      },
+      "persistent_l1": 0.1593814298377344,
+      "persistent_seconds": 0.3578935810000985,
+      "scipy_l1": 0.15938142983767223,
+      "scipy_seconds": 11.374480510000467,
+      "scipy_upper": 1.4262855894701865,
+      "stage": "changed_anchor_and_level",
+      "upper": 1.4262855894701951,
+      "variables": 4128
+    }
+  ],
+  "checkpoint_sha256": "58333e1d7d6409a5221877808486bcdf880dcce529ab00650d3e40033a9b733c",
+  "scope": "Floating solver equivalence and warm-basis performance; no exact game certificate.",
+  "small_runs": [
+    {
+      "iterations": [
+        {
+          "cuts": 4,
+          "iteration": 0,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": false,
+              "columns": 19,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 70,
+              "rows": 32,
+              "seconds": 0.001053843999216042,
+              "simplex_iterations": 0
+            }
+          },
+          "persistent_seconds": 0.001440996999917843,
+          "priced": 1.125,
+          "scipy_seconds": 0.002736995000304887,
+          "scipy_upper": 1.5,
+          "upper": 1.5
+        },
+        {
+          "cuts": 22,
+          "iteration": 1,
+          "level": 1.3125,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 19,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 171,
+              "rows": 50,
+              "seconds": 0.0002373570005147485,
+              "simplex_iterations": 2
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": false,
+              "columns": 55,
+              "l1_distance": 0.2802197802197802,
+              "level": 1.3125,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 279,
+              "rows": 86,
+              "seconds": 0.0003597409995563794,
+              "simplex_iterations": 3
+            }
+          },
+          "persistent_l1": 0.2802197802197802,
+          "persistent_seconds": 0.0020468680004341877,
+          "priced": 1.20535714275,
+          "scipy_l1": 0.2802197802197802,
+          "scipy_seconds": 0.004119304000596458,
+          "scipy_upper": 1.5,
+          "upper": 1.5
+        },
+        {
+          "cuts": 35,
+          "iteration": 2,
+          "level": 1.3274381867596154,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 19,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 233,
+              "rows": 63,
+              "seconds": 0.00016962500012596138,
+              "simplex_iterations": 9
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 55,
+              "l1_distance": 0.15040152135976445,
+              "level": 1.3274381867596154,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 341,
+              "rows": 99,
+              "seconds": 0.00017441199997847434,
+              "simplex_iterations": 3
+            }
+          },
+          "persistent_l1": 0.15040152135976445,
+          "persistent_seconds": 0.0010026170002674917,
+          "priced": 1.32743818825,
+          "scipy_l1": 0.15040152135976337,
+          "scipy_seconds": 0.0038336640000125044,
+          "scipy_upper": 1.4495192307692308,
+          "upper": 1.4495192307692308
+        },
+        {
+          "cuts": 38,
+          "iteration": 3,
+          "level": 1.3884787095096154,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 19,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 245,
+              "rows": 66,
+              "seconds": 8.213299952330999e-05,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 55,
+              "l1_distance": 0.10267328690848132,
+              "level": 1.3884787095096154,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 353,
+              "rows": 102,
+              "seconds": 7.800699950166745e-05,
+              "simplex_iterations": 0
+            }
+          },
+          "persistent_l1": 0.10267328690848132,
+          "persistent_seconds": 0.0007128809993446339,
+          "priced": 1.38847871,
+          "scipy_l1": 0.10267328690848132,
+          "scipy_seconds": 0.003876228000081028,
+          "scipy_upper": 1.4495192307692308,
+          "upper": 1.4495192307692308
+        },
+        {
+          "cuts": 38,
+          "level": 1.4189989703846155,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 19,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 245,
+              "rows": 66,
+              "seconds": 5.6555000810476486e-05,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 55,
+              "l1_distance": 0.06120109172600774,
+              "level": 1.4189989703846155,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 353,
+              "rows": 102,
+              "seconds": 0.00013441200007946463,
+              "simplex_iterations": 1
+            }
+          },
+          "persistent_l1": 0.06120109172600774,
+          "persistent_seconds": 0.0005891260007047094,
+          "repeat_without_new_cuts": true,
+          "scipy_l1": 0.061201091726007406,
+          "scipy_seconds": 0.0038448909999715397,
+          "scipy_upper": 1.4495192307692308,
+          "upper": 1.4495192307692308
+        }
+      ],
+      "n": 2
+    },
+    {
+      "iterations": [
+        {
+          "cuts": 4,
+          "iteration": 0,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": false,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 264,
+              "rows": 124,
+              "seconds": 0.00021635499979311135,
+              "simplex_iterations": 0
+            }
+          },
+          "persistent_seconds": 0.0004240280004523811,
+          "priced": 0.5,
+          "scipy_seconds": 0.0017958799999178154,
+          "scipy_upper": 1.5,
+          "upper": 1.5
+        },
+        {
+          "cuts": 34,
+          "iteration": 1,
+          "level": 1.0,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 509,
+              "rows": 154,
+              "seconds": 0.0002101460004269029,
+              "simplex_iterations": 7
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": false,
+              "columns": 205,
+              "l1_distance": 0.42105263157894735,
+              "level": 1.0,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 917,
+              "rows": 290,
+              "seconds": 0.0005609230001937249,
+              "simplex_iterations": 4
+            }
+          },
+          "persistent_l1": 0.42105263157894735,
+          "persistent_seconds": 0.0020696019992101355,
+          "priced": 0.5361842105,
+          "scipy_l1": 0.42105263157894735,
+          "scipy_seconds": 0.0061041080007271376,
+          "scipy_upper": 1.5,
+          "upper": 1.5
+        },
+        {
+          "cuts": 64,
+          "iteration": 2,
+          "level": 1.01809210525,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 769,
+              "rows": 184,
+              "seconds": 0.0002534810000724974,
+              "simplex_iterations": 2
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.42052727058439177,
+              "level": 1.01809210525,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1177,
+              "rows": 320,
+              "seconds": 0.0005538129998967634,
+              "simplex_iterations": 7
+            }
+          },
+          "persistent_l1": 0.42052727058439177,
+          "persistent_seconds": 0.0016472260003865813,
+          "priced": 0.9103334846875,
+          "scipy_l1": 0.4205272705843919,
+          "scipy_seconds": 0.006638401000600425,
+          "scipy_upper": 1.5,
+          "upper": 1.5
+        },
+        {
+          "cuts": 78,
+          "iteration": 3,
+          "level": 1.2039648192668269,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 864,
+              "rows": 198,
+              "seconds": 0.00030926500039640814,
+              "simplex_iterations": 6
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.4431309228747125,
+              "level": 1.2039648192668269,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1272,
+              "rows": 334,
+              "seconds": 0.00047843899938015966,
+              "simplex_iterations": 6
+            }
+          },
+          "persistent_l1": 0.4431309228747125,
+          "persistent_seconds": 0.001485654000134673,
+          "priced": 1.0955978425625,
+          "scipy_l1": 0.44313092287472033,
+          "scipy_seconds": 0.005358116000024893,
+          "scipy_upper": 1.4975961538461537,
+          "upper": 1.4975961538461537
+        },
+        {
+          "cuts": 85,
+          "iteration": 4,
+          "level": 1.2879616580809274,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 915,
+              "rows": 205,
+              "seconds": 0.00029538400031015044,
+              "simplex_iterations": 11
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.41014272743270624,
+              "level": 1.2879616580809274,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1323,
+              "rows": 341,
+              "seconds": 0.00033595500008232193,
+              "simplex_iterations": 4
+            }
+          },
+          "persistent_l1": 0.41014272743270624,
+          "persistent_seconds": 0.0012916920004499843,
+          "priced": 1.1475708701875,
+          "scipy_l1": 0.4101427274327068,
+          "scipy_seconds": 0.00554407599975093,
+          "scipy_upper": 1.4803254735993552,
+          "upper": 1.480325473599355
+        },
+        {
+          "cuts": 94,
+          "iteration": 5,
+          "level": 1.306480147491035,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 992,
+              "rows": 214,
+              "seconds": 0.00036366699987411266,
+              "simplex_iterations": 15
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.2752143028470092,
+              "level": 1.306480147491035,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1400,
+              "rows": 350,
+              "seconds": 0.00036046100012754323,
+              "simplex_iterations": 7
+            }
+          },
+          "persistent_l1": 0.2752143028470092,
+          "persistent_seconds": 0.001449960000172723,
+          "priced": 1.17974703175,
+          "scipy_l1": 0.2752143028470062,
+          "scipy_seconds": 0.005541241999708291,
+          "scipy_upper": 1.4653894247945698,
+          "upper": 1.4653894247945698
+        },
+        {
+          "cuts": 105,
+          "iteration": 6,
+          "level": 1.3139514164084685,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1076,
+              "rows": 225,
+              "seconds": 0.00040415700004814425,
+              "simplex_iterations": 16
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.261324759542242,
+              "level": 1.3139514164084685,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1484,
+              "rows": 361,
+              "seconds": 0.0005058599999756552,
+              "simplex_iterations": 13
+            }
+          },
+          "persistent_l1": 0.261324759542242,
+          "persistent_seconds": 0.0016223599996010307,
+          "priced": 1.23457342,
+          "scipy_l1": 0.26132475954223944,
+          "scipy_seconds": 0.00595893999980035,
+          "scipy_upper": 1.4481558010669369,
+          "upper": 1.4481558010669369
+        },
+        {
+          "cuts": 112,
+          "iteration": 7,
+          "level": 1.340689255526516,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1135,
+              "rows": 232,
+              "seconds": 0.00044764300037059,
+              "simplex_iterations": 12
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.26181734822851077,
+              "level": 1.340689255526516,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1543,
+              "rows": 368,
+              "seconds": 0.0004128199998376658,
+              "simplex_iterations": 8
+            }
+          },
+          "persistent_l1": 0.26181734822851077,
+          "persistent_seconds": 0.0015651929998057312,
+          "priced": 1.283659652875,
+          "scipy_l1": 0.2618173482285306,
+          "scipy_seconds": 0.0062816839999868535,
+          "scipy_upper": 1.4468050910530326,
+          "upper": 1.446805091053032
+        },
+        {
+          "cuts": 116,
+          "iteration": 8,
+          "level": 1.364031045968619,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1171,
+              "rows": 236,
+              "seconds": 0.00036898500002280343,
+              "simplex_iterations": 3
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.22256322485794042,
+              "level": 1.364031045968619,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1579,
+              "rows": 372,
+              "seconds": 0.0004255800004102639,
+              "simplex_iterations": 6
+            }
+          },
+          "persistent_l1": 0.22256322485794042,
+          "persistent_seconds": 0.00147729100081051,
+          "priced": 1.3276852795625,
+          "scipy_l1": 0.2225632248579397,
+          "scipy_seconds": 0.0064033170001494,
+          "scipy_upper": 1.444402439062238,
+          "upper": 1.444402439062238
+        },
+        {
+          "cuts": 120,
+          "iteration": 9,
+          "level": 1.386043859312369,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1208,
+              "rows": 240,
+              "seconds": 0.00014210300014383392,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.19205710272474924,
+              "level": 1.386043859312369,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1616,
+              "rows": 376,
+              "seconds": 0.0003596200003812555,
+              "simplex_iterations": 1
+            }
+          },
+          "persistent_l1": 0.19205710272474924,
+          "persistent_seconds": 0.0011974000008194707,
+          "priced": 1.3751086511875,
+          "scipy_l1": 0.19205710272475074,
+          "scipy_seconds": 0.006377519999659853,
+          "scipy_upper": 1.444402439062238,
+          "upper": 1.4444024390622379
+        },
+        {
+          "cuts": 123,
+          "iteration": 10,
+          "level": 1.409755545124869,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1227,
+              "rows": 243,
+              "seconds": 0.000163234999490669,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.4447675840760973,
+              "level": 1.409755545124869,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1635,
+              "rows": 379,
+              "seconds": 0.00040996600000653416,
+              "simplex_iterations": 6
+            }
+          },
+          "persistent_l1": 0.4447675840760973,
+          "persistent_seconds": 0.001198471999487083,
+          "priced": 1.4097555446875,
+          "scipy_l1": 0.44476758407609523,
+          "scipy_seconds": 0.006427514000279189,
+          "scipy_upper": 1.4444024390622379,
+          "upper": 1.4444024390622379
+        },
+        {
+          "cuts": 124,
+          "iteration": 11,
+          "level": 1.427078991874869,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1233,
+              "rows": 244,
+              "seconds": 0.0001648779998504324,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.29927013343571685,
+              "level": 1.427078991874869,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1641,
+              "rows": 380,
+              "seconds": 0.0003581280006983434,
+              "simplex_iterations": 1
+            }
+          },
+          "persistent_l1": 0.29927013343571685,
+          "persistent_seconds": 0.001197149999825342,
+          "priced": 1.4183451278125,
+          "scipy_l1": 0.2992701334357209,
+          "scipy_seconds": 0.00679000900072424,
+          "scipy_upper": 1.444402439062238,
+          "upper": 1.4444024390622379
+        },
+        {
+          "cuts": 130,
+          "iteration": 12,
+          "level": 1.431373783437369,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1291,
+              "rows": 250,
+              "seconds": 0.0003736319995368831,
+              "simplex_iterations": 1
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.10126207079185036,
+              "level": 1.431373783437369,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1699,
+              "rows": 386,
+              "seconds": 0.0004561559999274323,
+              "simplex_iterations": 8
+            }
+          },
+          "persistent_l1": 0.10126207079185036,
+          "persistent_seconds": 0.0016196249998756684,
+          "priced": 1.4265542620625,
+          "scipy_l1": 0.10126207079184493,
+          "scipy_seconds": 0.0067429489999994985,
+          "scipy_upper": 1.444402439062238,
+          "upper": 1.4444024390622379
+        },
+        {
+          "cuts": 137,
+          "iteration": 13,
+          "level": 1.435478350562369,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1363,
+              "rows": 257,
+              "seconds": 0.00018918400019174442,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.08704210679837017,
+              "level": 1.435478350562369,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1771,
+              "rows": 393,
+              "seconds": 0.0004888549992756452,
+              "simplex_iterations": 5
+            }
+          },
+          "persistent_l1": 0.08704210679837017,
+          "persistent_seconds": 0.001449248999961128,
+          "priced": 1.4354783501875,
+          "scipy_l1": 0.08704210679837412,
+          "scipy_seconds": 0.00691147199995612,
+          "scipy_upper": 1.444402439062238,
+          "upper": 1.4444024390622379
+        },
+        {
+          "cuts": 140,
+          "iteration": 14,
+          "level": 1.4399403946248688,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1389,
+              "rows": 260,
+              "seconds": 0.00013966999995318474,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 1.535235765206215,
+              "level": 1.4399403946248688,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1797,
+              "rows": 396,
+              "seconds": 0.0007466830002158531,
+              "simplex_iterations": 33
+            }
+          },
+          "persistent_l1": 1.535235765206215,
+          "persistent_seconds": 0.0016053039998951135,
+          "priced": 1.2086519900625,
+          "scipy_l1": 1.5352357652062079,
+          "scipy_seconds": 0.006689388000268082,
+          "scipy_upper": 1.4444024390622379,
+          "upper": 1.4444024390622379
+        },
+        {
+          "cuts": 158,
+          "iteration": 15,
+          "level": 1.4368345680945938,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1527,
+              "rows": 278,
+              "seconds": 0.00044971599982090993,
+              "simplex_iterations": 12
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.4088067643032152,
+              "level": 1.4368345680945938,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1935,
+              "rows": 414,
+              "seconds": 0.0005374180000217166,
+              "simplex_iterations": 15
+            }
+          },
+          "persistent_l1": 0.4088067643032152,
+          "persistent_seconds": 0.0017991049999181996,
+          "priced": 1.4283318436875,
+          "scipy_l1": 0.40880676430310414,
+          "scipy_seconds": 0.007010391000221716,
+          "scipy_upper": 1.4381907860016871,
+          "upper": 1.4381907860016874
+        },
+        {
+          "cuts": 160,
+          "iteration": 16,
+          "level": 1.4368345680945935,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1546,
+              "rows": 280,
+              "seconds": 0.00014878399997542147,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.41555711426515296,
+              "level": 1.4368345680945935,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1954,
+              "rows": 416,
+              "seconds": 0.0004257910004525911,
+              "simplex_iterations": 1
+            }
+          },
+          "persistent_l1": 0.41555711426515296,
+          "persistent_seconds": 0.0012416169993230142,
+          "priced": 1.4348535894375,
+          "scipy_l1": 0.4155571142651814,
+          "scipy_seconds": 0.006913975000315986,
+          "scipy_upper": 1.4381907860016871,
+          "upper": 1.4381907860016871
+        },
+        {
+          "cuts": 163,
+          "iteration": 17,
+          "level": 1.4368345680945935,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1578,
+              "rows": 283,
+              "seconds": 0.0001461790006942465,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.4158752710171094,
+              "level": 1.4368345680945935,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1986,
+              "rows": 419,
+              "seconds": 0.00035116800063406117,
+              "simplex_iterations": 3
+            }
+          },
+          "persistent_l1": 0.4158752710171094,
+          "persistent_seconds": 0.0011673859999064007,
+          "priced": 1.4361522973125,
+          "scipy_l1": 0.41587527101721183,
+          "scipy_seconds": 0.0071152680002342095,
+          "scipy_upper": 1.4381907860016874,
+          "upper": 1.4381907860016871
+        },
+        {
+          "cuts": 166,
+          "level": 1.4371715416570936,
+          "persistent": {
+            "highs_version": "1.8.0",
+            "main": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 69,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 1604,
+              "rows": 286,
+              "seconds": 0.00018149300012737513,
+              "simplex_iterations": 0
+            },
+            "prox": {
+              "basis_valid_after": true,
+              "basis_valid_before": true,
+              "columns": 205,
+              "l1_distance": 0.18878731341927854,
+              "level": 1.4371715416570936,
+              "max_dual_infeasibility": 0.0,
+              "max_primal_infeasibility": 0.0,
+              "nonzeros": 2012,
+              "rows": 422,
+              "seconds": 0.0006902779996380559,
+              "simplex_iterations": 21
+            }
+          },
+          "persistent_l1": 0.18878731341927854,
+          "persistent_seconds": 0.0015438620002896641,
+          "repeat_without_new_cuts": true,
+          "scipy_l1": 0.18878731341928828,
+          "scipy_seconds": 0.007353736999903049,
+          "scipy_upper": 1.4381907860016874,
+          "upper": 1.4381907860016871
+        }
+      ],
+      "n": 4
+    }
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "exact_physical_checks": 72,
+  "no_center_capture_formula": "T+1+abs(m(T))",
+  "zero_radius_at_cutoff_checked": true,
+  "initial_colocation_checked": true,
+  "center_visited_domination_checked": true,
+  "endpoint_tail_checked": true,
+  "certified_upper": "1140799301969009059644426513/800000000000000000000000000",
+  "smallest_upper_justified_cutoff": "740799301969009059644426513/400000000000000000000000000",
+  "simple_global_outward_cutoff": "2",
+  "princess_absorption_horizon": "3",
+  "normalized_monster_completion_horizon": "6",
+  "protected_turn_completion_horizon": "8",
+  "scope": "Exact finite regressions supporting the parameterized path proof; no sampled game value is asserted."
+}

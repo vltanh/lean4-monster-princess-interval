@@ -1,0 +1,44 @@
+name: Exact center compression
+
+on:
+  push:
+    branches: [research/interval-progress-2026-11-10]
+    paths:
+      - .github/workflows/center-pricing.yml
+      - packages/interval_center_pricing/**
+      - research/12-global-closure/DISCRETE_CENTER_BALANCE_PRICING.md
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-equivalence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Compare all phase policies with unrestricted exact references
+        run: |
+          mkdir -p reports
+          python3 packages/interval_center_pricing/test_center_pricing.py reports/center-regression.json
+      - name: Check the retained large exact minimum without repricing its reference
+        run: python3 packages/interval_center_pricing/verify.py packages/interval_clock_grid/lower_n256_field.json --output reports/retained-center-replay.json
+      - name: Check the projected field with the exact incoming-front terminal guard
+        run: python3 packages/interval_center_pricing/verify.py packages/interval_global_closure/lower_n256_front2_field.json --policy 4 --output reports/projected-front-replay.json
+      - name: Record exact source versions
+        if: always()
+        run: |
+          mkdir -p reports
+          git rev-parse HEAD > reports/commit.txt
+          g++ --version > reports/compiler.txt
+          sha256sum packages/interval_center_pricing/*.py packages/interval_center_pricing/*.cpp research/12-global-closure/DISCRETE_CENTER_BALANCE_PRICING.md > reports/sources.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: exact-center-compression
+          path: reports/
+          if-no-files-found: error
+          retention-days: 90

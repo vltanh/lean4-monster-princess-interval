@@ -1,0 +1,132 @@
+{
+  "scope": "Exact response ceiling only for p(a,c)=min(1,max(a-t,t-c,0)); exclusion target not reached.",
+  "monsters": [
+    {
+      "kind": "M1",
+      "parameter": "-1",
+      "weight": "293739/500000"
+    },
+    {
+      "kind": "M1",
+      "parameter": "-63/64",
+      "weight": "98/15625"
+    },
+    {
+      "kind": "M1",
+      "parameter": "5/8",
+      "weight": "2557/200000"
+    },
+    {
+      "kind": "M1",
+      "parameter": "3/4",
+      "weight": "15519/1000000"
+    },
+    {
+      "kind": "M1",
+      "parameter": "7/8",
+      "weight": "86383/1000000"
+    },
+    {
+      "kind": "M1",
+      "parameter": "15/16",
+      "weight": "7059/100000"
+    },
+    {
+      "kind": "M1",
+      "parameter": "31/32",
+      "weight": "113/200000"
+    },
+    {
+      "kind": "M1",
+      "parameter": "63/64",
+      "weight": "661/25000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "-3/4",
+      "weight": "12421/1000000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "-5/8",
+      "weight": "1519/125000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "-1/2",
+      "weight": "649/200000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "-3/8",
+      "weight": "3797/200000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "-1/4",
+      "weight": "2307/1000000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "1/8",
+      "weight": "147/50000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "1/4",
+      "weight": "7597/1000000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "3/8",
+      "weight": "37969/1000000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "1/2",
+      "weight": "13003/1000000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "5/8",
+      "weight": "187/15625"
+    },
+    {
+      "kind": "M2",
+      "parameter": "3/4",
+      "weight": "11851/1000000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "7/8",
+      "weight": "3977/500000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "15/16",
+      "weight": "407/100000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "31/32",
+      "weight": "1151/500000"
+    },
+    {
+      "kind": "M2",
+      "parameter": "63/64",
+      "weight": "549/500000"
+    },
+    {
+      "kind": "early_turn",
+      "parameter": "7/8",
+      "weight": "12393/500000"
+    },
+    {
+      "kind": "early_turn",
+      "parameter": "15/16",
+      "weight": "483/25000"
+    }
+  ],
+  "ceiling": "182103823/128000000",
+  "excludes_known_lower": false
+}

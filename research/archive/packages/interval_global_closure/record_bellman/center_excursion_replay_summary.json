@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "scope": "Exact partial center-outward integral and interior-record charts; no standalone security claim",
+  "fixtures": {
+    "center_excursion_n1_fullwidth.json": {
+      "n": 1,
+      "epsilon": "1/2",
+      "source_sha256": "699b28ad23183a455f34f31e934df9147d579af6c3278324e9795bb3fd9cec90",
+      "status": "PASS",
+      "pre_two_nodes": 5,
+      "cone_checks": 4,
+      "time_bands": 2,
+      "charts": 19,
+      "direct_integral_and_record_checks": 261
+    },
+    "center_excursion_n2_fullwidth.json": {
+      "n": 2,
+      "epsilon": "1/2",
+      "source_sha256": "521b27cb99958ef9cd7c5134de59cba1d08104f2997733773aa46cebce58878d",
+      "status": "PASS",
+      "pre_two_nodes": 18,
+      "cone_checks": 24,
+      "time_bands": 4,
+      "charts": 81,
+      "direct_integral_and_record_checks": 1186
+    },
+    "center_excursion_n2_narrow.json": {
+      "n": 2,
+      "epsilon": "1/4",
+      "source_sha256": "521b27cb99958ef9cd7c5134de59cba1d08104f2997733773aa46cebce58878d",
+      "status": "PASS",
+      "pre_two_nodes": 18,
+      "cone_checks": 24,
+      "time_bands": 12,
+      "charts": 375,
+      "direct_integral_and_record_checks": 8764
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "model": "interval [-1,1], monster speed <=1, arbitrary continuous princess, point capture",
+  "weight_denominator": 10000,
+  "families": [
+    {
+      "kind": 1,
+      "start": "-1",
+      "weight_numerator": 7507
+    },
+    {
+      "kind": 1,
+      "start": "5/8",
+      "weight_numerator": 149
+    },
+    {
+      "kind": 1,
+      "start": "3/4",
+      "weight_numerator": 171
+    },
+    {
+      "kind": 1,
+      "start": "7/8",
+      "weight_numerator": 188
+    },
+    {
+      "kind": 2,
+      "start": "-7/8",
+      "weight_numerator": 153
+    },
+    {
+      "kind": 2,
+      "start": "-3/4",
+      "weight_numerator": 150
+    },
+    {
+      "kind": 2,
+      "start": "-5/8",
+      "weight_numerator": 147
+    },
+    {
+      "kind": 2,
+      "start": "-1/2",
+      "weight_numerator": 143
+    },
+    {
+      "kind": 2,
+      "start": "-3/8",
+      "weight_numerator": 143
+    },
+    {
+      "kind": 2,
+      "start": "-1/4",
+      "weight_numerator": 122
+    },
+    {
+      "kind": 2,
+      "start": "1/4",
+      "weight_numerator": 228
+    },
+    {
+      "kind": 2,
+      "start": "3/8",
+      "weight_numerator": 271
+    },
+    {
+      "kind": 2,
+      "start": "1/2",
+      "weight_numerator": 280
+    },
+    {
+      "kind": 2,
+      "start": "5/8",
+      "weight_numerator": 116
+    },
+    {
+      "kind": 2,
+      "start": "3/4",
+      "weight_numerator": 116
+    },
+    {
+      "kind": 2,
+      "start": "7/8",
+      "weight_numerator": 116
+    }
+  ],
+  "reflection_rule": "Within each family choose the displayed path and its reflection with equal probability."
+}

@@ -1,0 +1,145 @@
+{
+  "scope": "Clipped avoided connectors are distinct legal unit/wait candidates. Fixed-bank agreement on tested rows is not adaptive-response equivalence; the actual159 law is independently rejected.",
+  "source_blob": "e35dd91bff8eada795c639f65851e31cac7f4607",
+  "input_blob": "6cac47a4b2227fa1469bb463d35ed37ffb3af1b6",
+  "toy": {
+    "scope": "Clipped unit/wait diagnostic, not a full-game law.",
+    "cases": [
+      {
+        "tau": "1/4",
+        "limit": "5/8",
+        "germ": {
+          "numerator": {
+            "0": "5/8",
+            "1": "-1/2",
+            "6": "-1/2"
+          },
+          "denominator": {
+            "0": "1"
+          }
+        },
+        "vertices": 8,
+        "nonzeroFailures": 0,
+        "nodes": 3
+      },
+      {
+        "tau": "1/2",
+        "limit": "3/4",
+        "germ": {
+          "numerator": {
+            "0": "3/4",
+            "1": "-1/2",
+            "6": "-1/2"
+          },
+          "denominator": {
+            "0": "1"
+          }
+        },
+        "vertices": 8,
+        "nonzeroFailures": 0,
+        "nodes": 3
+      },
+      {
+        "tau": "3/4",
+        "limit": "7/8",
+        "germ": {
+          "numerator": {
+            "0": "7/8",
+            "1": "-1/2",
+            "6": "-1/2"
+          },
+          "denominator": {
+            "0": "1"
+          }
+        },
+        "vertices": 8,
+        "nonzeroFailures": 0,
+        "nodes": 3
+      }
+    ],
+    "arithmetic": {
+      "radius": "1/40",
+      "comparisons": 3303,
+      "maxDegree": 12
+    }
+  },
+  "fixed_bank": {
+    "scope": "Independent clipped unit/wait candidate diagnostic. Fixed-bank equality, when checked, is not adaptive-response equivalence.",
+    "input_blob": "6cac47a4b2227fa1469bb463d35ed37ffb3af1b6",
+    "rows": [
+      {
+        "row": 0,
+        "vertices": 234,
+        "isolated_avoided": 23,
+        "nonzero_side_failures": [],
+        "fixed_bank_checks": 1086,
+        "differences": [],
+        "max_abs_difference": "0"
+      },
+      {
+        "row": 85,
+        "vertices": 294,
+        "isolated_avoided": 1,
+        "nonzero_side_failures": [],
+        "fixed_bank_checks": 1086,
+        "differences": [],
+        "max_abs_difference": "0"
+      },
+      {
+        "row": 79,
+        "vertices": 427,
+        "isolated_avoided": 0,
+        "nonzero_side_failures": [],
+        "fixed_bank_checks": 1086,
+        "differences": [],
+        "max_abs_difference": "0"
+      },
+      {
+        "row": 158,
+        "vertices": 158,
+        "isolated_avoided": 1,
+        "nonzero_side_failures": [],
+        "fixed_bank_checks": 1086,
+        "differences": [],
+        "max_abs_difference": "0"
+      }
+    ],
+    "arithmetic": {
+      "radius": "1/1280000000000000002",
+      "comparisons": 2365991,
+      "maxDegree": 14
+    },
+    "seconds": 167.343
+  },
+  "zero_side_signature_changes": [
+    {
+      "row": 0,
+      "total": 101,
+      "virtual": 71,
+      "physical_through_two": 0,
+      "late": 30
+    },
+    {
+      "row": 85,
+      "total": 151,
+      "virtual": 2,
+      "physical_through_two": 6,
+      "late": 143
+    },
+    {
+      "row": 79,
+      "total": 140,
+      "virtual": 0,
+      "physical_through_two": 26,
+      "late": 114
+    },
+    {
+      "row": 158,
+      "total": 25,
+      "virtual": 19,
+      "physical_through_two": 0,
+      "late": 6
+    }
+  ],
+  "actual159_rejection_report_blob": "d742337ce93a8071ed464c9cb39d47d960f4bd61"
+}

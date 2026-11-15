@@ -1,0 +1,86 @@
+{
+  "scope": "Fixed-bin two-parameter structural discovery; no exact bound or saddle.",
+  "trials": [
+    {
+      "offset": 0.01,
+      "slope": 0.12,
+      "objective": 1.4256992560654085,
+      "response": 1.425699415539344,
+      "inequality_dual_mass": 0.0024337559156012156,
+      "equality_dual_mass": 0.018208639507695024
+    },
+    {
+      "offset": 0.03,
+      "slope": 0.12,
+      "objective": 1.4256851122026715,
+      "response": 1.4256852703600016,
+      "inequality_dual_mass": 0.002385965414523107,
+      "equality_dual_mass": 0.018299954356846285
+    },
+    {
+      "offset": 0.01,
+      "slope": 0.24,
+      "objective": 1.4256945534510197,
+      "response": 1.4256947122847687,
+      "inequality_dual_mass": 0.004729815299743034,
+      "equality_dual_mass": 0.018235650474960365
+    },
+    {
+      "offset": 0.03,
+      "slope": 0.24,
+      "objective": 1.4256951628299483,
+      "response": 1.4256953193563335,
+      "inequality_dual_mass": 0.002385846202932581,
+      "equality_dual_mass": 0.018270170220247264
+    },
+    {
+      "offset": 0.024999999999999998,
+      "slope": 0.21000000000000002,
+      "objective": 1.4256907865745745,
+      "response": 1.4256909448224933,
+      "inequality_dual_mass": 0.004709475627047856,
+      "equality_dual_mass": 0.018274081527872917
+    },
+    {
+      "offset": 0.04499999999999999,
+      "slope": 0.09000000000000002,
+      "objective": 1.4256944309902841,
+      "response": 1.4256945889571975,
+      "inequality_dual_mass": 0.0023856844957424114,
+      "equality_dual_mass": 0.018240484634286555
+    },
+    {
+      "offset": 0.03625,
+      "slope": 0.1275,
+      "objective": 1.4256907664240233,
+      "response": 1.425690924664659,
+      "inequality_dual_mass": 0.002385727466248745,
+      "equality_dual_mass": 0.01826479345763387
+    },
+    {
+      "offset": 0.04125000000000001,
+      "slope": 0.03749999999999998,
+      "objective": 1.4256856449348305,
+      "response": 1.4256858017636374,
+      "inequality_dual_mass": 0.0023857772255401755,
+      "equality_dual_mass": 0.01829638188847423
+    },
+    {
+      "offset": 0.03500000000000001,
+      "slope": 0.02999999999999997,
+      "objective": 1.4256803350137623,
+      "response": 1.425680493123296,
+      "inequality_dual_mass": 0.0023858369117325147,
+      "equality_dual_mass": 0.018331966155293075
+    },
+    {
+      "offset": 0.03437500000000002,
+      "slope": 0.005,
+      "objective": 1.4256779778180388,
+      "response": 1.4256781356225643,
+      "inequality_dual_mass": 0.10936621244258504,
+      "equality_dual_mass": 0.01834789851073306
+    }
+  ],
+  "stopping_rule": "At most ten fixed-profile density solves; no bin refinement."
+}

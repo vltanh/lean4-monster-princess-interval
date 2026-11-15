@@ -1,0 +1,565 @@
+{
+  "exact_full_game_solution": false,
+  "closed_graph_iterations": [
+    {
+      "outer": 0,
+      "lower": 1.4116980223076498,
+      "matrix": 1.411698033267496,
+      "upper": 1.7120700819038117,
+      "active_m": 36,
+      "network_faces": 37,
+      "network_basis": 36,
+      "hiders": 36,
+      "log": [
+        {
+          "it": 0,
+          "value": 1.411698033267496,
+          "response": 1.4116980223076498,
+          "nodes": 4481,
+          "leaves": 5,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "outer": 1,
+      "lower": 1.4137634453469694,
+      "matrix": 1.413763601214958,
+      "upper": 1.5815784127746848,
+      "active_m": 50,
+      "network_faces": 130,
+      "network_basis": 53,
+      "hiders": 50,
+      "log": [
+        {
+          "it": 0,
+          "value": 1.424875939441778,
+          "response": 1.1479366987346569,
+          "nodes": 1786,
+          "leaves": 13,
+          "complete": true
+        },
+        {
+          "it": 1,
+          "value": 1.4187202001588448,
+          "response": 1.061763177717666,
+          "nodes": 1876,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 2,
+          "value": 1.4165636130069756,
+          "response": 1.2155823920985338,
+          "nodes": 1678,
+          "leaves": 10,
+          "complete": true
+        },
+        {
+          "it": 3,
+          "value": 1.4163832908899192,
+          "response": 1.2455757133062362,
+          "nodes": 2054,
+          "leaves": 14,
+          "complete": true
+        },
+        {
+          "it": 4,
+          "value": 1.4158658643818882,
+          "response": 1.2493235658531212,
+          "nodes": 2157,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 5,
+          "value": 1.4151461576324778,
+          "response": 1.2701982207899014,
+          "nodes": 2650,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 6,
+          "value": 1.4151456394650737,
+          "response": 1.2853967895514737,
+          "nodes": 2674,
+          "leaves": 6,
+          "complete": true
+        },
+        {
+          "it": 7,
+          "value": 1.4149888386335798,
+          "response": 1.3171606241208247,
+          "nodes": 3354,
+          "leaves": 8,
+          "complete": true
+        },
+        {
+          "it": 8,
+          "value": 1.4147325662956896,
+          "response": 1.3373314099574434,
+          "nodes": 2814,
+          "leaves": 6,
+          "complete": true
+        },
+        {
+          "it": 9,
+          "value": 1.4143913169516829,
+          "response": 1.363377516650936,
+          "nodes": 3126,
+          "leaves": 8,
+          "complete": true
+        },
+        {
+          "it": 10,
+          "value": 1.4143499133043038,
+          "response": 1.3846147784642464,
+          "nodes": 3138,
+          "leaves": 6,
+          "complete": true
+        },
+        {
+          "it": 11,
+          "value": 1.4143400810176368,
+          "response": 1.385165812017254,
+          "nodes": 3637,
+          "leaves": 5,
+          "complete": true
+        },
+        {
+          "it": 12,
+          "value": 1.4143390612762186,
+          "response": 1.386319190660067,
+          "nodes": 3840,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 13,
+          "value": 1.4142021961379632,
+          "response": 1.3888259999555062,
+          "nodes": 3567,
+          "leaves": 10,
+          "complete": true
+        },
+        {
+          "it": 14,
+          "value": 1.4141422334773892,
+          "response": 1.3915202733307008,
+          "nodes": 2946,
+          "leaves": 5,
+          "complete": true
+        },
+        {
+          "it": 15,
+          "value": 1.4141295141550756,
+          "response": 1.3908562335415373,
+          "nodes": 4649,
+          "leaves": 8,
+          "complete": true
+        },
+        {
+          "it": 16,
+          "value": 1.4141233033487979,
+          "response": 1.3945640789723308,
+          "nodes": 5368,
+          "leaves": 8,
+          "complete": true
+        },
+        {
+          "it": 17,
+          "value": 1.414120907907852,
+          "response": 1.3942471711218514,
+          "nodes": 4310,
+          "leaves": 10,
+          "complete": true
+        },
+        {
+          "it": 18,
+          "value": 1.4141187505542494,
+          "response": 1.3970433171049188,
+          "nodes": 4294,
+          "leaves": 10,
+          "complete": true
+        },
+        {
+          "it": 19,
+          "value": 1.413957458404587,
+          "response": 1.399037741440126,
+          "nodes": 4788,
+          "leaves": 10,
+          "complete": true
+        },
+        {
+          "it": 20,
+          "value": 1.413795547711788,
+          "response": 1.4009927641401851,
+          "nodes": 4818,
+          "leaves": 12,
+          "complete": true
+        },
+        {
+          "it": 21,
+          "value": 1.4137866918357962,
+          "response": 1.401452065593222,
+          "nodes": 4932,
+          "leaves": 11,
+          "complete": true
+        },
+        {
+          "it": 22,
+          "value": 1.4137788743658128,
+          "response": 1.4039051199657753,
+          "nodes": 5054,
+          "leaves": 10,
+          "complete": true
+        },
+        {
+          "it": 23,
+          "value": 1.4137778883904009,
+          "response": 1.4039151065547173,
+          "nodes": 5242,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 24,
+          "value": 1.4137775119766567,
+          "response": 1.4044140814617725,
+          "nodes": 5409,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 25,
+          "value": 1.4137766232821178,
+          "response": 1.40502198887611,
+          "nodes": 5541,
+          "leaves": 8,
+          "complete": true
+        },
+        {
+          "it": 26,
+          "value": 1.4137765957430957,
+          "response": 1.4062350517821656,
+          "nodes": 5863,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 27,
+          "value": 1.4137746581906219,
+          "response": 1.406430079428496,
+          "nodes": 6124,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 28,
+          "value": 1.4137652955259534,
+          "response": 1.4087975930752303,
+          "nodes": 6453,
+          "leaves": 9,
+          "complete": true
+        },
+        {
+          "it": 29,
+          "value": 1.4137648835375605,
+          "response": 1.4091156974429706,
+          "nodes": 6323,
+          "leaves": 8,
+          "complete": true
+        },
+        {
+          "it": 30,
+          "value": 1.413764883537561,
+          "response": 1.4093083393716985,
+          "nodes": 7582,
+          "leaves": 11,
+          "complete": true
+        },
+        {
+          "it": 31,
+          "value": 1.4137648831747573,
+          "response": 1.4095604170018508,
+          "nodes": 7454,
+          "leaves": 11,
+          "complete": true
+        },
+        {
+          "it": 32,
+          "value": 1.4137648664561098,
+          "response": 1.4100178328737432,
+          "nodes": 7763,
+          "leaves": 12,
+          "complete": true
+        },
+        {
+          "it": 33,
+          "value": 1.4137639119828445,
+          "response": 1.4103426017676872,
+          "nodes": 7755,
+          "leaves": 11,
+          "complete": true
+        },
+        {
+          "it": 34,
+          "value": 1.413763635091128,
+          "response": 1.4108218498947682,
+          "nodes": 7658,
+          "leaves": 14,
+          "complete": true
+        },
+        {
+          "it": 35,
+          "value": 1.413763601214958,
+          "response": 1.4137634453469694,
+          "nodes": 7661,
+          "leaves": 13,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "outer": 2,
+      "lower": 1.4165819114521165,
+      "matrix": 1.416581955113453,
+      "upper": 1.6744681456328676,
+      "active_m": 100,
+      "network_faces": 173,
+      "network_basis": 83,
+      "hiders": 100,
+      "log": [
+        {
+          "it": 0,
+          "value": 1.4165916051646457,
+          "response": 1.4148031688540275,
+          "nodes": 109396,
+          "complete": true,
+          "leaves": 64
+        },
+        {
+          "it": 1,
+          "value": 1.4165831480662443,
+          "response": 1.4139676914767674,
+          "nodes": 103281,
+          "complete": true,
+          "leaves": 64
+        },
+        {
+          "it": 2,
+          "value": 1.4165823289272619,
+          "response": 1.4151944696515733,
+          "nodes": 126329,
+          "complete": true,
+          "leaves": 65
+        },
+        {
+          "it": 3,
+          "value": 1.4165821297942425,
+          "response": 1.4153954798657762,
+          "nodes": 94085,
+          "complete": true,
+          "leaves": 64
+        },
+        {
+          "it": 4,
+          "value": 1.4165820141195835,
+          "response": 1.4163144961926524,
+          "nodes": 122616,
+          "complete": true,
+          "leaves": 65
+        },
+        {
+          "it": 5,
+          "value": 1.4165819594054547,
+          "response": 1.4165455898341197,
+          "nodes": 142273,
+          "complete": true,
+          "leaves": 66
+        },
+        {
+          "it": 6,
+          "value": 1.4165819555532637,
+          "response": 1.4165761950662223,
+          "nodes": 129140,
+          "complete": true,
+          "leaves": 65
+        },
+        {
+          "it": 7,
+          "value": 1.416581955113453,
+          "response": 1.4165819114521165,
+          "nodes": 128569,
+          "complete": true,
+          "leaves": 65
+        }
+      ]
+    },
+    {
+      "outer": 3,
+      "lower": 1.4175898349178546,
+      "matrix": 1.4175898471340893,
+      "upper": 1.635248227515621,
+      "active_m": 164,
+      "network_faces": 389,
+      "network_basis": 164,
+      "hiders": 169,
+      "log": [
+        {
+          "it": 0,
+          "value": 1.4233083732727039,
+          "response": 1.2642617415117836,
+          "nodes": 8676,
+          "complete": true,
+          "leaves": 32
+        },
+        {
+          "it": 1,
+          "value": 1.4200294965941747,
+          "response": 1.273555705324818,
+          "nodes": 19784,
+          "complete": true,
+          "leaves": 37
+        },
+        {
+          "it": 2,
+          "value": 1.4199888922367785,
+          "response": 1.3386044609896812,
+          "nodes": 25906,
+          "complete": true,
+          "leaves": 45
+        },
+        {
+          "it": 3,
+          "value": 1.4185434284113887,
+          "response": 1.3505466473347245,
+          "nodes": 44601,
+          "complete": true,
+          "leaves": 54
+        },
+        {
+          "it": 4,
+          "value": 1.4179963187514735,
+          "response": 1.3162634148861285,
+          "nodes": 60342,
+          "complete": true,
+          "leaves": 63
+        },
+        {
+          "it": 5,
+          "value": 1.4176196905315805,
+          "response": 1.365554678274074,
+          "nodes": 81824,
+          "complete": true,
+          "leaves": 81
+        },
+        {
+          "it": 6,
+          "value": 1.4176055032023178,
+          "response": 1.405377527422927,
+          "nodes": 140137,
+          "complete": true,
+          "leaves": 98
+        },
+        {
+          "it": 7,
+          "value": 1.4176012439046548,
+          "response": 1.4077218183667768,
+          "nodes": 182418,
+          "complete": true,
+          "leaves": 106
+        },
+        {
+          "it": 8,
+          "value": 1.4175938683375826,
+          "response": 1.412818532319544,
+          "nodes": 187759,
+          "complete": true,
+          "leaves": 110
+        },
+        {
+          "it": 9,
+          "value": 1.4175904307124214,
+          "response": 1.4151741171070387,
+          "nodes": 262473,
+          "complete": true,
+          "leaves": 119
+        },
+        {
+          "it": 10,
+          "value": 1.4175902932712614,
+          "response": 1.4168327396482319,
+          "nodes": 314658,
+          "complete": true,
+          "leaves": 123
+        },
+        {
+          "it": 11,
+          "value": 1.4175900090235936,
+          "response": 1.4171834968033001,
+          "nodes": 324165,
+          "complete": true,
+          "leaves": 125
+        },
+        {
+          "it": 12,
+          "value": 1.4175899125041747,
+          "response": 1.4173890762976287,
+          "nodes": 333514,
+          "complete": true,
+          "leaves": 125
+        },
+        {
+          "it": 13,
+          "value": 1.4175898676519922,
+          "response": 1.417198023731692,
+          "nodes": 285484,
+          "complete": true,
+          "leaves": 124
+        },
+        {
+          "it": 14,
+          "value": 1.4175898538676743,
+          "response": 1.4175204002263047,
+          "nodes": 321808,
+          "complete": true,
+          "leaves": 125
+        },
+        {
+          "it": 15,
+          "value": 1.417589847269175,
+          "response": 1.4175773643967522,
+          "nodes": 327463,
+          "complete": true,
+          "leaves": 125
+        },
+        {
+          "it": 16,
+          "value": 1.4175898471340893,
+          "response": 1.4175898349178546,
+          "nodes": 335668,
+          "complete": true,
+          "leaves": 125
+        }
+      ]
+    }
+  ],
+  "last_inner_iteration": {
+    "it": 22,
+    "value": 1.418150853055467,
+    "response": 1.4181311980330893,
+    "nodes": 803469,
+    "complete": true,
+    "leaves": 238
+  },
+  "last_inner_outer": 4,
+  "stopped_without_matching_unrestricted_guarantees": true,
+  "python": "3.13.5",
+  "discovery_dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "numba": "0.65.1"
+  }
+}

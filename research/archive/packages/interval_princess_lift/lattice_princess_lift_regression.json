@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Independent small-bank Fraction physical/clock domination regressions and exact new-strategy arithmetic; not a replay of the B=1536 exhaustive search or a mechanical proof of continuum transfer.",
+  "fields": 10,
+  "physical_paths": 4090,
+  "clock_planes": 41544,
+  "exhaustive_short_clocks": 15400,
+  "partial_record_crossings": 1730,
+  "endpoint_start_paths": 20,
+  "strict_domination_examples": 3272,
+  "guaranteed_security": "27450199627/19327352832"
+}

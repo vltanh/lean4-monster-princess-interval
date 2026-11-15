@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "lower": "2677462523/2000000000",
+  "absorption_horizon": "3",
+  "physical_completion_horizon": "7",
+  "field_vertices": 95,
+  "potential_vertices": 59,
+  "field_triangles": 160,
+  "queue_knots": [
+    "0",
+    "1",
+    "2",
+    "4"
+  ],
+  "analytic_checks_by_kind": {
+    "cdf_range": 190,
+    "cdf_transport": 320,
+    "move": 20736,
+    "charge": 10368,
+    "initial": 5,
+    "lower_range": 2,
+    "endpoint_boundary": 9624,
+    "queue_boundary": 51912,
+    "time_boundary": 12576
+  },
+  "minimum_margin_by_kind": {
+    "cdf_range": "79364319/1000000000",
+    "cdf_transport": "0",
+    "move": "0",
+    "charge": "1/400000000",
+    "initial": "0",
+    "lower_range": "322537477/2000000000",
+    "endpoint_boundary": "63/2000000000",
+    "queue_boundary": "1878587319/16000000000",
+    "time_boundary": "97706819/200000000"
+  },
+  "boundary_polytopes": {
+    "endpoint_boundary": 3384,
+    "queue_boundary": 8584,
+    "time_boundary": 160
+  },
+  "distinct_exact_tail_integrals": 804,
+  "arithmetic": "Python Fraction only; direct exact geometry and line integrals",
+  "scope": "Global lower certificate, not an improvement on the archived best lower bound.",
+  "certificate_sha256": "39da8088fbe2aa7e19051aa34f96083b25bf683cbea8ddcaf579b27eb5eba781"
+}

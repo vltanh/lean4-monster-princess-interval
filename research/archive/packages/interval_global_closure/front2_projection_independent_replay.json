@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "scope": "Independent exact nodal/hash/guarantee replay and exhaustive small normalized-bank record checks; no new n256 optimization or exact-minimum claim.",
+  "source_field_sha256": "81483589b60c14d823d2bb467015a321d77cf555076fe8d69a36d63cd829d7d5",
+  "source_strategy_sha256": "d1432172efe4aca9c67394ae7c12fd5b553302e5c9e067d930cc343cb0db4086",
+  "projected_field_sha256": "a8e1d84d67e66e08d6d1eeb02f18c6e5121108cb4368ededd9db2e792a97189e",
+  "projected_strategy_sha256": "73633ef3386a9712463280fe220e8d6898c197414fea61fa8c1bdf3f8e659a68",
+  "source_raw_sha256": "a7ce6802e2ca3dd096cca4fd7f23c03665c131cbf66867105cc80c39433c0ec5",
+  "projected_raw_sha256": "8f5ce252881c46bc924e6fe24fb7400ad9d085c541bcdc30d1949f8bc5524d6e",
+  "large_projection_checks": {
+    "all_horizon_projection_identities": 1050881,
+    "unchanged_incoming_nodes": 197377,
+    "stored_nodes": 262400,
+    "stored_beyond_front": 65536,
+    "stored_changed_nodes": 892,
+    "initial_distribution": 257,
+    "rational_interpolation_identities": 96
+  },
+  "maximum_nodal_decrease_units": 435094784,
+  "total_nodal_decrease_units": "89425535824",
+  "source_legality": {
+    "range": 1050881,
+    "transport": 2097152,
+    "sticky_endpoint": 2048
+  },
+  "projected_legality": {
+    "range": 1050881,
+    "transport": 2097152,
+    "sticky_endpoint": 2048
+  },
+  "global_value_lower": "582291421641/409600000000",
+  "explicit_princess_security": "582289859141/409600000000",
+  "small_exhaustive_fixtures": [
+    {
+      "n": 1,
+      "stationary_until": 1,
+      "endpoint_atom": false,
+      "checks": {
+        "record_states": 148,
+        "paths": 16,
+        "strictly_improved_prices": 0
+      },
+      "old_minimum": "11/8",
+      "projected_minimum": "11/8"
+    },
+    {
+      "n": 1,
+      "stationary_until": 2,
+      "endpoint_atom": false,
+      "checks": {
+        "record_states": 148,
+        "changed_postcenter_nodes": 6,
+        "paths": 16,
+        "strictly_improved_prices": 0
+      },
+      "old_minimum": "5/4",
+      "projected_minimum": "5/4"
+    },
+    {
+      "n": 1,
+      "stationary_until": 2,
+      "endpoint_atom": true,
+      "checks": {
+        "record_states": 148,
+        "changed_postcenter_nodes": 6,
+        "paths": 16,
+        "strictly_improved_prices": 0
+      },
+      "old_minimum": "9/8",
+      "projected_minimum": "9/8"
+    },
+    {
+      "n": 2,
+      "stationary_until": 1,
+      "endpoint_atom": false,
+      "checks": {
+        "record_states": 16470,
+        "paths": 802,
+        "strictly_improved_prices": 0
+      },
+      "old_minimum": "21/16",
+      "projected_minimum": "21/16"
+    },
+    {
+      "n": 2,
+      "stationary_until": 2,
+      "endpoint_atom": false,
+      "checks": {
+        "record_states": 16470,
+        "changed_postcenter_nodes": 1106,
+        "strict_record_states": 1554,
+        "paths": 802,
+        "strictly_improved_prices": 220
+      },
+      "old_minimum": "9/8",
+      "projected_minimum": "37/32"
+    },
+    {
+      "n": 2,
+      "stationary_until": 2,
+      "endpoint_atom": true,
+      "checks": {
+        "record_states": 16470,
+        "changed_postcenter_nodes": 1106,
+        "strict_record_states": 1554,
+        "paths": 802,
+        "strictly_improved_prices": 220
+      },
+      "old_minimum": "17/16",
+      "projected_minimum": "69/64"
+    }
+  ]
+}

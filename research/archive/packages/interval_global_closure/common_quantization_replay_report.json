@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "quantizer_identities": 3615,
+  "physical_clock_repairs": 32,
+  "early_endpoint_cases": 18,
+  "simultaneous_jump_fills": 56,
+  "sharp_delta_buffer_cases": 11,
+  "matching_containments": 400,
+  "collapsed_target_cases": 15,
+  "two_queue_calendar_paths": 4
+}

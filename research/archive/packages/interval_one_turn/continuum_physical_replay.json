@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scope": "exact chronological E/S/P_b payoff-formula fixtures; independent of the potential checker",
+  "arithmetic": "Fraction throughout",
+  "deterministic_seed": 170319,
+  "radial_princess_paths": 34,
+  "P_density_bin_fixtures": 238,
+  "S_density_bin_fixtures": 136,
+  "endpoint_fixtures": 34,
+  "initial_radius_above_turn_level": 43,
+  "initial_radius_equal_turn_level": 4,
+  "late_W_terminal_fixtures": 24
+}

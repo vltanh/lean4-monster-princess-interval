@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "field_sha256": "a8e1d84d67e66e08d6d1eeb02f18c6e5121108cb4368ededd9db2e792a97189e",
+  "dimensionless_interpolation_epsilon": "1/2",
+  "checks": {
+    "source_routes": 3,
+    "prefix_deletions": 10,
+    "front_preserving_compressions": 2,
+    "affine_intervals": 49360
+  },
+  "scope": "Exact fixed-field chronological prefix comparisons; distinct from the saved narrow Princess law and not a game-value certificate."
+}

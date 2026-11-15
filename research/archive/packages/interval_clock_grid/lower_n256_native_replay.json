@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "exact normalized-bank dual; unrestricted game-value lower uses the proved atomization, bank normalization and quantitative transfer",
+  "n": 256,
+  "exact_bank_dual": "583091421641/409600000000",
+  "global_value_lower": "582291421641/409600000000",
+  "global_value_lower_decimal": 1.4216099161157227,
+  "input_sha256": "81483589b60c14d823d2bb467015a321d77cf555076fe8d69a36d63cd829d7d5",
+  "verifier_source_sha256": "9fe59dd962f76665af8d6f2fceee0bec1f626dfff96f6d918802d67ceb28f9bd",
+  "pricing": {
+    "status": "PASS",
+    "scope": "exact integer dual pricing on the normalized physical grid bank",
+    "n": 256,
+    "field_denominator": "800000000",
+    "minimum_units": "1166182843282",
+    "objective_denominator": "819200000000",
+    "retained_states": 198100075,
+    "generated_transitions": 382110177,
+    "dominance_pruned": 184010359,
+    "independent_pursuit_pruned": 7039517,
+    "late_center_pruned": 0,
+    "maximum_layer": 733222,
+    "terminal_tours": 7045,
+    "witness_storage": "packed current-layer prefixes",
+    "peak_packed_trace_bytes": 0,
+    "paths": []
+  },
+  "seconds": 45.85576655800014
+}

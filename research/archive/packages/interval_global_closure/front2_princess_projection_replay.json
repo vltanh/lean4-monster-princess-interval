@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "qout_verified": true,
+  "n": 256,
+  "input_sha256": "a8e1d84d67e66e08d6d1eeb02f18c6e5121108cb4368ededd9db2e792a97189e",
+  "verified_lower_units": "1166182843282",
+  "objective_denominator": "819200000000",
+  "normalized_bank_lower": "583091421641/409600000000",
+  "source_field_sha256": "81483589b60c14d823d2bb467015a321d77cf555076fe8d69a36d63cd829d7d5",
+  "source_strategy_sha256": "d1432172efe4aca9c67394ae7c12fd5b553302e5c9e067d930cc343cb0db4086",
+  "scope": "Analytically inherited bank lower under exact front projection. This is not a fresh exhaustive pricing run and does not claim equality with the new bank minimum.",
+  "projection": {
+    "stored_nodes": 262400,
+    "nodes_strictly_beyond_front": 65536,
+    "changed_nodes": 892,
+    "remaining_front_domain_nodes": 196864,
+    "maximum_nodal_decrease_units": 435094784,
+    "total_nodal_decrease_units": "89425535824",
+    "exact_front_identities": 66048,
+    "transport_inequalities": 523264,
+    "sticky_endpoint_inequalities": 512
+  },
+  "projected_strategy_sha256": "73633ef3386a9712463280fe220e8d6898c197414fea61fa8c1bdf3f8e659a68",
+  "incoming_front": "2",
+  "exact_interpolation_epsilon": "1/512",
+  "explicit_security": "582289859141/409600000000",
+  "global_value_lower": "582291421641/409600000000",
+  "no_new_pricing_search": true,
+  "no_claim_of_new_minimum_attainment": true
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "global physical Monster upper via centered-law Princess normalization and exact Qout closure",
+  "n": 64,
+  "physical_calendar_plans": 736,
+  "distinct_physical_pairs": 703,
+  "closure_nodes": 16450,
+  "closure_arcs": 40760,
+  "positive_flow_entries": 11398,
+  "exact_flow": "23926115635762",
+  "exact_cut": "23926115635762",
+  "global_upper": "364842628535291/256000000000000",
+  "endpoint_baseline": "2276326166273/1600000000000",
+  "closure_excess": "630441931611/256000000000000",
+  "certificate_sha256": "2a09355539fa015a0b281843a9db108c4a619243118eb0d57d14144cab20d89a",
+  "certificate_uncompressed_sha256": "228eeb494382098a3e7cbe58378cadd0bb305eab89f678ef5785744d24f706b9",
+  "certificate_bytes": 203453
+}

@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "scope": "Independent expanded-v1 CDF comparisons, exact nodal recovery, complete fixed-time affine breakpoints, quantile inversion and speed/stopping regressions; exact BigInt target-bound regeneration on each fixture.",
+  "counts": {
+    "fixtures": 3,
+    "pricing_replays": 11,
+    "extractions": 8,
+    "exact_nodes": 4172,
+    "legacy_cdf_comparisons": 7052,
+    "affine_piece_checks": 1384,
+    "symmetry_checks": 3196,
+    "transport_checks": 6064,
+    "outward_checks": 540,
+    "quantile_inversions": 820,
+    "quantile_speed_checks": 780,
+    "rejected_malformed_inputs": 37
+  },
+  "fixtures": [
+    {
+      "name": "constant endpoint law",
+      "n": 1,
+      "finite_dual_lower": "1",
+      "epsilons": [
+        {
+          "epsilon": "1/2",
+          "guaranteed_security": "1/4"
+        },
+        {
+          "epsilon": "1/512",
+          "guaranteed_security": "511/1024"
+        }
+      ]
+    },
+    {
+      "name": "stationary uniform plus endpoint atom",
+      "n": 2,
+      "finite_dual_lower": "8731/8000",
+      "epsilons": [
+        {
+          "epsilon": "1/2",
+          "guaranteed_security": "5731/8000"
+        },
+        {
+          "epsilon": "1/4",
+          "guaranteed_security": "6231/8000"
+        },
+        {
+          "epsilon": "1/512",
+          "guaranteed_security": "215267/256000"
+        }
+      ]
+    },
+    {
+      "name": "nonoptimal native n6 Qout profile",
+      "n": 6,
+      "finite_dual_lower": "5737266673/4000000000",
+      "epsilons": [
+        {
+          "epsilon": "1/2",
+          "guaranteed_security": "5237266673/4000000000"
+        },
+        {
+          "epsilon": "1/12",
+          "guaranteed_security": "48385400057/36000000000"
+        },
+        {
+          "epsilon": "1/512",
+          "guaranteed_security": "2701641149/2000000000"
+        }
+      ]
+    }
+  ]
+}

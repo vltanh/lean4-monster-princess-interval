@@ -1,0 +1,153 @@
+{
+  "scope": "Exact finite rational polygonal laws, constant tails. No game-value or continuous-CDF certification.",
+  "archivedRaw": 40,
+  "archivedSorted": 40,
+  "arbitrarySearch": 24,
+  "arbitrarySorted": 24,
+  "rayChecks": 1920,
+  "sixty": {
+    "mode": "raw",
+    "complete": true,
+    "stopReason": null,
+    "paths": 60,
+    "weightTotal": "200000",
+    "value": "56305800187/40000000000",
+    "decimal": 1.407645004675,
+    "route": [
+      [
+        "0",
+        "-5/16"
+      ],
+      [
+        "131249/200000",
+        "68749/200000"
+      ],
+      [
+        "199999/100000",
+        "-1"
+      ],
+      [
+        "399999/100000",
+        "1"
+      ]
+    ],
+    "stats": {
+      "nodes": 25776,
+      "leaves": 3,
+      "bounded": 4411,
+      "dominated": 8483,
+      "improvements": 3,
+      "memoKeys": 7897,
+      "remaining": 0
+    }
+  },
+  "shell": {
+    "mode": "sorted",
+    "complete": true,
+    "stopReason": null,
+    "paths": 9,
+    "weightTotal": "5266",
+    "value": "381/2633",
+    "decimal": 0.14470186099506266,
+    "route": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1/4",
+        "1/4"
+      ],
+      [
+        "1",
+        "-1/2"
+      ],
+      [
+        "9/4",
+        "3/4"
+      ],
+      [
+        "4",
+        "-1"
+      ],
+      [
+        "6",
+        "1"
+      ]
+    ],
+    "stats": {
+      "nodes": 171,
+      "leaves": 14,
+      "bounded": 56,
+      "dominated": 9,
+      "improvements": 14,
+      "memoKeys": 69,
+      "remaining": 0
+    },
+    "captureRecords": [
+      {
+        "time": "0",
+        "mass": "4096",
+        "lower": "585",
+        "upper": "4681"
+      },
+      {
+        "time": "1/4",
+        "mass": "512",
+        "lower": "585",
+        "upper": "5193"
+      },
+      {
+        "time": "3/4",
+        "mass": "512",
+        "lower": "73",
+        "upper": "5193"
+      },
+      {
+        "time": "1",
+        "mass": "64",
+        "lower": "9",
+        "upper": "5193"
+      },
+      {
+        "time": "2",
+        "mass": "64",
+        "lower": "9",
+        "upper": "5257"
+      },
+      {
+        "time": "9/4",
+        "mass": "8",
+        "lower": "9",
+        "upper": "5265"
+      },
+      {
+        "time": "15/4",
+        "mass": "8",
+        "lower": "1",
+        "upper": "5265"
+      },
+      {
+        "time": "4",
+        "mass": "1",
+        "lower": "0",
+        "upper": "5265"
+      },
+      {
+        "time": "6",
+        "mass": "1",
+        "lower": "0",
+        "upper": "5266"
+      }
+    ]
+  },
+  "crossing": {
+    "raw": "1/2",
+    "sorted": "9/4"
+  },
+  "execution": "Core and verifier body executed in pure V8; Node CLI and file-I/O wrappers not executed during the executor outage.",
+  "archived_input_blobs": {
+    "regressions": "f5a144dd9f9e0670422a801c8cf490f763ab7938",
+    "sixty": "c048c5f28f3c53b056196411af1becceef9685dd"
+  }
+}

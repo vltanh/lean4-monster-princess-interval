@@ -1,0 +1,191 @@
+name: Continuous geometry and incoming fronts
+
+on:
+  push:
+    branches: [research/interval-progress-2026-11-10]
+    paths:
+      - .github/workflows/continuous-geometry-discovery.yml
+      - packages/interval_continuous_lower/**
+      - packages/interval_quantile_certificate/search_continuous_attacks.py
+      - packages/interval_quantile_certificate/score_continuous_attack.py
+      - packages/interval_quantile_certificate/extract_quantiles.py
+      - packages/interval_quantile_certificate/earlier_front_probe.*
+      - packages/interval_quantile_certificate/test_continuous_record_hypographs.py
+      - research/12-global-closure/CONTINUOUS_RECORD_HYPOGRAPHS.md
+  # Expensive discovery is only enabled by an explicit manual dispatch.
+  workflow_dispatch:
+    inputs:
+      run_geometry:
+        description: Run the three discovery families for this workflow
+        type: boolean
+        default: true
+      resume_run_id:
+        description: Prior continuous-geometry run with matching family artifacts
+        required: false
+        default: ''
+      refine_front:
+        description: Repeat the already retained exact front refinement
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  PYTHONUNBUFFERED: '1'
+  OMP_NUM_THREADS: '2'
+  OPENBLAS_NUM_THREADS: '2'
+
+jobs:
+  exact-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: |
+          python3 -m pip install numpy==2.3.5 scipy==1.17.0
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libgmp-dev
+      - name: Verify separate objectives, causal planes, quantiles and front projection
+        run: |
+          python3 packages/interval_continuous_lower/test_continuous_lower.py
+          python3 packages/interval_continuous_lower/test_front_model.py
+          python3 packages/interval_continuous_lower/test_record_lp.py
+          python3 packages/interval_continuous_lower/test_hybrid_lp.py
+          python3 packages/interval_continuous_lower/test_hybrid_search.py
+          python3 packages/interval_continuous_lower/test_trial_retention.py
+          python3 packages/interval_quantile_certificate/test_quantile_certificate.py
+          python3 packages/interval_quantile_certificate/test_continuous_attack_search.py
+          python3 packages/interval_quantile_certificate/test_refinement_ceiling.py > /tmp/refinement-ceilings.json
+          python3 packages/interval_quantile_certificate/earlier_front_probe.py > /tmp/earlier-front-probe.json
+          python3 packages/interval_quantile_certificate/test_continuous_record_hypographs.py --report /tmp/continuous-record-hypographs.json
+          python3 packages/interval_center_pricing/refine.py --source packages/interval_clock_grid/normalized_princess_n6_fixture.json --n 12 --output /tmp/exact-refinement --classic
+          node packages/interval_clock_grid/normalized_record_pricing.cjs /tmp/exact-refinement/field.json --target-bound
+
+  geometry:
+    needs: exact-regressions
+    if: github.event_name == 'workflow_dispatch' && inputs.run_geometry
+    name: Continuous Princess ${{ matrix.id }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: full-strict
+            script: search.py
+            radius: .004
+            slack: 1/10000000
+            seed: 2026111401
+          - id: front-strict
+            script: front_search.py
+            radius: .004
+            slack: 1/10000000
+            seed: 2026111402
+          - id: front-flexible
+            script: front_search.py
+            radius: .02
+            slack: 1/20000
+            seed: 2026111403
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - if: inputs.resume_run_id != '' && inputs.resume_run_id != null
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.resume_run_id }}
+          name: continuous-${{ matrix.id }}
+          path: results/${{ matrix.id }}
+      - name: Change CDF geometry with exact bank floors and continuous attack separation
+        shell: bash
+        run: |
+          mkdir -p results/${{ matrix.id }}
+          resume=()
+          if test -f results/${{ matrix.id }}/state.json.gz; then resume=(--resume); fi
+          python3 -u packages/interval_continuous_lower/${{ matrix.script }} \
+            --n 256 --oracle center --bank-model records --radius ${{ matrix.radius }} \
+            --bank-slack ${{ matrix.slack }} --random-seed ${{ matrix.seed }} \
+            --seconds 1200 --iterations 80 --lp-seconds 180 \
+            --initial-routes 32 --keep 16 --cached-keep 16 --attack-seconds 30 --attack-starts 4 \
+            --new-attacks 2 "${resume[@]}" --output results/${{ matrix.id }} \
+            2>&1 | tee results/${{ matrix.id }}/search.log
+      - name: Record reproducibility metadata
+        if: always()
+        run: |
+          mkdir -p results/${{ matrix.id }}
+          git rev-parse HEAD > results/${{ matrix.id }}/commit.txt
+          python3 -m pip freeze > results/${{ matrix.id }}/dependencies.txt
+          sha256sum packages/interval_continuous_lower/*.py packages/interval_quantile_certificate/*.py packages/interval_center_pricing/price_center.cpp > results/${{ matrix.id }}/sources.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: continuous-${{ matrix.id }}
+          path: |
+            results/${{ matrix.id }}/
+            !results/${{ matrix.id }}/work/
+          if-no-files-found: error
+          retention-days: 90
+
+  front-refinement:
+    needs: exact-regressions
+    if: github.event_name == 'workflow_dispatch' && inputs.refine_front
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    outputs:
+      improves: ${{ steps.outcome.outputs.improves }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - run: python3 -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Exactly refine the globally sufficient front geometry and price every response
+        run: python3 -u packages/interval_center_pricing/refine.py --source packages/interval_global_closure/lower_n256_front2_field.json --n 512 --policy 4 --classic --output results/front-refinement
+      - id: outcome
+        name: Gate independent certification on a stronger native result
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from fractions import Fraction as Q
+          d=json.load(open('results/front-refinement/manifest.json'))
+          improves=Q(d['global_value_lower'])>Q(1456306620181,1024000000000)
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('improves='+str(improves).lower()+'\n')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: continuous-front-refinement
+          path: |
+            results/front-refinement/
+            !results/front-refinement/work/
+          if-no-files-found: error
+          retention-days: 90
+
+  independent-front-lower:
+    needs: front-refinement
+    if: needs.front-refinement.outputs.improves == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: continuous-front-refinement
+          path: results/front-refinement
+      - name: Check the unchanged independent BigInt bank lower
+        run: node --max-old-space-size=6144 packages/interval_clock_grid/normalized_record_pricing.cjs results/front-refinement/field.json --target-bound > results/front-refinement/independent.replay.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: continuous-front-independent
+          path: results/front-refinement/
+          if-no-files-found: error
+          retention-days: 90

@@ -1,0 +1,4 @@
+PASS: exact unrestricted response = 36290299773897097/25600000000000000
+Decimal (display only): 1.4175898349178553
+Search: {'nodes': 48228, 'leaves': 7, 'dominated': 21262, 'bounded': 2904}
+Seconds: 3.1076579093933105

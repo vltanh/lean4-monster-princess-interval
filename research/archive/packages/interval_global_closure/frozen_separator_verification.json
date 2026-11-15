@@ -1,0 +1,74 @@
+{
+  "scope": "Prepared-path search initialization is compared with the original constructor; every universal M1/companion column is checked by direct segment capture, including zero-weight row support.",
+  "fixtures": [
+    {
+      "name": "distinct_same_limit",
+      "search_value": "germ:[[\"0\",\"1\"],[\"1\"]]",
+      "search_nodes": 7,
+      "universal_starts": 5,
+      "columns": 5,
+      "zero_weight_universe_preserved": true,
+      "asymptotic_value": "0",
+      "asymptotic_nodes": 5,
+      "radius": "1/4"
+    },
+    {
+      "name": "asymmetric_stationary",
+      "search_value": "germ:[[\"3/4\",\"-1\"],[\"1\"]]",
+      "search_nodes": 42,
+      "universal_starts": 8,
+      "columns": 14,
+      "zero_weight_universe_preserved": true,
+      "asymptotic_value": "3/4",
+      "asymptotic_nodes": 42,
+      "radius": "1/384"
+    },
+    {
+      "name": "rational_speed_outgoing",
+      "search_value": "germ:[[\"-19/20\",\"-1/2\",\"0\",\"0\",\"0\",\"0\",\"57/40\",\"1/2\",\"0\",\"0\",\"0\",\"0\",\"-1/2\"],[\"-1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\"]]",
+      "search_nodes": 10,
+      "universal_starts": 6,
+      "columns": 10,
+      "zero_weight_universe_preserved": true,
+      "asymptotic_value": "19/20",
+      "asymptotic_nodes": 10,
+      "radius": "1/64"
+    },
+    {
+      "name": "inward_outward",
+      "search_value": "germ:[[\"13/16\",\"1/2\"],[\"1\"]]",
+      "search_nodes": 13,
+      "universal_starts": 6,
+      "columns": 12,
+      "zero_weight_universe_preserved": true,
+      "asymptotic_value": "13/16",
+      "asymptotic_nodes": 13,
+      "radius": "1/62"
+    },
+    {
+      "name": "moving_coalescence",
+      "search_value": "1/4",
+      "search_nodes": 7,
+      "universal_starts": 5,
+      "columns": 6,
+      "zero_weight_universe_preserved": true,
+      "asymptotic_value": "1/4",
+      "asymptotic_nodes": 7,
+      "radius": "1/4"
+    },
+    {
+      "name": "initial_tie_then_split",
+      "search_value": "1/2",
+      "search_nodes": 8,
+      "universal_starts": 5,
+      "columns": 5,
+      "zero_weight_universe_preserved": true,
+      "asymptotic_value": "1/2",
+      "asymptotic_nodes": 8,
+      "radius": "1/4"
+    }
+  ],
+  "complete_search_equalities": 6,
+  "complete_asymptotic_search_equalities": 6,
+  "direct_signed_captures": 394
+}

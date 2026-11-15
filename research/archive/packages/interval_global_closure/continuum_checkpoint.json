@@ -1,0 +1,151 @@
+{
+  "scope": "Computer-assisted discovery checkpoint. No new unrestricted lower bound or saddle-point claim.",
+  "representation": "Complete legal symmetric ordered-quantile CDF, free nodal values subject only to physical transport/normalization and declared terminal horizon.",
+  "rejected_h2": {
+    "field": "continuum_free_candidate_12.json",
+    "sha256": "515cc2541dad42983b76fb411986ff69adcec7a08f0990235f455c6fb05aaa89",
+    "original_finite_bank_routes": 17862,
+    "original_bank_minimum": 1.423555001740737,
+    "original_master": 1.423555046396745,
+    "exact_native_inward_attack": {
+      "decimal": 1.4136835336364284,
+      "label": {
+        "kind": "initial_inward",
+        "start": 0.575,
+        "first_v": -0.55,
+        "second_u": 1.0000038146972656
+      },
+      "route": [
+        [
+          "0",
+          "23/40"
+        ],
+        [
+          "1/80",
+          "9/16"
+        ],
+        [
+          "589829/2621440",
+          "2031621/2621440"
+        ],
+        [
+          "524289/262144",
+          "-1"
+        ],
+        [
+          "1048577/262144",
+          "1"
+        ]
+      ],
+      "payoff": "382430127362409882795307986254052936629/270520323865329363776962560000000000000"
+    },
+    "response_report": "continuum_inward_h2_12.json"
+  },
+  "current_h3": {
+    "field": "continuum_complete_h3_iter_01.json",
+    "sha256": "5092c9f3741416d2b41a107a39b74e940357f75183fbeb51b20ce0b07909b367",
+    "terminal_time": 3,
+    "nodes": 5917,
+    "triangles": 11560,
+    "known_bank_routes": 21702,
+    "known_bank_minimum": 1.4222573551224444,
+    "supporting_master": 1.423490597029971,
+    "native_inward_family_routes": 54145,
+    "native_inward_minimum": 1.4229844183987477,
+    "physical_dp_64_minimum": 1.4229844183987477,
+    "independent_physical_dp_128_attack": {
+      "payoff": "2038346940252554543256376483357/1434297738628956160000000000000",
+      "decimal": 1.4211463110867124,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/8",
+          "-1/16"
+        ],
+        [
+          "9/32",
+          "3/32"
+        ],
+        [
+          "11/16",
+          "-5/16"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "4",
+          "-1"
+        ]
+      ],
+      "interior_turns": 3,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    "independent_response_report": "continuous_response_grid_h3_iter01_128.json",
+    "adaptive_native_node_attack": {
+      "payoff": "12511193768594011271487553423/8804284319498240000000000000",
+      "decimal": 1.4210347274776594,
+      "route": [
+        [
+          "0",
+          "1/16"
+        ],
+        [
+          "1/8",
+          "-1/16"
+        ],
+        [
+          "13/32",
+          "7/32"
+        ],
+        [
+          "21/32",
+          "-1/32"
+        ],
+        [
+          "6911/8192",
+          "1279/8192"
+        ],
+        [
+          "8191/4096",
+          "-1"
+        ],
+        [
+          "16383/4096",
+          "1"
+        ]
+      ],
+      "interior_turns": 4,
+      "center_waits": 0,
+      "origin": "Endpoint completion of a globally discovered route prefix"
+    },
+    "adaptive_response_report": "continuous_response_grid_h3_iter01_adaptive_complete.json",
+    "adaptive_record_scope": "Numerical finite-node interpolation estimate agrees with exact decoded route; not an all-continuous-Monster certificate."
+  },
+  "algorithm": {
+    "full_signed_native_m2": true,
+    "complete_native_inward_scan": true,
+    "global_dp_no_turn_cap": true,
+    "center_wait_controls": true,
+    "all_prefix_endpoint_completions": true,
+    "all_new_attacks_recheck_incumbents": true,
+    "persistent_highs": "Integrated IPM+crossover then retained simplex basis, with all-cut compressed checkpoints and historical-cut replay. Small complete CDF checkpoint/resume integration test passed."
+  },
+  "limitations": [
+    "The route-bank minima and sampled physical-DP attacks are not unrestricted Princess guarantees.",
+    "The CDF horizon and mesh remain candidate-class restrictions, not an equilibrium reduction.",
+    "The independent128-bin attack is below the64-bin minimum; record interpolation must remain explicit.",
+    "The second cold H3 LP reached its time limit; its frozen laws and all known attacks are retained.",
+    "Independent turn-coordinate rounding can break contact alignments; global responses to rounded dual laws must not be attributed to their unrounded intended geometry."
+  ],
+  "verification": [
+    "python packages/interval_global_closure/verify_continuum_field.py",
+    "python packages/interval_global_closure/continuum_inward_scan.py packages/interval_global_closure/continuum_free_candidate_12.json --count 4 --verify"
+  ],
+  "ongoing_execution": "Warm H3 restart has replayed24,777 supporting cuts from the two frozen cold iterates and is solving that retained model; later iterations use128-bin physical DP."
+}

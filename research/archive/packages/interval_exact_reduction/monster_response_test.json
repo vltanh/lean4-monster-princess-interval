@@ -1,0 +1,23 @@
+{
+  "value": "151/128",
+  "path": [
+    [
+      "0",
+      "-1"
+    ],
+    [
+      "2",
+      "1"
+    ]
+  ],
+  "captures": [
+    "2",
+    "23/32",
+    "2",
+    "0"
+  ],
+  "states": 16,
+  "leaves": 6,
+  "initial_positions": 4,
+  "universal_leaf_bound": 32
+}

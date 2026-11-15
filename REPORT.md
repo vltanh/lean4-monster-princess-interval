@@ -569,7 +569,9 @@ Plans for follow-up papers are kept in `NEXT.md`, which is not published.
 ### Open directions
 
 - **The value.** Closing the gap `15/11 ≤ V ≤ 13/9` (about `1.364` to `1.444`) is the paper's own
-  challenge, together with its conjecture `V = 1.4`.
+  challenge, together with its conjecture `V = 1.4`. Our attempt, in [`research/`](research/README.md),
+  does not close it. It narrows it to `1.4225745 ≤ V ≤ 1.4240199` with computer-assisted bounds that are
+  not formalized, which would refute the conjecture.
   - Theorem 15 shows that searcher strategies of the form `σ_Φ` cannot go below `337/237 ≈ 1.422`.
     A better upper bound therefore needs other searcher strategies.
   - The lower bound of Theorem 16 uses only the uniform `Φ`. Optimizing `Φ` and adding loiterers

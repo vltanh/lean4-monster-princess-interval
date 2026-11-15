@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "Independent exact chronological Field.cdf integration agrees with specialized lattice-edge interval integrator on endpoint, final, and most-turning routes.",
+  "checks": [
+    {
+      "pair_index": 0,
+      "physical_runs": 1,
+      "independent_affine_intervals": 512,
+      "exact_value": "191358576601/128000000000"
+    },
+    {
+      "pair_index": 381,
+      "physical_runs": 6,
+      "independent_affine_intervals": 1024,
+      "exact_value": "331778405897/256000000000"
+    },
+    {
+      "pair_index": 675,
+      "physical_runs": 4,
+      "independent_affine_intervals": 1012,
+      "exact_value": "297605851677/512000000000"
+    }
+  ]
+}

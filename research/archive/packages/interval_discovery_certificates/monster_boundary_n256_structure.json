@@ -1,0 +1,8 @@
+{
+  "scope": "Lower witness for the worst response to this fixed physical law only.",
+  "endpoint_sweep_mass": "629535049023/1000000000000",
+  "endpoint_baseline": "91124223552501/64000000000000",
+  "initial_gap": "1/128",
+  "endpoint_loop_supremum_lower": "729623323469031/512000000000000",
+  "certified_upper_minus_loop_witness": "11433/1024000000000000"
+}

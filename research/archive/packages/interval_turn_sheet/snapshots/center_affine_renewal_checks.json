@@ -1,0 +1,61 @@
+{
+  "scope": "Exact local affine-cell renewal algebra and direct rational capture intersections. Crossing actions, front equality, and global attachment remain assumptions.",
+  "checks": {
+    "parameters": 144,
+    "riccati": 288,
+    "triangle_identities": 1536,
+    "triangle_nonnegative": 1104,
+    "wait_identities": 1104,
+    "wait_nonnegative": 1104,
+    "physical_intersections": 16320,
+    "primitive_integrals": 2208,
+    "slope_and_concavity": 144,
+    "equality_chain": 5184,
+    "truncation_residual": 1728
+  },
+  "total_checks": 30864,
+  "examples": [
+    {
+      "w": "1",
+      "ratio": "0",
+      "B": "1/2",
+      "theta": "0",
+      "limit_time": "3/200"
+    },
+    {
+      "w": "7/8",
+      "ratio": "15/512",
+      "B": "128/225",
+      "theta": "1/15",
+      "limit_time": "169/10500"
+    },
+    {
+      "w": "3/4",
+      "ratio": "7/128",
+      "B": "32/49",
+      "theta": "1/7",
+      "limit_time": "37/2100"
+    },
+    {
+      "w": "1/2",
+      "ratio": "3/32",
+      "B": "8/9",
+      "theta": "1/3",
+      "limit_time": "7/300"
+    },
+    {
+      "w": "1/4",
+      "ratio": "15/128",
+      "B": "32/25",
+      "theta": "3/5",
+      "limit_time": "21/500"
+    },
+    {
+      "w": "1/8",
+      "ratio": "63/512",
+      "B": "128/81",
+      "theta": "7/9",
+      "limit_time": "73/900"
+    }
+  ]
+}

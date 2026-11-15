@@ -1,0 +1,33 @@
+{
+  "value": "957063215727541539/671088640000000000",
+  "decimal_value": 1.4261353250258288,
+  "atoms": 280,
+  "network": {
+    "scale": "16777216",
+    "weightDenominator": "10000000000",
+    "maximumFlow": "329041605759107475",
+    "cutCapacity": "329041605759107475",
+    "totalRewardCeiling": "1286104821486649014",
+    "score": "957063215727541539",
+    "denominator": "671088640000000000",
+    "phases": 612,
+    "pushes": 58433,
+    "nodes": 105783,
+    "arcs": 268928
+  },
+  "verification": {
+    "scope": "Exact unrestricted princess response to the supplied normalized rational monster law; no equilibrium claim",
+    "positive_reflected_pairs": 280,
+    "normalization_verified": true,
+    "physical_routes_verified": true,
+    "flow_replayed": true,
+    "extremal_responses_checked": 2,
+    "exactValue": "957063215727541539/671088640000000000",
+    "flow": "329041605759107475",
+    "nodes": 105783,
+    "arcs": 268928,
+    "positiveFlows": 117051
+  },
+  "seconds": 11.381,
+  "certificate_sha256": "e52809886f413630dd8707589802c81cb596e8a71587987887c4e27e832b94a1"
+}

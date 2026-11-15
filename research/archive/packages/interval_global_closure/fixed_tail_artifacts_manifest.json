@@ -1,0 +1,122 @@
+{
+  "scope": "Exact fixed-tail initial-start theorem and executable frozen-law workers. Named round003 is rejected, not a lower guarantee. All instance bytes below are text-safe compressed snapshots.",
+  "artifacts": [
+    {
+      "path": "packages/interval_global_closure/separate_frozen_law.mjs",
+      "sha": "bf2607f4c793fe9d8bd3d80ce697323aa777379a",
+      "length": 12988
+    },
+    {
+      "path": "packages/interval_global_closure/verify_frozen_separator.mjs",
+      "sha": "38be53512f897dd06607fc4a9f977299a9c60bc6",
+      "length": 3973
+    },
+    {
+      "path": "packages/interval_global_closure/fixed_tail_start_separator.mjs",
+      "sha": "eac7eed3be944008c27d927304b769c6671a26cc",
+      "length": 9556
+    },
+    {
+      "path": "packages/interval_global_closure/verify_fixed_tail_starts.mjs",
+      "sha": "57acf48a8f91bf1c0d87bcd7c751c1364e44f6f2",
+      "length": 3670
+    },
+    {
+      "path": "research/12-global-closure/FROZEN_LOWER_SEPARATION_WORKER.md",
+      "sha": "677feb2eb0192b1827c729897be8a6b209f5024a",
+      "length": 6294
+    },
+    {
+      "path": "research/12-global-closure/FIXED_TAIL_INITIAL_REDUCTION.md",
+      "sha": "a0e26f7ff8507a646da4ba73635275cf493c675c",
+      "length": 5059
+    },
+    {
+      "path": "packages/interval_global_closure/frozen_separator_verification.json",
+      "sha": "4b9faa39bb35a4d7be0c7e09c65a4ecf5c5f0721",
+      "length": 2284
+    },
+    {
+      "path": "packages/interval_global_closure/fixed_tail_start_verification.json",
+      "sha": "c2a278b5541519ea226c6cc9e4891ec97a698300",
+      "length": 862
+    },
+    {
+      "path": "packages/interval_global_closure/unpack_frozen_snapshot.py",
+      "sha": "90fcbfb9067055ce5b375679b296e551600224b2"
+    }
+  ],
+  "archives": [
+    {
+      "name": "round003_rows.json.gz",
+      "uncompressed_bytes": 7576318,
+      "compressed_bytes": 449765,
+      "source_sha256": "8983b8889705e701ee83a01e4ab20e96b285b1aa87cdb1f4d723429228551e7b",
+      "git_blob_sha1": "387ce45edba1ad81e67330c4a8a0d98ea34a209d",
+      "path": "packages/interval_global_closure/snapshots/round003_rows.json.gz.b64",
+      "sha": "28347f22fdbd2e8f6ed90f083b313e55bf611db1",
+      "encoding": "base64 text of gzip; decode then decompress"
+    },
+    {
+      "name": "round003_master.json.gz",
+      "uncompressed_bytes": 49932,
+      "compressed_bytes": 16977,
+      "source_sha256": "f3f4be38af1e6cf1dea55ba33064684e33811d3c32b37d5e22afd765b27df253",
+      "git_blob_sha1": "004523ef68ab1b382405b7e8f2fd2c50f53b27ff",
+      "path": "packages/interval_global_closure/snapshots/round003_master.json.gz.b64",
+      "sha": "be64bac7f04993460057a6bbe17274128eb0caa0",
+      "encoding": "base64 text of gzip; decode then decompress"
+    },
+    {
+      "name": "round003_bank.json.gz",
+      "uncompressed_bytes": 545240,
+      "compressed_bytes": 38067,
+      "source_sha256": "6bf0a14f35ab312833f522e3370cab4a1d218fe792debc29f47212a932b99848",
+      "git_blob_sha1": "b35081ae7e90a7e4e9de978b6d9fe7bf9667d5d0",
+      "path": "packages/interval_global_closure/snapshots/round003_bank.json.gz.b64",
+      "sha": "fa72660210f1c24026d2b8d8d580578b05664857",
+      "encoding": "base64 text of gzip; decode then decompress"
+    },
+    {
+      "name": "round003_fixed_tail.report.json.gz",
+      "uncompressed_bytes": 241138,
+      "compressed_bytes": 25264,
+      "source_sha256": "e64890ba6ff99178fbc5a0f26c55442f7b72718d80eb826ade7eb70f5046084a",
+      "git_blob_sha1": "3d7b92aec66881300abbee79066c8f8ff21e05e9",
+      "path": "packages/interval_global_closure/snapshots/round003_fixed_tail.report.json.gz.b64",
+      "sha": "ef2b28f54fd18eb5a189659ccae932916e8dd84d",
+      "encoding": "base64 text of gzip; decode then decompress"
+    },
+    {
+      "name": "round003_fixed_tail.columns.json.gz",
+      "uncompressed_bytes": 458829,
+      "compressed_bytes": 18070,
+      "source_sha256": "8c6796da8d08b6db2b54d7bf82040db4335c80634d8bafd60f870faaaa088a99",
+      "git_blob_sha1": "9a4312008f57248f414fa3fc6741e4ec3e1b7beb",
+      "path": "packages/interval_global_closure/snapshots/round003_fixed_tail.columns.json.gz.b64",
+      "sha": "7e4cc9dfd98fb30e965d8e35bde2903fa89d52cc",
+      "encoding": "base64 text of gzip; decode then decompress"
+    },
+    {
+      "name": "lower332_all_m1.columns.json.gz",
+      "uncompressed_bytes": 12829684,
+      "compressed_bytes": 847269,
+      "source_sha256": "9fb0c3742b317e4efaa9d3f9b2322a6d225fbbd0b247b0072cba2ec2a75e25d5",
+      "git_blob_sha1": "8335c9e8666d9650be54678f73af6dafb6628b48",
+      "path": "packages/interval_global_closure/snapshots/lower332_all_m1.columns.json.gz.b64",
+      "sha": "66c88682117a8281228384b05ebcd5f50c95482f",
+      "encoding": "base64 text of gzip; decode then decompress"
+    }
+  ],
+  "base_manifest": "24ce9b6945d4fab630c59407c71dda0aa4557099",
+  "dependencies": {
+    "asymptotic": "3778e574f0b7a6ccdc3fbcefb6e52433434233c6"
+  },
+  "replay": [
+    "python packages/interval_global_closure/unpack_frozen_snapshot.py MANIFEST.json . RESTORED",
+    "node packages/interval_global_closure/verify_fixed_tail_starts.mjs inputs/germ_v8_fixture_inputs.json reports/fixed_tail_starts.json",
+    "node packages/interval_global_closure/verify_frozen_separator.mjs inputs/germ_v8_fixture_inputs.json reports/frozen_separator.json",
+    "node packages/interval_global_closure/fixed_tail_start_separator.mjs RESTORED/round003_rows.json RESTORED/round003_master.json RESTORED/round003_bank.json OUT --target 1.4192365094 --top 12"
+  ],
+  "archive_note": "The all-M1 pure matrix is independent of weights. Its ordered-score metadata used the preceding332-row master, while the pinned round003 master is the subsequent M1-repaired solve; row geometry is identical and hash-verified."
+}

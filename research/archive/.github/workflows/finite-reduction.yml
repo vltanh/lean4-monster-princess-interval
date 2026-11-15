@@ -1,0 +1,179 @@
+name: Finite reduction exact certificates
+
+on:
+  push:
+    branches:
+      - research/interval-progress-2026-11-10
+    paths:
+      - .github/workflows/finite-reduction.yml
+      - packages/interval_clock_grid/**
+      - packages/interval_global_closure/verify_common_quantization.py
+      - packages/interval_global_closure/verify_randomized_interpolation.cjs
+      - packages/interval_global_closure/left_floor_atomization_regression.cjs
+      - packages/interval_global_closure/uniform_leg_regression.cjs
+      - packages/interval_global_closure/adaptive_order_upper_exact.json
+      - packages/interval_global_closure/verify_adaptive_order_upper.cjs
+      - packages/interval_global_closure/warped_order_upper_exact.json
+      - packages/interval_global_closure/verify_warped_order_upper.cjs
+      - packages/interval_global_closure/verify_sharp_interpolation_loss.py
+      - packages/interval_global_closure/verify_full_width_refinement.py
+      - packages/interval_global_closure/verify_fullwidth_transfer_counterexample.py
+      - packages/interval_global_closure/lattice_lower/**
+      - packages/interval_global_closure/record_bellman/**
+      - packages/interval_global_closure/verify_boundary_layer_kernel.py
+      - packages/interval_global_closure/verify_common_warp_family.py
+      - packages/interval_global_closure/n64_upper_common_warp_obstruction.json.gz
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the proof and certificates
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Replay exact common quantization
+        run: python3 packages/interval_global_closure/verify_common_quantization.py
+      - name: Replay exact randomized interpolation
+        run: node packages/interval_global_closure/verify_randomized_interpolation.cjs
+      - name: Replay exact clock atomization and uniform-leg calendars
+        run: |
+          node packages/interval_global_closure/left_floor_atomization_regression.cjs
+          node packages/interval_global_closure/uniform_leg_regression.cjs
+      - name: Verify interpolation identities and transfer counterexamples
+        run: |
+          python3 packages/interval_global_closure/verify_sharp_interpolation_loss.py
+          python3 packages/interval_global_closure/verify_full_width_refinement.py
+          python3 packages/interval_global_closure/verify_fullwidth_transfer_counterexample.py
+      - name: Verify exact quadratic polytope minima and scalar elimination
+        run: |
+          python3 packages/interval_global_closure/record_bellman/test_exact_quadratic_polytope.py
+          python3 packages/interval_global_closure/record_bellman/test_eliminate_quadratic_interval.py
+      - name: Independently replay exact endpoint and center-excursion charts
+        run: |
+          python3 packages/interval_global_closure/record_bellman/test_chart_field_parser.py
+          python3 packages/interval_global_closure/record_bellman/build_endpoint_tail_charts.py packages/interval_clock_grid/grid_n2_princess.json /tmp/endpoint_tail_n2.json --epsilon 1/4 --direct-replay
+          python3 packages/interval_global_closure/record_bellman/build_center_excursion_charts.py packages/interval_clock_grid/grid_n2_princess.json /tmp/center_excursion_n2.json --epsilon 1/4 --direct-replay
+      - name: Verify complete clock graphs
+        run: |
+          node packages/interval_clock_grid/verify_grid.cjs packages/interval_clock_grid/grid_n1_certificate.json
+          node packages/interval_clock_grid/verify_grid.cjs packages/interval_clock_grid/grid_n2_certificate.json
+          node packages/interval_clock_grid/verify_grid.cjs packages/interval_clock_grid/grid_n3_certificate.json
+      - name: Independently verify physical-record duals
+        run: |
+          node packages/interval_clock_grid/record_pricing.cjs packages/interval_clock_grid/grid_n1_certificate.json
+          node packages/interval_clock_grid/record_pricing.cjs packages/interval_clock_grid/grid_n2_certificate.json
+          node packages/interval_clock_grid/record_pricing.cjs packages/interval_clock_grid/grid_n3_certificate.json
+          node packages/interval_clock_grid/record_pricing.cjs packages/interval_clock_grid/grid_n4_certificate.json
+          node packages/interval_clock_grid/record_pricing.cjs packages/interval_clock_grid/grid_n6_certificate.json
+      - name: Independently verify the normalized physical bank
+        run: |
+          node packages/interval_clock_grid/normalized_record_pricing.cjs packages/interval_clock_grid/grid_n1_certificate.json
+          node packages/interval_clock_grid/normalized_record_pricing.cjs packages/interval_clock_grid/grid_n2_certificate.json
+          node packages/interval_clock_grid/normalized_record_pricing.cjs packages/interval_clock_grid/grid_n3_certificate.json
+          node packages/interval_clock_grid/normalized_record_pricing.cjs packages/interval_clock_grid/grid_n4_certificate.json
+          node packages/interval_clock_grid/normalized_record_pricing.cjs packages/interval_clock_grid/grid_n6_certificate.json
+          python3 packages/interval_clock_grid/normalized_native/test_price_normalized.py
+          python3 packages/interval_clock_grid/normalized_native/test_bounded_witnesses.py --output /tmp/bounded_witness_replay.json
+          node packages/interval_clock_grid/test_pursuit_pruning.cjs
+      - name: Verify equivalent uniform-clock models
+        run: |
+          node packages/interval_clock_grid/uniform_pricing.cjs packages/interval_clock_grid/uniform_n1_certificate.json
+          node packages/interval_clock_grid/uniform_pricing.cjs packages/interval_clock_grid/uniform_n2_certificate.json
+          node packages/interval_clock_grid/uniform_pricing.cjs packages/interval_clock_grid/uniform_n3_certificate.json
+          node packages/interval_clock_grid/uniform_planning_replay.cjs packages/interval_clock_grid/uniform_n1_certificate.json
+          node packages/interval_clock_grid/uniform_planning_replay.cjs packages/interval_clock_grid/uniform_n2_certificate.json
+      - name: Regenerate and verify explicit Princess fields
+        run: |
+          node packages/interval_clock_grid/verify_princess_extraction.cjs packages/interval_clock_grid/grid_n1_certificate.json packages/interval_clock_grid/grid_n1_princess.json
+          node packages/interval_clock_grid/verify_princess_extraction.cjs packages/interval_clock_grid/grid_n2_certificate.json packages/interval_clock_grid/grid_n2_princess.json
+          node packages/interval_clock_grid/verify_princess_extraction.cjs packages/interval_clock_grid/grid_n3_certificate.json packages/interval_clock_grid/grid_n3_princess.json
+          node packages/interval_clock_grid/test_normalized_princess.cjs
+      - name: Compile and compare integer lattice search with exhaustive Fraction integration
+        run: |
+          python3 packages/interval_global_closure/lattice_lower/test_integer_lattice.py
+          python3 packages/interval_global_closure/lattice_lower/test_inward_lattice.py
+          python3 packages/interval_global_closure/lattice_lower/test_endpoint_release.py
+          python3 packages/interval_global_closure/lattice_lower/test_early_outward.py
+          python3 packages/interval_global_closure/lattice_lower/replay_h3_lattice.py --check-only
+      - name: Compare every NumPy sampler entry and run complete wrappers
+        run: |
+          python3 -m pip install numpy==2.3.5 scipy==1.17.0
+          python3 packages/interval_global_closure/lattice_lower/test_native_sampler.py
+      - name: Compare persistent discovery LPs and independently certify a native dual
+        run: |
+          python3 packages/interval_clock_grid/normalized_native/test_persistent_highs.py --output /tmp/persistent_replay.json
+          python3 packages/interval_clock_grid/normalized_native/test_interpolated_master.py
+          python3 packages/interval_clock_grid/normalized_native/test_cached_path_pricing.py
+          python3 packages/interval_clock_grid/normalized_native/solve_normalized.py 6 --output /tmp/normalized_n6
+          node packages/interval_clock_grid/normalized_record_pricing.cjs /tmp/normalized_n6.dual.json
+      - name: Recompute and independently replay the recovered unrestricted upper
+        run: node --stack-size=16384 packages/interval_global_closure/verify_adaptive_order_upper.cjs
+      - name: Recompute and independently replay the warped unrestricted upper
+        run: node --stack-size=16384 packages/interval_global_closure/verify_warped_order_upper.cjs
+
+  global-bound-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out the current unrestricted certificates
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Independently decode and reprice the compact lower with C++ integers
+        run: python3 packages/interval_clock_grid/normalized_native/verify_native_field.py packages/interval_clock_grid/lower_n256_field.json
+      - name: Independently prove the lower with BigInt and regenerate the Princess law
+        run: node --max-old-space-size=8192 packages/interval_clock_grid/extract_normalized_princess.cjs verify packages/interval_clock_grid/lower_n256_field.json packages/interval_clock_grid/lower_n256_princess.json
+      - name: Verify the physical Monster law and exact Qout flow and cut
+        run: node packages/interval_clock_grid/qout_primal_certificate.cjs packages/interval_clock_grid/upper_n64_physical.json.gz
+
+  lattice-value-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Check out the frozen lattice certificate
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Replay the complete integer response and exact global transfer
+        run: python3 packages/interval_global_closure/lattice_lower/replay_h3_lattice.py
+
+  exact-center-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the finite center proof and certificate
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Independently regenerate and bind every input chart
+        run: |
+          python3 packages/interval_global_closure/record_bellman/build_center_excursion_charts.py packages/interval_clock_grid/grid_n1_princess.json /tmp/center_n1_charts.json --epsilon 1/2 --direct-replay
+          python3 -c "import gzip,pathlib; assert pathlib.Path('/tmp/center_n1_charts.json').read_bytes() == gzip.decompress(pathlib.Path('packages/interval_global_closure/record_bellman/center_excursion_n1_fullwidth.json.gz').read_bytes())"
+          python3 packages/interval_global_closure/record_bellman/build_endpoint_tail_charts.py packages/interval_clock_grid/grid_n1_princess.json /tmp/endpoint_n1_charts.json --epsilon 1/2 --direct-replay
+          python3 -c "import pathlib; assert pathlib.Path('/tmp/endpoint_n1_charts.json').read_bytes() == pathlib.Path('packages/interval_global_closure/record_bellman/endpoint_tail_n1_fullwidth.json').read_bytes()"
+      - name: Regenerate all five exact renewal layers and pruning decisions
+        run: python3 packages/interval_global_closure/record_bellman/exact_center_renewal_envelope.py packages/interval_global_closure/record_bellman/center_excursion_n1_fullwidth.json.gz packages/interval_global_closure/record_bellman/center_envelope_n1_exact.json.gz --depth 5 --verify --history-output /tmp/center_n1_history.json.gz
+      - name: Independently integrate the reconstructed physical routes
+        run: python3 packages/interval_global_closure/record_bellman/replay_center_renewal_paths.py packages/interval_global_closure/record_bellman/center_envelope_n1_exact.json.gz packages/interval_clock_grid/grid_n1_princess.json /tmp/center_n1_paths_replay.json --raw-history /tmp/center_n1_history.json.gz
+      - name: Regenerate the complete free-start n1 response
+        run: python3 packages/interval_global_closure/record_bellman/exact_n1_precenter.py --field packages/interval_clock_grid/grid_n1_princess.json --center packages/interval_global_closure/record_bellman/center_envelope_n1_exact.json.gz --center-charts packages/interval_global_closure/record_bellman/center_excursion_n1_fullwidth.json.gz --tail packages/interval_global_closure/record_bellman/endpoint_tail_n1_fullwidth.json --output packages/interval_global_closure/record_bellman/n1_precenter_complete.json.gz --complete --verify
+      - name: Independently replay free-start routes and whole initial intervals
+        run: python3 packages/interval_global_closure/record_bellman/replay_n1_precenter.py packages/interval_global_closure/record_bellman/n1_precenter_complete.json.gz packages/interval_global_closure/record_bellman/center_envelope_n1_exact.json.gz packages/interval_clock_grid/grid_n1_princess.json /tmp/n1_precenter_replay.json
+
+  structural-response-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact structural response certificates
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Independently replay endpoint-layer contacts and retained n64 gap
+        run: python3 packages/interval_global_closure/verify_boundary_layer_kernel.py --physical-certificate packages/interval_clock_grid/upper_n64_physical.json.gz --report /tmp/boundary_layer_kernel_replay.json
+      - name: Verify every symbolic capture and the common-warp family obstruction
+        run: python3 packages/interval_global_closure/verify_common_warp_family.py --physical-certificate packages/interval_clock_grid/upper_n64_physical.json.gz --family-certificate packages/interval_global_closure/n64_upper_common_warp_obstruction.json.gz --report /tmp/common_warp_family_replay.json

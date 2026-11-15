@@ -1,0 +1,3 @@
+DIRECT 546 8 vars 636730 eq 107165 ub 107156 seconds 2.322998523712158
+/workspace/scratch/f5595f62cf06/experiments/direct_support.py:31: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  sol=linprog(obj,A_ub=Aub,b_ub=ubs,A_eq=Aeq,b_eq=rhs,bounds=bounds,method='highs-ipm',options={'dual_feasibility_tolerance':1e-9,'primal_feasibility_tolerance':1e-9,'ipm_optimality_tolerance':1e-10,'threads':1})

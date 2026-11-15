@@ -1,0 +1,343 @@
+{
+  "space_time_scale": 128,
+  "weight_denominator": 1000000000,
+  "source": "Rounded archived upper_continuum_32.json; geometry and weights verified exactly by verify.py",
+  "families": [
+    {
+      "kind": 1,
+      "start": "-1",
+      "weight_numerator": 735750940
+    },
+    {
+      "kind": 1,
+      "start": "9/16",
+      "weight_numerator": 3410021
+    },
+    {
+      "kind": 1,
+      "start": "19/32",
+      "weight_numerator": 3513456
+    },
+    {
+      "kind": 1,
+      "start": "5/8",
+      "weight_numerator": 3619879
+    },
+    {
+      "kind": 1,
+      "start": "21/32",
+      "weight_numerator": 3729434
+    },
+    {
+      "kind": 1,
+      "start": "11/16",
+      "weight_numerator": 3842274
+    },
+    {
+      "kind": 1,
+      "start": "23/32",
+      "weight_numerator": 3980315
+    },
+    {
+      "kind": 1,
+      "start": "3/4",
+      "weight_numerator": 4146934
+    },
+    {
+      "kind": 1,
+      "start": "25/32",
+      "weight_numerator": 4338073
+    },
+    {
+      "kind": 1,
+      "start": "13/16",
+      "weight_numerator": 4533693
+    },
+    {
+      "kind": 1,
+      "start": "27/32",
+      "weight_numerator": 4612532
+    },
+    {
+      "kind": 1,
+      "start": "7/8",
+      "weight_numerator": 4659485
+    },
+    {
+      "kind": 1,
+      "start": "29/32",
+      "weight_numerator": 4796750
+    },
+    {
+      "kind": 1,
+      "start": "15/16",
+      "weight_numerator": 5053475
+    },
+    {
+      "kind": 1,
+      "start": "31/32",
+      "weight_numerator": 5235795
+    },
+    {
+      "kind": 2,
+      "start": "-31/32",
+      "weight_numerator": 3856600
+    },
+    {
+      "kind": 2,
+      "start": "-15/16",
+      "weight_numerator": 3836721
+    },
+    {
+      "kind": 2,
+      "start": "-29/32",
+      "weight_numerator": 3802423
+    },
+    {
+      "kind": 2,
+      "start": "-7/8",
+      "weight_numerator": 3783023
+    },
+    {
+      "kind": 2,
+      "start": "-27/32",
+      "weight_numerator": 3763820
+    },
+    {
+      "kind": 2,
+      "start": "-13/16",
+      "weight_numerator": 3744811
+    },
+    {
+      "kind": 2,
+      "start": "-25/32",
+      "weight_numerator": 3711637
+    },
+    {
+      "kind": 2,
+      "start": "-3/4",
+      "weight_numerator": 3693078
+    },
+    {
+      "kind": 2,
+      "start": "-23/32",
+      "weight_numerator": 3674705
+    },
+    {
+      "kind": 2,
+      "start": "-11/16",
+      "weight_numerator": 3642331
+    },
+    {
+      "kind": 2,
+      "start": "-21/32",
+      "weight_numerator": 3624389
+    },
+    {
+      "kind": 2,
+      "start": "-5/8",
+      "weight_numerator": 3606622
+    },
+    {
+      "kind": 2,
+      "start": "-19/32",
+      "weight_numerator": 3589029
+    },
+    {
+      "kind": 2,
+      "start": "-9/16",
+      "weight_numerator": 3571606
+    },
+    {
+      "kind": 2,
+      "start": "-17/32",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-1/2",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-15/32",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-7/16",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-13/32",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-3/8",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-11/32",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-5/16",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-9/32",
+      "weight_numerator": 3486971
+    },
+    {
+      "kind": 2,
+      "start": "-1/4",
+      "weight_numerator": 3406254
+    },
+    {
+      "kind": 2,
+      "start": "-7/32",
+      "weight_numerator": 3390557
+    },
+    {
+      "kind": 2,
+      "start": "-3/16",
+      "weight_numerator": 982609
+    },
+    {
+      "kind": 2,
+      "start": "3/16",
+      "weight_numerator": 1809248
+    },
+    {
+      "kind": 2,
+      "start": "7/32",
+      "weight_numerator": 6179609
+    },
+    {
+      "kind": 2,
+      "start": "1/4",
+      "weight_numerator": 6251786
+    },
+    {
+      "kind": 2,
+      "start": "9/32",
+      "weight_numerator": 6437887
+    },
+    {
+      "kind": 2,
+      "start": "5/16",
+      "weight_numerator": 6484727
+    },
+    {
+      "kind": 2,
+      "start": "11/32",
+      "weight_numerator": 6532311
+    },
+    {
+      "kind": 2,
+      "start": "3/8",
+      "weight_numerator": 6580649
+    },
+    {
+      "kind": 2,
+      "start": "13/32",
+      "weight_numerator": 6629755
+    },
+    {
+      "kind": 2,
+      "start": "7/16",
+      "weight_numerator": 6679641
+    },
+    {
+      "kind": 2,
+      "start": "15/32",
+      "weight_numerator": 6730318
+    },
+    {
+      "kind": 2,
+      "start": "1/2",
+      "weight_numerator": 6781800
+    },
+    {
+      "kind": 2,
+      "start": "17/32",
+      "weight_numerator": 6834099
+    },
+    {
+      "kind": 2,
+      "start": "9/16",
+      "weight_numerator": 2843019
+    },
+    {
+      "kind": 2,
+      "start": "19/32",
+      "weight_numerator": 2839819
+    },
+    {
+      "kind": 2,
+      "start": "5/8",
+      "weight_numerator": 2837346
+    },
+    {
+      "kind": 2,
+      "start": "21/32",
+      "weight_numerator": 2835621
+    },
+    {
+      "kind": 2,
+      "start": "11/16",
+      "weight_numerator": 2834667
+    },
+    {
+      "kind": 2,
+      "start": "23/32",
+      "weight_numerator": 2833717
+    },
+    {
+      "kind": 2,
+      "start": "3/4",
+      "weight_numerator": 2832966
+    },
+    {
+      "kind": 2,
+      "start": "25/32",
+      "weight_numerator": 2832869
+    },
+    {
+      "kind": 2,
+      "start": "13/16",
+      "weight_numerator": 2834195
+    },
+    {
+      "kind": 2,
+      "start": "27/32",
+      "weight_numerator": 2839396
+    },
+    {
+      "kind": 2,
+      "start": "7/8",
+      "weight_numerator": 2845686
+    },
+    {
+      "kind": 2,
+      "start": "29/32",
+      "weight_numerator": 2851228
+    },
+    {
+      "kind": 2,
+      "start": "15/16",
+      "weight_numerator": 2856866
+    },
+    {
+      "kind": 2,
+      "start": "31/32",
+      "weight_numerator": 2864765
+    }
+  ],
+  "expected_upper": "36563170811/25600000000"
+}

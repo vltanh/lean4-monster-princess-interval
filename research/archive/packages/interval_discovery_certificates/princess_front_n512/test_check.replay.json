@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "Cheap retained-packet rejection regressions; complete-bank pricer imports are forbidden during this test.",
+  "full_bank_search_replayed": false,
+  "valid_packet_passed": true,
+  "rejected_mutations": [
+    "field byte change",
+    "report input retargeted with updated outer hash",
+    "Princess guarantee altered with updated outer hash",
+    "game transfer halved",
+    "positive-width allowance omitted",
+    "completed CI job relabeled",
+    "critical CI step failed",
+    "proof commitment removed",
+    "proof bytes mismatched",
+    "prepared-field reconstruction changed",
+    "historical verifier bytes changed"
+  ],
+  "original_field_sha256": "a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10",
+  "explicit_princess_security": "582556541071/409600000000"
+}

@@ -1,0 +1,123 @@
+{
+  "scope": "Exact regression of uniform-leg calendar rounding, planning credit, type matching and current-leg pricing; no LP or game value evaluated.",
+  "status": "passed",
+  "checks": {
+    "calendars": 121,
+    "rounding_pieces": 273,
+    "credit_samples": 8934,
+    "planning_arcs": 1912,
+    "matching_pairs": 2250,
+    "common_alpha_lifts": 1985,
+    "infeasible_pair_samples": 16677,
+    "endpoint_exclusions": 238,
+    "pricing_cases": 96,
+    "integer_calendars": 911
+  },
+  "types": {
+    "total": 105,
+    "positive": 50,
+    "active_negative": 45
+  },
+  "pricing_witnesses": [
+    {
+      "steps": 1,
+      "node_prices": [
+        "20"
+      ],
+      "leg_prices": [
+        "1"
+      ],
+      "initial_credit": "0",
+      "uniform_calendar": [
+        1
+      ],
+      "price": "1"
+    },
+    {
+      "steps": 2,
+      "node_prices": [
+        "20",
+        "20"
+      ],
+      "leg_prices": [
+        "2",
+        "1"
+      ],
+      "initial_credit": "0",
+      "uniform_calendar": [
+        1,
+        1
+      ],
+      "price": "3"
+    },
+    {
+      "steps": 3,
+      "node_prices": [
+        "20",
+        "20",
+        "20"
+      ],
+      "leg_prices": [
+        "3",
+        "2",
+        "1"
+      ],
+      "initial_credit": "0",
+      "uniform_calendar": [
+        1,
+        1,
+        1
+      ],
+      "price": "6"
+    },
+    {
+      "steps": 4,
+      "node_prices": [
+        "20",
+        "20",
+        "20",
+        "20"
+      ],
+      "leg_prices": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "initial_credit": "0",
+      "uniform_calendar": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "price": "10"
+    },
+    {
+      "steps": 5,
+      "node_prices": [
+        "20",
+        "20",
+        "20",
+        "20",
+        "20"
+      ],
+      "leg_prices": [
+        "5",
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "initial_credit": "0",
+      "uniform_calendar": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "price": "15"
+    }
+  ]
+}

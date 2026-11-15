@@ -1,0 +1,10 @@
+PASS: all 124 explicit paths are 1-Lipschitz in [-1,1]
+PASS: post-U=1 detour is applied only when c >= 0
+Initial left mass alpha = 48509926/9999999997
+Time-1 right mass beta = 1388665985/19999999994
+Nonfunnel pair mass R = 1388665985/9999999997
+Unrestricted sweep upper bound = 1554318825101/1279999999616
+Decimal (display only) = 1.2143115824744497
+Symmetric simplified bound = 819137911873/639999999808
+PASS: bound is strictly below the existing exact full-game lower bound
+PASS: the same bound holds after ordered quantile rearrangement

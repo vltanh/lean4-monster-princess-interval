@@ -1,0 +1,58 @@
+{
+  "scope": "Frozen physical rows; exact unit-Monster pure capture and normalized implicit ordered laws.",
+  "fixtures": [
+    {
+      "name": "distinct_same_limit",
+      "paths": 3,
+      "monsters": 12
+    },
+    {
+      "name": "asymmetric_stationary",
+      "paths": 4,
+      "monsters": 14
+    },
+    {
+      "name": "rational_speed_outgoing",
+      "paths": 4,
+      "monsters": 14
+    },
+    {
+      "name": "inward_outward",
+      "paths": 4,
+      "monsters": 14
+    },
+    {
+      "name": "moving_coalescence",
+      "paths": 3,
+      "monsters": 12
+    },
+    {
+      "name": "initial_tie_then_split",
+      "paths": 4,
+      "monsters": 12
+    }
+  ],
+  "pure_segment_equalities": 716,
+  "actual": {
+    "signed_component_matches": 318,
+    "ordered_quantile_checks": 20,
+    "raw_m1_limit": "4115606858452227030094659793/3276799999999999976930082816",
+    "retained_ids": [
+      0,
+      79,
+      85
+    ]
+  },
+  "cache": {
+    "inverseQueries": 1004,
+    "inverseHits": 285,
+    "constantComputations": 123,
+    "germComputations": 596,
+    "pairScores": 517
+  },
+  "arithmetic": {
+    "radius": "1/1280000000000000002",
+    "comparisons": 149051,
+    "maxDegree": 12
+  }
+}

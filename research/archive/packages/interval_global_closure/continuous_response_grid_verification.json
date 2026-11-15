@@ -1,0 +1,37 @@
+{
+  "scope": "Exact physical route verification, including late center atoms; no equilibrium claim.",
+  "fixtures": [
+    {
+      "name": "early_center",
+      "center_wait_value": "1/2",
+      "nodes": 213,
+      "decoded_routes": 5,
+      "routes_with_waits": 4,
+      "exact_edge_moments": "pass",
+      "independent_survival_integrals": "pass",
+      "mixed_full_route_costs": "pass"
+    },
+    {
+      "name": "post_one_center",
+      "center_wait_value": "7/8",
+      "nodes": 213,
+      "decoded_routes": 5,
+      "routes_with_waits": 1,
+      "exact_edge_moments": "pass",
+      "independent_survival_integrals": "pass",
+      "mixed_full_route_costs": "pass"
+    },
+    {
+      "name": "all_node_records_vs_exhaustive_graph",
+      "nodes": 18,
+      "exact_value": "1/2",
+      "exhaustive_complete_routes": 97,
+      "nonuniform_record_knots": [
+        "0",
+        "1/2",
+        "1"
+      ],
+      "floating_dp_agrees_with_exact_enumeration": true
+    }
+  ]
+}

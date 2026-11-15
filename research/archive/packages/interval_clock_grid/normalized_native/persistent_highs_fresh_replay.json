@@ -1,0 +1,51 @@
+{
+  "snapshot_sha256": "36be09cb15478986c5ebc56bb64220cccd9029245f2c7f28359b9eb14c39efab",
+  "cold": {
+    "stage": "cold_pass",
+    "upper": 1.4262855893928756,
+    "weights_sum": 0.9999999999999987,
+    "stats": {
+      "highs_version": "1.8.0",
+      "main": {
+        "seconds": 16.302895148999596,
+        "simplex_iterations": 0,
+        "basis_valid_before": false,
+        "basis_valid_after": true,
+        "rows": 15052,
+        "columns": 4129,
+        "nonzeros": 379225,
+        "max_primal_infeasibility": 0.0,
+        "max_dual_infeasibility": 0.0,
+        "ipm_iterations": 59,
+        "crossover_iterations": 1202,
+        "fallback": {
+          "original_status": "Unknown",
+          "original_run_status": "HighsStatus.kWarning",
+          "method": "IPM with crossover, then restore dual simplex"
+        }
+      }
+    }
+  },
+  "warm_repeat": {
+    "upper": 1.4262855893928756,
+    "stats": {
+      "highs_version": "1.8.0",
+      "main": {
+        "seconds": 0.007575530000394792,
+        "simplex_iterations": 0,
+        "basis_valid_before": true,
+        "basis_valid_after": true,
+        "rows": 15052,
+        "columns": 4129,
+        "nonzeros": 379225,
+        "max_primal_infeasibility": 0.0,
+        "max_dual_infeasibility": 0.0,
+        "ipm_iterations": 0,
+        "crossover_iterations": 0
+      }
+    }
+  },
+  "status": "passed",
+  "scope": "Fresh n=32 checkpoint naturally reproduced Unknown; IPM/crossover recovered an optimal solution and a warm simplex basis.",
+  "helper_source_sha256": "e464d4257c909d03695eefcec2893dfd1c0830ed3a1528eb6089edf739f42ca0"
+}

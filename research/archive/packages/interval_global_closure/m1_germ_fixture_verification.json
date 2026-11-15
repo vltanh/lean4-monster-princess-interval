@@ -1,0 +1,56 @@
+{
+  "scope": "Complete-family reduction fixtures, exact moments, physical segments, and concave weight planes.",
+  "cases": [
+    {
+      "name": "distinct_same_limit",
+      "initial_positions": 5,
+      "candidate_routes": 10,
+      "minimum_germ": "germ:[[\"0\",\"1\"],[\"1\"]]",
+      "minimum_limit": "0"
+    },
+    {
+      "name": "asymmetric_stationary",
+      "initial_positions": 6,
+      "candidate_routes": 12,
+      "minimum_germ": "germ:[[\"19/32\",\"-5/4\",\"1/4\"],[\"1\"]]",
+      "minimum_limit": "19/32"
+    },
+    {
+      "name": "rational_speed_outgoing",
+      "initial_positions": 6,
+      "candidate_routes": 12,
+      "minimum_germ": "germ:[[\"-19/20\",\"-1/2\",\"0\",\"0\",\"0\",\"0\",\"57/40\",\"1/2\",\"0\",\"0\",\"0\",\"0\",\"-1/2\"],[\"-1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\"]]",
+      "minimum_limit": "19/20"
+    },
+    {
+      "name": "inward_outward",
+      "initial_positions": 6,
+      "candidate_routes": 12,
+      "minimum_germ": "germ:[[\"7/8\",\"1/2\"],[\"1\"]]",
+      "minimum_limit": "7/8"
+    },
+    {
+      "name": "moving_coalescence",
+      "initial_positions": 5,
+      "candidate_routes": 10,
+      "minimum_germ": "1/3",
+      "minimum_limit": "1/3"
+    },
+    {
+      "name": "initial_tie_then_split",
+      "initial_positions": 5,
+      "candidate_routes": 10,
+      "minimum_germ": "1/2",
+      "minimum_limit": "1/2"
+    }
+  ],
+  "record_equalities": 66,
+  "raw_segment_equalities": 66,
+  "gap_dominance_checks": 54,
+  "weight_plane_checks": 132,
+  "arithmetic": {
+    "radius": "1/84",
+    "comparisons": 21089,
+    "maxDegree": 18
+  }
+}

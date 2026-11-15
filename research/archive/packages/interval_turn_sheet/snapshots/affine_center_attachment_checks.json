@@ -1,0 +1,134 @@
+{
+  "scope": "Completed center-continuation lower potential on the specified reachable cone, not a global interval-game bound.",
+  "field_blob": "5c45d042ee9948faebc03354c3e1e2ee3cbec1a5",
+  "field_gates": {
+    "curvature": "-89895147293181138009386759/430202975346023823219241",
+    "wait_coefficient": "7820540063744326/655898601421",
+    "affine_triangles": 1,
+    "future_vertices": 6324,
+    "row_b_vertices": 408,
+    "flat_triangles": 75,
+    "v1_vertices": 204
+  },
+  "direct_crossing": {
+    "scope": "Exact crossing-exit defect minimum on the selected front reachable polytope; endpoint and wait exits are not included here.",
+    "t": "57/64",
+    "n": "10184278599/62500000000",
+    "B": "3000",
+    "restricted": true,
+    "primitive_pieces": {
+      "rows": 60,
+      "moments": 38,
+      "checks": 168
+    },
+    "pairs": 248,
+    "regions": 140,
+    "vertices": 634,
+    "candidates": 872,
+    "stationary": 1461,
+    "checks": 140,
+    "best": {
+      "value": "10748868539258338056002451551/1918110601942289500000000000",
+      "numeric": 5.603883596896849,
+      "point": [
+        "55178969913308685/61379539262153264",
+        "15/16",
+        "59967938118642438041274639/239763825242786187500000000"
+      ],
+      "kind": "face_stationary",
+      "row": 798,
+      "moment": "center"
+    }
+  },
+  "other_exits": [
+    {
+      "label": "endpoint",
+      "vertices": 3,
+      "candidates": 4,
+      "stationary": 6,
+      "best": {
+        "value": "3031678274582283563292238107112146729631/540813849223692922629652480000000000000",
+        "numeric": 5.605770412377721,
+        "point": [
+          "483515805007219853791/515760277961438105230",
+          "15/16",
+          "33616998811561474814805971244377/51576027796143810523000000000000"
+        ],
+        "kind": "edge_stationary"
+      }
+    },
+    {
+      "label": "wait_low",
+      "vertices": 3,
+      "candidates": 5,
+      "stationary": 2,
+      "best": {
+        "value": "2802890496469/500000000000",
+        "numeric": 5.605780992938,
+        "point": [
+          "57/64",
+          "15/16",
+          "10184278599/62500000000"
+        ],
+        "kind": "vertex"
+      }
+    },
+    {
+      "label": "wait_high",
+      "vertices": 3,
+      "candidates": 6,
+      "stationary": 6,
+      "best": {
+        "value": "44116324622575016279745990793/7869791159607698500000000000",
+        "numeric": 5.605780855914627,
+        "point": [
+          "236093209377532075/251833317107446352",
+          "15/16",
+          "160296325069075474642543253/245930973737740578125000000"
+        ],
+        "kind": "edge_stationary"
+      }
+    }
+  ],
+  "rank_boundary_exit": {
+    "scope": "Exact rank-boundary exit LOWER certificate at the stated target, using Bernstein gates and complete quadratic stationary fallback. No claim that the reported fallback minimum is the full minimum.",
+    "certified_target": "10748868539258338056002451551/1918110601942289500000000000",
+    "certified_target_numeric": 5.603883596896849,
+    "state": {
+      "t": "57/64",
+      "n": "10184278599/62500000000",
+      "B": "3000"
+    },
+    "counts": {
+      "rank_candidates": 231,
+      "rank_regions": 126,
+      "endpoint_regions": 126,
+      "crossing_regions": 5760,
+      "vertices": 28514,
+      "point_candidates": 6,
+      "stationary": 6,
+      "primitive_checks": 66,
+      "bernstein_regions": 5885,
+      "bernstein_pairs": 103840,
+      "quadratic_fallback_regions": 1
+    },
+    "fallback_best": {
+      "value": "10748868539258338056002451551/1918110601942289500000000000",
+      "numeric": 5.603883596896849,
+      "point": [
+        "55178969913308685/61379539262153264",
+        "15/16",
+        "15/16"
+      ],
+      "kind": "edge_stationary",
+      "exit": "endpoint",
+      "moment": 0,
+      "rank": [
+        "-71289950193/7812500000",
+        "7820870065430579/750000000000000",
+        "655898601421/750000000000000",
+        "0"
+      ]
+    }
+  }
+}

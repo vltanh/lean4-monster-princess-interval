@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "n": 512,
+  "physical_pairs": 676,
+  "all_calendar_family_floor": "145931157143161/102400000000000",
+  "actual_continuous_payoff_interval": [
+    "5836196016558091/4096000000000000",
+    "5836196016558091/4096000000000000"
+  ],
+  "continuous_interval_width": "0",
+  "nodal_minus_continuous_lower": "1050269168349/4096000000000000",
+  "global_target_upper": "291849329389899/204800000000000",
+  "actual_fixed_law_obstructed_by_this_field": false,
+  "scope": "This grid's nodal-clock certificate family is blocked for this fixed law. The continuous interval separately quantifies the actual response of this field. No game-value lower is asserted."
+}

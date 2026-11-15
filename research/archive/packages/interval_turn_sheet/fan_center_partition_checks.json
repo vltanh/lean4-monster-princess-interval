@@ -1,0 +1,286 @@
+{
+  "scope": "Exact stationary-cone merge and finite center-return partition for ordered fixed-interval bang-bang translation fans. It does not reduce arbitrary same-side prefixes before the first center. No game value or matching law is claimed.",
+  "merge": {
+    "polynomial_identities": 140,
+    "arbitrary_future_inverse_pairings": 700,
+    "independent_ordered_capture_routes": 216,
+    "affine_capture_pieces": 4080,
+    "maximum_physical_difference_minus_bound": "-65/256"
+  },
+  "count": {
+    "exhaustive_time_partition_chains": 682
+  },
+  "partitions": [
+    {
+      "H": "2",
+      "J": "4",
+      "balanced_productive_return_bound": "7",
+      "conservative_physical_return_bound": "8",
+      "blocks": [
+        {
+          "left": "0",
+          "right": "1/2",
+          "subintervals": "1",
+          "step": "1/2",
+          "k": "2"
+        },
+        {
+          "left": "1/2",
+          "right": "1",
+          "subintervals": "1",
+          "step": "1/2",
+          "k": "0"
+        },
+        {
+          "left": "1",
+          "right": "3/2",
+          "subintervals": "1",
+          "step": "1/2",
+          "k": "0"
+        },
+        {
+          "left": "3/2",
+          "right": "2",
+          "subintervals": "1",
+          "step": "1/2",
+          "k": "2"
+        }
+      ],
+      "edge_checks": 6,
+      "cone_identity_checks": 144
+    },
+    {
+      "H": "2",
+      "J": "3",
+      "balanced_productive_return_bound": "5",
+      "conservative_physical_return_bound": "6",
+      "blocks": [
+        {
+          "left": "0",
+          "right": "1",
+          "subintervals": "1",
+          "step": "1",
+          "k": "1"
+        },
+        {
+          "left": "1",
+          "right": "3/2",
+          "subintervals": "1",
+          "step": "1/2",
+          "k": "0"
+        },
+        {
+          "left": "3/2",
+          "right": "2",
+          "subintervals": "1",
+          "step": "1/2",
+          "k": "0"
+        }
+      ],
+      "edge_checks": 5,
+      "cone_identity_checks": 108
+    },
+    {
+      "H": "2",
+      "J": "9",
+      "balanced_productive_return_bound": "17",
+      "conservative_physical_return_bound": "18",
+      "blocks": [
+        {
+          "left": "0",
+          "right": "1/8",
+          "subintervals": "1",
+          "step": "1/8",
+          "k": "2"
+        },
+        {
+          "left": "1/8",
+          "right": "1/2",
+          "subintervals": "1",
+          "step": "3/8",
+          "k": "1"
+        },
+        {
+          "left": "1/2",
+          "right": "3/4",
+          "subintervals": "1",
+          "step": "1/4",
+          "k": "2"
+        },
+        {
+          "left": "3/4",
+          "right": "1",
+          "subintervals": "1",
+          "step": "1/4",
+          "k": "0"
+        },
+        {
+          "left": "1",
+          "right": "5/4",
+          "subintervals": "1",
+          "step": "1/4",
+          "k": "0"
+        },
+        {
+          "left": "5/4",
+          "right": "11/8",
+          "subintervals": "1",
+          "step": "1/8",
+          "k": "2"
+        },
+        {
+          "left": "11/8",
+          "right": "3/2",
+          "subintervals": "1",
+          "step": "1/8",
+          "k": "3"
+        },
+        {
+          "left": "3/2",
+          "right": "2",
+          "subintervals": "2",
+          "step": "1/4",
+          "k": "2"
+        }
+      ],
+      "edge_checks": 29,
+      "cone_identity_checks": 324
+    },
+    {
+      "H": "2",
+      "J": "12",
+      "balanced_productive_return_bound": "23",
+      "conservative_physical_return_bound": "24",
+      "blocks": [
+        {
+          "left": "0",
+          "right": "1/6",
+          "subintervals": "1",
+          "step": "1/6",
+          "k": "4/3"
+        },
+        {
+          "left": "1/6",
+          "right": "1/2",
+          "subintervals": "2",
+          "step": "1/6",
+          "k": "7/3"
+        },
+        {
+          "left": "1/2",
+          "right": "5/6",
+          "subintervals": "2",
+          "step": "1/6",
+          "k": "7/3"
+        },
+        {
+          "left": "5/6",
+          "right": "1",
+          "subintervals": "1",
+          "step": "1/6",
+          "k": "4/3"
+        },
+        {
+          "left": "1",
+          "right": "7/6",
+          "subintervals": "1",
+          "step": "1/6",
+          "k": "4/3"
+        },
+        {
+          "left": "7/6",
+          "right": "3/2",
+          "subintervals": "2",
+          "step": "1/6",
+          "k": "7/3"
+        },
+        {
+          "left": "3/2",
+          "right": "11/6",
+          "subintervals": "2",
+          "step": "1/6",
+          "k": "7/3"
+        },
+        {
+          "left": "11/6",
+          "right": "2",
+          "subintervals": "1",
+          "step": "1/6",
+          "k": "4/3"
+        }
+      ],
+      "edge_checks": 24,
+      "cone_identity_checks": 432
+    }
+  ],
+  "folded_outward": {
+    "scope": "Reflected outward fans p_z=1-|1-p-z|, z in[0,delta], then fair reflection. The two interval components form a density representation, not a probability mixture of clipped rows.",
+    "partitions": [
+      {
+        "H": "2",
+        "J": "2",
+        "balanced_productive_return_bound": "3",
+        "conservative_physical_return_bound": "4",
+        "blocks": [
+          {
+            "left": "0",
+            "right": "1",
+            "subintervals": "1",
+            "step": "1",
+            "k": "0"
+          },
+          {
+            "left": "1",
+            "right": "2",
+            "subintervals": "1",
+            "step": "1",
+            "k": "0"
+          }
+        ],
+        "edge_checks": 8,
+        "cone_identity_checks": 72
+      },
+      {
+        "H": "2",
+        "J": "3",
+        "balanced_productive_return_bound": "5",
+        "conservative_physical_return_bound": "6",
+        "blocks": [
+          {
+            "left": "0",
+            "right": "1/2",
+            "subintervals": "1",
+            "step": "1/2",
+            "k": "5/4"
+          },
+          {
+            "left": "1/2",
+            "right": "3/2",
+            "subintervals": "1",
+            "step": "1",
+            "k": "0"
+          },
+          {
+            "left": "3/2",
+            "right": "2",
+            "subintervals": "1",
+            "step": "1/2",
+            "k": "1/4"
+          }
+        ],
+        "edge_checks": 21,
+        "cone_identity_checks": 108
+      }
+    ],
+    "normalization_and_endpoint_trace_checks": 36,
+    "static_ordered_capture_checks": 12,
+    "affine_capture_pieces": 72
+  },
+  "conventions": {
+    "field": "ordered common-quantile realization of the symmetric marginal",
+    "intervals": "general fixed nondegenerate [lo,hi], including outward [0,delta]",
+    "endpoint": "clipping atoms retained by strict/closed traces; within-cell diamonds have duration <=1",
+    "future": "merge uses only monotonicity and beta_e>=e outside the cone",
+    "physical_count": "balanced renewal <=2J-1; conservative physical action realization <=2J before static completion"
+  }
+}

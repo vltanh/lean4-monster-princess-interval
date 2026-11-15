@@ -1,0 +1,89 @@
+{
+  "scope": "Complete s>=1 genuinely delayed-plan Bellman gate on the stated high-current domain; delayed U<s<1 remains open.",
+  "source": {
+    "blob_sha": "5c45d042ee9948faebc03354c3e1e2ee3cbec1a5",
+    "path": "packages/interval_cdf_discovery/snapshots/endpoint_joint_i1_field.json",
+    "exact_reader_blob_sha": "5714f57ada458f38ef8b46adb32be2472a009622"
+  },
+  "domain": {
+    "initial_start_floor": "255/256",
+    "current_U": [
+      "255/256",
+      "1"
+    ],
+    "current_U_upper_strict": true,
+    "current_record_M_floor": "17670484999841/19531250000000",
+    "current_M_equals_R": true,
+    "current_V_negative": true,
+    "first_V_ge_current_V": true,
+    "first_V_lt_current_U": true,
+    "second_U_ge_one": true,
+    "retained_L_ge": "R(max(a0,-V),V)",
+    "no_reset_at_U_one": true
+  },
+  "coverage": {
+    "tail": {
+      "completed": 156,
+      "cases": 45092,
+      "empty": 9160,
+      "trace_degenerate": 16835,
+      "pass": 18282,
+      "fail": 815,
+      "minpass": "0",
+      "algorithm_crosschecks": 50
+    },
+    "ratio_cap": {
+      "completed": 815,
+      "pass": 168,
+      "fail": 563,
+      "empty": 84,
+      "degenerate": 0
+    },
+    "endpoint_comparator": {
+      "completed": 290,
+      "pass": 290,
+      "fail": 0,
+      "empty": 0,
+      "degenerate": 0
+    },
+    "fixed_one_affine": {
+      "completed": 273,
+      "pass": 29,
+      "fail": 244,
+      "empty": 0,
+      "degenerate": 0
+    },
+    "fixed_one_comparator": {
+      "completed": 244,
+      "pass": 244,
+      "fail": 0,
+      "empty": 0,
+      "degenerate": 0
+    }
+  },
+  "wide_first_turn_gate": {
+    "w0": "-31876647474353/45229875167500",
+    "left_four_cost_margin": "2517209183656877666974201311/28268671979687500000000000000",
+    "right_four_cost_margin": "3680834990301/156250000000000"
+  },
+  "post_turn_gate": {
+    "triangles": 1156,
+    "vertex_checks": 3468,
+    "minimum": "91472232581/1000000000000"
+  },
+  "quadratic_certificates": {
+    "endpoint_regions": 290,
+    "endpoint_bernstein_pairs": 9321,
+    "fixed_one_regions": 244,
+    "fixed_one_bernstein_pairs": 8419
+  },
+  "alpha_time_regression": {
+    "s": "4/5",
+    "Vroot": "1/2",
+    "alpha": "13/20",
+    "radius": "3/20"
+  },
+  "delayed_s_ge_one_gate_proved": true,
+  "all_precenter_Bellman_gate_proved": false,
+  "game_bound_claimed": false
+}

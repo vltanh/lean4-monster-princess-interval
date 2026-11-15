@@ -1,0 +1,56 @@
+{
+  "scope": "Exact suffix-gain formula evaluated with analytic spliced primitives; no whole-game value claim.",
+  "formula": "4Delta=(y+beta)Fbar(a)-integral_0^beta (1-x)f(x)dx; y=late_left<turn and ell=0 below y",
+  "cases": [
+    {
+      "a": 0.991696693624,
+      "c": -0.585131232,
+      "y": 0.625,
+      "Fbar": 0.05601627910654844,
+      "weighted_f_loss": 0.0035626127039811925,
+      "four_payoff_gain": 0.06422443614328213,
+      "payoff_gain": 0.016056109035820533,
+      "switch_beta_roots_below_tail": []
+    },
+    {
+      "a": 0.99013684913,
+      "c": -0.54648347435,
+      "y": 0.625,
+      "Fbar": 0.05918469055738756,
+      "weighted_f_loss": 0.002027438539379826,
+      "four_payoff_gain": 0.06730644838311818,
+      "payoff_gain": 0.016826612095779545,
+      "switch_beta_roots_below_tail": []
+    },
+    {
+      "a": 0.99,
+      "c": -0.55,
+      "y": 0.625,
+      "Fbar": 0.059445985433627564,
+      "weighted_f_loss": 0.0021727737291081795,
+      "four_payoff_gain": 0.0676762591554042,
+      "payoff_gain": 0.01691906478885105,
+      "switch_beta_roots_below_tail": []
+    },
+    {
+      "a": 0.995,
+      "c": -0.55,
+      "y": 0.625,
+      "Fbar": 0.04764309650892308,
+      "weighted_f_loss": 0.0021727737291081795,
+      "four_payoff_gain": 0.053807864668876444,
+      "payoff_gain": 0.013451966167219111,
+      "switch_beta_roots_below_tail": []
+    },
+    {
+      "a": 0.999,
+      "c": -0.55,
+      "y": 0.625,
+      "Fbar": 0.028573852695930015,
+      "weighted_f_loss": 0.0021727737291081795,
+      "four_payoff_gain": 0.03140150318860959,
+      "payoff_gain": 0.007850375797152398,
+      "switch_beta_roots_below_tail": []
+    }
+  ]
+}

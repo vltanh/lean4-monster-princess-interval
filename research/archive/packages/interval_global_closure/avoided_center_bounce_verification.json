@@ -1,0 +1,229 @@
+{
+  "scope": "Exact finite fixtures plus stated analytic all-monster lemmas for the avoided-bounce family. No lower strategy for the full target game is claimed.",
+  "pair_fixtures": [
+    {
+      "tau": "1/8",
+      "epsilon": "1/2",
+      "value": "25/32",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/8",
+      "epsilon": "1/8",
+      "value": "79/128",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/8",
+      "epsilon": "1/64",
+      "value": "583/1024",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/8",
+      "epsilon": "1/1024",
+      "value": "9223/16384",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/8",
+      "epsilon": "0",
+      "value": "1/16",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/2",
+      "epsilon": "1/2",
+      "value": "7/8",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/2",
+      "epsilon": "1/8",
+      "value": "25/32",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/2",
+      "epsilon": "1/64",
+      "value": "193/256",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/2",
+      "epsilon": "1/1024",
+      "value": "3073/4096",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "1/2",
+      "epsilon": "0",
+      "value": "1/4",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "7/8",
+      "epsilon": "1/2",
+      "value": "31/32",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "7/8",
+      "epsilon": "1/8",
+      "value": "121/128",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "7/8",
+      "epsilon": "1/64",
+      "value": "961/1024",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "7/8",
+      "epsilon": "1/1024",
+      "value": "15361/16384",
+      "nodes": 3,
+      "complete": true
+    },
+    {
+      "tau": "7/8",
+      "epsilon": "0",
+      "value": "7/16",
+      "nodes": 3,
+      "complete": true
+    }
+  ],
+  "jitter_fixtures": [
+    {
+      "epsilon": "1/8",
+      "delta": "1/1024",
+      "finiteFixtureValue": "38435/49152",
+      "rigorousContinuousFamilyLower": "12793/16384",
+      "rigorousContinuousFamilyUpper": "12935/16384",
+      "nodes": 24
+    },
+    {
+      "epsilon": "1/32",
+      "delta": "1/16384",
+      "finiteFixtureValue": "50064319/66060288",
+      "rigorousContinuousFamilyLower": "794593/1048576",
+      "rigorousContinuousFamilyUpper": "796703/1048576",
+      "nodes": 24
+    },
+    {
+      "epsilon": "1/128",
+      "delta": "1/262144",
+      "finiteFixtureValue": "2573608499/3422552064",
+      "rigorousContinuousFamilyLower": "50462593/67108864",
+      "rigorousContinuousFamilyUpper": "50495615/67108864",
+      "nodes": 24
+    }
+  ],
+  "all_searches_complete": true,
+  "face_attack": {
+    "scope": "Specified straight-left attack, independently intersected with each supplied physical path.",
+    "route": [
+      [
+        "0",
+        "499999999999997/1000000000000000"
+      ],
+      [
+        "1499999999999997/1000000000000000",
+        "-1"
+      ],
+      [
+        "3499999999999997/1000000000000000",
+        "1"
+      ],
+      [
+        "8",
+        "1"
+      ]
+    ],
+    "profiles": [
+      {
+        "name": "minimum",
+        "positive": "1/64",
+        "negative": "562499999999997/1000000000000000",
+        "value": "578124999999997/2000000000000000",
+        "decimal": 0.2890624999999985
+      },
+      {
+        "name": "maximum",
+        "positive": "0",
+        "negative": "562499999999997/1000000000000000",
+        "value": "562499999999997/2000000000000000",
+        "decimal": 0.2812499999999985
+      }
+    ],
+    "epsilon_profile": {
+      "positive": "112730043973143994938695068600356875152492237247924465352773742259114622915216685256919180821441765425479588686936766408023207/7214722814281215676076484393336843348098096790246358642812797864546946125152077138320478487334730997197405421568000000000000000",
+      "negative": "14417912492466020629330941823356410877898392245806906068369435728780235716168088857175673970495143173533732428967/25631844431050920988740260474034625375232454268279833239364499293866636709367686600275510683500544000000000000000",
+      "value": "3111511502168429477284060984138129565642464770270153488849440167286474431005521003106924761179136095259547401545863751807725001688475257577893111861457656911895121960768998225653306597055724162476889309177222538073/10764147899393574690559241604642274521655294444237498449975766590709688304894763723273832427921386230365123456954562980260434324003951446291597072447381700207110721795824514215373017278820534387212288000000000000000",
+      "decimal": 0.2890624999999976
+    },
+    "uniform_trace_bound": {
+      "scope": "Uniform limiting bound over all realizing residual-face controls, using the three priced traces and lattice extremality, not canonical-fill interpolation.",
+      "trace_checks": [
+        {
+          "v": "-1/2",
+          "min": {
+            "U": "0",
+            "side": 0
+          },
+          "max": {
+            "U": "1/2",
+            "side": -1
+          }
+        },
+        {
+          "v": "-15/32",
+          "min": {
+            "U": "4823449/8388608",
+            "side": -1
+          },
+          "max": {
+            "U": "4823449/8388608",
+            "side": -1
+          }
+        },
+        {
+          "v": "1/2",
+          "min": {
+            "U": "5/8",
+            "side": -1
+          },
+          "max": {
+            "U": "5/8",
+            "side": -1
+          }
+        }
+      ],
+      "A": "468749999999997/1000000000000000",
+      "X": "499999999999997/1000000000000000",
+      "T": "624999999999997/1000000000000000",
+      "bound": "578124999999997/2000000000000000",
+      "decimal": 0.2890624999999985
+    }
+  },
+  "inputs": {
+    "finite_oracle_blob": "51dbac43b59c3041abf831837dc58fde2a9294b2",
+    "face_blob": "61db8ab94e396c4bf5423e69e47e3aa64321d93a",
+    "upper_blob": "07c65a9a017864c97a5433e0a721a682aadee96b",
+    "source_blob": "188b8b43fad7c69cafb42195d69d045cb44e8f23"
+  }
+}

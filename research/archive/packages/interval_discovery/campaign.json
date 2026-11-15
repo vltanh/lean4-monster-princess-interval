@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "selected": ["princess-plain"],
+  "experiments": [
+    {
+      "id": "princess-proximal",
+      "kind": "princess",
+      "family": "proximal",
+      "n": 64,
+      "profile": 32,
+      "seed": 1701,
+      "iterations": 160,
+      "resume_run_id": ""
+    },
+    {
+      "id": "princess-randomized",
+      "kind": "princess",
+      "family": "randomized",
+      "n": 128,
+      "profile": 32,
+      "seed": 271828,
+      "iterations": 160,
+      "resume_run_id": ""
+    },
+    {
+      "id": "princess-plain",
+      "kind": "princess",
+      "family": "plain",
+      "n": 128,
+      "profile": 64,
+      "seed": 314159,
+      "iterations": 120,
+      "resume_run_id": "43532597339"
+    },
+    {
+      "id": "monster-mutations",
+      "kind": "monster",
+      "family": "mutations",
+      "n": 128,
+      "profile": 128,
+      "seed": 161803,
+      "iterations": 60,
+      "resume_run_id": ""
+    },
+    {
+      "id": "monster-priced",
+      "kind": "monster",
+      "family": "priced",
+      "n": 64,
+      "profile": 64,
+      "seed": 141421,
+      "iterations": 60,
+      "resume_run_id": ""
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "scope": "Cheap retention check: reviewed source/proof bytes, completed CI report and artifact-member bindings, exact rational arithmetic, complete nodal transport/front validation, and regenerated Princess strategy. No all-bank search is rerun.",
+  "full_bank_search_replayed": false,
+  "archive_zip_digests_rechecked": false,
+  "saved_ci_reports_rebound": true,
+  "strategy_regenerated_and_matched": true,
+  "field_sha256": "a4fe152dbf70f5896c256d3a329f6ac2ab31028421795ae74a3163b399c28e10",
+  "princess_sha256": "b7ac0c124dfcf6d3d00fbfaa6fbf2872e04878572d0f5221e7f7de0b05a257d7",
+  "independent_report_sha256": "98ad748bd66963ee37ed0d9d7584e29e248c5d7f9db7a960452db6a89867baa3",
+  "historical_independent_verifier_sha256": "3ca39089073633d89e12a7ebec1b46257ee037d3ff4ed71d58614f5f6aa73092",
+  "n": 512,
+  "normalized_bank_lower": "36434808231/25600000000",
+  "game_value_lower": "36409808231/25600000000",
+  "explicit_princess_security": "582556541071/409600000000",
+  "validation": {
+    "cone_inequalities": 2095104,
+    "sticky_endpoint_inequalities": 1024,
+    "incoming_front_identities": 262144
+  },
+  "provenance": {
+    "repository_source_commitments": 7,
+    "proof_source_commitments": 9,
+    "historical_verifier_retained": true,
+    "selected_successful_ci_jobs": 2,
+    "exact_artifact_members_recoverable": 11,
+    "prepared_field_reconstructed_byte_exact": true,
+    "archive_zip_digest_recomputed": false
+  }
+}

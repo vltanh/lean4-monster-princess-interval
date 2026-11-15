@@ -1,0 +1,12 @@
+{
+  "original_response": "56305800187/40000000000",
+  "all_minimizers": 2,
+  "endpoint_test": "299999/100000",
+  "theta": "1/1000000000000",
+  "spacing": "1/40000000000",
+  "strict_perturbation_response": "56305800187063693799813/40000000000000000000000",
+  "nodes": 751782,
+  "lower_bound_prunes": 375887,
+  "dominance_prunes": 0,
+  "full_game_solved": false
+}

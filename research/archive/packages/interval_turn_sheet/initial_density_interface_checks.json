@@ -1,0 +1,37 @@
+{
+  "scope": "Exact local two-density initial-prefix identities, a failed-concavity witness, and a conditional hinge deletion. The general finite pre-first-center theorem remains open.",
+  "algebra": {
+    "scope": "Independent initial two-density interface audit. The corrected physical moment is exact; conditional parity concavity is proved only for the no-crossover-hinge quadratic, not for the full hinged objective.",
+    "physical_moment_identities": 363,
+    "with_active_crossing_hinges": 71,
+    "affine_capture_pieces": 2487,
+    "conditional_parity_sos_identities": 486
+  },
+  "curvature": {
+    "alpha": "1/4",
+    "beta_plus": "1/2",
+    "beta_minus": "2",
+    "legs": 49,
+    "internal_positive_records": 24,
+    "amplitudes": "x_j=2^(j-1)/2^53, j=1..49",
+    "epsilon": "1/85070591730234615865843651857942052864",
+    "variation": "z_j=min(j,24-j)*epsilon; v_j=z_j-(3/7)z_(j-1), j=1..24; vary positive ranks by +/-v, fix negative and final positive ranks",
+    "exit_time": "422212465065983/4503599627370496",
+    "exit_position_relative": "1/32",
+    "record_lower_relative": "-351843720888321/18014398509481984",
+    "record_upper_relative": "703687441776639/18014398509481984",
+    "normalized_second_difference": "1504/441",
+    "physical_piece_checks": 291,
+    "fan_realization_checks": 15,
+    "complete_fan_capture_curvature": "1504/441",
+    "complete_fan_affine_capture_pieces": 351,
+    "scope": "Counterexample to conditional parity concavity of the FULL hinged moment, not to a finite-prefix theorem."
+  },
+  "deletion": {
+    "full_fan_capture_comparisons": 108,
+    "affine_capture_pieces": 4752,
+    "band_and_bound_identities": 12,
+    "maximum_actual_difference_minus_bound": "-1/1048576",
+    "scope": "Two maximal interface tents with flow-overtaken upper peak, including arbitrary old records; future affine persistence is checked explicitly."
+  }
+}

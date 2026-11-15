@@ -1,0 +1,17 @@
+{
+  "all_monster_lower": "9072574958621987/6400000000000000",
+  "fixture_sha256": "76b59e27dc22d26a8886daecf1813bdef9b77fbe42b0760168864eeb59ac9806",
+  "gain_above_old_lower": "60590851/25600000000000000",
+  "independent_attaining_payoff": "9072574958621987/6400000000000000",
+  "oriented_princess_paths": 588,
+  "prefix_time": "1/128000000",
+  "scope": "all-Monster lower certificate; tiny numerical gain, retained as a structural regression",
+  "search": {
+    "bounded": 3570,
+    "dominated": 30628,
+    "leaves": 6,
+    "nodes": 68164
+  },
+  "source_sha256": "25f86abe2a4d955fea8974d8fddf6aaf1e8e8e8ccec9cec76f9da0bf5c4a7bcc",
+  "status": "PASS"
+}

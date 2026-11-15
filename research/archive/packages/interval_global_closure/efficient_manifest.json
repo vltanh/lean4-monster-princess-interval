@@ -1,0 +1,152 @@
+{
+  "scope": "Curated upper-strategy exchange checkpoint; excludes restart caches and intermediate duplicate stages.",
+  "files": [
+    {
+      "path": "packages/interval_global_closure/efficient_master.py",
+      "role": "source",
+      "bytes": 17041,
+      "sha256": "c6b71bf712a9806c080f39e62e238f7603a99ad566117803da244eb49c5524bb"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_separator.cjs",
+      "role": "source",
+      "bytes": 10021,
+      "sha256": "267f161f8af2ef54105c7918e50e5d7c4af4c6bc23cf86729c5c1d5f4ea3994a"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_numeric_model.cjs",
+      "role": "source",
+      "bytes": 2925,
+      "sha256": "35266aac39126355de7b55624a36f6beb2c8e0b89249ecebf48564400093819c"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_hotstart.py",
+      "role": "source",
+      "bytes": 3552,
+      "sha256": "f81633ad707e9ab8f14862bb651b08468e8a2d4c6b7fdeb467effccc818c410b"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_union.py",
+      "role": "source",
+      "bytes": 5734,
+      "sha256": "50250a72ea406080c369c3ae8825878cc0031e738dd0e551bac0e16f1ad0d794"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_geometry.py",
+      "role": "source",
+      "bytes": 2297,
+      "sha256": "a0f60bad274e651e788086cf50223389eff9b5333f081ccf822a1db69147b1a1"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_test_continuum.py",
+      "role": "source",
+      "bytes": 3456,
+      "sha256": "a45478e7cb7815c1f1dbdca144d636732def69058e1afffdc17751fefa747eac"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_test_continuum.cjs",
+      "role": "source",
+      "bytes": 1255,
+      "sha256": "fc2d97f42ab7eaeb7fd85af90e9536419b3345841a5a43829851bb7453690660"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_realize_response.cjs",
+      "role": "source",
+      "bytes": 1990,
+      "sha256": "bb32c1970173359eca9b78f0658e1c2495afff6b1f05390399f05ab2ebfe2da3"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_uncross_probe.py",
+      "role": "source",
+      "bytes": 2241,
+      "sha256": "e7b86c1452d81adc7bcf74298b6abedfd4da3bd3ecd0c6069a027c1a6ea7fefd"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_method.md",
+      "role": "source",
+      "bytes": 10054,
+      "sha256": "53bb9256ea5a074f1c27d97a67fef88a9524b83d6a8cf28e115842ee7d9e28bb"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_checkpoint.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 481765,
+      "sha256": "3f9f146b4a4bd36aa07a95680869c63325e0c6f522fc6d5ba07eb6fb0579c4a4"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_checkpoint_bank.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 765937,
+      "sha256": "d65a73770d8a58e16675c46175d5a2cf272c00b41ecca3cbc5b71aa4880dacb0"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_uncross_summary.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 543048,
+      "sha256": "b4fb09b839dafe336e77a927f7e3f198ddb838f173923e638da7f6f34ae22447"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_h2.bank.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 146564,
+      "sha256": "f0f39ad06e1e3ca20a4ec4981a0e5349cc7ed4454469423b40e37ac1a128450b"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_h2.law.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 62456,
+      "sha256": "8721259bb05a282f1667ebda37aeba3dffe3104f5f9bc4309fe8a61b635728e5"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_h2.response.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 26308,
+      "sha256": "67da1f1feabfc381652871b36de8cfd975aad9b8d4d8349f38ca32562e46ae26"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_h2.princess_paths.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 257457,
+      "sha256": "3da2a13bca7849ec9735a27e3e546b3ea9d3134ad38018749005cc666da91a6c"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_complete_h3.bank.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 236662,
+      "sha256": "bd667481b5affb7cffd2cceb8ea4ec10a271350a63405056f98698d05c3a6ae0"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_complete_h3.law.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 98789,
+      "sha256": "6e0e3b5d7beb9606eadf4e6a50c4ad5792d2ef3dd9f7bca38c658a6b82378b27"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_complete_h3.response.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 24214,
+      "sha256": "189cbf19a46fca04414e3bb19b9e9bec877d8b3c98f5d4405dcad984217ff42f"
+    },
+    {
+      "path": "packages/interval_global_closure/efficient_positive_waits.json",
+      "role": "frozen_input_or_diagnostic",
+      "bytes": 747,
+      "sha256": "7b09a85f19b87e1d6d06e0e8e2d9c4973df9939c513a517f4be94275408dc8ad"
+    }
+  ],
+  "source_files": 11,
+  "data_files": 11,
+  "total_bytes": 2704513,
+  "exclude": [
+    "*_pool.npz",
+    "efficient_uncross_probe.json",
+    "intermediate efficient_*_stage*.json and efficient_*_result.json files"
+  ],
+  "existing_dependencies": [
+    "packages/interval_global_closure/survival_minimax.py",
+    "packages/interval_global_closure/global_minimax_enriched.json",
+    "packages/interval_turn_density/atomic_survival_v8.cjs",
+    "packages/interval_turn_density/atomic_search_checkpoint.json"
+  ],
+  "new_shared_dependency": "packages/interval_global_closure/continuous_response_waits.py"
+}

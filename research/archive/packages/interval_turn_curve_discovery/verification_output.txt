@@ -1,0 +1,2 @@
+PASS: 5280 free-turn and 440 fixed-time-turn exact captures.
+PASS: 142 atomic free-strip exchanges preserve M2 and attain the gain bound.

@@ -1,0 +1,175 @@
+{
+  "weight_denominator": 1000000,
+  "families": [
+    {
+      "kind": 1,
+      "start": "-1",
+      "weight_numerator": 673871
+    },
+    {
+      "kind": 1,
+      "start": "-15/16",
+      "weight_numerator": 24458
+    },
+    {
+      "kind": 1,
+      "start": "9/16",
+      "weight_numerator": 6324
+    },
+    {
+      "kind": 1,
+      "start": "5/8",
+      "weight_numerator": 6714
+    },
+    {
+      "kind": 1,
+      "start": "11/16",
+      "weight_numerator": 7165
+    },
+    {
+      "kind": 1,
+      "start": "3/4",
+      "weight_numerator": 7531
+    },
+    {
+      "kind": 1,
+      "start": "13/16",
+      "weight_numerator": 8430
+    },
+    {
+      "kind": 1,
+      "start": "7/8",
+      "weight_numerator": 8662
+    },
+    {
+      "kind": 1,
+      "start": "15/16",
+      "weight_numerator": 79645
+    },
+    {
+      "kind": 2,
+      "start": "-7/8",
+      "weight_numerator": 7101
+    },
+    {
+      "kind": 2,
+      "start": "-13/16",
+      "weight_numerator": 7029
+    },
+    {
+      "kind": 2,
+      "start": "-3/4",
+      "weight_numerator": 6739
+    },
+    {
+      "kind": 2,
+      "start": "-11/16",
+      "weight_numerator": 6672
+    },
+    {
+      "kind": 2,
+      "start": "-5/8",
+      "weight_numerator": 6607
+    },
+    {
+      "kind": 2,
+      "start": "-9/16",
+      "weight_numerator": 6542
+    },
+    {
+      "kind": 2,
+      "start": "-1/2",
+      "weight_numerator": 6387
+    },
+    {
+      "kind": 2,
+      "start": "-7/16",
+      "weight_numerator": 6387
+    },
+    {
+      "kind": 2,
+      "start": "-3/8",
+      "weight_numerator": 6387
+    },
+    {
+      "kind": 2,
+      "start": "-5/16",
+      "weight_numerator": 6387
+    },
+    {
+      "kind": 2,
+      "start": "-1/4",
+      "weight_numerator": 6240
+    },
+    {
+      "kind": 2,
+      "start": "-3/16",
+      "weight_numerator": 2908
+    },
+    {
+      "kind": 2,
+      "start": "3/16",
+      "weight_numerator": 5440
+    },
+    {
+      "kind": 2,
+      "start": "1/4",
+      "weight_numerator": 11541
+    },
+    {
+      "kind": 2,
+      "start": "5/16",
+      "weight_numerator": 11969
+    },
+    {
+      "kind": 2,
+      "start": "3/8",
+      "weight_numerator": 12149
+    },
+    {
+      "kind": 2,
+      "start": "7/16",
+      "weight_numerator": 12335
+    },
+    {
+      "kind": 2,
+      "start": "1/2",
+      "weight_numerator": 12527
+    },
+    {
+      "kind": 2,
+      "start": "9/16",
+      "weight_numerator": 5203
+    },
+    {
+      "kind": 2,
+      "start": "5/8",
+      "weight_numerator": 5193
+    },
+    {
+      "kind": 2,
+      "start": "11/16",
+      "weight_numerator": 5187
+    },
+    {
+      "kind": 2,
+      "start": "3/4",
+      "weight_numerator": 5191
+    },
+    {
+      "kind": 2,
+      "start": "13/16",
+      "weight_numerator": 5189
+    },
+    {
+      "kind": 2,
+      "start": "7/8",
+      "weight_numerator": 5211
+    },
+    {
+      "kind": 2,
+      "start": "15/16",
+      "weight_numerator": 4679
+    }
+  ]
+}
