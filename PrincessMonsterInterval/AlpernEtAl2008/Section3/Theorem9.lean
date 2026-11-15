@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.Section3.Strategies
+public import PrincessMonsterInterval.AlpernEtAl2008.Section3.Strategies
 
 /-!
 # Section 3: Theorem 9, `V ≤ 47/32`
@@ -18,7 +18,7 @@ the hider at a random end guarantees `1`.
 open scoped NNReal ENNReal
 open MeasureTheory
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-! ### The paths `A` and `B` at the times used in the proofs -/
 
@@ -297,4 +297,4 @@ theorem one_le_lowerValue_and_upperValue_le_three_halves :
           rw [show (1 / 2 * (1 + 2) : ℝ≥0) = 3 / 2 by norm_num]
           simp [ENNReal.coe_div]
 
-end PrincessMonster
+end PrincessMonsterInterval

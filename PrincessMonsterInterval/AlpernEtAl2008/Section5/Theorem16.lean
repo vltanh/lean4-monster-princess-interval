@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.Section3.Strategies
+public import PrincessMonsterInterval.AlpernEtAl2008.Section3.Strategies
 public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 public import Mathlib.Order.Filter.Basic
@@ -48,7 +48,7 @@ and `S₂` exactly (`s5_T1p_a` … `s5_T2n_b`), and passing to the limit by domi
 open scoped NNReal ENNReal Topology
 open MeasureTheory Filter
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- The loitering hider of `h_Φ`: wait at `x` until the sweeper `A` is `ε`-close (time
 `1 - x - ε`), run just ahead of it to `ε` (time `1 - 2ε`), turn and run to `+1`. -/
@@ -2167,4 +2167,4 @@ theorem theorem16 :
   exact le_iSup (fun ν : ProbabilityMeasure hiderPaths =>
     ⨅ S : searcherPaths, ∫⁻ H, captureTime S H ∂(ν : Measure hiderPaths)) ⟨gamma ε, this⟩
 
-end PrincessMonster
+end PrincessMonsterInterval

@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.Section2.Symmetric
+public import PrincessMonsterInterval.AlpernEtAl2008.Section2.Symmetric
 public import Basic.Analysis.TriangleWave
 
 /-!
@@ -26,7 +26,7 @@ Hider paths, with the parameter `ε > 0` of the paper:
 open scoped NNReal ENNReal
 open MeasureTheory
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- The sweeper `A`: start at `+1` and run to `-1` (`A(t) = 1 - t`), and back. -/
 noncomputable def sweeperA : C(ℝ≥0, ℝ) :=
@@ -144,4 +144,4 @@ noncomputable def symDiracS (S : C(ℝ≥0, ℝ)) : Measure searcherPaths :=
 noncomputable def symDiracH (H : C(ℝ≥0, ℝ)) : Measure hiderPaths :=
   (1 / 2 : ℝ≥0∞) • (Measure.dirac (toHider H) + Measure.dirac (toHider (-H)))
 
-end PrincessMonster
+end PrincessMonsterInterval

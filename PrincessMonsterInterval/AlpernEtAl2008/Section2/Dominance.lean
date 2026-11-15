@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.CaptureTime
+public import PrincessMonsterInterval.CaptureTime
 public import Basic.Analysis.TriangleWave
 public import Mathlib.Analysis.Calculus.ContDiff.Defs
 
@@ -22,7 +22,7 @@ path `H'` dominates `H` when `T(S, H) ≤ T(S, H')` for every searcher path `S`.
 
 open scoped NNReal ENNReal
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- A path is *end-reflecting* if, whenever it is at an end `±1` at a time `t₀`, it moves away at
 unit speed for the next unit of time: `|S t - S t₀| = t - t₀` for `t₀ ≤ t ≤ t₀ + 1`. This is the
@@ -497,9 +497,9 @@ theorem proposition3 {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths) (_hsmooth : S
     ∃ H' ∈ searcherPaths, ∀ S ∈ searcherPaths, captureTime S H ≤ captureTime S H' :=
   dom_exists_dominating hH
 
-end PrincessMonster
+end PrincessMonsterInterval
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- **Proposition 3** (`prop:3`) holds for every continuous hider path, smooth or not.
 
@@ -513,4 +513,4 @@ theorem proposition3_of_continuous {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths)
     ∃ H' ∈ searcherPaths, ∀ S ∈ searcherPaths, captureTime S H ≤ captureTime S H' :=
   dom_exists_dominating hH
 
-end PrincessMonster
+end PrincessMonsterInterval

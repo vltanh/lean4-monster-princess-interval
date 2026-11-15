@@ -32,7 +32,7 @@ Conventions: time `[0, ∞)` is `ℝ≥0`; a path is an element of `C(ℝ≥0, �
 open scoped NNReal ENNReal
 open MeasureTheory
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 -- BEGIN SHARED DEFINITIONS
 
@@ -64,9 +64,9 @@ noncomputable def lowerValue : ℝ≥0∞ :=
 
 -- END SHARED DEFINITIONS
 
-end PrincessMonster
+end PrincessMonsterInterval
 
-namespace PrincessMonster.Challenge
+namespace PrincessMonsterInterval.Challenge
 
 /-- The princess and monster game on `[-1, 1]` has a value: its lower and upper values in mixed
 strategies coincide. -/
@@ -79,4 +79,4 @@ theorem main :
     ∃ V : ℝ≥0∞, lowerValue = V ∧ upperValue = V ∧ 15 / 11 ≤ V ∧ V ≤ 13 / 9 := by
   sorry
 
-end PrincessMonster.Challenge
+end PrincessMonsterInterval.Challenge

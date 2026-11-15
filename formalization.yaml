@@ -130,15 +130,15 @@ review:
     under the Lean kernel and nanoda. No person has reviewed the proofs.
 
 alignment:
-  namespace: "PrincessMonster.Challenge"
+  namespace: "PrincessMonsterInterval.Challenge"
   statements:
     - source: "Section 1: existence of the value (from the Alpern–Gal minimax theorem)"
-      lean: "PrincessMonster.Challenge.value_exists"
+      lean: "PrincessMonsterInterval.Challenge.value_exists"
       module: "Challenge"
       status: "proved"
       note: "The lower and upper values in mixed strategies coincide."
     - source: "Abstract and Section 6: 15/11 ≤ V ≤ 13/9 (Theorems 14 and 16)"
-      lean: "PrincessMonster.Challenge.main"
+      lean: "PrincessMonsterInterval.Challenge.main"
       module: "Challenge"
       status: "proved"
       note: "There is V equal to both the lower and the upper value with 15/11 ≤ V ≤ 13/9."

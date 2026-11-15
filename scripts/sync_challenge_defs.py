@@ -20,7 +20,7 @@ from pathlib import Path
 
 # ---- configuration -------------------------------------------------------------------------
 # The library module that holds the shared definitions, and the Challenge file.
-DEFS = 'PrincessMonster/Defs.lean'
+DEFS = 'PrincessMonsterInterval/Defs.lean'
 CHALLENGE = 'Challenge.lean'
 # The marker lines around the shared block, in both files.
 BEGIN = '-- BEGIN SHARED DEFINITIONS\n'

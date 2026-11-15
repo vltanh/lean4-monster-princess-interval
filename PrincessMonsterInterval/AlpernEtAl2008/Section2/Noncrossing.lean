@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.CaptureTime
+public import PrincessMonsterInterval.CaptureTime
 public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 
 /-!
@@ -18,7 +18,7 @@ public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 
 open scoped NNReal ENNReal
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- **Definition 6** (`def:6`). Two hider paths are *noncrossing* if one lies weakly below the
 other at all times. -/
@@ -494,4 +494,4 @@ theorem proposition8 (P : Finset C(ℝ≥0, ℝ)) (hP : ∀ H ∈ P, H ∈ hider
         H.continuous.continuousOn (show (0 : ℝ) ∈ Set.Icc (H t) (H 0) from ⟨hneg.le, h0.le⟩)
       exact hz s hs
 
-end PrincessMonster
+end PrincessMonsterInterval

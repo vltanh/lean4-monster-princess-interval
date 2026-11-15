@@ -1,7 +1,7 @@
-name = "PrincessMonster"
+name = "PrincessMonsterInterval"
 version = "0.1.0"
 keywords = ["math"]
-defaultTargets = ["Basic", "External", "PrincessMonster", "Challenge", "Solution"]
+defaultTargets = ["Basic", "External", "PrincessMonsterInterval", "Challenge", "Solution"]
 
 [leanOptions]
 pp.unicode.fun = true
@@ -24,8 +24,8 @@ name = "External"
 globs = ["External.+"]
 
 [[lean_lib]]
-name = "PrincessMonster"
-globs = ["PrincessMonster.+"]
+name = "PrincessMonsterInterval"
+globs = ["PrincessMonsterInterval.+"]
 
 [[lean_lib]]
 name = "Challenge"

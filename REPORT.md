@@ -63,19 +63,19 @@ metrizability, and about non-regular Borel measures too. The proof:
 
 The space must be nonempty: there is no probability measure on the empty space, so without this
 hypothesis the statement is false. The paper's searcher space is nonempty.
-[`PrincessMonster.value_exists`](PrincessMonster/Value.lean#L167) applies the theorem to the searcher's paths. It uses that they
+[`PrincessMonsterInterval.value_exists`](PrincessMonsterInterval/Value.lean#L167) applies the theorem to the searcher's paths. It uses that they
 form a compact space (Arzelà–Ascoli) and that the capture time is lower semicontinuous in the
 searcher's path.
 
 The Alpern–Asic averaging is stated in game-theoretic terms, for a payoff invariant under
-involutions of the two strategy spaces; [`proposition4`](PrincessMonster/Section2/Symmetric.lean#L96) applies it to `S ↦ -S`.
+involutions of the two strategy spaces; [`proposition4`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Symmetric.lean#L96) applies it to `S ↦ -S`.
 
 ### Standard facts used without citation
 
 | Fact | Where | In the formalization |
 | --- | --- | --- |
-| Intermediate value theorem | Propositions 1, 2, 3, 7; Theorem 9; Lemma 11 | `intermediate_value_Icc'`, through [`captureTime_le_of_le_of_le`](PrincessMonster/CaptureTime.lean#L83) |
-| Arzelà–Ascoli: the searcher's paths form a compact space | Section 1 | `ArzelaAscoli.isCompact_of_equicontinuous`, in [`compactSpace_searcherPaths`](PrincessMonster/Value.lean#L100) |
+| Intermediate value theorem | Propositions 1, 2, 3, 7; Theorem 9; Lemma 11 | `intermediate_value_Icc'`, through [`captureTime_le_of_le_of_le`](PrincessMonsterInterval/CaptureTime.lean#L83) |
+| Arzelà–Ascoli: the searcher's paths form a compact space | Section 1 | `ArzelaAscoli.isCompact_of_equicontinuous`, in [`compactSpace_searcherPaths`](PrincessMonsterInterval/Value.lean#L100) |
 | Integration by parts | Lemma 13 | Mathlib's interval integration by parts |
 | Layer-cake formula `E T = ∫ P(T > t) dt` | Theorem 9 (the paper's `P(t)`), Lemma 12 | [`Mathlib.MeasureTheory.Integral.Layercake`](https://leanprover-community.github.io/mathlib4_docs/Mathlib/MeasureTheory/Integral/Layercake.html), and explicit Tonelli arguments |
 | Value of small matrix games by linear programming | (4); Theorems 15 and 16 | explicit optimal strategies, checked by `norm_num` |
@@ -113,15 +113,15 @@ semicontinuous as a function on the pure strategies". This is false. Take the se
 minimum on `[0, c']` for every `c' < T(S, H)`, and uniform convergence on `[0, c']` preserves this.
 Lower semicontinuity in the searcher's path is exactly what the minimax theorem of Alpern and Gal
 needs, so the existence of the value is unaffected. Geupel's bachelor's thesis (2011, Section 10)
-already calls `T` lower semicontinuous. Lean: [`lowerSemicontinuous_captureTime`](PrincessMonster/Value.lean#L41), `value_exists`.
+already calls `T` lower semicontinuous. Lean: [`lowerSemicontinuous_captureTime`](PrincessMonsterInterval/Value.lean#L41), `value_exists`.
 
 ### E2. Section 2: the definition of end-reflecting
 
 The paper defines `S` to be end-reflecting if `S(t₀) = ±1` implies `|S(t) - S(t₀)| = t - t₀` for
 `t₀ ≤ t ≤ t₀ + 1`. The text before it says "once the searcher reaches an end, he should go
 directly to the other end", which is the window `t₀ ≤ t ≤ t₀ + 2`. Both versions of Proposition 1
-are true and both are proved: [`proposition1`](PrincessMonster/Section2/Dominance.lean#L247) ([`EndReflecting`](PrincessMonster/Section2/Dominance.lean#L31), as printed) and
-[`proposition1_sweeping`](PrincessMonster/Section2/Dominance.lean#L259) ([`EndSweeping`](PrincessMonster/Section2/Dominance.lean#L37), as the text describes).
+are true and both are proved: [`proposition1`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L247) ([`EndReflecting`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L31), as printed) and
+[`proposition1_sweeping`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L259) ([`EndSweeping`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L37), as the text describes).
 
 ### E3. Proposition 1: the dominating path leaves the interval
 
@@ -132,7 +132,7 @@ is met by `t₀ + 2`.
 
 The repair continues `S*` after `t₀` by sweeping from end to end (a triangle wave), which agrees
 with the paper's `S*` on `[t₀, t₀ + 2]`. The proposition holds.
-Lean: [`proposition1`](PrincessMonster/Section2/Dominance.lean#L247), [`proposition1_sweeping`](PrincessMonster/Section2/Dominance.lean#L259).
+Lean: [`proposition1`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L247), [`proposition1_sweeping`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L259).
 
 ### E4. Section 2: the restriction to a dense set of hider paths
 
@@ -167,8 +167,8 @@ until it reaches `L`, and may pass `H`. The domination argument is the paper's, 
 caught from behind". If a searcher meets `H*` while `H*` is below `H` (above `H`), the envelope
 `U` (`L`) gives an earlier time at which the searcher was on the other side of `H`.
 
-The proposition holds for every continuous hider path, smooth or not. Lean: [`proposition3`](PrincessMonster/Section2/Dominance.lean#L496), and
-the general form [`proposition3_of_continuous`](PrincessMonster/Section2/Dominance.lean#L512).
+The proposition holds for every continuous hider path, smooth or not. Lean: [`proposition3`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L496), and
+the general form [`proposition3_of_continuous`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L512).
 
 ### E6. Proposition 5: "obviously optimal"
 
@@ -177,7 +177,7 @@ has met `H_σ(j)`". The missing step is that the greedy chase reaches the next h
 `S` does. The chase starts from the point where it met the previous hider, at a time no later than
 `S` met it. The target has speed at most `1`, and the chase-then-follow path is
 `min (p + (t - a)) (X t)`. The bound follows from the triangle inequality along the previous
-hider's path and `S`. The proposition holds. Lean: [`proposition5`](PrincessMonster/Section2/Greedy.lean#L359), through [`greedy_chase_fastest`](PrincessMonster/Section2/Greedy.lean#L257).
+hider's path and `S`. The proposition holds. Lean: [`proposition5`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Greedy.lean#L359), through [`greedy_chase_fastest`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Greedy.lean#L257).
 
 ### E7. Proposition 7: "Consequently, any finite mixed hider strategy may be assumed to consist of noncrossing pure strategies"
 
@@ -193,7 +193,7 @@ The statement holds for arbitrary weights. Replace the mixture by its quantile p
 
 These paths are noncrossing, finitely many and continuous, and the new mixture dominates the old
 one. At each time, the paths that stay above (below) the searcher carry at least the old mass. Lean:
-[`proposition7_finite`](PrincessMonster/Section2/Noncrossing.lean#L414), for arbitrary weights in `[0, ∞]`.
+[`proposition7_finite`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Noncrossing.lean#L414), for arbitrary weights in `[0, ∞]`.
 
 ### E8. After Proposition 7: approximation by nonintersecting paths
 
@@ -211,7 +211,7 @@ nonintersecting symmetric strategy as its hypothesis.
 
 Section 3 announces "`1 < 97/75 < V < 47/32 < 3/2`". The strategies of Section 3 give only
 `97/75 ≤ V ≤ 47/32` (Theorems 9 and 10). The strict inequalities hold, by the main result
-`15/11 ≤ V ≤ 13/9`. Lean: [`section3_bounds`](PrincessMonster/Main.lean#L31), proved from `main`.
+`15/11 ≤ V ≤ 13/9`. Lean: [`section3_bounds`](PrincessMonsterInterval/AlpernEtAl2008/Main.lean#L31), proved from `main`.
 
 ### E10. Theorem 10: the reduction to `A, B, C, D, M`
 
@@ -225,7 +225,7 @@ Two steps are not justified:
 - The enumeration is informal: a greedy path can visit the six hider paths in 720 orders.
 - For a start at an end, the statement of Proposition 1 says only that some end-reflecting path
   dominates; its proof's construction gives `A` itself. The formalization proves that version
-  ([`proposition1_start_one`](PrincessMonster/Section2/Dominance.lean#L268)) and uses it, as the paper does.
+  ([`proposition1_start_one`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L268)) and uses it, as the paper does.
 
 The conclusion holds. Against the optimal hider mixture of (4), weights `31, 24, 20, 0` (over 75)
 on `E, F, G, H`, every searcher path starting at `1`, `0` or `1/2` pays at least
@@ -234,7 +234,7 @@ intermediate value theorem, with a few case splits; reflection gives `-1` and `-
 Proposition 5 makes these the only starts.
 
 An exhaustive check of all 8! greedy orders (numerically, before the proof) confirms the bound. It
-also confirms the paper's matrix entries. Lean: [`theorem10`](PrincessMonster/Section3/Theorem10.lean#L795), [`equation4`](PrincessMonster/Section3/Theorem10.lean#L349), [`matrix4_value`](PrincessMonster/Section3/Theorem10.lean#L419).
+also confirms the paper's matrix entries. Lean: [`theorem10`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem10.lean#L795), [`equation4`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem10.lean#L349), [`matrix4_value`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem10.lean#L419).
 
 ### E11. Lemma 11: false at one starting point, and Proposition 8 applied to a single path
 
@@ -249,7 +249,7 @@ lie in `(H(y) - y, H(0)] = (0, 0] = ∅`.
 
 The lemma holds for every hider path of speed at most `1`, whichever sweeper it meets first,
 when the starting points `x = H(y) ∓ y` are excluded. Excluding them does not matter downstream,
-since they carry no mass for an atomless `Φ`. Lean: [`lemma11`](PrincessMonster/Section4/Lemmas.lean#L316).
+since they carry no mass for an atomless `Φ`. Lean: [`lemma11`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L316).
 
 ### E12. Lemma 12: the first-order argument, and smoothness
 
@@ -265,9 +265,9 @@ The repair is a layer-cake identity that needs neither smoothness nor derivative
 starting at `x` has not met `H` by time `s` exactly when `H(s) - s > x`, because `H(t) - t` is
 nonincreasing. Hence the expected time of the early catches is
 `∫₀^y (Φ(H(t) - t) - Φ(1 - 2y)) dt`: the integrated form of Lemma 13, valid for every path of
-speed at most `1` ([`s4_lemma13'`](PrincessMonster/Section4/Lemmas.lean#L694)). Lemma 12, for smooth paths, follows from it by one integration
-by parts, and the payoff formula (9) is proved from it. Lean: [`lemma12`](PrincessMonster/Section4/Lemmas.lean#L796), [`s4_lemma13'`](PrincessMonster/Section4/Lemmas.lean#L694),
-[`equation9`](PrincessMonster/Section4/Lemmas.lean#L1134).
+speed at most `1` ([`s4_lemma13'`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L694)). Lemma 12, for smooth paths, follows from it by one integration
+by parts, and the payoff formula (9) is proved from it. Lean: [`lemma12`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L796), [`s4_lemma13'`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L694),
+[`equation9`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L1134).
 
 ### E13. Formula (9) fails at `y = 1`
 
@@ -279,7 +279,7 @@ to `+1` it then moves along `-A`, and the left runners, which have joined `-A`, 
 `1`.
 
 For `y < 1` formula (9) is correct, and as an upper bound it holds for every `y`. The formal
-[`equation9`](PrincessMonster/Section4/Lemmas.lean#L1134) requires the hider to meet `A` strictly first, which forces `y < 1`. [`equation9_le`](PrincessMonster/Section4/Lemmas.lean#L1187),
+[`equation9`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L1134) requires the hider to meet `A` strictly first, which forces `y < 1`. [`equation9_le`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L1187),
 the bound that Theorem 14 uses, has no such restriction. The boundary case does not affect
 Theorems 14 and 15.
 
@@ -289,7 +289,7 @@ Theorems 14 and 15.
 `½ (Φ(x)(1 - x) + ∫₀^{-x} Φ(t) dt + ∫_{1-2y}^{x} Φ(t) dt)`. Substituting `u = -2t - x` on
 `[0, (1 - x)/2]` gives `∫_{-1}^{-x} Φ`, not `∫₀^{-x} Φ`. Formula (12), which the paper derives from
 (11), has the correct limit `-1`. A simulation confirms (12) to four decimals. Geupel (2011)
-writes (11) with the limit `-1`. Lean: [`equation11`](PrincessMonster/Section4/Theorem15.lean#L51), with the limit `-1`.
+writes (11) with the limit `-1`. Lean: [`equation11`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem15.lean#L51), with the limit `-1`.
 
 ### E15. Section 4: a Riemann-sum inequality in the wrong direction
 
@@ -297,7 +297,7 @@ writes (11) with the limit `-1`. Lean: [`equation11`](PrincessMonster/Section4/T
 `∫_{-1}^{0} Φ(t) dt ≥ ½ Φ(-½) + ½ Φ(0)`." Since `Φ` is nondecreasing, the right-hand side is an
 upper Riemann sum, so the inequality fails in general, even for the uniform distribution
 (`1/4 < 3/8`). The correct lower sum is `½ Φ(-1) + ½ Φ(-½)`, which Geupel (2011) uses. The matrix that follows uses the correct lower sums, so its entries and the
-value `337/237` are right. Lean: the bounds inside [`theorem15`](PrincessMonster/Section4/Theorem15.lean#L419).
+value `337/237` are right. Lean: the bounds inside [`theorem15`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem15.lean#L419).
 
 ### E16. Theorem 16: the reduction to `S₁` and `S₂`
 
@@ -319,7 +319,7 @@ The theorem holds. The formal proof keeps the paper's structure:
 
 It replaces the reduction to two explicit paths by lower bounds valid for every continuation. The
 result: every searcher path pays at least `(30 - 200ε)/22`, and the sweeper pays at most `15/11`.
-Lean: [`theorem16`](PrincessMonster/Section5/Theorem16.lean#L2139).
+Lean: [`theorem16`](PrincessMonsterInterval/AlpernEtAl2008/Section5/Theorem16.lean#L2139).
 
 ### E17. Formula (15) and Figure 3
 
@@ -339,7 +339,7 @@ catches a loiterer at `x < 1 - 2y` at time `1 - x`, when the sweeper reaches it,
 For the uniform distribution the printed formula gives `V(S₁, h_Φ) → 1` as `y → 1`. The corrected
 formula and a simulation give `3/4`, the value the paper itself uses. Figure 3 follows the printed
 formula on `[0, ½]` and ends at the corrected value `0.75`; Figure 4 peaks at the printed formula's
-`21/11` and ends at the corrected `15/11`. The conclusion of Theorem 16 is unaffected (E16). Lean: [`equation15`](PrincessMonster/Section5/Theorem16.lean#L2057),
+`21/11` and ends at the corrected `15/11`. The conclusion of Theorem 16 is unaffected (E16). Lean: [`equation15`](PrincessMonsterInterval/AlpernEtAl2008/Section5/Theorem16.lean#L2057),
 corrected.
 
 ### E18. Typos
@@ -371,9 +371,9 @@ theorem needs the minimizer's space to be nonempty (Section 2).
 
 | Result | Hypothesis that is not needed | Lean |
 | --- | --- | --- |
-| Proposition 3 | smoothness of the hider path (E5) | [`proposition3`](PrincessMonster/Section2/Dominance.lean#L496) keeps it, unused (`_hsmooth`), to match the paper; [`proposition3_of_continuous`](PrincessMonster/Section2/Dominance.lean#L512) omits it |
-| Proposition 7 | the searcher's speed limit | [`proposition7`](PrincessMonster/Section2/Noncrossing.lean#L90) holds for every continuous searcher path |
-| Formula (11) | `y ≤ 1` | [`equation11`](PrincessMonster/Section4/Theorem15.lean#L51) omits it |
+| Proposition 3 | smoothness of the hider path (E5) | [`proposition3`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L496) keeps it, unused (`_hsmooth`), to match the paper; [`proposition3_of_continuous`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L512) omits it |
+| Proposition 7 | the searcher's speed limit | [`proposition7`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Noncrossing.lean#L90) holds for every continuous searcher path |
+| Formula (11) | `y ≤ 1` | [`equation11`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem15.lean#L51) omits it |
 
 ## 6. How the formalization reads the paper
 
@@ -388,7 +388,7 @@ Representation:
   σ-algebra.
 - The capture time `captureTime S H` is the infimum of the meeting times, in `[0, ∞]`. It is `∞`
   when the paths never meet ("hiding at some end gives a payoff that is infinite"), and it is
-  attained when they meet ([`exists_eq_captureTime`](PrincessMonster/CaptureTime.lean#L57)). Expected payoffs are lower Lebesgue
+  attained when they meet ([`exists_eq_captureTime`](PrincessMonsterInterval/CaptureTime.lean#L57)). Expected payoffs are lower Lebesgue
   integrals.
 - [`upperValue`](Challenge.lean#L55) is `inf_μ sup_H`, over searcher mixed strategies and hider paths. [`lowerValue`](Challenge.lean#L61) is
   `sup_ν inf_S`, over hider mixed strategies and searcher paths. The value `V` is their common
@@ -404,12 +404,12 @@ Readings of informal statements:
   sweeping from end to end (a triangle wave, [`Real.triangleWave`](Basic/Analysis/TriangleWave.lean#L25)).
 - Strategy `B` runs left and joins `-A` at time `½`, as the published version says.
 - `s_Φ` in `σ` and in formula (9) contains both directions, each with probability `½`, as the
-  factors `½` in (9) show ([`sPhi`](PrincessMonster/Section4/Runners.lean#L57)). `Φ` is the distribution function of an atomless probability
+  factors `½` in (9) show ([`sPhi`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Runners.lean#L57)). `Φ` is the distribution function of an atomless probability
   measure on `[-1, 1]` (`NullSingletonClass`).
 - Proposition 5's "the optimal response is concentrated on a finite number of strategies" is
   formalized two ways: every searcher path is dominated by the greedy path for some order
-  ([`proposition5`](PrincessMonster/Section2/Greedy.lean#L359)); and the best response to a finite mixture is attained among the greedy paths
-  ([`proposition5_response`](PrincessMonster/Section2/Greedy.lean#L378)).
+  ([`proposition5`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Greedy.lean#L359)); and the best response to a finite mixture is attained among the greedy paths
+  ([`proposition5_response`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Greedy.lean#L378)).
 - Proposition 7's "any finite mixed hider strategy" allows arbitrary weights (E7).
 - Proposition 8's "nonintersecting symmetric hider strategy" is given by its finite support,
   closed under reflection, with distinct paths nonintersecting.
@@ -438,7 +438,7 @@ in its docstring and in [`docs/route_differences.tsv`](docs/route_differences.ts
 | Theorem 10 | Proposition 5, an informal enumeration of five responses, and Proposition 1 for a start at an end | Proposition 5 and Proposition 1 as in the paper, then a lower bound for every path from each other start | the enumeration of the responses is incomplete | E10 |
 | Lemma 11 | "by Proposition 8 we may assume `H ≥ 0`" | both cases, `A` or `-A` met first, directly | Proposition 8 does not apply to a single path | E11 |
 | Lemma 12 | first-order count of the catches in `[t, t + Δt]` | a layer-cake identity, then one integration by parts | the first-order argument is heuristic | E12 |
-| Formula (9) and Theorem 14 | Lemmas 12 and 13 for smooth paths of speed at most `1` | Lemma 13 in integrated form for every path of speed at most `1` ([`s4_lemma13'`](PrincessMonster/Section4/Lemmas.lean#L694)) | Proposition 3's dominating path is only Lipschitz; Lemma 12 for it needs a change of variables for Lipschitz functions, which Mathlib lacks in usable form, and the layer-cake identity avoids it | E12 |
+| Formula (9) and Theorem 14 | Lemmas 12 and 13 for smooth paths of speed at most `1` | Lemma 13 in integrated form for every path of speed at most `1` ([`s4_lemma13'`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L694)) | Proposition 3's dominating path is only Lipschitz; Lemma 12 for it needs a change of variables for Lipschitz functions, which Mathlib lacks in usable form, and the layer-cake identity avoids it | E12 |
 | Theorem 14 | "by Proposition 8, `H ≥ 0`" (in Lemma 11) | `σ` is reflection invariant, so the path may be taken to meet `A` first | Proposition 8 does not apply to a single path | E11 |
 | Theorem 16 | Proposition 5, the reduction to `S₁, S₂`, and Figures 3 and 4 | the same structure, with lower bounds valid for every continuation | Proposition 5 needs finitely many hider paths; the reduction is not proved; the figures use a misprinted formula | E16 |
 
@@ -459,25 +459,25 @@ Generated from [`scripts/Audit.lean`](scripts/Audit.lean). Every result uses onl
 | Result | Lean | Results from prior work used |
 | --- | --- | --- |
 | The value exists (Section 1) | `value_exists` | [`External.AlpernGal.minimax`](External/AlpernGal/Minimax.lean#L539) |
-| Proposition 1 | [`proposition1`](PrincessMonster/Section2/Dominance.lean#L247), [`proposition1_sweeping`](PrincessMonster/Section2/Dominance.lean#L259), [`proposition1_start_one`](PrincessMonster/Section2/Dominance.lean#L268) | – |
-| Proposition 2 | [`proposition2`](PrincessMonster/Section2/Dominance.lean#L281) | – |
-| Proposition 3 | [`proposition3`](PrincessMonster/Section2/Dominance.lean#L496), [`proposition3_of_continuous`](PrincessMonster/Section2/Dominance.lean#L512) | – |
-| Proposition 4 | [`proposition4`](PrincessMonster/Section2/Symmetric.lean#L96) | [`External.AlpernGal.minimax`](External/AlpernGal/Minimax.lean#L539), [`External.AlpernAsic.theorem3_minimizer`](External/AlpernAsic/Theorem3.lean#L49), [`External.AlpernAsic.theorem3_maximizer`](External/AlpernAsic/Theorem3.lean#L65) |
-| Proposition 5 | [`proposition5`](PrincessMonster/Section2/Greedy.lean#L359), [`proposition5_response`](PrincessMonster/Section2/Greedy.lean#L378) | – |
-| Proposition 7 | [`proposition7`](PrincessMonster/Section2/Noncrossing.lean#L90), [`proposition7_finite`](PrincessMonster/Section2/Noncrossing.lean#L414) | – |
-| Proposition 8 | [`proposition8`](PrincessMonster/Section2/Noncrossing.lean#L454) | – |
-| Theorem 9 | [`theorem9`](PrincessMonster/Section3/Theorem9.lean#L221) | – |
-| Matrix (4) and its value | [`equation4`](PrincessMonster/Section3/Theorem10.lean#L349), [`matrix4_value`](PrincessMonster/Section3/Theorem10.lean#L419) | – |
-| Theorem 10 | [`theorem10`](PrincessMonster/Section3/Theorem10.lean#L795) | – |
-| Lemmas 11, 12, 13 | [`lemma11`](PrincessMonster/Section4/Lemmas.lean#L316), [`lemma12`](PrincessMonster/Section4/Lemmas.lean#L796), [`lemma13`](PrincessMonster/Section4/Lemmas.lean#L896), [`s4_lemma13'`](PrincessMonster/Section4/Lemmas.lean#L694) | – |
-| Formulas (9), (10) | [`equation9`](PrincessMonster/Section4/Lemmas.lean#L1134), [`equation9_le`](PrincessMonster/Section4/Lemmas.lean#L1187), [`equation10`](PrincessMonster/Section4/Lemmas.lean#L1239) | – |
-| Theorem 14 | [`theorem14`](PrincessMonster/Section4/Theorem14.lean#L353) | – |
-| Formulas (11), (12) | [`equation11`](PrincessMonster/Section4/Theorem15.lean#L51), [`equation12`](PrincessMonster/Section4/Theorem15.lean#L292) | – |
-| Theorem 15 | [`theorem15`](PrincessMonster/Section4/Theorem15.lean#L419) | – |
-| Formula (15) | [`equation15`](PrincessMonster/Section5/Theorem16.lean#L2057) | – |
-| Theorem 16 | [`theorem16`](PrincessMonster/Section5/Theorem16.lean#L2139) | – |
-| Section 3 display | [`section3_bounds`](PrincessMonster/Main.lean#L31) | [`External.AlpernGal.minimax`](External/AlpernGal/Minimax.lean#L539) |
-| Main result | `main`; [`PrincessMonster.Challenge.main`](Challenge.lean#L78) | [`External.AlpernGal.minimax`](External/AlpernGal/Minimax.lean#L539) |
+| Proposition 1 | [`proposition1`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L247), [`proposition1_sweeping`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L259), [`proposition1_start_one`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L268) | – |
+| Proposition 2 | [`proposition2`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L281) | – |
+| Proposition 3 | [`proposition3`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L496), [`proposition3_of_continuous`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L512) | – |
+| Proposition 4 | [`proposition4`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Symmetric.lean#L96) | [`External.AlpernGal.minimax`](External/AlpernGal/Minimax.lean#L539), [`External.AlpernAsic.theorem3_minimizer`](External/AlpernAsic/Theorem3.lean#L49), [`External.AlpernAsic.theorem3_maximizer`](External/AlpernAsic/Theorem3.lean#L65) |
+| Proposition 5 | [`proposition5`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Greedy.lean#L359), [`proposition5_response`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Greedy.lean#L378) | – |
+| Proposition 7 | [`proposition7`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Noncrossing.lean#L90), [`proposition7_finite`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Noncrossing.lean#L414) | – |
+| Proposition 8 | [`proposition8`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Noncrossing.lean#L454) | – |
+| Theorem 9 | [`theorem9`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem9.lean#L221) | – |
+| Matrix (4) and its value | [`equation4`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem10.lean#L349), [`matrix4_value`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem10.lean#L419) | – |
+| Theorem 10 | [`theorem10`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem10.lean#L795) | – |
+| Lemmas 11, 12, 13 | [`lemma11`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L316), [`lemma12`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L796), [`lemma13`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L896), [`s4_lemma13'`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L694) | – |
+| Formulas (9), (10) | [`equation9`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L1134), [`equation9_le`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L1187), [`equation10`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Lemmas.lean#L1239) | – |
+| Theorem 14 | [`theorem14`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem14.lean#L353) | – |
+| Formulas (11), (12) | [`equation11`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem15.lean#L51), [`equation12`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem15.lean#L292) | – |
+| Theorem 15 | [`theorem15`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem15.lean#L419) | – |
+| Formula (15) | [`equation15`](PrincessMonsterInterval/AlpernEtAl2008/Section5/Theorem16.lean#L2057) | – |
+| Theorem 16 | [`theorem16`](PrincessMonsterInterval/AlpernEtAl2008/Section5/Theorem16.lean#L2139) | – |
+| Section 3 display | [`section3_bounds`](PrincessMonsterInterval/AlpernEtAl2008/Main.lean#L31) | [`External.AlpernGal.minimax`](External/AlpernGal/Minimax.lean#L539) |
+| Main result | `main`; [`PrincessMonsterInterval.Challenge.main`](Challenge.lean#L78) | [`External.AlpernGal.minimax`](External/AlpernGal/Minimax.lean#L539) |
 
 The route check ([`scripts/route_check.py`](scripts/route_check.py)) compares, for every result, the results that its formal
 proof uses with those that the paper's proof cites ([`docs/paper_routes.tsv`](docs/paper_routes.tsv)). Every difference is
@@ -582,10 +582,10 @@ Plans for follow-up papers are kept in `NEXT.md`, which is not published.
 - **Stronger Theorem 15.** The weights of the hider's response need not depend on `Φ`: the
   mixture `(37, 148, 24, 28)/237` on `(E, H₁, H₀, H_{½})` of the paper's 4×2 game gives
   `(337 + 8(Φ(½) - Φ(0)))/237 ≥ 337/237` for every `Φ` and `p`, in the limit `ε → 0`. At a fixed
-  `ε` the guarantee depends on `Φ`, so the formal [`theorem15`](PrincessMonster/Section4/Theorem15.lean#L419) still chooses `ε` for each `Φ`; a
+  `ε` the guarantee depends on `Φ`, so the formal [`theorem15`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem15.lean#L419) still chooses `ε` for each `Φ`; a
   bound uniform in `Φ` would make the response fully independent of `Φ`.
 - **Optimal strategies.** The paper derives properties of optimal strategies (Propositions 1–8).
-  The searcher has an optimal strategy, even a symmetric one (`value_exists`, [`proposition4`](PrincessMonster/Section2/Symmetric.lean#L96)). For
+  The searcher has an optimal strategy, even a symmetric one (`value_exists`, [`proposition4`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Symmetric.lean#L96)). For
   the hider the paper, like the minimax theorem it uses, gives only `ε`-optimal strategies; it
   does not address whether an optimal one exists.
 

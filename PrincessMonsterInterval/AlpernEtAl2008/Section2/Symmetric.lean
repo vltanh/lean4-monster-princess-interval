@@ -1,7 +1,7 @@
 module
 
-public import PrincessMonster.CaptureTime
-import PrincessMonster.Value
+public import PrincessMonsterInterval.CaptureTime
+import PrincessMonsterInterval.Value
 import External.AlpernAsic.Theorem3
 import Mathlib.MeasureTheory.Measure.DiracProba
 
@@ -18,7 +18,7 @@ mixed strategy, and for every `ε > 0` an `ε`-optimal hider mixed strategy, tha
 open scoped NNReal ENNReal
 open MeasureTheory
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 lemma neg_mem_searcherPaths {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherPaths) : -S ∈ searcherPaths := by
   refine ⟨fun t => ?_, fun t t' => ?_⟩
@@ -132,4 +132,4 @@ theorem proposition4 :
       (fun S => (val_lowerSemicontinuous_captureTime_right S).measurable) reflectS reflectH
       measurable_reflectH val_reflectS_involutive val_captureTime_reflect ν₀
 
-end PrincessMonster
+end PrincessMonsterInterval

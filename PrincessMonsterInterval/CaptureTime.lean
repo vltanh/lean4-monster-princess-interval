@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.Defs
+public import PrincessMonsterInterval.Defs
 
 /-!
 # Basic properties of the capture time
@@ -14,7 +14,7 @@ have met", symmetry, and the evaluation of paths given by real formulas.
 
 open scoped NNReal ENNReal
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- The continuous path `t ↦ f t` on `[0, ∞)` given by a continuous real function. -/
 def pathOf (f : ℝ → ℝ) (hf : Continuous f) : C(ℝ≥0, ℝ) :=
@@ -103,4 +103,4 @@ lemma le_captureTime_of_ne {c : ℝ≥0} (h : ∀ t : ℝ≥0, t < c → S t ≠
   by_contra hlt
   exact h t (ENNReal.coe_lt_coe.mp (not_le.mp hlt)) ht
 
-end PrincessMonster
+end PrincessMonsterInterval

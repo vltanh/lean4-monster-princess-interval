@@ -8,22 +8,22 @@ public meta import Lean.DocString
 import all Basic.Analysis.TriangleWave
 import all External.AlpernAsic.Theorem3
 import all External.AlpernGal.Minimax
-import all PrincessMonster.CaptureTime
-import all PrincessMonster.Defs
-import all PrincessMonster.Main
-import all PrincessMonster.Section2.Dominance
-import all PrincessMonster.Section2.Greedy
-import all PrincessMonster.Section2.Noncrossing
-import all PrincessMonster.Section2.Symmetric
-import all PrincessMonster.Section3.Strategies
-import all PrincessMonster.Section3.Theorem10
-import all PrincessMonster.Section3.Theorem9
-import all PrincessMonster.Section4.Lemmas
-import all PrincessMonster.Section4.Runners
-import all PrincessMonster.Section4.Theorem14
-import all PrincessMonster.Section4.Theorem15
-import all PrincessMonster.Section5.Theorem16
-import all PrincessMonster.Value
+import all PrincessMonsterInterval.CaptureTime
+import all PrincessMonsterInterval.Defs
+import all PrincessMonsterInterval.AlpernEtAl2008.Main
+import all PrincessMonsterInterval.AlpernEtAl2008.Section2.Dominance
+import all PrincessMonsterInterval.AlpernEtAl2008.Section2.Greedy
+import all PrincessMonsterInterval.AlpernEtAl2008.Section2.Noncrossing
+import all PrincessMonsterInterval.AlpernEtAl2008.Section2.Symmetric
+import all PrincessMonsterInterval.AlpernEtAl2008.Section3.Strategies
+import all PrincessMonsterInterval.AlpernEtAl2008.Section3.Theorem10
+import all PrincessMonsterInterval.AlpernEtAl2008.Section3.Theorem9
+import all PrincessMonsterInterval.AlpernEtAl2008.Section4.Lemmas
+import all PrincessMonsterInterval.AlpernEtAl2008.Section4.Runners
+import all PrincessMonsterInterval.AlpernEtAl2008.Section4.Theorem14
+import all PrincessMonsterInterval.AlpernEtAl2008.Section4.Theorem15
+import all PrincessMonsterInterval.AlpernEtAl2008.Section5.Theorem16
+import all PrincessMonsterInterval.Value
 import all Solution
 
 /-!
@@ -73,49 +73,49 @@ meta def externalResults : List (String × Name) :=
 
 /-- The numbered results of the paper, in the order of the paper. -/
 meta def paperResults : List (String × Name) :=
-  [("Value (Sec. 1)", ``PrincessMonster.value_exists),
-   ("Prop 1", ``PrincessMonster.proposition1),
-   ("Prop 1 (to the other end)", ``PrincessMonster.proposition1_sweeping),
-   ("Prop 1 (start at an end)", ``PrincessMonster.proposition1_start_one),
-   ("Prop 2", ``PrincessMonster.proposition2),
-   ("Prop 3", ``PrincessMonster.proposition3),
-   ("Prop 3 (continuous H)", ``PrincessMonster.proposition3_of_continuous),
-   ("Prop 4", ``PrincessMonster.proposition4),
-   ("Prop 5", ``PrincessMonster.proposition5),
-   ("Prop 5 (mixed)", ``PrincessMonster.proposition5_response),
-   ("Prop 7", ``PrincessMonster.proposition7),
-   ("Prop 7 (finite mixtures)", ``PrincessMonster.proposition7_finite),
-   ("Prop 8", ``PrincessMonster.proposition8),
-   ("Thm 9", ``PrincessMonster.theorem9),
-   ("Matrix (4)", ``PrincessMonster.equation4),
-   ("Matrix (4) value", ``PrincessMonster.matrix4_value),
-   ("Thm 10", ``PrincessMonster.theorem10),
-   ("Lemma 11", ``PrincessMonster.lemma11),
-   ("Lemma 12", ``PrincessMonster.lemma12),
-   ("Lemma 13", ``PrincessMonster.lemma13),
-   ("Lemma 13' (speed ≤ 1)", ``PrincessMonster.s4_lemma13'),
-   ("(9)", ``PrincessMonster.equation9),
-   ("(9) bound", ``PrincessMonster.equation9_le),
-   ("(10)", ``PrincessMonster.equation10),
-   ("Thm 14", ``PrincessMonster.theorem14),
-   ("(11)", ``PrincessMonster.equation11),
-   ("(12)", ``PrincessMonster.equation12),
-   ("Thm 15", ``PrincessMonster.theorem15),
-   ("(15)", ``PrincessMonster.equation15),
-   ("Thm 16", ``PrincessMonster.theorem16),
-   ("Sec. 3 display", ``PrincessMonster.section3_bounds),
-   ("Main", ``PrincessMonster.main)]
+  [("Value (Sec. 1)", ``PrincessMonsterInterval.value_exists),
+   ("Prop 1", ``PrincessMonsterInterval.proposition1),
+   ("Prop 1 (to the other end)", ``PrincessMonsterInterval.proposition1_sweeping),
+   ("Prop 1 (start at an end)", ``PrincessMonsterInterval.proposition1_start_one),
+   ("Prop 2", ``PrincessMonsterInterval.proposition2),
+   ("Prop 3", ``PrincessMonsterInterval.proposition3),
+   ("Prop 3 (continuous H)", ``PrincessMonsterInterval.proposition3_of_continuous),
+   ("Prop 4", ``PrincessMonsterInterval.proposition4),
+   ("Prop 5", ``PrincessMonsterInterval.proposition5),
+   ("Prop 5 (mixed)", ``PrincessMonsterInterval.proposition5_response),
+   ("Prop 7", ``PrincessMonsterInterval.proposition7),
+   ("Prop 7 (finite mixtures)", ``PrincessMonsterInterval.proposition7_finite),
+   ("Prop 8", ``PrincessMonsterInterval.proposition8),
+   ("Thm 9", ``PrincessMonsterInterval.theorem9),
+   ("Matrix (4)", ``PrincessMonsterInterval.equation4),
+   ("Matrix (4) value", ``PrincessMonsterInterval.matrix4_value),
+   ("Thm 10", ``PrincessMonsterInterval.theorem10),
+   ("Lemma 11", ``PrincessMonsterInterval.lemma11),
+   ("Lemma 12", ``PrincessMonsterInterval.lemma12),
+   ("Lemma 13", ``PrincessMonsterInterval.lemma13),
+   ("Lemma 13' (speed ≤ 1)", ``PrincessMonsterInterval.s4_lemma13'),
+   ("(9)", ``PrincessMonsterInterval.equation9),
+   ("(9) bound", ``PrincessMonsterInterval.equation9_le),
+   ("(10)", ``PrincessMonsterInterval.equation10),
+   ("Thm 14", ``PrincessMonsterInterval.theorem14),
+   ("(11)", ``PrincessMonsterInterval.equation11),
+   ("(12)", ``PrincessMonsterInterval.equation12),
+   ("Thm 15", ``PrincessMonsterInterval.theorem15),
+   ("(15)", ``PrincessMonsterInterval.equation15),
+   ("Thm 16", ``PrincessMonsterInterval.theorem16),
+   ("Sec. 3 display", ``PrincessMonsterInterval.section3_bounds),
+   ("Main", ``PrincessMonsterInterval.main)]
 
 /-- The theorems that Palomar's comparator checks (`theorem_names` of `comparator.json`). -/
 meta def solutionResults : List Name :=
-  [``PrincessMonster.Challenge.value_exists, ``PrincessMonster.Challenge.main]
+  [``PrincessMonsterInterval.Challenge.value_exists, ``PrincessMonsterInterval.Challenge.main]
 
 /-- Lean's standard axioms. -/
 meta def standardAxioms : List Name := [``propext, ``Classical.choice, ``Quot.sound]
 
 /-- Whether `m` is a module of the libraries: the paper's, `External` or `Basic`. -/
 meta def isLibraryModule (m : Name) : Bool :=
-  (`PrincessMonster).isPrefixOf m || (`External).isPrefixOf m || (`Basic).isPrefixOf m
+  (`PrincessMonsterInterval).isPrefixOf m || (`External).isPrefixOf m || (`Basic).isPrefixOf m
 
 /-- The constants declared in the library. -/
 meta def libraryConstants (env : Environment) : NameSet := Id.run do

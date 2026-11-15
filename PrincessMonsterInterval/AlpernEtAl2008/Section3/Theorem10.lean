@@ -1,8 +1,8 @@
 module
 
-public import PrincessMonster.Section3.Strategies
-public import PrincessMonster.Section2.Greedy
-public import PrincessMonster.Section2.Dominance
+public import PrincessMonsterInterval.AlpernEtAl2008.Section3.Strategies
+public import PrincessMonsterInterval.AlpernEtAl2008.Section2.Greedy
+public import PrincessMonsterInterval.AlpernEtAl2008.Section2.Dominance
 public import Mathlib.Order.Filter.Basic
 public import Mathlib.Topology.Instances.ENNReal.Lemmas
 public import Mathlib.Data.Fin.VecNotation
@@ -27,7 +27,7 @@ the zero-sum matrix game (4), whose value `97/75` is a lower bound on `V`.
 open scoped NNReal ENNReal Topology
 open MeasureTheory Filter
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- The matrix (4): rows `A, B, C, D, M` (searcher), columns `E, F, G, H` (hider). -/
 def matrix4 : Fin 5 → Fin 4 → ℚ :=
@@ -822,4 +822,4 @@ theorem theorem10 :
         exact le_iSup_of_le (⟨strategy10 ε, inferInstance⟩ : ProbabilityMeasure hiderPaths)
           le_rfl
 
-end PrincessMonster
+end PrincessMonsterInterval

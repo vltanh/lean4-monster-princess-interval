@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.Section4.Runners
+public import PrincessMonsterInterval.AlpernEtAl2008.Section4.Runners
 public import Mathlib.Analysis.Calculus.Deriv.Basic
 public import Mathlib.Analysis.Calculus.ContDiff.Defs
 public import Mathlib.Analysis.Calculus.ContDiff.Deriv
@@ -43,7 +43,7 @@ Lemma 11. The measurability of the capture time in the searcher path, needed to 
 open scoped NNReal ENNReal
 open MeasureTheory
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 section Helpers
 
@@ -1257,4 +1257,4 @@ theorem equation10 {x y : ℝ} (hx : x ∈ I) (hy0 : 0 ≤ y) (hy1 : y ≤ 1) {h
     s4_cdf_uniformI hx, s4_cdf_uniformI (u := 1 - 2 * y) ⟨by linarith, by linarith⟩]
   ring
 
-end PrincessMonster
+end PrincessMonsterInterval

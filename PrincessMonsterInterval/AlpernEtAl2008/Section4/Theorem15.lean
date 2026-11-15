@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.Section4.Lemmas
+public import PrincessMonsterInterval.AlpernEtAl2008.Section4.Lemmas
 public import Mathlib.Order.Filter.Basic
 public import Mathlib.Topology.Instances.ENNReal.Lemmas
 public import Mathlib.Probability.CDF
@@ -25,7 +25,7 @@ runs towards the sweeper `A`, turns `ε` in front of it, runs back towards the m
 open scoped NNReal ENNReal Topology
 open MeasureTheory Filter
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- The hider path `H_x` of Section 4 with `y = 1`: start at `min x (1 - ε)`, run right towards
 the sweeper `A`, turn `ε` in front of it and run left just ahead of it, turn at `ε` (time
@@ -512,4 +512,4 @@ theorem theorem15 (μ : Measure ℝ) [IsProbabilityMeasure μ] [NullSingletonCla
       s4t_toHider_val (hmem 0 hx0), s4t_toHider_val (hmem _ hxh)]
     simpa only [smul_eq_mul] using hε1
 
-end PrincessMonster
+end PrincessMonsterInterval

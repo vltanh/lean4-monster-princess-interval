@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.CaptureTime
+public import PrincessMonsterInterval.CaptureTime
 public import Mathlib.Order.ConditionallyCompleteLattice.Basic
 public import Mathlib.Topology.Order.Basic
 public import Mathlib.Topology.Piecewise
@@ -25,7 +25,7 @@ as one has been met, run at unit speed towards the next.
 
 open scoped NNReal ENNReal
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- From position `p` at time `a`, run at unit speed towards the path `X`, and follow `X` from
 the moment it is reached. -/
@@ -387,4 +387,4 @@ theorem proposition5_response {J : ℕ} (H : Fin J → C(ℝ≥0, ℝ)) (hH : �
     gcongr with j
     exact hσ j
 
-end PrincessMonster
+end PrincessMonsterInterval

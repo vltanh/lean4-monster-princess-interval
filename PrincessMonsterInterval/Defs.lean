@@ -30,7 +30,7 @@ Lebesgue integrals.
 open scoped NNReal ENNReal
 open MeasureTheory
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 -- BEGIN SHARED DEFINITIONS
 
@@ -70,4 +70,4 @@ abbrev I : Set ℝ := Set.Icc (-1) 1
 
 lemma searcherPaths_subset_hiderPaths : searcherPaths ⊆ hiderPaths := fun _ h => h.1
 
-end PrincessMonster
+end PrincessMonsterInterval

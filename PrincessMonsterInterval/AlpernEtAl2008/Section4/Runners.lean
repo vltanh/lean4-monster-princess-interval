@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.Section3.Strategies
+public import PrincessMonsterInterval.AlpernEtAl2008.Section3.Strategies
 public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
@@ -24,7 +24,7 @@ public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 open scoped NNReal ENNReal
 open MeasureTheory
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- The path of `s_Φ` that starts at `x` and runs right: it meets the sweeper `A` at time
 `(1 - x)/2`, joins it until `-1`, and then runs back to the other end. -/
@@ -77,4 +77,4 @@ noncomputable def realPath (H : C(ℝ≥0, ℝ)) (t : ℝ) : ℝ := H t.toNNReal
 noncomputable def sweepTime (H : C(ℝ≥0, ℝ)) : ℝ≥0∞ :=
   min (captureTime sweeperA H) (captureTime (-sweeperA) H)
 
-end PrincessMonster
+end PrincessMonsterInterval

@@ -1,10 +1,10 @@
 module
 
-public import PrincessMonster.Value
-public import PrincessMonster.Section3.Theorem9
-public import PrincessMonster.Section3.Theorem10
-public import PrincessMonster.Section4.Theorem14
-public import PrincessMonster.Section5.Theorem16
+public import PrincessMonsterInterval.Value
+public import PrincessMonsterInterval.AlpernEtAl2008.Section3.Theorem9
+public import PrincessMonsterInterval.AlpernEtAl2008.Section3.Theorem10
+public import PrincessMonsterInterval.AlpernEtAl2008.Section4.Theorem14
+public import PrincessMonsterInterval.AlpernEtAl2008.Section5.Theorem16
 
 /-!
 # The main result: `15/11 ≤ V ≤ 13/9`
@@ -18,7 +18,7 @@ Abstract and Section 6: the princess and monster game on `[-1, 1]` has a value `
 
 open scoped NNReal ENNReal
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- **Main theorem** (`main`). The game has a value `V`, and `15/11 ≤ V ≤ 13/9`. -/
 theorem main : ∃ V : ℝ≥0∞, HasValue V ∧ 15 / 11 ≤ V ∧ V ≤ 13 / 9 := by
@@ -53,4 +53,4 @@ theorem section3_bounds :
   · simpa using frac_lt (a := 47) (b := 32) (c := 3) (d := 2) (by norm_num) (by norm_num)
       (by norm_num)
 
-end PrincessMonster
+end PrincessMonsterInterval

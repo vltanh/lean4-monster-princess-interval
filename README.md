@@ -30,11 +30,11 @@ is assumed. The paper's informal arguments in Sections 3–5 are completed into 
 | Paper | Lean | Statement |
 | --- | --- | --- |
 | Section 1 | `value_exists` ★ | the game has a value: lower and upper values coincide; the searcher has an optimal mixed strategy |
-| Theorem 9 | [`theorem9`](PrincessMonster/Section3/Theorem9.lean#L221) | `V ≤ 47/32` (sweepers with probability `7/16` each, strategy `±B` with `1/16` each) |
-| Theorem 10 | [`theorem10`](PrincessMonster/Section3/Theorem10.lean#L795) | `V ≥ 97/75`, the value of the matrix game (4) |
-| Theorem 14 | [`theorem14`](PrincessMonster/Section4/Theorem14.lean#L353) | `V ≤ 13/9`: sweepers with probability `7/9`, uniformly started runners with `2/9` |
-| Theorem 15 | [`theorem15`](PrincessMonster/Section4/Theorem15.lean#L419) | against sweepers mixed with runners started by any atomless `Φ`, the hider gets more than `1.421` |
-| Theorem 16 | [`theorem16`](PrincessMonster/Section5/Theorem16.lean#L2139) | `V ≥ 15/11`: ends with probability `3/11`, uniformly started loiterers with `8/11` |
+| Theorem 9 | [`theorem9`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem9.lean#L221) | `V ≤ 47/32` (sweepers with probability `7/16` each, strategy `±B` with `1/16` each) |
+| Theorem 10 | [`theorem10`](PrincessMonsterInterval/AlpernEtAl2008/Section3/Theorem10.lean#L795) | `V ≥ 97/75`, the value of the matrix game (4) |
+| Theorem 14 | [`theorem14`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem14.lean#L353) | `V ≤ 13/9`: sweepers with probability `7/9`, uniformly started runners with `2/9` |
+| Theorem 15 | [`theorem15`](PrincessMonsterInterval/AlpernEtAl2008/Section4/Theorem15.lean#L419) | against sweepers mixed with runners started by any atomless `Φ`, the hider gets more than `1.421` |
+| Theorem 16 | [`theorem16`](PrincessMonsterInterval/AlpernEtAl2008/Section5/Theorem16.lean#L2139) | `V ≥ 15/11`: ends with probability `3/11`, uniformly started loiterers with `8/11` |
 | Main result | `main` ★ | `15/11 ≤ V ≤ 13/9` |
 
 ★ The Challenge ([`Challenge.lean`](Challenge.lean)) restates these two theorems in Mathlib's vocabulary. The game
@@ -91,7 +91,7 @@ The only dependency is Mathlib.
 
 | Path | Contents |
 | --- | --- |
-| [`PrincessMonster/`](PrincessMonster) | the paper: definitions (`Defs.lean`), capture times, the value, and one directory per section |
+| [`PrincessMonsterInterval/`](PrincessMonsterInterval) | the paper: definitions (`Defs.lean`), capture times, the value, and one directory per section |
 | [`External/`](External) | the cited results: Alpern–Gal's minimax theorem, Alpern–Asic's Theorem 3 |
 | [`Basic/`](Basic) | general mathematics: the triangle wave that folds a motion onto `[-1, 1]` |
 | [`Challenge.lean`](Challenge.lean), [`Solution.lean`](Solution.lean), [`comparator.json`](comparator.json) | the statements of record and their proofs, for [Palomar](https://palomar-registry.org) |

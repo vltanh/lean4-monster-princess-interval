@@ -1,6 +1,6 @@
 module
 
-public import PrincessMonster.CaptureTime
+public import PrincessMonsterInterval.CaptureTime
 public import External.AlpernGal.Minimax
 import Mathlib.Topology.UniformSpace.Ascoli
 import Mathlib.Topology.UniformSpace.CompactConvergence
@@ -28,7 +28,7 @@ And after Proposition 4: "for any `ε` there exists an `ε`-optimal finite mixed
 open scoped NNReal ENNReal Topology
 open MeasureTheory Filter
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-- Paths close to a given one, uniformly on a compact set, form a neighbourhood of it. -/
 private lemma val_eventually_dist_lt (S₀ : C(ℝ≥0, ℝ)) {K : Set ℝ≥0} (hK : IsCompact K) {ε : ℝ}
@@ -239,4 +239,4 @@ theorem value_exists :
   rw [heq, hup]
   exact tsub_le_iff_right.1 hw.le
 
-end PrincessMonster
+end PrincessMonsterInterval

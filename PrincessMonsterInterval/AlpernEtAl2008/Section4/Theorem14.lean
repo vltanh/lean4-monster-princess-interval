@@ -1,7 +1,7 @@
 module
 
-public import PrincessMonster.Section4.Lemmas
-public import PrincessMonster.Section2.Dominance
+public import PrincessMonsterInterval.AlpernEtAl2008.Section4.Lemmas
+public import PrincessMonsterInterval.AlpernEtAl2008.Section2.Dominance
 
 /-!
 # Section 4: Theorem 14, `V ≤ 13/9`
@@ -18,7 +18,7 @@ which achieves `13/9` exactly, or to run from an end to the middle and back, whi
 open scoped NNReal ENNReal
 open MeasureTheory
 
-namespace PrincessMonster
+namespace PrincessMonsterInterval
 
 /-! ### The sweepers -/
 
@@ -371,4 +371,4 @@ theorem theorem14 :
   exact (iInf_le _ (⟨sigma (7 / 9) uniformI, this⟩ : ProbabilityMeasure searcherPaths)).trans
     hsup.le
 
-end PrincessMonster
+end PrincessMonsterInterval

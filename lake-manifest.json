@@ -91,6 +91,6 @@
    "inputRev": "v4.36.0-rc2",
    "inherited": true,
    "configFile": "lakefile.toml"}],
- "name": "PrincessMonster",
+ "name": "PrincessMonsterInterval",
  "lakeDir": ".lake",
  "fixedToolchain": false}

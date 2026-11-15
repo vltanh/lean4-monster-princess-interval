@@ -54,7 +54,7 @@ How it was made:
 - **Proof review.** Another independent agent compared every formal proof with the paper's. It
   found one departure that was not necessary (Theorem 10's start at an end) and two inaccurate
   descriptions (Propositions 3 and 7). The two agents that wrote those proofs were resumed: one
-  added [`proposition1_start_one`](PrincessMonster/Section2/Dominance.lean#L268), the other made Theorem 10 use it, and the descriptions were
+  added [`proposition1_start_one`](PrincessMonsterInterval/AlpernEtAl2008/Section2/Dominance.lean#L268), the other made Theorem 10 use it, and the descriptions were
   corrected.
 - **Follow-up papers.** A further agent explored follow-up papers, which are kept private.
 
