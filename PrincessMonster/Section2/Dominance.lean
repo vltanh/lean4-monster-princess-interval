@@ -136,10 +136,11 @@ private lemma dom_triangleWave_sweep {a h : ℝ}
       show h - 1 - -1 = h by ring, abs_of_nonneg h0]
 
 /-- The construction of Proposition 1 for a path whose first end time `t₀` is at `+1`: follow `S`
-until `t₀`, then sweep between the ends at unit speed. -/
+until `t₀`, then sweep between the ends at unit speed (the triangle wave `1 - (t - t₀)`). -/
 private lemma dom_prop1_aux {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherPaths) {t₀ : ℝ≥0} (ht₀ : S t₀ = 1)
     (hfirst : ∀ t, (S t = 1 ∨ S t = -1) → t₀ ≤ t) :
     ∃ S' ∈ searcherPaths, EndSweeping S' ∧
+      (∀ t, t₀ ≤ t → S' t = Real.triangleWave (1 - ((t : ℝ) - t₀))) ∧
       ∀ H ∈ hiderPaths, captureTime S' H ≤ captureTime S H := by
   have htw1 : Real.triangleWave 1 = 1 := Real.triangleWave_of_mem_Icc ⟨by norm_num, le_rfl⟩
   let S' : C(ℝ≥0, ℝ) :=
@@ -154,7 +155,7 @@ private lemma dom_prop1_aux {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherPaths) {t�
       max_eq_left (by linarith : (0 : ℝ) ≤ t - t₀), ht₀]
     ring
   refine ⟨S', ⟨fun t => ?_, dom_lipschitz_glue (t₀ := t₀) (fun t t' ht ht' => ?_)
-    (fun t t' ht ht' => ?_)⟩, ?_, ?_⟩
+    (fun t t' ht ht' => ?_)⟩, ?_, hS'2, ?_⟩
   · rcases le_total t t₀ with ht | ht
     · rw [hS'1 t ht]
       exact hS.1 t
@@ -222,9 +223,10 @@ private lemma dom_exists_endSweeping {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherP
   by_cases hne : ∃ t, S t = 1 ∨ S t = -1
   · obtain ⟨t₀, ht₀, hfirst⟩ := dom_first_end_time S hne
     rcases ht₀ with h1 | h1
-    · exact dom_prop1_aux hS h1 hfirst
+    · obtain ⟨S', hS', hsw, -, hdom⟩ := dom_prop1_aux hS h1 hfirst
+      exact ⟨S', hS', hsw, hdom⟩
     · -- the first end is `-1`: reflect the interval
-      obtain ⟨S', hS', hsw, hdom⟩ := dom_prop1_aux (dom_neg_mem_searcherPaths hS)
+      obtain ⟨S', hS', hsw, -, hdom⟩ := dom_prop1_aux (dom_neg_mem_searcherPaths hS)
         (by simp [h1]) fun t ht => hfirst t (by
           simp only [ContinuousMap.neg_apply] at ht
           rcases ht with h | h <;> [right; left] <;> linarith)
@@ -258,6 +260,21 @@ theorem proposition1_sweeping {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherPaths) :
     ∃ S' ∈ searcherPaths, EndSweeping S' ∧
       ∀ H ∈ hiderPaths, captureTime S' H ≤ captureTime S H := by
   exact dom_exists_endSweeping hS
+
+/-- **Proposition 1** (`prop:1`), for a path that starts at the end `+1`: the dominating path of
+the proof is then the sweeper `t ↦ 1 - t` (folded by the triangle wave), so a searcher who starts
+at an end may adopt the sweeper (the paper uses this in Section 3: "If the searcher starts out
+from an end, then by Proposition 1 it is optimal to adopt strategy A"). -/
+theorem proposition1_start_one {S : C(ℝ≥0, ℝ)} (hS : S ∈ searcherPaths) (h0 : S 0 = 1) :
+    ∀ H ∈ hiderPaths,
+      captureTime (pathOf (fun t => Real.triangleWave (1 - t)) (by fun_prop)) H ≤
+        captureTime S H := by
+  -- the first end time is `t₀ = 0`, after which the construction is the triangle wave `1 - t`
+  obtain ⟨S', -, -, hform, hdom⟩ := dom_prop1_aux hS h0 fun t _ => zero_le
+  have hS' : S' = pathOf (fun t => Real.triangleWave (1 - t)) (by fun_prop) := by
+    ext t
+    rw [hform t zero_le, pathOf_apply, NNReal.coe_zero, sub_zero]
+  exact hS' ▸ hdom
 
 /-- **Proposition 2** (`prop:2`). Every pure hider strategy is dominated by one which is
 end-absorbing. -/
@@ -427,8 +444,9 @@ private lemma dom_Hstar_lipschitz {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths) 
   · rw [abs_sub_comm, abs_sub_comm (t : ℝ)]
     exact key t' t h
 
-/-- The closed form of the paper's construction: every hider path is dominated by a path of speed
-at most `1` that follows it when it can and otherwise runs towards it at unit speed. -/
+/-- Every hider path is dominated by a path of speed at most `1`, given in closed form: it stays
+between the envelopes `U(t) = inf_{s ≤ t} (H s + (t - s))` and `L(t) = sup_{s ≤ t} (H s - (t - s))`,
+so it cannot be caught from behind. -/
 private lemma dom_exists_dominating {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths) :
     ∃ H' ∈ searcherPaths, ∀ S ∈ searcherPaths, captureTime S H ≤ captureTime S H' := by
   have hcont : Continuous (dom_Hstar H) := by
@@ -471,9 +489,10 @@ private lemma dom_exists_dominating {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths
 /-- **Proposition 3** (`prop:3`). Every smooth hider strategy is dominated by one in `𝒮`, that is,
 one with speed bounded by `1`.
 
-Departure from the paper: the inductive construction of `H*` is replaced by a closed formula for
-the same path (the construction can stall: `τ` may equal `t₀`, and the times may accumulate).
-Smoothness is not used; see `proposition3_of_continuous`. -/
+Departure from the paper: the inductive construction of `H*` (which can stall: `τ` may equal
+`t₀`, and the times may accumulate) is replaced by a different dominating path in closed form;
+the domination argument is the paper's. Smoothness is not used; see
+`proposition3_of_continuous`. -/
 theorem proposition3 {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths) (_hsmooth : Smooth H) :
     ∃ H' ∈ searcherPaths, ∀ S ∈ searcherPaths, captureTime S H ≤ captureTime S H' :=
   dom_exists_dominating hH
@@ -482,12 +501,14 @@ end PrincessMonster
 
 namespace PrincessMonster
 
-/-- **Proposition 3** (`prop:3`) holds for every continuous hider path, smooth or not: the path
-`H'` that follows `H` when it can and otherwise runs towards it at unit speed dominates `H`.
+/-- **Proposition 3** (`prop:3`) holds for every continuous hider path, smooth or not.
 
-Departure from the paper: the inductive construction of `H*` is replaced by a closed formula for
-the same path, `H*(t) = inf_{s ≤ t} (L(s) + (t - s))` with `L(s) = sup_{r ≤ s} (H r - (s - r))`
-(the construction can stall: `τ` may equal `t₀`, and the times may accumulate). -/
+Departure from the paper: the inductive construction of `H*` (which can stall: `τ` may equal
+`t₀`, and the times may accumulate) is replaced by a different dominating path in closed form,
+`H*(t) = inf_{s ≤ t} (L(s) + (t - s))` with `L(s) = sup_{r ≤ s} (H r - (s - r))`. It has speed at
+most `1` and stays between the envelopes `U ≤ H* ≤ L`, which gives the paper's argument: `H*`
+cannot be caught from behind. Unlike the paper's path it may move away from `H` (it rises at unit
+speed until it reaches `L`). -/
 theorem proposition3_of_continuous {H : C(ℝ≥0, ℝ)} (hH : H ∈ hiderPaths) :
     ∃ H' ∈ searcherPaths, ∀ S ∈ searcherPaths, captureTime S H ≤ captureTime S H' :=
   dom_exists_dominating hH
