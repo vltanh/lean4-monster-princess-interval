@@ -1,3 +1,5 @@
+> **Exact center-wait subgame solved (2026-11-15):** [a restricted infinite-dimensional saddle](CENTER_WAIT_PRINCIPAL_ONE_TURN_EXACT.md) has value `3/2 - e^(-1/2)/2 = 1.1967346701...`, with an explicit exponential/atomic Monster law and a continuously approaching Princess law. It applies when **every** Princess path enters the exact center and the Monster uses only the principal one-turn front `t+x=1` with nonnegative oriented starts. The same Monster law proves an upper of 1.196735 on the **full** one-interior-turn Monster class against this Princess restriction; it does not give a full one-turn exact minimax value. [Fraction regression](../../packages/interval_center_wait_principal/verify.py).
+
 # Equilibrium geometry — active research index
 
 **One-turn comparison: closed negatively.** The [exact countercertificate](ONE_TURN_SEPARATION_COUNTERCERTIFICATE.md) supplies a physical one-turn Monster law with an all-Princess upper

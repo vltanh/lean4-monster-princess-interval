@@ -158,6 +158,9 @@ cover the layer before time 1 or fix the thresholds.
     [note](archive/research/12-global-closure/GLOBAL_FREE_START_ZENO_COUNTEREXAMPLE.md));
   - pushing a Princess law onto a simpler "front-one" form can lose value, from $47/40$ to $469/400$
     ([note](archive/research/12-global-closure/FRONT_ONE_PROJECTION_SECURITY_LOSS.md)).
+  - a restricted subgame is solved exactly: a Princess who runs to the centre, waits and leaves, against
+    a Monster whose one turn is on $t+x=1$, has value $3/2-e^{-1/2}/2\approx1.19673$
+    ([note](archive/research/13-equilibrium-geometry/CENTER_WAIT_PRINCIPAL_ONE_TURN_EXACT.md)).
 
   None of them identifies the phases of an optimal Princess CDF or the Monster paths that support
   it, and that is the missing step.
