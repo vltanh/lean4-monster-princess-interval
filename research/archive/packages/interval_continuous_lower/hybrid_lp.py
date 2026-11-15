@@ -32,15 +32,18 @@ class HybridLP(RecordLP):
     retain endpoint interior traces until actual capture.
     """
     def __init__(self, master, floor, seconds=180., level_fraction=.5,
-                 front=False, secants=16):
+                 front=False, secants=16, route_batch=2):
         if type(secants) is not int or secants < 1:
             raise ValueError('secants must be a positive integer')
+        if type(route_batch) is not int or route_batch < 1:
+            raise ValueError('continuous route batch must be positive')
         super().__init__(master, floor, seconds, level_fraction, front)
         # A specified inefficient route can cost more than the old search's
         # objective cap of three. Its score must not be clipped to that cap.
         for lp in (self.main, self.prox):
             event_lp._check(lp.highs.changeColBounds(0, 0., np.inf), 'unclip specified-route score')
         self.secants = secants
+        self.route_batch = route_batch
         self.pending = []
         self.auxiliary_count = 0
         self.aux_main = []
@@ -51,20 +54,22 @@ class HybridLP(RecordLP):
         self.promoted_seen = set()
         self.violations = {}
 
-    def add_plane(self, plane):
-        if 'route' in plane:
-            self.add_route(plane['route'])
-        return super().add_plane(plane)
+    def select_routes(self, reports):
+        # All reports still contribute their supporting planes. Promote only
+        # the lowest-scoring physical routes at this screening step; a route
+        # becoming active on a later trial can then acquire its full model.
+        return sum(self.add_route(p['route'])
+                   for p in sorted(reports, key=lambda p: Q(p['value']))[:self.route_batch])
 
     def checkpoint(self):
-        return dict(schema=1, secants=self.secants, front=self.front,
+        return dict(schema=2, secants=self.secants, front=self.front, route_batch=self.route_batch,
                     continuous_routes=[[[str(t), str(x)] for t, x in r] for r in self.continuous_routes],
                     promoted_paths=self.promoted_paths,
                     violations=[dict(start_grid=start, moves=list(moves), count=count)
                                 for (start, moves), count in sorted(self.violations.items())])
 
     def restore(self, state):
-        if (state['schema'], state['secants'], state['front']) != (1, self.secants, self.front):
+        if (state['schema'], state['secants'], state['front'], state.get('route_batch')) != (2, self.secants, self.front, self.route_batch):
             raise ValueError('hybrid checkpoint model parameters changed')
         for route in state['continuous_routes']:
             self.add_route(route)
@@ -278,6 +283,7 @@ class HybridLP(RecordLP):
                      physical_path_rows=len(self.promoted_paths),
                      promoted_physical_paths=len(self.promoted_paths),
                      continuous_record_routes=len(self.continuous_routes),
+                     continuous_route_batch=self.route_batch,
                      continuous_secants=self.secants)
         # With conservative secants this is an inner model optimum, not an
         # upper on the corresponding exact continuous-route optimization.

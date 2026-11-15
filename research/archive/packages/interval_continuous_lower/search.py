@@ -175,6 +175,7 @@ def score_routes(master,table,routes,model,output,prefix):
             'field_pre_two_sha256':data['encoding']['uncompressed_sha256']})
         new+=model.add_plane(plane);values.append(Q(plane['value']))
         reports.append(plane)
+    if hasattr(model,'select_routes'):model.select_routes(reports)
     write(output/f'{prefix}.planes.json.gz',reports)
     return min(values),values,new,data
 
@@ -292,7 +293,7 @@ def run(args):
     if args.bank_model=='hybrid':
         from hybrid_lp import HybridLP
         model=HybridLP(master,floor+buffer,args.lp_seconds,args.level_fraction,
-                       front=FRONT_TWO,secants=args.continuous_secants)
+                       front=FRONT_TWO,secants=args.continuous_secants,route_batch=args.continuous_route_batch)
         if state:
             if not state.get('hybrid_model'):raise ValueError('missing hybrid checkpoint')
             model.restore(state['hybrid_model'])
@@ -331,6 +332,14 @@ def run(args):
         try:candidate,upper,level,stats=model.solve(incumbent,screen,radius)
         except SolveError as error:
             if 'Time limit reached' not in str(error):raise
+            info=model.main.highs.getInfo()
+            write(args.output/f'lp_failure_{iteration:06d}.json',{
+                'error':str(error),'iteration':iteration,'bank_model':args.bank_model,
+                'main_rows':model.main.highs.getNumRow(),'main_columns':model.main.highs.getNumCol(),
+                'main_nonzeros':model.main.highs.getNumNz(),
+                'main_ipm_iterations':int(info.ipm_iteration_count),
+                'main_simplex_iterations':int(info.simplex_iteration_count),
+                'scope':'Failed discovery solve; no candidate or bound is certified.'})
             status='LP_BUDGET_STOPPED';break
         trial_field=retain_trial_field(master,candidate,args.output,iteration)
         cached=cache.price(candidate,keep=args.cached_keep,level=floor,tolerance='0')
@@ -412,6 +421,7 @@ def main():
     p.add_argument('--oracle',choices=('classic','center'),default='center')
     p.add_argument('--bank-model',choices=('calendars','records','hybrid'),default='calendars')
     p.add_argument('--continuous-secants',type=int,default=16)
+    p.add_argument('--continuous-route-batch',type=int,default=2)
     p.add_argument('--promotion-after',type=int,default=3)
     p.add_argument('--bank-slack',default='1/10000000')
     p.add_argument('--seconds',type=float,default=1200.)
@@ -437,7 +447,7 @@ def main():
     if not (0<args.minimum_radius<=args.radius<=args.maximum_radius<=1):raise ValueError('trust radii')
     if Q(args.bank_slack)<0 or args.keep<1 or not 0<args.level_fraction<1:raise ValueError('invalid search parameters')
     if min(args.attack_starts,args.attack_evaluations,args.attack_every,args.new_attacks)<1:raise ValueError('attack search controls')
-    if args.continuous_secants<1 or args.promotion_after<1:raise ValueError('hybrid model controls')
+    if min(args.continuous_secants,args.continuous_route_batch,args.promotion_after)<1:raise ValueError('hybrid model controls')
     print(json.dumps(run(args)),flush=True)
 
 

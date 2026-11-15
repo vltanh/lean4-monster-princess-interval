@@ -1,5 +1,7 @@
 > **Archive.** This folder is a snapshot of our research repository as it stood on 2026-11-15, when
-> that repository was retired. It covers the work from 2026-11-10 to 2026-11-15. Nothing here is
+> that repository was retired. It covers the work from 2026-11-10 to 2026-11-15. It also includes
+> one local commit of 2026-11-13 that was never pushed there: it changes
+> `packages/interval_continuous_lower` so that its search promotes continuous routes by exact activity. Nothing here is
 > maintained, and some notes are superseded by later ones. Links inside the folder are relative
 > to it, and the workflows in `.github/` no longer run. The current account of the bounds and the
 > maintained copies of the programs they need are in [`research/`](../README.md). Status labels in

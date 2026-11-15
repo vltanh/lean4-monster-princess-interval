@@ -122,6 +122,16 @@ def run():
                     for path in paths:
                         model.promote(path)
         model = HybridLP(master, Q(0))
+        reports = [dict(route=r, value=str(v))
+                   for r, v in zip(routes[:3], (Q(7,4), Q(5,4), Q(3,2)))]
+        assert model.select_routes(reports) == 2
+        assert set(model.continuous_routes) == {
+            tuple(tuple(map(Q,p)) for p in reports[i]['route']) for i in (1,2)}
+        assert model.select_routes(reports) == 0
+        # A formerly inactive route can acquire its exact hypograph later.
+        reports[0]['value'] = '1'
+        assert model.select_routes(reports) == 1
+        model = HybridLP(master, Q(0))
         invalid = [[], [(0, 0), (2, 1), (4, -1)], [(0, 0), (1, 1)],
                    [(0, 2), (3, -1), (5, 1)], [(1, 1), (3, -1)]]
         for route in invalid:

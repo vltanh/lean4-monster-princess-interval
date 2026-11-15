@@ -104,9 +104,12 @@ six endpoint-atom fields, and five rejected invalid routes. These checks
 verify the implementation; they supply no new unrestricted bound.
 
 `search.py` and `front_search.py` accept `--bank-model hybrid`,
-`--continuous-secants K`, and `--promotion-after N`. Every continuous
-route scored by the driver also gets its conservative secant hypograph;
-ordinary supporting clock planes remain valid additional constraints.
+`--continuous-secants K`, `--continuous-route-batch B` (default two), and
+`--promotion-after N`. All scored continuous routes contribute supporting
+clock planes; the B lowest-scoring routes at each exact screening step
+also acquire conservative secant hypographs. Previously inactive routes
+can acquire them when they become active on a later candidate. This limits
+the initial model size without discarding any exact route-screen gate.
 An optional `--route-bank FILE` supplies a JSON list (or a `routes` member)
 of additional physical routes. These routes can have either initial sign
 and arbitrary legal turn times; no positive-start or time-one restriction
@@ -115,14 +118,14 @@ is imposed.
 Every repeated cached violation still adds its new calendar when available.
 At the declared repetition threshold its entire discrete history is
 promoted to exact records. Checkpoints retain the promoted paths, violation
-counts, continuous routes, and secant count. Resume rejects a changed bank
-model or secant count. All exact candidates are retained before screening,
+counts, continuous routes, route batch, and secant count. Resume rejects a changed bank
+model, batch, or secant count. All exact candidates are retained before screening,
 and the existing complete response oracle still controls acceptance.
 
 ```bash
 python3 -B packages/interval_continuous_lower/test_hybrid_search.py
 python3 -B packages/interval_continuous_lower/front_search.py \
-  --bank-model hybrid --continuous-secants 8 --promotion-after 3 \
+  --bank-model hybrid --continuous-secants 8 --continuous-route-batch 2 --promotion-after 3 \
   --n 256 --oracle center --initial-routes 1292 --initial-attacks 0 \
   --route-bank packages/interval_quantile_certificate/earlier_front_probe.json \
   --radius .004 --bank-slack 1/20000 --seconds 420 --iterations 24 \

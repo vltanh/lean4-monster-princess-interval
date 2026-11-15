@@ -46,7 +46,7 @@ def run():
                 assert path.read_bytes() == raw
             state = search.read_json(output/'state.json.gz')
             assert len(state['history']) == 4
-            assert len(state['hybrid_model']['continuous_routes']) >= 3
+            assert len(state['hybrid_model']['continuous_routes']) >= 2
             manifest = search.read_json(output/'manifest.json')
             assert not manifest['continuous_screen_is_lower_bound']
             assert not manifest['same_fullwidth_cdf_security_claimed']
